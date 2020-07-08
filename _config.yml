@@ -8,7 +8,7 @@ theme_settings:
   title: Om Prabhu
   subtitle: also this is not animé
   avatar: assets/img/avatar_lis.png
-  favicon: assets/favicon.ico
+  favicon: avatar_lis_fvQ_icon.ico
   description: "My Blog"
 
 #  Header and footer text
