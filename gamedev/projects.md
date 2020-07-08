@@ -1,0 +1,21 @@
+---
+layout: page
+title: Gamedev Projects
+permalink: /gamedev/projects/
+feature-img: "assets/img/sample_feature_img_3.png"
+hide: true
+---
+
+Here are some of my projects in Unity3D along with their respective project files. Feel free to check them out as well as have a little fun with the games. Note that most web browsers do not support WebGL content. If you encounter any bugs or have any suggestions or feedback, please contact me [here]() and I will make sure to fix them at the earliest.
+
+> <h3>Solar System Simulation</h3>
+> <i>Made using Unity 2019.4.2f1</i>
+> This is a simple solar system simulation - my first project as part of the [Introduction to Game Development](https://www.coursera.org/learn/game-development?specialization=game-development) course. Technically it's not a game, but it introduces many important Unity3D concepts. It ain't much, but it's honest work!
+>
+> Check it out here: [Application](/gamedev/files/solarsystem/Builds/WebGL/index.html) / [Project Files](https://github.com/omprabhu31/omprabhu31.github.io/tree/master/gamedev/files/solarsystem)
+
+> <h3>Roller Madness</h3>
+> <i>Made using Unity 2017.4.40f1</i>
+> This is my second project as part of the [Introduction to Game Development](https://www.coursera.org/learn/game-development?specialization=game-development) course - this is where many theory concepts actually come into action while building out a simple but fully functional game. The goal is to collect as many coins as possible while avoiding enemies or the death zone.
+>
+> Check it out here: [Application](/gamedev/files/rollermadness/Builds/WebGL/index.html) / [Project Files](https://github.com/omprabhu31/omprabhu31.github.io/tree/master/gamedev/files/rollermadness)
