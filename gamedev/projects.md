@@ -6,7 +6,7 @@ feature-img: "assets/img/sample_feature_img_3.png"
 hide: true
 ---
 
-Here are some of my projects in Unity3D along with their respective project files. Feel free to check them out as well as have a little fun with the games. Note that most web browsers do not support WebGL content. If you encounter any bugs or have any suggestions or feedback, please contact me [here]() and I will make sure to fix them at the earliest.
+Here are some of my projects in Unity3D along with their respective project files. Feel free to check them out as well as have a little fun with the games. Note that most web browsers do not support WebGL content. If you encounter any bugs or have any suggestions or feedback, please contact me [here](https://forms.gle/za5hyQ4nHnz6FT7R6) and I will make sure to fix them at the earliest.
 
 > <h3>Solar System Simulation</h3>
 > <i>Made using Unity 2019.4.2f1</i>

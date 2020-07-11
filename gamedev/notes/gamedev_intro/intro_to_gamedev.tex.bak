@@ -13,7 +13,10 @@
 \usepackage{lipsum, graphicx, caption}
 \usepackage{float}
 \usepackage{commath}
-
+\usepackage{wrapfig}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
 \theoremstyle{definition}
 \newtheorem{innercustomgeneric}{\customgenericname}
 \providecommand{\customgenericname}{}
@@ -103,7 +106,7 @@ Keeping in mind the above factors, we proceed to conceptualize the game structur
 
 While normally we would construct anything from the ground up, from a game design perspective things work better when conceptualized from the top down. 
 \begin{itemize}
-	\item We first create everything essential, i.e. 'game assets' - that would mean any art, textures \& materials, game object models, audio/music and scripts (basically code that defines interaction between objects)
+	\item We first create everything essential, i.e. `game assets' - that would mean any art, textures \& materials, game object models, audio/music and scripts (basically code that defines interaction between objects)
 	\item Then, we actually construct the levels in the game using the above created assets in an engine like Unity, Unreal, Godot, etc
 	\item We then build the game for the intended platforms
 	\item Finally the game is tested for bugs and to determine the requirements for a system that could hope to run our game
@@ -112,13 +115,47 @@ While normally we would construct anything from the ground up, from a game desig
 \subsection{Team structure and roles}
 Considering all the stuff from the previous subsection, it would be near impossible for a single person to carry out all the work required and make an end product that ticks all the boxes (individual developers do exist still). This is why there are often teams, ranging in size from as small as 2-3 people to well over 1000 employees, with each member having one or more roles to perform.
 \begin{itemize}
-	\item Game Designer: execution of the idea behind the story, designing levels, organizing assets and documents
+	\item Game Designer: execution of the idea behind the story, designing levels, gameplay mechanics, organizing assets and documents
 	\item Story Designer: character design, story arcs, writing dialogues, etc
-	\item Game Producer: 
- 	\item Programmer: 
-	\item Game Artist: 
-	\item Sound Designer: 
+	\item Game Producer: monitoring project budgets, keeping track of deadlines, keeping the team together
+ 	\item Programmer: writing actual code to determine how game objects interact
+	\item Game Artist: create concept art, textures for game objects to give them unique looks 
+	\item Sound Designer: create and edit music to match the mood of various in-game scenes
 	\item Game Tester: not the same as a player; requires sitting on a single game level for hours to identify bugs/inconsistencies
 \end{itemize}
+Depending on the size of the team, each person may assume one or more of the above roles based on what they can best do:
+\begin{itemize}
+	\item a small team (1-5 people) may be able to make do with just general purpose designers, artists and programmers, and each person will be more or less actively involved in production work
+	\item a medium sized team (6-25 people) may additionally require a manager/producer and specialized designers \& artists
+	\item a large team (25+ people) will have supplementary roles like scripters (people who have knowledge of programming as well as design), technical artists (programmers who can also work as artists) and level designers (who make the artwork and game design for separate levels)
+\end{itemize}
+\hrulefill
+\pagebreak
+
+\section{The Unity3D Engine}
+All games need a few basic features - loading and displaying game assets, playing sound FX. receive player input and react to it, some code to define game rules and mechanics. One way to incorporate all of this is to build everything from scratch i.e. the core game software, renderers, etc. While this can certainly be done, it is much easier to use a game engine to do most of the work for us.
+\vspace{6pt}
+
+A game engine is a platform that provides basic game functionality, support for integration of game objects of multiple different formats. This allows us to focus on the actual unique gameplay elements.
+\vspace{6pt}
+
+Some advantages of using the Unity3D game engine are:
+\begin{itemize}
+ 	\item great documentation (by which I mean insanely great) and a very large dev community
+	\item very fast build times and support for many platforms
+	\item great asset pipeline (mechanism to import and use game assets)
+	\item not as processor intensive as other engines like Unreal
+	\item can actively switch between different editor versions using Unity Hub without needing to rebuild the entire project
+\end{itemize}
+\textbf{NOTE:} If you take up this course, the instructor will mention that Unity3D offers flexibility in programming languages between C\# and JavaScript. This is no longer valid after the 2019 LTS releases. However, many .NET compatible languages like C++ can be used if they are first compiled into a DLL (for which you can refer this - \texttt{\href{https://docs.unity3d.com/Manual/UsingDLL.html}{https://docs.unity3d.com/Manual/UsingDLL.html}}).
+\subsection{Unity3D interface and configuration}
+The process of downloading and installing Unity is very intuitive and I won't go over it. However, note that Unity has stopped distributing the Standard Assets Example Project from 2018 onwards, so you might need to use the 2017 releases if you want to try stuff out with the example project. On launching Unity, the editor window might look something similar to this:
+\vspace{6pt}
+
+\includegraphics[width=\textwidth]{unity_default_layout.png}
+\vspace{1pt}
+
+I personally hate this layout (for the main reason that you can only see 4 panels at any given time which means you have to keep on switching between tabs). You can play around with this layout by simply dragging various tabs around the window to get the window configuration you like. I personally prefer this editor configuration:
+\includegraphics[width=\textwidth]{unity_custom_layout.png}
 
 \end{document}
