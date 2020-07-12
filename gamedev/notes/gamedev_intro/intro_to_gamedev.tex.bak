@@ -155,7 +155,81 @@ The process of downloading and installing Unity is very intuitive and I won't go
 \includegraphics[width=\textwidth]{unity_default_layout.png}
 \vspace{1pt}
 
-I personally hate this layout (for the main reason that you can only see 4 panels at any given time which means you have to keep on switching between tabs). You can play around with this layout by simply dragging various tabs around the window to get the window configuration you like. I personally prefer this editor configuration:
+I personally hate this layout (for the main reason that you can only see 4 panels at any given time which means you have to keep on switching between tabs). You can play around with this layout by simply dragging various tabs around the window to get the window configuration you like. I personally prefer this editor configuration, since now you can see all tabs within a single window:
+
 \includegraphics[width=\textwidth]{unity_custom_layout.png}
+\vspace{1pt}
+
+Let us now take a brief look at the various elements in the Unity3D interface:
+\begin{itemize}
+	\item Scene View: visual level editor for the currently open scene (edit mode)
+	\item Game View: shows the view through the active camera object (the play button can be used to switch to play mode for playing and testing the game within the Unity editor)
+	\item Object Hierarchy: hierarchical list of all game objects being used in the current scene along with parent-child relationships (is linked directly to the scene view)
+	\item Project Assets: all the files and folders that make up the project (including the ones which are not being used in the current scene, but can be used later)
+	\item Console: displays errors while building the scene (eg: lighting needs to be rebaked)
+	\item Inspector: shows details of all game objects and components (like position, scale, scripts, materials, audio, etc) attached to them
+\end{itemize}
+You might now want to explore the Unity editor to look at various features. There are also many quick shortcuts in Unity that you can refer to here: \texttt{\href{https://docs.unity3d.com/Manual/UnityHotkeys.html}{https://docs.unity3d.com/Manual/UnityHotkeys.html}}.
+\vspace{6pt}
+
+\textbf{NOTE:} If you ever need to move/rename/delete asset files, do it in the Unity editor itself (in the Project Assets panel) and \textit{NOT} in the system file explorer - doing this may affect some connections between game objects and break your project.
+
+\hrulefill
+\pagebreak
+\section{Basic Concepts}
+\subsection{Game graphics concepts}
+Before we start using Unity, let us briefly discuss the basics of computer graphics using the graphics display model:
+
+\includegraphics[width=\textwidth]{graphics_concepts.png}
+\begin{enumerate}
+	\item Display layer:
+	\begin{itemize}
+		\item display devices: laptop, smartphone, tablet, VR glasses
+		\item display resolution: measure of how accurately a display approximates continuous images using finite pixels (pixel dimensions like 1920$\times$1080, dots/pixels per inch)
+		\item aspect ratio: proportion of pixel map width vs height (eg: 1920$\times$1080 and 1280$\times$720 both have aspect ratio of 16:9)
+		\item refresh rate: maximum rate at which the hardware can refresh the display image (expressed in hertz)
+		\item frame rate: actual rate at which the hardware updates the display images (eg: a complex game might run at 60 FPS even though the display has a refresh rate of 240 Hz)
+	\end{itemize}
+	\item Model layer:
+	\begin{itemize}
+		\item bitmap image: stores color information about each individual pixel (zooming degrades image quality since we are not creating new pixels, but rather zooming in on the available pixels)
+		\item vector image: stored internally as mathematical equations representing certain geometric aspects of the image (can be scaled up without loss of quality)
+		\item vector images take longer to load (additional step of converting vector information to the corresponding pixel map before rendering it to the display), hence usually give lower frame rates
+		\item 3D graphics: essentially vector graphics in 3 dimensions (i.e. 3D model defined by geometric polygons, usually triangles, to create a `mesh' of the model) - for realtime rendering at high FPS, we use low polygon modeling (i.e. limit number of polygons)
+	\end{itemize}
+	\item File layer:
+	\begin{itemize}
+		\item Unity supports nearly all file formats (support for 2D vector graphics also added recently)
+		\item for 3D formats (eg: native Maya, 3ds Max, Blender files), Unity converts to FBX files while importing
+	\end{itemize}
+\end{enumerate}
+\textbf{NOTE:} As a general rule of thumb, try to maintain highest achievable image quality for as long as possible - reduce it only if it is adversely affecting the gameplay.
+\pagebreak
+\subsection{Game audio concepts}
+We can apply the analogy of the graphics display model here as well:
+\begin{itemize}
+	\item instead of the display we have a device which converts digital data signals back into analogue waves (7.1 surround system, headphones, etc)
+	\item instead of image storage algorithms we have a process called sampling (approximation of continuous analogue input to discrete digital pulses)
+	\item sample rate: number of times per second the sound wave is `sampled' (typically 44.1 kHz)
+	\item sample size: amount of data stored per sample (typically 8, 16 or 32 bits)
+	\item typical file formats include WAV, AIFF, OGG, MP3, etc (software like Adobe Audition or Audacity have their native file formats)
+\end{itemize}
+Audio is very important to games, and also one of the tougher things to actually make or synthesize digitally. There are 3 main types of game audio:
+\begin{itemize}
+	\item voice: easiest to come by - voice actors need not be professionals, they can be friends, family, etc (pro tip: keep background noise as low as possible, otherwise noise removal is a very difficult task in production)
+	\item sound FX:
+	\begin{itemize}
+		\item[$-$] reactive FX: effects that occur as things happen in the game (royalty free, creative commons licensed effects can be easily found in places like the Unity Asset Store)
+		\item[$-$] ambient FX: ambient noises that add a feeling of immersion (natural sounds often work better than digitized ambient effects)
+	\end{itemize}
+	\item music: adds emotional impact and complements the atmosphere (again free resources exist; commercially produced music will need you to buy a license in order that you do not violate copyright law)
+\end{itemize}
+\hrulefill
+\begin{center}\textbf{END OF WEEK 1}\end{center}
+This is the end of the documentation from Week 1 of the course. Continue reading forward for further weeks, or head over into Unity and try out some stuff yourself.
+
+\hrulefill
+\pagebreak
+\section{Solar System Simulation}
 
 \end{document}
