@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.7.11)  12 JUL 2020 14:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.7.11)  12 JUL 2020 23:22
 entering extended mode
 **./intro_to_gamedev.tex
 (intro_to_gamedev.tex
@@ -654,66 +654,85 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
  [1
 
 {C:/Users/Om Prabhu/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2]
-<gamedev_basic_factors_to_consider.png, id=90, 492.03825pt x 298.11375pt>
+<gamedev_basic_factors_to_consider.png, id=127, 492.03825pt x 298.11375pt>
 File: gamedev_basic_factors_to_consider.png Graphic file (type png)
 <use gamedev_basic_factors_to_consider.png>
 Package pdftex.def Info: gamedev_basic_factors_to_consider.png  used on input l
-ine 101.
+ine 103.
 (pdftex.def)             Requested size: 393.63113pt x 238.49132pt.
-<game_design_hierarchy.png, id=92, 534.19576pt x 302.3295pt>
+<game_design_hierarchy.png, id=129, 534.19576pt x 302.3295pt>
 File: game_design_hierarchy.png Graphic file (type png)
 <use game_design_hierarchy.png>
-Package pdftex.def Info: game_design_hierarchy.png  used on input line 105.
+Package pdftex.def Info: game_design_hierarchy.png  used on input line 107.
 (pdftex.def)             Requested size: 427.3572pt x 241.86392pt.
  [3 <./gamedev_basic_factors_to_consider.png> <./game_design_hierarchy.png>] [4
 ]
-<unity_default_layout.png, id=105, 1156.32pt x 620.3175pt>
+<unity_default_layout.png, id=142, 1156.32pt x 620.3175pt>
 File: unity_default_layout.png Graphic file (type png)
 <use unity_default_layout.png>
-Package pdftex.def Info: unity_default_layout.png  used on input line 155.
+Package pdftex.def Info: unity_default_layout.png  used on input line 157.
 (pdftex.def)             Requested size: 483.69684pt x 259.48093pt.
-<unity_custom_layout.png, id=106, 1445.4pt x 775.39688pt>
+<unity_custom_layout.png, id=143, 1445.4pt x 775.39688pt>
 File: unity_custom_layout.png Graphic file (type png)
 <use unity_custom_layout.png>
-Package pdftex.def Info: unity_custom_layout.png  used on input line 160.
+Package pdftex.def Info: unity_custom_layout.png  used on input line 162.
 (pdftex.def)             Requested size: 483.69684pt x 259.47856pt.
  [5 <./unity_default_layout.png>] [6 <./unity_custom_layout.png>]
-<graphics_concepts.png, id=117, 481.8pt x 267.399pt>
+<graphics_concepts.png, id=154, 481.8pt x 267.399pt>
 File: graphics_concepts.png Graphic file (type png)
 <use graphics_concepts.png>
-Package pdftex.def Info: graphics_concepts.png  used on input line 183.
+Package pdftex.def Info: graphics_concepts.png  used on input line 185.
 (pdftex.def)             Requested size: 483.69684pt x 268.45918pt.
- [7 <./graphics_concepts.png>] [8] [9]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 238.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 238.
- (intro_to_gamedev.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 238.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 238.
+ [7 <./graphics_concepts.png>] [8]
+<solarsystem_startscreen.png, id=170, 1156.32pt x 620.3175pt>
+File: solarsystem_startscreen.png Graphic file (type png)
+<use solarsystem_startscreen.png>
+Package pdftex.def Info: solarsystem_startscreen.png  used on input line 244.
+(pdftex.def)             Requested size: 483.69684pt x 259.48093pt.
+<add_sun_earth_moon.png, id=171, 1156.32pt x 620.3175pt>
+File: add_sun_earth_moon.png Graphic file (type png)
+<use add_sun_earth_moon.png>
+Package pdftex.def Info: add_sun_earth_moon.png  used on input line 259.
+(pdftex.def)             Requested size: 483.69684pt x 259.48093pt.
+ [9 <./solarsystem_startscreen.png>]
+<rotatearound_earth.png, id=182, 335.45325pt x 139.722pt>
+File: rotatearound_earth.png Graphic file (type png)
+<use rotatearound_earth.png>
+Package pdftex.def Info: rotatearound_earth.png  used on input line 284.
+(pdftex.def)             Requested size: 335.45241pt x 139.72165pt.
+ [10 <./add_sun_earth_moon.png>] [11 <./rotatearound_earth.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 305.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 305.
+
+(intro_to_gamedev.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 305.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 305.
 Package rerunfilecheck Info: File `intro_to_gamedev.out' has not changed.
-(rerunfilecheck)             Checksum: 159AACF949DC91D96A1185EF89E6D3C1;854.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 238.
+(rerunfilecheck)             Checksum: 9E89B96FD70CD97F1D12C148051F89B9;1436.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 305.
  ) 
 Here is how much of TeX's memory you used:
- 10559 strings out of 480790
- 173580 string characters out of 2893515
- 584844 words of memory out of 3000000
- 26310 multiletter control sequences out of 15000+200000
+ 10602 strings out of 480790
+ 174377 string characters out of 2893515
+ 585844 words of memory out of 3000000
+ 26332 multiletter control sequences out of 15000+200000
  542360 words of font info for 62 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 45i,6n,47p,617b,382s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 45i,6n,47p,617b,384s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Om Prabhu\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi
 600\tcrm1000.pk><C:/Users/Om Prabhu/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
 e1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Om Prabhu/AppData/Local/Programs/MiK
 TeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Om Prabhu/AppData/L
-ocal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Om 
-Prabhu/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.p
-fb><C:/Users/Om Prabhu/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/ams
-fonts/cm/cmsy10.pfb><C:/Users/Om Prabhu/AppData/Local/Programs/MiKTeX 2.9/fonts
-/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Om Prabhu/AppData/Local/Programs
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on intro_to_gamedev.pdf (9 pages, 1363522 bytes).
+ocal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Om
+ Prabhu/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.
+pfb><C:/Users/Om Prabhu/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmr12.pfb><C:/Users/Om Prabhu/AppData/Local/Programs/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Om Prabhu/AppData/Local/Programs
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Om Prabhu/AppDa
+ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on intro_to_gamedev.pdf (11 pages, 1734097 bytes).
 PDF statistics:
- 171 PDF objects out of 1000 (max. 8388607)
- 30 named destinations out of 1000 (max. 500000)
- 130 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 239 PDF objects out of 1000 (max. 8388607)
+ 48 named destinations out of 1000 (max. 500000)
+ 201 words of extra memory for PDF output out of 10000 (max. 10000000)
 

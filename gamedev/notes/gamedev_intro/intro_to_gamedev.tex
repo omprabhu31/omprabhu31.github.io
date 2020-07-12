@@ -90,8 +90,10 @@ Nevertheless, I decided to give it a shot - the worst that could happen is I cou
 \textbf{NOTE:} 
 \begin{enumerate}
 	\item This entire course works with Unity3D as the game engine, however the exact same concepts apply to other engines like Unreal, Godot, etc as well.
+	\item Even if you are using a newer or older version of Unity, the concepts apply just as well. In fact, there is almost negligible difference in functionality between releases.
 	\item The source files for course projects are available on my website for free use and modification. I will mainly be working with the 2019.4.2f1 and 2017.4.40f1 LTS releases of Unity, so you might need to install these versions of the engine before you try them out.
 	\item Most of the project builds will be for the WebGL platform. Many browsers do not support running local WebGL content out of the box. You might find this guide handy: \texttt{\href{techwiser.com/enable-webgl}{techwiser.com/enable-webgl}}
+	\item If you want to install Standard Assets through Unity Hub, then you might want to install a 2017 LTS release (Unity no longer releases Standard Assets from 2018). Otherwise there is always the option of importing and using 2017 Standard Assets in a 2018 or 2019 release.
 \end{enumerate}
 \hrulefill
 \pagebreak
@@ -231,7 +233,72 @@ This is the end of the documentation from Week 1 of the course. Continue reading
 \hrulefill
 \pagebreak
 \section{Solar System Simulation}
-(\textit{This section is not complete yet, but it should be up within a week's time at max.})
+While a solar system model is not technically a game, it is useful to start small and understand the basic workflow that goes into making a game. Sadly due to copyright issues, I am not sure if I can directly provide you the link to the project assets. In case you wish to follow along as I discuss the concepts, you might need to dig a little bit into my website github repository: \texttt{\href{https://github.com/omprabhu31/omprabhu31.github.io}{https://github.com/omprabhu31/omprabhu31.github.io}}.
+\subsection{Importing assets into Unity}
+To get started, launch Unity and create a new project (set the template as 3D and any location you prefer; no need to import standard assets) and extract the assets to a suitable location. To import the assets there are 2 methods:
+\begin{itemize}
+	\item Drag and drop the asset folders from the file explorer into the `Project' panel
+	\item Click on the `Assets' tab $>$ Import New Asset... $>$ Browse each asset and add it
+\end{itemize}
+The first method is easier, especially in a big project where we have hundreds of individual asset files. Note that changes to assets within Unity will not affect the assets in the location you extracted them to. By now, you should have a screen that looks like this: 
+\begin{center}\includegraphics[width=\textwidth]{solarsystem_startscreen.png}\end{center}
+We will be dealing with various game objects in a 3D cartesian system (pro-tip: to remember which axis is which colour, \textbf{RGB=XYZ}).
+\subsection{Game objects and the transform component}
+
+Now that we have a basic scene to work with, let's start out by adding the Sun, Earth and Moon as the first game objects. To do so, you might want to follow these steps (or maybe try to explore yourself how to do it):
+\begin{enumerate}
+	\item Click on the `GameObject' tab $>$ 3D Object $>$ Sphere
+	\item In the `Inspector' panel, change the name of the object to `Sun'
+	\item In the `Inspector' panel, adjust the position and scale parameters of the transform component
+	\item Add the other 2 spheres, change their name, position and scale to suit them
+\end{enumerate}
+(If your game object initially appears in a weird position on your scene view, you can reset its transform by going to the `Inspector' panel $>$ right-click `Transform' $>$ Reset)
+\vspace{6pt}
+
+If you followed along these lines, you should have a screen that looks somewhat like this (could look slightly different based on the transform values you set):
+\begin{center}\includegraphics[width=\textwidth]{add_sun_earth_moon.png}\end{center}
+As you can see, our objects have successfully been created in the `Hierarchy' panel and our scene and game views have been updated (Note: I have changed the position values in the transform component of the `Main Camera' object to focus the game view, however this is up to you).
+\subsection{Adding behaviour to game objects}
+Up till now, we have added the Sun, Earth and Moon as game objects. However, go into play mode and you will observe that they do not move. It is time to get them to rotate around each other appropriately. 
+\vspace{6pt}
+
+We do this by `adding behaviour' to our game objects. We do this through the use of scripts, which are nothing but files that contain code. This code tells Unity exactly how to get the game objects to behave with each other. Traditionally we would do this by writing the code ourselves, but as of now we have ready-made programs in the `Scripts' folder. From the names of the scripts, you might be able to (correctly) guess that we need to use the \texttt{RotateAround.cs} script here.
+\subsubsection{Adding scripts}
+Let us add the script to the Sun, Earth and Moon. Again there are multiple methods to add the script:
+\begin{itemize}
+	\item Click on the object in the hierarchy panel $>$ Click on `Add Component' in the inspector panel $>$ Click on `Scripts' $>$ \texttt{RotateAround.cs}
+	\item Click \texttt{RotateAround.cs} in the projects panel $>$ drag and drop it on the desired game object
+\end{itemize}
+You will notice that a new `Rotate Around' component has been added into the inspector panel for the particular game object. It also contains two parameters - target (the object around which the selected game object will rotate) and speed (angular speed of rotation in degrees per second).
+\vspace{6pt}
+
+Note that the Earth rotates around itself as well as the Sun. This means we need to add the same script twice (similarly for the Moon as well).
+
+\subsubsection{Adjusting script parameters}
+Merely adding the script usually won't do anything. It is simply a component, and updating its parameter(s) is what will actually define the behaviour. I will elaborate the process for the `Earth' object, since there are 2 scripts we have to deal with:
+\begin{enumerate}
+	\item Target: drag and drop the `Sun' object onto target parameter of the first script in the inspector panel
+	\item Speed: type in a suitable speed and test it in your game view and make further edits if any
+	\item Similarly set up the second script by setting the target to the `Earth' object this time
+\end{enumerate}
+\begin{center}\includegraphics{rotatearound_earth.png}\end{center}
+Complete these steps for the Sun and Moon as well (the Sun will need only one script, since it only rotates around itself), and please do not go into play mode yet. Note that there will not be any apparent effect of the objects rotating around themselves, but this is because we haven't added textures to them yet.
+\subsubsection{Parent-child relationships}
+Did you complete the above steps for the moon? Now go into play mode - I'm guessing you're having a pretty weird experience now. You're probably seeing the Moon chase the Earth and the distance between them increase. The reason for this delves a little bit into Mathematics and Physics, but I will discuss it in brief:
+\begin{itemize}
+	\item the \texttt{RotateAround.cs} script instructs the Moon to rotate around the `instantaneous center' of the Earth at any given point in time
+	\item since the Earth is itself rotating around the Sun, the `instantaneous center' of the Earth is changing with time in the frame of reference of the scene view and so is the distance between the centers of the Earth and the Moon
+	\item however, if we look from the frame of reference of the Earth (i.e. try to imagine that you're inside the Earth and at its center), what do you see? You will see apparently the Sun rotate around you, and the center of the Earth will appear stationary for you
+\end{itemize}
+If you still feel lost or get it partially, don't worry. You can look up the concept of `instantaneous center of rotation' on the internet and refer to some pretty good articles for more knowledge. 
+\vspace{6pt}
+
+Let's get back on track now. To fix this, we need to attach the Moon to the frame of reference to the Earth. In Unity language, we have to make the Moon a `child' of the Earth - this will make any motion of the Moon relative to the frame of the reference of the Earth. To do this, we simply click on the Moon in the hierarchy view and drag \& drop it onto the Earth.
+\vspace{6pt}
+
+Note that on setting the Moon as a child of the Earth, the transform components also change since the coordinates are now relative to the center of the Earth.
+\subsection{Adding materials, lighting and audio}
+\textit{(This sub-section is currently in the works. Expect it to be up in under a week's time.)}
 
 \hrulefill
 \pagebreak
