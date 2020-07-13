@@ -80,7 +80,7 @@ Most of my motivation for pursuing game development came from playing games itse
 \vspace{6pt}
 
 Now while playing games (of all genres) is vital to understanding what essentially makes a good game, they are two very different things - it's like comparing movie binging to actually making movies. Making games involves a lot of hardwork at different stages of the development process and there is a reason why good game developers take their time (often more than 10 years) before putting out a game on the market.
-\vspace{12pt}
+\vspace{6pt}
 
 Nevertheless, I decided to give it a shot - the worst that could happen is I could end up hating it, but I hate it during quarantine anyway.
 
@@ -379,6 +379,32 @@ Repeat the same process for the Sun (since it is at a fixed position, no need to
 \end{center}
 \subsection{Adding cameras and adjusting views}
 A camera object in Unity is far from its real life counterpart. What a camera in Unity essentially does is project the 3D geometric information onto a 2D screen. We can choose to have multiple cameras in a single scene and show them simultaneously on screen.
+\vspace{6pt}
+
+There are 2 types of 3D projections - perspective and orthographic. The perspective projection is what we have in our camera now, since the Earth appears bigger as it moves closer and vice-versa - it renders everything within its `view frustum'. Orthographic projections can probably be found in case of top-down or isometric views - the camera maintains the same scale of the object irrespective of the distance (a good example of this is \textit{SimCity}).
+\begin{center}\includegraphics{view_frustum.png}\end{center}
+The view frustum is better described by the above image. The white outlines determine the field of view and the near and far clipping planes (set right now at 2 and 20 metres respectively). If, for instance, the Earth were to come within 2m distance or go farther than 20m distance from the camera, the object would not be rendered.
+\vspace{6pt}
+
+For the purpose of applying these camera concepts, we will create a second camera to show a top-down view of our solar system and position it in a little `mini-window'. To add and position the camera suitably, follow these steps:
+\begin{enumerate}
+	\item Go to the `Hierarchy' panel $>$ Create $>$ Camera (the game view will suddenly change, since Unity reads this as the new active camera)
+	\item Reset its transform if needed and rename it to something suitable
+	\item Position and angle the camera so that it provides a top-down view of our solar system model
+	\item Go to the `Camera' component in the inspector $>$ Projection $>$ Orthographic
+	\item Play around with further properties till you get a view that you like
+\end{enumerate}
+So we have added our second camera. However the game view shows only the view from this new camera object. Since this is going to be positioned in a `mini-window', we probably need to update some further settings within the inspector. Follow these steps to set up the minimap camera window:
+\begin{enumerate}
+	\item In the `Inspector' panel $>$ Camera $>$ Viewport Rect (this is basically a set of origin coordinates size of the rectangle on the screen to which the camera outputs)
+	\item Set suitable values for width and height (width of 0.25 means that the rectangle will have one-fourth the width of the screen)
+	\item (Optional) To make the background color of the minimap different, in the same component $>$ Clear Flags $>$ Solid Color (set any color you like)
+\end{enumerate}
+Note how the main camera view appeared again. By now you should have a screen looking like this:
+\begin{center}\includegraphics[width=\textwidth]{minimap_camera.png}\end{center}
+\vspace{6pt}
+
+\textbf{NOTE:} We now have 2 camera objects and hence 2 audio listeners. It is highly advised to have only one audio listener component switched on at any given point of time - otherwise Unity will pick one of those two, which may not be the one we want. To avoid this, switch off the audio listener component on the second camera (or remove it altogether since we won't be using it anyway).
 
 \hrulefill
 \pagebreak
