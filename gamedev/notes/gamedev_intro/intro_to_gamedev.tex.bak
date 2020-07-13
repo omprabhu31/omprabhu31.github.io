@@ -293,13 +293,90 @@ Did you complete the above steps for the moon? Now go into play mode - I'm guess
 If you still feel lost or get it partially, don't worry. You can look up the concept of `instantaneous center of rotation' on the internet and refer to some pretty good articles for more knowledge. 
 \vspace{6pt}
 
-Let's get back on track now. To fix this, we need to attach the Moon to the frame of reference to the Earth. In Unity language, we have to make the Moon a `child' of the Earth, which - this will make any motion of the Moon relative to the frame of the reference of the Earth. To do this, we simply click on the Moon in the hierarchy view and drag \& drop it onto the Earth.
+Let's get back on track now. To fix this, we need to attach the Moon to the frame of reference to the Earth. In Unity language, we have to make the Moon a `child' of the Earth - this will make any motion of the Moon relative to the frame of the reference of the Earth. To do this, we simply click on the Moon in the hierarchy view and drag \& drop it onto the Earth.
 \vspace{6pt}
 
-Note that on setting the Moon as a child of the Earth, the transform components also change since now the coordinates are relative to the center of the Earth.
-
+Note that on setting the Moon as a child of the Earth, the transform components also change since the coordinates are now relative to the center of the Earth.
 \subsection{Adding materials, lighting and audio}
-\textit{(This sub-section is currently in the works. Expect it to be up in under a week's time.)}
+We have set up the basic rotation scripts, but it is still just a couple of spheres rotating around each other. We can enhance the look of our solar system by:
+\begin{itemize}
+	\item making the Sun, Earth and Moon actually look like their solar system counterparts through the use of textures and materials
+	\item removing the directional light \& adding a suitable background and lighting to the Sun
+	\item adding basic audio to the simulation
+\end{itemize}
+\subsubsection{Adding materials}
+A game object is made up of a 3D model. It can be thought of as a wire frame, and its material as the skin which wraps around this framework. Let us get into some theory about materials before we actually apply them to our solar system:
+\begin{itemize}
+	\item Material: all visible game objects have a material - however, it is only a set of parameters that specifies how the object should respond to light (it does not actually define the look of the object)
+	\item Shader: this is the formula that takes the above parameters (position of individual triangles, relative position of light, material color values for each triangle) and defines the look of the object
+	\item the shader has properties for texture maps (like emission, albedo, occlusion, etc), which in turn is the property of a material
+\end{itemize}
+If you're still confused, head over to this link to learn more about materials and shaders: 
+
+\texttt{\href{https://gamedev.stackexchange.com/questions/45842/difference-between-material-and-shader}{https://gamedev.stackexchange.com/questions/45842/difference-between-material-and-shader}}
+\vspace{6pt}
+
+With the theory covered up, it is now time to actually add materials to our game objects:
+\begin{enumerate}
+	\item Go into the `Project' panel $>$ Assets $>$ Textures
+	\item Drag and drop the `sunmap' texture on the Sun in the hierarchy view
+	\item Notice how Unity automatically created a new `Materials' folder under the assets category - for organizational purposes rename the material to `Sun material'
+	\item Repeat the process for the Earth and Moon
+\end{enumerate}
+Note that over here, we have only changed one property of the shader for each material. The texture map is what makes these objects look like entities in the solar system. By the end of this section, your window should look similar to this:
+\begin{center}\includegraphics[width=\textwidth]{addng_materials.png}\end{center}
+\subsubsection{Adding lighting}
+We have 2 major lighting issues in this project - the Sun is not emitting any light of its own and the background doesn't look like space. Let us start by fixing the lighting for the Sun:
+\begin{enumerate}
+	\item Remove the `Directional Light' component from the hierarchy view (right-click $>$ Delete)
+	\item Browse to `Sun material' in the projects panel and check the `Emission' property box
+	\item It is possible to set a texture map for the emission color (which will essentially form a layer over the existing texture) - Go to the `Color' parameter under `Emission' $>$ Click the little dot next to `Color' $>$ Select a suitable texture map
+	\item Set a suitable emission color (anything between yellow and orange should work for the Sun)
+	\item (Optional, since 2019+ releases do not have this feature) Set the emission color brightness to an value to your liking
+\end{enumerate}
+\begin{center}\includegraphics[width=\textwidth]{sun_emission.png}\end{center}
+Now the sun has a little emission characteristic, but it still does not emit its own light onto the Earth and Moon. To do this, let us first understand the basic types of light objects in Unity:
+\begin{itemize}
+	\item ambient light: used for basic illumination (will be discussed later)
+	\item directional light: used for illumination and establish the time of day if required
+	\item point light: sends out light in all directions
+	\item spot light: acts like the lights on a stage; illuminates a particular region
+\end{itemize}
+You will probably have guessed by now that we need to add a point light object as a child of the Sun. To do this, go to the `GameObject' tab $>$ Light $>$ Point Light. Reset its transform component if needed and set it as a child of the Sun. Play around with the parameters a little to get an appropriate lighting effect. You might want to rename this to something like `Sunlight'. 
+\vspace{6pt}
+
+If you have followed until now, your window should look similar to this (notice the difference in lighting between the 2 screenshots on this page):
+\begin{center}\includegraphics[width=\textwidth]{add_sunlight.png}\end{center}
+Now that we have set up the lighting of the Sun, the only thing left to do is change the background and add ambient light. In Unity, the background is referred to as the Skybox. To setup the Skybox material:
+\begin{enumerate}
+	\item Go to the `Project' panel $>$ Click on `Create' $>$ Material
+	\item Rename it to something appropriate
+	\item In the `Inspector' panel $>$ Click the shader dropdown $>$ Skybox $>$ 6 Sided
+	\item Set all 6 texture maps to the `space' texture (you could have multiple space textures and set them accordingly, but here we have only one to work with)
+\end{enumerate}
+Now it is time to add this material to the Skybox. To do this, go to the `Window' tab $>$ Lighting $>$ Settings (In some versions of Unity, you will have to go to `Window' $>$ Rendering $>$ Lighting Settings). Drag and drop the skybox material onto the corresponding property in the pop-up window.
+\vspace{6pt}
+
+We don't really need to add any ambient light, but we can do it by playing around with the parameters within the `Enviromment Lighting' section of the same window to add a little more flair to the scene. Once we are done with this, our scene should start looking a lot more like the solar system.
+\begin{center}\includegraphics[width=\textwidth]{final_lighting.png}\end{center}
+\textbf{NOTE:} While adding a lot of lights into a scene might make it look somewhat better, it is important to understand that more lights make the game more processor intensive and can adversely affect frame rates. It is hence advisable to work with as little light objects as possible.
+\subsubsection{Adding audio}
+While a solar system simulation doesn't necessarily need any audio, many other projects do. We will add some basic audio to illustrate some basic audio concepts in Unity. We might want to add a burning sound effect to the Sun and some sort of humming sound to the Earth which fades in and out as the distance of the Earth from the camera changes.
+\vspace{6pt}
+
+There are 2 audio components that we will work with. The audio source component has to be attached to the game object which is meant to emit sound, while the audio listener is often attached to a camera object. As the name suggests, the audio listener picks up the sound emitted from the audio sources (intensity depends on the distance between the source and listener). The listener is a simple component -  it has no properties and can only be turned on or off.
+\vspace{6pt}
+
+To add the audio source component to the game objects, follow these steps (I will illustrate it for the Earth object, since we will also need to edit 3D sound settings for it):
+\begin{enumerate}
+	\item In the `Inspector' panel $>$ Add Component $>$ Audio $>$ Audio Source
+	\item From the project panel, drag and drop the `dronehum.aif' audio file onto the AudioClip parameter in the inspector panel (if you go into play mode, you will hardly notice the fading effect of the sound)
+	\item To make the fade effect more prominent, 
+\end{enumerate}
+If you followed along, your audio source component settings should look similar to this:
+\begin{center}
+\includegraphics[width=\textwidth]{adding_audio.png}
+\end{center}
 
 \hrulefill
 \pagebreak
