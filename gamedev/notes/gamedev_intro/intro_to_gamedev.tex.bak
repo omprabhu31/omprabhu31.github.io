@@ -371,12 +371,14 @@ To add the audio source component to the game objects, follow these steps (I wil
 \begin{enumerate}
 	\item In the `Inspector' panel $>$ Add Component $>$ Audio $>$ Audio Source
 	\item From the project panel, drag and drop the `dronehum.aif' audio file onto the AudioClip parameter in the inspector panel (if you go into play mode, you will hardly notice the fading effect of the sound)
-	\item To make the fade effect more prominent, 
+	\item To make the fade effect more prominent, go to the Audio Source component $>$ 3D Sound Settings $>$ set the Min and Max distances to appropriate values and adjust the volume rolloff to your liking
 \end{enumerate}
-If you followed along, your audio source component settings should look similar to this:
+Repeat the same process for the Sun (since it is at a fixed position, no need to change any 3D sound settings. If you followed along, your audio source component settings should look similar to this:
 \begin{center}
 \includegraphics[width=\textwidth]{adding_audio.png}
 \end{center}
+\subsection{Adding cameras and adjusting views}
+A camera object in Unity is far from its real life counterpart. What a camera in Unity essentially does is project the 3D geometric information onto a 2D screen. We can choose to have multiple cameras in a single scene and show them simultaneously on screen.
 
 \hrulefill
 \pagebreak
