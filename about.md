@@ -13,7 +13,7 @@ I love playing video games (any genre, but I prefer story rich stuff the most). 
 Here's a sneak peak from my Steam art gallery:
 
 <img src="/assets/img/lis_finalchoice.jpg" alt="Life is Strange" width="454">
-<img src="/assets/img/lighthouseview.jpg" alt="Life is Strange" width="454">
+<img src="/assets/img/mantroid_planet.jpg" alt="The Awesome Adventures of Captain Spirit" width="454">
 <img src="/assets/img/gizaview.jpg" alt="Assassin's Creed Origins" width="454">
 <img src="/assets/img/house.jpg" alt="What Remains of Edith Finch" width="454">
 
