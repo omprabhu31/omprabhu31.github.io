@@ -22,3 +22,10 @@
 \contentsline {subsubsection}{\numberline {5.4.2}Adding lighting}{12}{subsubsection.5.4.2}%
 \contentsline {subsubsection}{\numberline {5.4.3}Adding audio}{14}{subsubsection.5.4.3}%
 \contentsline {subsection}{\numberline {5.5}Adding cameras and adjusting views}{15}{subsection.5.5}%
+\contentsline {subsection}{\numberline {5.6}Finishing, building and deploying a project}{17}{subsection.5.6}%
+\contentsline {section}{\numberline {6}Roller Madness}{18}{section.6}%
+\contentsline {section}{\numberline {7}Box Shooter}{19}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Unity programming concepts}{19}{subsection.7.1}%
+\contentsline {subsubsection}{\numberline {7.1.1}Referencing gameObjects in scripts}{20}{subsubsection.7.1.1}%
+\contentsline {subsubsection}{\numberline {7.1.2}Referencing components in scripts}{21}{subsubsection.7.1.2}%
+\contentsline {subsection}{\numberline {7.2}Setting things up}{21}{subsection.7.2}%

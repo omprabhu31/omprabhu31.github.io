@@ -21,3 +21,10 @@ Here are some of my projects in Unity3D along with their respective project file
 > This is my second project as part of the [Introduction to Game Development](https://www.coursera.org/learn/game-development?specialization=game-development) course - this is where many theory concepts actually come into action while building out a simple but fully functional game. The goal is to collect as many coins as possible while avoiding enemies or the death zone.
 >
 > Check it out here: [Play the game](/gamedev/files/rollermadness/Builds/WebGL/index.html) / [Project files](https://github.com/omprabhu31/omprabhu31.github.io/tree/master/gamedev/files/rollermadness)
+
+> <h3>Box Shooter</h3>
+> <i>Made using Unity 5.6.7f1</i>
+>
+> This is my final project as part of the [Introduction to Game Development](https://www.coursera.org/learn/game-development?specialization=game-development) course - this is where earlier design concepts along with basic programming combine to produce a simple FPS game, quite advanced compared to the earlier two projects.
+>
+> <i>(This project is currently in the works. The links should be up in about a week.)</i>

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.7.11)  13 JUL 2020 23:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.7.11)  16 JUL 2020 00:06
 entering extended mode
 **./intro_to_gamedev.tex
 (intro_to_gamedev.tex
@@ -654,107 +654,149 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
  [1
 
 {C:/Users/Om Prabhu/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2]
-<gamedev_basic_factors_to_consider.png, id=147, 492.03825pt x 298.11375pt>
+<gamedev_basic_factors_to_consider.png, id=182, 492.03825pt x 298.11375pt>
 File: gamedev_basic_factors_to_consider.png Graphic file (type png)
 <use gamedev_basic_factors_to_consider.png>
 Package pdftex.def Info: gamedev_basic_factors_to_consider.png  used on input l
 ine 103.
 (pdftex.def)             Requested size: 393.63113pt x 238.49132pt.
-<game_design_hierarchy.png, id=149, 534.19576pt x 302.3295pt>
+<game_design_hierarchy.png, id=184, 534.19576pt x 302.3295pt>
 File: game_design_hierarchy.png Graphic file (type png)
 <use game_design_hierarchy.png>
 Package pdftex.def Info: game_design_hierarchy.png  used on input line 107.
 (pdftex.def)             Requested size: 427.3572pt x 241.86392pt.
  [3 <./gamedev_basic_factors_to_consider.png> <./game_design_hierarchy.png>] [4
 ]
-<unity_default_layout.png, id=162, 1156.32pt x 620.3175pt>
+<unity_default_layout.png, id=197, 1156.32pt x 620.3175pt>
 File: unity_default_layout.png Graphic file (type png)
 <use unity_default_layout.png>
 Package pdftex.def Info: unity_default_layout.png  used on input line 157.
 (pdftex.def)             Requested size: 483.69684pt x 259.48093pt.
-<unity_custom_layout.png, id=163, 1445.4pt x 775.39688pt>
+<unity_custom_layout.png, id=198, 1445.4pt x 775.39688pt>
 File: unity_custom_layout.png Graphic file (type png)
 <use unity_custom_layout.png>
 Package pdftex.def Info: unity_custom_layout.png  used on input line 162.
 (pdftex.def)             Requested size: 483.69684pt x 259.47856pt.
  [5 <./unity_default_layout.png>] [6 <./unity_custom_layout.png>]
-<graphics_concepts.png, id=174, 481.8pt x 267.399pt>
+<graphics_concepts.png, id=209, 481.8pt x 267.399pt>
 File: graphics_concepts.png Graphic file (type png)
 <use graphics_concepts.png>
 Package pdftex.def Info: graphics_concepts.png  used on input line 185.
 (pdftex.def)             Requested size: 483.69684pt x 268.45918pt.
  [7 <./graphics_concepts.png>] [8]
-<solarsystem_startscreen.png, id=190, 1156.32pt x 620.3175pt>
+<solarsystem_startscreen.png, id=225, 1156.32pt x 620.3175pt>
 File: solarsystem_startscreen.png Graphic file (type png)
 <use solarsystem_startscreen.png>
-Package pdftex.def Info: solarsystem_startscreen.png  used on input line 244.
+Package pdftex.def Info: solarsystem_startscreen.png  used on input line 249.
 (pdftex.def)             Requested size: 483.69684pt x 259.48093pt.
-<add_sun_earth_moon.png, id=191, 1156.32pt x 620.3175pt>
+<add_sun_earth_moon.png, id=226, 1156.32pt x 620.3175pt>
 File: add_sun_earth_moon.png Graphic file (type png)
 <use add_sun_earth_moon.png>
-Package pdftex.def Info: add_sun_earth_moon.png  used on input line 259.
+Package pdftex.def Info: add_sun_earth_moon.png  used on input line 264.
 (pdftex.def)             Requested size: 483.69684pt x 259.48093pt.
  [9 <./solarsystem_startscreen.png>]
-<rotatearound_earth.png, id=202, 335.45325pt x 139.722pt>
+<rotatearound_earth.png, id=237, 335.45325pt x 139.722pt>
 File: rotatearound_earth.png Graphic file (type png)
 <use rotatearound_earth.png>
-Package pdftex.def Info: rotatearound_earth.png  used on input line 284.
+Package pdftex.def Info: rotatearound_earth.png  used on input line 289.
 (pdftex.def)             Requested size: 335.45241pt x 139.72165pt.
  [10 <./add_sun_earth_moon.png>] [11 <./rotatearound_earth.png>]
-<addng_materials.png, id=217, 1156.32pt x 620.3175pt>
+<addng_materials.png, id=252, 1156.32pt x 620.3175pt>
 File: addng_materials.png Graphic file (type png)
 <use addng_materials.png>
-Package pdftex.def Info: addng_materials.png  used on input line 327.
+Package pdftex.def Info: addng_materials.png  used on input line 332.
 (pdftex.def)             Requested size: 483.69684pt x 259.48093pt.
-<sun_emission.png, id=218, 1156.32pt x 620.3175pt>
+<sun_emission.png, id=253, 1156.32pt x 620.3175pt>
 File: sun_emission.png Graphic file (type png)
 <use sun_emission.png>
-Package pdftex.def Info: sun_emission.png  used on input line 337.
+Package pdftex.def Info: sun_emission.png  used on input line 342.
 (pdftex.def)             Requested size: 483.69684pt x 259.48093pt.
  [12 <./addng_materials.png>]
-<add_sunlight.png, id=233, 1156.32pt x 620.3175pt>
+<add_sunlight.png, id=268, 1156.32pt x 620.3175pt>
 File: add_sunlight.png Graphic file (type png)
 <use add_sunlight.png>
-Package pdftex.def Info: add_sunlight.png  used on input line 349.
+Package pdftex.def Info: add_sunlight.png  used on input line 354.
 (pdftex.def)             Requested size: 483.69684pt x 259.48093pt.
  [13 <./sun_emission.png> <./add_sunlight.png>]
-<final_lighting.png, id=241, 1156.32pt x 620.3175pt>
+<final_lighting.png, id=276, 1156.32pt x 620.3175pt>
 File: final_lighting.png Graphic file (type png)
 <use final_lighting.png>
-Package pdftex.def Info: final_lighting.png  used on input line 361.
+Package pdftex.def Info: final_lighting.png  used on input line 366.
 (pdftex.def)             Requested size: 483.69684pt x 259.48093pt.
  [14 <./final_lighting.png>]
-<adding_audio.png, id=253, 1156.32pt x 620.3175pt>
+<adding_audio.png, id=288, 1156.32pt x 620.3175pt>
 File: adding_audio.png Graphic file (type png)
 <use adding_audio.png>
-Package pdftex.def Info: adding_audio.png  used on input line 378.
+Package pdftex.def Info: adding_audio.png  used on input line 383.
 (pdftex.def)             Requested size: 483.69684pt x 259.48093pt.
-<view_frustum.png, id=254, 482.40225pt x 254.1495pt>
+<view_frustum.png, id=289, 482.40225pt x 254.1495pt>
 File: view_frustum.png Graphic file (type png)
 <use view_frustum.png>
-Package pdftex.def Info: view_frustum.png  used on input line 385.
+Package pdftex.def Info: view_frustum.png  used on input line 390.
 (pdftex.def)             Requested size: 482.40106pt x 254.14888pt.
  [15 <./adding_audio.png> <./view_frustum.png>]
-<minimap_camera.png, id=262, 1156.32pt x 620.3175pt>
+<minimap_camera.png, id=297, 1156.32pt x 620.3175pt>
 File: minimap_camera.png Graphic file (type png)
 <use minimap_camera.png>
-Package pdftex.def Info: minimap_camera.png  used on input line 404.
+Package pdftex.def Info: minimap_camera.png  used on input line 409.
 (pdftex.def)             Requested size: 483.69684pt x 259.48093pt.
  [16 <./minimap_camera.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 411.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 411.
+<solarsystem_final.png, id=311, 1156.32pt x 620.3175pt>
+File: solarsystem_final.png Graphic file (type png)
+<use solarsystem_final.png>
+Package pdftex.def Info: solarsystem_final.png  used on input line 421.
+(pdftex.def)             Requested size: 483.69684pt x 259.48093pt.
+ [17 <./solarsystem_final.png>] [18]
+<program_basic_structure.png, id=327, 522.753pt x 233.07076pt>
+File: program_basic_structure.png Graphic file (type png)
+<use program_basic_structure.png>
+Package pdftex.def Info: program_basic_structure.png  used on input line 465.
+(pdftex.def)             Requested size: 483.69684pt x 215.65463pt.
+ [19 <./program_basic_structure.png>]
+<basic_target_mover.png, id=334, 519.74174pt x 213.79875pt>
+File: basic_target_mover.png Graphic file (type png)
+<use basic_target_mover.png>
+Package pdftex.def Info: basic_target_mover.png  used on input line 475.
+(pdftex.def)             Requested size: 483.69684pt x 198.97757pt.
+<ecent_cycle.png, id=335, 416.757pt x 150.5625pt>
+File: ecent_cycle.png Graphic file (type png)
+<use ecent_cycle.png>
+Package pdftex.def Info: ecent_cycle.png  used on input line 477.
+(pdftex.def)             Requested size: 416.75598pt x 150.56212pt.
+<reference_local_gameobject.png, id=336, 302.3295pt x 72.87225pt>
+File: reference_local_gameobject.png Graphic file (type png)
+<use reference_local_gameobject.png>
+Package pdftex.def Info: reference_local_gameobject.png  used on input line 481
+.
+(pdftex.def)             Requested size: 302.32875pt x 72.87207pt.
+<reference_global_gameobject.png, id=337, 284.86424pt x 186.6975pt>
+File: reference_global_gameobject.png Graphic file (type png)
+<use reference_global_gameobject.png>
+Package pdftex.def Info: reference_global_gameobject.png  used on input line 48
+3.
+(pdftex.def)             Requested size: 284.86354pt x 186.69704pt.
+ [20 <./basic_target_mover.png> <./ecent_cycle.png> <./reference_local_gameobje
+ct.png>]
+<reference_components.png, id=345, 279.444pt x 110.814pt>
+File: reference_components.png Graphic file (type png)
+<use reference_components.png>
+Package pdftex.def Info: reference_components.png  used on input line 494.
+(pdftex.def)             Requested size: 279.44331pt x 110.8137pt.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 511.
+ [21 <./reference_global_gameobject.png> <./reference_components.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 511.
  (intro_to_gamedev.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 411.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 411.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 511.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 511.
 Package rerunfilecheck Info: File `intro_to_gamedev.out' has not changed.
-(rerunfilecheck)             Checksum: 821938B623FE4D35DC7DA84D003CB291;1743.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 411.
+(rerunfilecheck)             Checksum: 98D679961BAD2D9D9FB66FC58BDEDBC9;2263.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 511.
  ) 
 Here is how much of TeX's memory you used:
- 10681 strings out of 480790
- 175577 string characters out of 2893515
- 586844 words of memory out of 3000000
- 26371 multiletter control sequences out of 15000+200000
+ 10752 strings out of 480790
+ 177045 string characters out of 2893515
+ 587844 words of memory out of 3000000
+ 26413 multiletter control sequences out of 15000+200000
  542360 words of font info for 62 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  45i,6n,47p,617b,439s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -769,9 +811,9 @@ sfonts/cm/cmr12.pfb><C:/Users/Om Prabhu/AppData/Local/Programs/MiKTeX 2.9/fonts
 /type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Om Prabhu/AppData/Local/Programs
 /MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Om Prabhu/AppDa
 ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on intro_to_gamedev.pdf (16 pages, 7678529 bytes).
+Output written on intro_to_gamedev.pdf (21 pages, 8927955 bytes).
 PDF statistics:
- 326 PDF objects out of 1000 (max. 8388607)
- 81 named destinations out of 1000 (max. 500000)
- 268 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 413 PDF objects out of 1000 (max. 8388607)
+ 103 named destinations out of 1000 (max. 500000)
+ 359 words of extra memory for PDF output out of 10000 (max. 10000000)
 

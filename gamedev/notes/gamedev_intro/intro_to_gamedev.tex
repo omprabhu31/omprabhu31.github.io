@@ -174,7 +174,7 @@ Let us now take a brief look at the various elements in the Unity3D interface:
 You might now want to explore the Unity editor to look at various features. There are also many quick shortcuts in Unity that you can refer to here: \texttt{\href{https://docs.unity3d.com/Manual/UnityHotkeys.html}{https://docs.unity3d.com/Manual/UnityHotkeys.html}}.
 \vspace{6pt}
 
-\textbf{NOTE:} If you ever need to move/rename/delete asset files, do it in the Unity editor itself (in the Project Assets panel) and \textit{NOT} in the system file explorer - doing this may affect some connections between game objects and break your project.
+\textbf{NOTE:} If you ever need to move/rename/delete asset files, do it in the Unity editor itself (in the Project panel) and \textit{NOT} in the system file explorer - doing this may affect some connections between game objects and break your project.
 
 \hrulefill
 \pagebreak
@@ -228,7 +228,12 @@ Audio is very important to games, and also one of the tougher things to actually
 \end{itemize}
 \hrulefill
 \begin{center}\textbf{END OF WEEK 1}\end{center}
-This is the end of the documentation from Week 1 of the course. Continue reading forward for further weeks, or head over into Unity and try out some stuff yourself.
+This is the end of the documentation from Week 1 of the course. Continue reading forward, or head over into Unity and try out some stuff yourself. In subsequent weeks, we will be actually making stuff in Unity:
+\begin{itemize}
+	\item Week 2 - Solar System Simulation
+	\item Week 3 - Roller Madness
+	\item Week 4 - Box Shooter
+\end{itemize}
 
 \hrulefill
 \pagebreak
@@ -406,6 +411,101 @@ Note how the main camera view appeared again. By now you should have a screen lo
 
 \textbf{NOTE:} We now have 2 camera objects and hence 2 audio listeners. It is highly advised to have only one audio listener component switched on at any given point of time - otherwise Unity will pick one of those two, which may not be the one we want. To avoid this, switch off the audio listener component on the second camera (or remove it altogether since we won't be using it anyway).
 
+\subsection{Finishing, building and deploying a project}
+We have essentially completed our simulation of the solar system. We could do some more finish work like (this is all essentially based on the concepts covered earlier so I will not discuss this in detail):
+\begin{itemize}
+	\item add other planetary bodies  to complete the solar system
+	\item figure out how the \texttt{LookAtTarget.cs} and \texttt{ChangeLookAtTarget.cs} scripts work (hint: they are meant to work together so that clicking on the Earth will focus the main camera on the Earth and so on)
+\end{itemize}
+Take some time out to test your final project to test for any bugs. It is highly unlikely that this project will have any, but it is still a good idea to do so. By the end you should have something that looks like this:
+\begin{center}\includegraphics[width=\textwidth]{solarsystem_final.png}\end{center}
+Once you're done testing, it is time to finally build it so that it can be launched as an application from any specific platform. This can be done in the following manner:
+\begin{enumerate}
+	\item File $>$ Build Settings
+	\item Drag the `Solar System' scene from the projects panel into the `Build Settings' window
+	\item Select the platform for which you want to build the application. If needed, click on `Switch Platform'
+	\item Click on `Player Settings ...' and play around with the settings to your liking (do not mess around too much, the default settings work well for the most part)
+	\item Click on `Build', select a destination and wait for the build to be complete
+	\item Launch the application to see if it works successfully
+\end{enumerate}
+\textbf{NOTE:} Again for organizational purposes, it is better to save all your builds in the Unity project folder itself in a folder called `Builds' (eg: for a Windows build, save it in Builds $>$ Windows and so on).
+
+\hrulefill
+\begin{center}\textbf{END OF WEEK 2}\end{center}
+This is the end of the documentation from Week 2 of the course. In the next project, will be creating an actual game called `Roller Madness' which will put into action all the previously discussed concepts and more. Continue reading forward, or head over into Unity and try out some stuff yourself.
+
 \hrulefill
 \pagebreak
+\section{Roller Madness}
+\textit{(This section is in the works along with notes from Week 4 as well. I will probably be finishing Week 4 first since I am already going through the Week 4 course material at this time. However, there shouldn't be any major loss if you do Week 4 before Week 3. Expect it to be up in about 2 weeks.)}
+
+\hrulefill
+%\begin{center}\textbf{END OF WEEK 3}\end{center}
+%This is the end of the documentation from Week 3 of the course. In the next project, will be creating an actual game called `Box Shooter' which will put into action all the previously discussed concepts and more. Continue reading forward, or head over into Unity and try out some stuff yourself.
+
+%\hrulefill
+\pagebreak
+\section{Box Shooter}
+Up till now we have only used ready-made scripts. However it is important to be able to write our own code and modify existing code as well, irrespective of our role in the dev team. With a working knowledge of programming, we can go much further in Unity as well as other tools like Maya, Blender, etc. One must strive to gain at least an intermediate level of understanding in programming which will allow them to grasp the core language, write code and modify code from an example source.
+
+\subsection{Unity programming concepts}
+Unity follows an object-oriented approach to programming. Much like the real world, everything here is considered an object - it has properties (variable type, size, etc) and methods (functions which enable performing actions using code) associated with it. Most of the assets we have worked with up till now were visual objects. These objects have their properties (i.e. components) and methods (parameter values).
+\vspace{6pt}
+
+One important concept in object oriented programming is classes. Classes are templates for creating objects, much like prefabs which we used in the previous project. For example there could be a class for a 	`clock' object that defines how a general clock should function, but individual clocks generated from this class will have their own properties like color, timezone, etc.
+\vspace{6pt}
+
+Let us now discuss more about programming in Unity:
+\begin{itemize}
+	\item the language used to write code for Unity is C\#
+	\item a C\# script can either be created from scratch by `Project' panel $>$ Create $>$ C\# Script, or be imported from an existing source and later modified
+	\item a script is just another type of asset like sounds, textures, etc
+	\item scripts can be attached as components to game objects in a scene
+\end{itemize}
+\begin{center}\includegraphics[width=\textwidth]{program_basic_structure.png}\end{center}
+A typical script template generated by Unity is as above:
+\begin{itemize}
+	\item part 1: instructs the scripts to use classes from \texttt{UnityEngine} and \texttt{Systems.Collections} (these are namespaces which define various types of objects like lists, queues, arrays, etc)
+	\item part 2: \texttt{public class} indicates that this class will be visible as a component in Unity (public classes \& variables are generally seen as components in Unity)
+	\item part 2 (continued): \texttt{MonoBehaviour} is the base class from which every script in Unity derives (in essence, \texttt{SampleScript} is our custom class which uses stuff from the broader \texttt{MonoBehaviour} class) - Mono is an open-source implementation of Microsoft's .NET framework
+	\item part 3: variables \& functions that make up the details of the \texttt{SampleScript} class
+\end{itemize}
+\pagebreak
+Let us now look at a more complete C\# script:
+\begin{center}\includegraphics[width=\textwidth]{basic_target_mover.png}\end{center}
+The event driven environment means that we will often be adding functions to the class(es) to respond to events that occur in certain stages of the game.
+\begin{center}\includegraphics{ecent_cycle.png}\end{center}
+Just like \texttt{Start}, we have 2 other events \texttt{Awake} and \texttt{OnEnable} which allow us to set things up before the first frame update occurs. After this, the game is set into an event loop (each loop usually lasting a frame) - the \texttt{Update} and \texttt{LateUpdate} functions provide a way to keep a check on things while the game is playing. Finally, there are certain specific events that the program can be instructed to respond to in a certain manner (eg: \texttt{OnMouseDown} causes the camera view to shift down).
+\subsubsection{Referencing gameObjects in scripts}
+When a script is attached to game object, it can be referred to as either \texttt{this.gameObject} or simply \texttt{gameObject}. The following is a simple program that causes the transform of the object to change: 
+\begin{center}\includegraphics{reference_local_gameobject.png}\end{center}
+For referencing any other game object that the script is not attached to, we need to define a public variable of type gameObject that we attach to another game object/prefab in the editor. They can further be searched in the editor either using object names or tags. The following is a program to change the transform of global game objects:
+\begin{center}\includegraphics{reference_global_gameobject.png}\end{center}
+
+\subsubsection{Referencing components in scripts}
+Every property you see in the Unity Editor for a component can be reference and often modified through code. For example, in both of the above programs we referenced the position (\texttt{gameObject.transform.position.x}) along the X-axis and also modified it.
+\vspace{6pt}
+
+Quite often, there are multiple ways of implementing actions into code. Sometimes one is more efficient than the others. For example, \texttt{gameObject.transform.position.x += 1} and \texttt{gameObject.transform.Translate (1,0,0)} do exactly the same thing.
+\vspace{6pt}
+
+Not all components are properties of a game object like transform. To reference and/or manipulate these, we use the \texttt{gameObject.GetComponent<TYPE>()}
+function. The following program illustrates the above concept to the `RigidBody' component:
+\begin{center}\includegraphics{reference_components.png}\end{center}
+\textbf{NOTE:} Consider the following points while programming in Unity:
+\begin{enumerate}
+	\item The name of the class \textit{must} be the same as your script name. If you do change the name of your script, you will have to change the name of the class too - Unity does \textit{NOT} automatically do this
+	\item If, at any point, you find yourself stuck, do remember that Unity has an excellent documentation (\texttt{\href{https://docs.unity3d.com/}{https://docs.unity3d.com/}}) - many of your problems can be solved by a simple Google search
+	\item Use the community forum (\texttt{\href{https://unity.com/community}{https://unity.com/community}}) to your advantage - if you're stumbling upon an error, it is more than likely that someone else has too
+	\item Finally, here is a quick reference sheet on writing basic C\# code: \texttt{\href{https://omprabhu31.github.io/gamedev/notes/gamedev_intro/scripting_reference_sheet.pdf}{Reference Sheet}}
+\end{enumerate}
+\subsection{Setting things up}
+\textit{(This sub-section is currently in the works. Expect it to be up within a week's time.)}
+
+\hrulefill
+%\begin{center}\textbf{END OF COURSE DOCUMENTATION}\end{center}
+%This is the end of the course documentation. Thank you for showing interest and reading till the end. If you have any suggestions for this or other documents, feel free to contact me using the links on my website.
+
+%\hrulefill
+
 \end{document}
