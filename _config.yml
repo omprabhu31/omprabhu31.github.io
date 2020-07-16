@@ -8,7 +8,7 @@ theme_settings:
   title: Om Prabhu
   subtitle: also this is not animé
   avatar: assets/img/avatar_lis.png
-  favicon: avatar_lis_fvQ_icon.ico
+  favicon: favicon.ico
   description: "My Blog"
 
 #  Header and footer text
@@ -64,7 +64,9 @@ highlighter: rouge
 sass:
   sass_dir: _sass
   style: :compressed
-plugins: [jekyll-paginate]
+plugins: 
+  - jekyll-paginate
+  - jekyll-seo-tag
 exclude:
   - Gemfile
   - Gemfile.lock
