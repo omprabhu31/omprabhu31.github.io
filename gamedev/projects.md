@@ -25,6 +25,6 @@ Here are some of my projects in Unity3D along with their respective project file
 > <h3>Box Shooter</h3>
 > <i>Made using Unity 5.6.7f1</i>
 >
-> This is my final project as part of the [Introduction to Game Development](https://www.coursera.org/learn/game-development?specialization=game-development) course - this is where earlier design concepts along with basic programming combine to produce a simple FPS game, quite advanced compared to the earlier two projects.
+> This is my final project as part of the [Introduction to Game Development](https://www.coursera.org/learn/game-development?specialization=game-development) course - this is where earlier design concepts along with basic programming coome together to produce a simple first person shooter. The goal is to reach the target score before time runs out.
 >
 > Check it out here: [Play the game](/gamedev/files/boxshooter/Builds/WebGL/index.html) / [Project files](https://github.com/omprabhu31/omprabhu31.github.io/tree/master/gamedev/files/boxshooter)
