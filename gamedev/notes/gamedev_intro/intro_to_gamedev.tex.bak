@@ -69,6 +69,9 @@
 
 \hrulefill
 \tableofcontents
+\vspace{6pt}
+
+\hrulefill
 \pagebreak
 
 \section{Introduction}
@@ -497,8 +500,64 @@ function. The following program illustrates the above concept to the `RigidBody'
 	\item The name of the class \textit{must} be the same as your script name. If you do change the name of your script, you will have to change the name of the class too - Unity does \textit{NOT} automatically do this
 	\item If, at any point, you find yourself stuck, do remember that Unity has an excellent documentation (\texttt{\href{https://docs.unity3d.com/}{https://docs.unity3d.com/}}) - many of your problems can be solved by a simple Google search
 	\item Use the community forum (\texttt{\href{https://unity.com/community}{https://unity.com/community}}) to your advantage - if you're stumbling upon an error, it is more than likely that someone else has too
-	\item Here is a quick reference sheet on writing basic C\# code: \texttt{\href{https://omprabhu31.github.io/gamedev/notes/gamedev_intro/scripting_reference_sheet.pdf}{Reference Sheet}}
-\end{enumerate}	
+	\item Finally, here is a quick reference sheet on writing basic C\# code: \texttt{\href{https://omprabhu31.github.io/gamedev/notes/gamedev_intro/scripting_reference_sheet.pdf}{Reference Sheet}}
+\end{enumerate}
+\subsection{Setting things up}
+In this project, we will dive a lot deeper into Unity by building out a custom game using our own custom scripts. Most of the time in this project, we will be modifying existing code rather than making scripts from scratch. Some of the concepts we will cover are:
+\begin{itemize}
+	\item creating custom C\# scripts using an IDE and basic debugging techniques
+	\item use of classes, variables and functions to respond to events
+	\item instantiate prefabs dynamically, obtain user input and update user interface through code
+\end{itemize}
+Similar to earlier projects, if you are trying this out yourself, you will have to find the assets in the GitHub repository. Once you have them downloaded, import them into the project. Since this is a single unity package file, import it by going to `Assets' $>$ Import Package $>$ Custom Package... $>$ Browse to the local file location.
+
+\subsection{Using scripts to move objects}
+In this subsection, we will apply the concepts of public variables, floating point numbers, boolean values and referencing components to create a basic script for moving a target object. Firstly, create a 3D object (I have created a cube) and name is as `Target' and apply the Target-Positive Material to it.
+\subsubsection{Basic object movement}
+A script to induce basic movement in a game object might look like this:
+\begin{itemize}
+	\item \texttt{Vector3.up}: a representation of the 3D vector (0,1,0) - references the Y component of the rotate and position properties of the transform respectively
+	\item \texttt{Time.deltaTime}: normalizes the motion for different frame rates
+	\begin{itemize}
+		\item[$-$] without this, the spinning would be slower on 15 FPS compared to 60 FPS
+		\item[$-$] multiplies by the time in seconds between frames (i.e. for 60 FPS, 1/60)
+		\item[$-$] for example at 60 FPS, Update is called 60 times per second - during every update, object rotates through (0,3,0) so total rotation in one second is (0,180,0)
+		\item[$-$] in contrast for 15 FPS, Update is called 15 times per second - during every update, object rotates through (0,12,0) so total rotation per second is again (0,180,0)
+		\item[$-$] as a result, consistence of spin motion is maintained but smoothness of the motion may vary	
+	\end{itemize}
+	\item \texttt{Mathf.Cos(Time.timeSinceLevelLoad)}: cumulative time since level load (converted to radians) - facilitates harmonic motion of the target object
+\end{itemize}
+\begin{center}\includegraphics[width=\textwidth]{basic_target_mover_float.png}\end{center}
+\subsubsection{\texttt{bool} datatype and \texttt{if} statements}
+With the above code, we can make our target game object spin as well as move up and down. If we only want it to spin, we can set the Motion Magnitude value to 0 within the editor (this will not affect the value in our script), and similarly for only motion. While this is easy enough, it is not user-friendly and game designers might want simple options to switch these properties on and off. When faced with words like on and off, true and false, etc, a programmer's instinct leads them to work with the boolean datatype.
+\vspace{6pt}
+
+The bool datatype is a relatively simple one - it can store only values 0(false) and 1(true). We can define 2 bool variables named \texttt{doSpin} and \texttt{doMotion} and write if statements so that:
+\begin{itemize}
+	\item spin motion occurs only if \texttt{doSpin} is true
+	\item vertical motion occurs only if \texttt{doMotion} is true
+\end{itemize}
+And of course, we can individually switch these on/off in the editor without affecting values in the script file.
+\begin{center}\includegraphics[width=\textwidth]{basic_target_mover_bool.png}\end{center}
+\subsubsection{\texttt{enum} datatype and \texttt{switch} statements}
+Up till now we can effectively switch on and off the individual motion components. But what if we have more than two types of motion? We can go on creating bool variables and if statements but that would make the component interface in Unity too complicated and cluttered. A better solution is to use the enumeration datatype.
+\vspace{6pt} 
+
+Let us check out the \texttt{TargetMover.cs} script we have in our assets directory. One disadvantage is that we can only choose one type of motion (i.e. spin and vertical motion cannot be switched on simultaneously).
+\begin{center}\includegraphics[width=\textwidth]{target_mover_enum.png}\end{center}
+\pagebreak
+Some points to note about this are:
+\begin{itemize}
+	\item \texttt{public enum motionDirections {Spin,Horizontal,Vertical}}: basically an array where we define a list of all possible motion states
+	\item \texttt{public motionDirections motionState = motionDirections.Horizontal}: initializes the motion state to horizontal (can be changed in the editor)
+	\item the \texttt{switch} statement:
+	\begin{itemize}
+		\item[$-$] \texttt{case motionDirections.Spin}: initializes a case which instructs the program to check whether or not \texttt{motionDirections.Spin} is true
+		\item[$-$] every case must contain a \texttt{break} statement (so that the switch case breaks on the first occurrence of a satisfied case and ignores all further cases)
+		\item[$-$] there can be an optional \texttt{default} case which runs if none of the cases are satisfied
+	\end{itemize}
+\end{itemize}
+
 
 \hrulefill
 %\begin{center}\textbf{END OF COURSE DOCUMENTATION}\end{center}

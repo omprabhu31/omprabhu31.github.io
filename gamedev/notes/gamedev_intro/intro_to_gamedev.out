@@ -29,3 +29,8 @@
 \BOOKMARK [3][-]{subsubsection.7.1.1}{Referencing gameObjects in scripts}{subsection.7.1}% 29
 \BOOKMARK [3][-]{subsubsection.7.1.2}{Referencing components in scripts}{subsection.7.1}% 30
 \BOOKMARK [2][-]{subsection.7.2}{Setting things up}{section.7}% 31
+\BOOKMARK [2][-]{subsection.7.3}{Using scripts to move objects}{section.7}% 32
+\BOOKMARK [3][-]{subsubsection.7.3.1}{Basic object movement}{subsection.7.3}% 33
+\BOOKMARK [3][-]{subsubsection.7.3.2}{bool datatype and if statements}{subsection.7.3}% 34
+\BOOKMARK [3][-]{subsubsection.7.3.3}{enum datatype and switch statements}{subsection.7.3}% 35
+\BOOKMARK [2][-]{subsection.7.4}{Player, camera, projectiles and shooting}{section.7}% 36
