@@ -396,7 +396,9 @@ Again, let us briefly discuss this framework in another context of optimizing a 
 	\item Suggest hypothesis \& actions: change operations (eg: vary humidity and temperature based on time of day), get dynamic feedback from manufacturing output and take further actions if necessary
 \end{enumerate}
 \subsection{Impact of data on job functions}
-The digitization of society means that more and more data is being stored in digital formats. Due to this, almost all jobs have been or will be impacted by the advent of machine learning and data science.
+The digitization of society means that more and more data is being stored in digital formats. Due to this, almost all jobs have been or will be impacted by the advent of machine learning and data science. Let us see briefly how data science \& ML have made or are making their way into different industries:
+
+
 
 \subsection{Choosing an AI project}
 
