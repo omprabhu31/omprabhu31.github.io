@@ -12,4 +12,4 @@ You can find some handy documentation over here that I've been maintaining for s
 > <h3>AI For Everyone</h3>
 > <i>Offered by</i> [deeplearning.ai](https://www.deeplearning.ai/) <i>on</i> [Coursera](www.coursera.org)
 >
-> Notes: [.pdf](/academics/docs/AI For Everyone.pdf) / [.tex](https://github.com/omprabhu31/omprabhu31.github.io/blob/master/academics/docs/ai_for_everyone/AI%20for%20Everyone.tex)
+> Notes: [.pdf](/academics/docs/ai_for_everyone/AI For Everyone.pdf) / [.tex](https://github.com/omprabhu31/omprabhu31.github.io/blob/master/academics/docs/ai_for_everyone/AI%20for%20Everyone.tex)
