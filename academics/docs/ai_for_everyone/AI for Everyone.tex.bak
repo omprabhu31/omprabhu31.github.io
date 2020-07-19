@@ -397,12 +397,68 @@ Again, let us briefly discuss this framework in another context of optimizing a 
 \end{enumerate}
 \subsection{Impact of data on job functions}
 The digitization of society means that more and more data is being stored in digital formats. Due to this, almost all jobs have been or will be impacted by the advent of machine learning and data science. Let us see briefly how data science \& ML have made or are making their way into different industries:
-
-
-
+\begin{center}
+\begin{tabular}{|p{10em}|p{17em}|p{17em}|}
+\hline
+ & \textbf{Data Science} & \textbf{Machine Learning} \\
+\hline
+\textsc{Sales} & optimising a sales tunnel (refer Section 3.2) & automated lead sorting - prioritize certain marketing leads over others (contact CEO of large company over an intern at small company)\\
+\hline
+\textsc{Manufacturing} & optimising a manufacturing line (refer Section 3.2) & visual product inspection (AI algorithms can learn to figure out if products are defective or not)\\
+\hline
+\textsc{Recruiting} & optimising the recruiting process (analysing why people are not making it to certain stages or why too many people are making it) & automated resume screening based on sample dataset of resumes and whether to select candidate or not (fair and ethical screening free of any bias)\\
+\hline
+\textsc{Marketing} & A/B testing - launching 2 versions of a website to find out what appeals to consumers & customized product recommendations to significantly increase sales\\
+\hline
+\textsc{Agriculture} & crop analytics (find out what to plant and when to plant based on market conditions, soil \& weather conditions, etc) & precision agriculture (recognize presence of weeds through images/video and spray an appropriate amount of weed killers)\\
+\hline
+\end{tabular}
+\end{center}
+Of course, this list is not exhaustive and there are many more industries which have seen or will see the impact of AI soon enough.
 \subsection{Choosing an AI project}
+There are definitely a lot of things we can try to do with AI, but how to we choose an AI project? Let us discuss a general framework on how to choose an AI project. Many of these points have already been discussed, but let us revisit them in this context:
+\begin{itemize}
+	\item feasibility and value addition:
+	\begin{itemize}
+		\item must be feasible to do with AI and also add value to the business/application
+		\item brainstorming with cross-functional teams (comprising both AI experts as well as business domain experts) to narrow down projects
+	\end{itemize}
+	\item brainstorming framework:
+	\begin{itemize}
+		\item think about automating tasks rather than entire jobs (eg: for radiologists, AI might be useful in X-ray diagnosis but not as useful in consulting with other doctors or patients)
+		\item consider main drivers in business value and try to augment them using AI to increase the scale and productivity of the business
+		\item consider tasks which are particularly painstaking for humans and try to automate them if possible
+	\end{itemize}
+	\item do not insist on acquisition of big data
+	\begin{itemize}
+		\item try to make progress with small datasets and get dynamic feedback from the AI team as to what type of data to obtain further and what type of IT infrastructure to build
+	\end{itemize}
+\end{itemize}
+After brainstorming and narrowing down to a certain list of projects, it is time to pick one to work with. Committing to an AI project requires a lot of work to see it through and hence, it is important to conduct due diligence on it. Technical diligence is used to make sure the task is feasible to carry out using AI, while business diligence revolves more around deciding how much value it is going to add and if it is worth the effort.
+\begin{center}
+\begin{tabular}{|p{21.5em}|p{21.5em}|}
+\hline
+\textsc{Technical Diligence} & \textsc{Business Diligence} \\
+\hline
+can an AI system meet the desired performance & will automation lower costs enough?\\
+\hline
+how much data is needed & how much revenue/efficiency it will increase\\
+\hline
+engineering timeline (how long and how many people it will take) & will launching this project bring enough value to the business?\\
+\hline
+ & building spreadsheet financial models to estimate the value quantitatively\\
+\hline
+\end{tabular}
+\end{center}
+Another type of diligence one should try to perform is ethical diligence (i.e. is the society/environment being harmed). Any AI project should ideally add value to society and if not, it should not cause harm at least.
+\vspace{6pt}
 
-
+Another factor we need to consider is whether we want to build or buy (or maybe do a combination or both):
+\begin{itemize}
+	\item outsourcing ML projects can lead to easier access to datasets
+	\item data science projects are more commonly done in-house since they are highly tied to the business (it takes very deep business knowledge which is unlikely to occur through outsourcing)
+	\item try and build things that will be specialized to the project
+	\item avoid building things that are an industry standard
 \subsection{AI teams}
 
 \hrulefill

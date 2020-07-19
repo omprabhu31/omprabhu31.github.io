@@ -18,4 +18,4 @@
 \contentsline {subsection}{\numberline {3.2}Workflow of a data science project}{10}{subsection.3.2}%
 \contentsline {subsection}{\numberline {3.3}Impact of data on job functions}{11}{subsection.3.3}%
 \contentsline {subsection}{\numberline {3.4}Choosing an AI project}{11}{subsection.3.4}%
-\contentsline {subsection}{\numberline {3.5}AI teams}{11}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.5}Working with an AI team}{12}{subsection.3.5}%
