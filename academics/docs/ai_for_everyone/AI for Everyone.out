@@ -20,11 +20,22 @@
 \BOOKMARK [2][-]{subsection.3.4}{Choosing an AI project}{section.3}% 20
 \BOOKMARK [2][-]{subsection.3.5}{Working with an AI team}{section.3}% 21
 \BOOKMARK [2][-]{subsection.3.6}{Technical tools for AI teams}{section.3}% 22
-\BOOKMARK [1][-]{section.4}{Building AI in a company}{}% 23
+\BOOKMARK [1][-]{section.4}{Building AI in a Company}{}% 23
 \BOOKMARK [2][-]{subsection.4.1}{Smart speakers: a case study}{section.4}% 24
 \BOOKMARK [2][-]{subsection.4.2}{Self-driving cars: a case study}{section.4}% 25
 \BOOKMARK [2][-]{subsection.4.3}{Major roles in an AI team}{section.4}% 26
 \BOOKMARK [2][-]{subsection.4.4}{The AI transformation playbook}{section.4}% 27
 \BOOKMARK [2][-]{subsection.4.5}{First steps and pitfalls}{section.4}% 28
 \BOOKMARK [2][-]{subsection.4.6}{Major AI application areas}{section.4}% 29
-\BOOKMARK [2][-]{subsection.4.7}{Major AI techniques}{section.4}% 30
+\BOOKMARK [3][-]{subsubsection.4.6.1}{Computer vision}{subsection.4.6}% 30
+\BOOKMARK [3][-]{subsubsection.4.6.2}{Natural language processing}{subsection.4.6}% 31
+\BOOKMARK [3][-]{subsubsection.4.6.3}{Speech}{subsection.4.6}% 32
+\BOOKMARK [3][-]{subsubsection.4.6.4}{Robotics}{subsection.4.6}% 33
+\BOOKMARK [3][-]{subsubsection.4.6.5}{General machine learning}{subsection.4.6}% 34
+\BOOKMARK [2][-]{subsection.4.7}{Major AI techniques}{section.4}% 35
+\BOOKMARK [3][-]{subsubsection.4.7.1}{Unsupervised learning}{subsection.4.7}% 36
+\BOOKMARK [3][-]{subsubsection.4.7.2}{Transfer learning}{subsection.4.7}% 37
+\BOOKMARK [3][-]{subsubsection.4.7.3}{Reinforcement learning}{subsection.4.7}% 38
+\BOOKMARK [3][-]{subsubsection.4.7.4}{GANs \(generative adversarial networks\)}{subsection.4.7}% 39
+\BOOKMARK [3][-]{subsubsection.4.7.5}{Knowledge graph}{subsection.4.7}% 40
+\BOOKMARK [1][-]{section.5}{AI and Society}{}% 41

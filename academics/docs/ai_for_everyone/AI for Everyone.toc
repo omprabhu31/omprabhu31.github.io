@@ -1,30 +1,41 @@
-\contentsline {section}{\numberline {1}Introduction}{2}{section.1}%
-\contentsline {subsection}{\numberline {1.1}About myself}{2}{subsection.1.1}%
-\contentsline {subsection}{\numberline {1.2}About this course}{2}{subsection.1.2}%
-\contentsline {section}{\numberline {2}What is AI?}{3}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Machine Learning}{3}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Data}{4}{subsection.2.2}%
-\contentsline {subsubsection}{\numberline {2.2.1}Collection of data}{4}{subsubsection.2.2.1}%
-\contentsline {subsubsection}{\numberline {2.2.2}Misconceptions about data}{5}{subsubsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.3}AI terminology}{5}{subsection.2.3}%
-\contentsline {subsubsection}{\numberline {2.3.1}Machine learning vs. data science}{5}{subsubsection.2.3.1}%
-\contentsline {subsubsection}{\numberline {2.3.2}Deep learning}{6}{subsubsection.2.3.2}%
-\contentsline {subsubsection}{\numberline {2.3.3}The larger picture}{6}{subsubsection.2.3.3}%
-\contentsline {subsection}{\numberline {2.4}AI companies}{7}{subsection.2.4}%
-\contentsline {subsection}{\numberline {2.5}Limitations of AI}{7}{subsection.2.5}%
-\contentsline {subsection}{\numberline {2.6}Understanding deep learning}{8}{subsection.2.6}%
-\contentsline {section}{\numberline {3}Building AI Projects}{10}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Workflow of a machine learning project}{10}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Workflow of a data science project}{10}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Impact of data on job functions}{11}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Choosing an AI project}{11}{subsection.3.4}%
-\contentsline {subsection}{\numberline {3.5}Working with an AI team}{12}{subsection.3.5}%
-\contentsline {subsection}{\numberline {3.6}Technical tools for AI teams}{13}{subsection.3.6}%
-\contentsline {section}{\numberline {4}Building AI in a company}{14}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Smart speakers: a case study}{14}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Self-driving cars: a case study}{14}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Major roles in an AI team}{15}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}The AI transformation playbook}{16}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}First steps and pitfalls}{17}{subsection.4.5}%
-\contentsline {subsection}{\numberline {4.6}Major AI application areas}{17}{subsection.4.6}%
-\contentsline {subsection}{\numberline {4.7}Major AI techniques}{17}{subsection.4.7}%
+\contentsline {section}{\numberline {1}Introduction}{3}{section.1}%
+\contentsline {subsection}{\numberline {1.1}About myself}{3}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}About this course}{3}{subsection.1.2}%
+\contentsline {section}{\numberline {2}What is AI?}{4}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Machine Learning}{4}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Data}{5}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Collection of data}{5}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}Misconceptions about data}{6}{subsubsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.3}AI terminology}{6}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}Machine learning vs. data science}{6}{subsubsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.2}Deep learning}{7}{subsubsection.2.3.2}%
+\contentsline {subsubsection}{\numberline {2.3.3}The larger picture}{7}{subsubsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.4}AI companies}{8}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Limitations of AI}{8}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Understanding deep learning}{9}{subsection.2.6}%
+\contentsline {section}{\numberline {3}Building AI Projects}{11}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Workflow of a machine learning project}{11}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Workflow of a data science project}{11}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Impact of data on job functions}{12}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Choosing an AI project}{12}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Working with an AI team}{13}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Technical tools for AI teams}{14}{subsection.3.6}%
+\contentsline {section}{\numberline {4}Building AI in a Company}{15}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Smart speakers: a case study}{15}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Self-driving cars: a case study}{15}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Major roles in an AI team}{16}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}The AI transformation playbook}{17}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}First steps and pitfalls}{18}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Major AI application areas}{18}{subsection.4.6}%
+\contentsline {subsubsection}{\numberline {4.6.1}Computer vision}{18}{subsubsection.4.6.1}%
+\contentsline {subsubsection}{\numberline {4.6.2}Natural language processing}{18}{subsubsection.4.6.2}%
+\contentsline {subsubsection}{\numberline {4.6.3}Speech}{19}{subsubsection.4.6.3}%
+\contentsline {subsubsection}{\numberline {4.6.4}Robotics}{19}{subsubsection.4.6.4}%
+\contentsline {subsubsection}{\numberline {4.6.5}General machine learning}{19}{subsubsection.4.6.5}%
+\contentsline {subsection}{\numberline {4.7}Major AI techniques}{19}{subsection.4.7}%
+\contentsline {subsubsection}{\numberline {4.7.1}Unsupervised learning}{19}{subsubsection.4.7.1}%
+\contentsline {subsubsection}{\numberline {4.7.2}Transfer learning}{19}{subsubsection.4.7.2}%
+\contentsline {subsubsection}{\numberline {4.7.3}Reinforcement learning}{20}{subsubsection.4.7.3}%
+\contentsline {subsubsection}{\numberline {4.7.4}GANs (generative adversarial networks)}{20}{subsubsection.4.7.4}%
+\contentsline {subsubsection}{\numberline {4.7.5}Knowledge graph}{20}{subsubsection.4.7.5}%
+\contentsline {section}{\numberline {5}AI and Society}{21}{section.5}%

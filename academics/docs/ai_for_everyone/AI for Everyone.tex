@@ -494,7 +494,7 @@ This is the end of the course documentation from Week 2. Keep on reading further
 
 \hrulefill
 \pagebreak
-\section{Building AI in a company}
+\section{Building AI in a Company}
 Up till now, we have discussed what AI is and how to build an AI project. Let us now discuss some complex AI projects in depth and find out how AI projects fit in the context of a company.
 \subsection{Smart speakers: a case study}
 Let us go through a brief case study of how AI software is written to respond to voice commands like `Ok Google, tell me a joke'. There is a sequence of steps (known as an AI pipeline) needed to process the command:
@@ -545,7 +545,7 @@ Even though having a large team generally helps due to the possibility of specia
 
 Up till now, we have seen what an AI team comprises, but AI teams often need to work with other departments in the company to bring out maximum efficiency. This is where the AI transformation playbook comes in.
 \subsection{The AI transformation playbook}
-Just having a large AI team at its disposal does not make a company a good AI company. Many of the top AI companies follow most of the points in the AI transformation playbook in some way of the other (this is a term coined by Andrew Ng, a pioneer in ML technology, but is essentially a list of points that, if followed, is likely to make a company good at AI):
+Just having a large AI team at its disposal does not make a company a good AI company. Many of the top AI companies follow most of the points in the AI transformation playbook in some way of the other (this is a term coined by Andrew Ng, a pioneer in ML technology who also happens to be the instructor for this course, but is essentially a list of points that, if followed, is likely to make a company good at AI):
 \begin{enumerate}
 	\item Execute pilot projects to gain momentum
 	\begin{itemize}
@@ -585,7 +585,7 @@ Just having a large AI team at its disposal does not make a company a good AI co
 		\item may also help in recruitment procedures for the company
 	\end{itemize}
 \end{enumerate}
-If you wish to go through a more detailed version of the AI transformation playbook, you may do so here: \texttt{\href{https://landing.ai/ai-transformation-playbook/}{https://landing.ai/ai-transformation-playbook/}}.
+If you wish to go through the entire AI transformation playbook in much greater detail, you may do so here: \texttt{\href{https://landing.ai/ai-transformation-playbook/}{https://landing.ai/ai-transformation-playbook/}}.
 \subsection{First steps and pitfalls}
 Even after following all the points in the AI transformation playbook, there are companies which are subject to common pitfalls while taking their first steps towards an AI project.  Let us look at some of them:
 \begin{itemize}
@@ -600,9 +600,82 @@ Much of what we have discussed so far might sound great but can feel daunting wh
 
 Now that we have looked through the basics of AI technology and how to build and choose AI projects, let us now go through slightly more advanced concepts like reinforcement learning, computer vision, natural language processing, etc.
 \subsection{Major AI application areas}
-\textit{(This section is currently in the works. Expect it to be up within a week's time.)}
+AI today is being successfully applied in many industries involving image \& video data, language data, speech data, etc. Let's take a deeper look into a brief survey of of how AI is applied to these different areas.
+\subsubsection{Computer vision}
+One of the major successes of deep learning has been computer vision. To understand what computer vision is, let us look at some of its applications.
+\vspace{6pt}
+
+One of these applications is image classification/object recognition. For example, AI can take a picture and tell the user if it is of a cat. This technology is actually much more advanced than just recognizing cats $-$ there are applications to detect certain species of flowers, types of food, etc. And of course, one of the major implementations of this lies in face recognition.
+\vspace{6pt}
+
+Another type of computer vision algorithm is that of object detection. Hence rather than just recognize an object and label the whole image, we're trying to detect the different types of objects in the same image. For example, a self-driving car AI does not only recognize cars \& pedestrians but also shows their position. It is also possible to track the live position of cars, etc as they are moving.
+\vspace{6pt}
+
+Image segmentation takes this one step further $-$ it tells us not just where the cars are but also for every single pixel in the image, if that pixel is a part of a car or of a pedestrian, etc. This is commonly used in X-ray scans to detect particular organs.
+\subsubsection{Natural language processing}
+NLP refers to AI understanding everyday human language. One application of NLP lies in text classification (eg: to take an email and categorize it as spam or not spam, or take a product description and figure out which category it belongs to).
+\vspace{6pt}
+
+One type of text classification used widely is sentiment recognition \& analysis. This type of AI can take input like ``The food was good, but the ambience can be improved'' and output an expectation of the star rating the restaurant might get.
+\vspace{6pt}
+
+A second type of NLP is information retrieval, of which web search is probably the best example. This AI will take in a search string as input and help the user find relevant documents. Companies also use this internally to search within particular sets of documentation.
+\vspace{6pt}
+
+Name entity recognition is another type of NLP, which helps filter out certain types of names in large documents. For example, the input `I am fluent in English, Spanish and Japanese' should lead the NLP algorithm to filter out English, Spanish and Japanese as language names. They can also recognize phone numbers, countries, etc.
+\vspace{-6pt}
+
+NLP also features in applications of machine translation, where the AI translates an input phrase or document into a specific language that the user wants. Apart from the above, NLP can be used in a wide range of other applications like parsing, part-of-speech tagging (classify which words in a string are nouns, verbs, etc), etc. 
+\subsubsection{Speech}
+Modern AI technology has completely transformed how speech is processed by computers. A microphone records rapid variations in surrounding air pressure. These variations can be represented on a plot against time on a computer (this is the information a typical digital audio waveform contains). Speech recognition deals with taking inputs of a plot like this and figure out what the user said.
+\vspace{6pt}
+
+As we discussed earlier, one particular type of speech recognition is trigger word/wakeword detection. Another type of speech recognition used is speaker ID, where the problem is to take an audio clip and figure out the identity of the speaker.
+\vspace{6pt}
+
+Recently, text-to-speech has also gained a lot of traction. TTS is used in audio books and as aid in communication for people lacking the ability of speech.
+\subsubsection{Robotics}
+One of the applications in robotics we have already seen is that of a self-driving car. One of the main challenges with robotics are perception (figuring out what is in the world around us), motion planning (computing a path for the robot to follow) and control (sending commands to motors \& other electric components to execute the calculated path).
+\subsubsection{General machine learning}
+A majority of the applications we saw dealt with unstructured data. However ML works just as well for structured data. Structured data processing is often more specific to a company and it is harder for humans to understand the data at first glance and/or empathize with it.
 \subsection{Major AI techniques}
-\textit{(This section is currently in the works. Expect it to be up within a week's time.)}
+In the previous sections, we have mainly discussed only supervised learning. This term almost invites the question as to what is unsupervised learning? Apart from this, there are other AI techniques like reinforcement learning as well.
+\subsubsection{Unsupervised learning}
+The best known example of unsupervised learning is that of clustering. Suppose there is a shop that specializes in selling chocolates. It may sell cheap, low quality chocolates as well as expensive but high quality ones. If consumer buying patterns are plotted on a graph, it may reveal that buyers are separated into 2 groups $-$ some buy a lot of cheap chocolates while others buy a few expensive chocolates. A clustering algorithm automatically sorts this data into 2 clusters and this data can be used for market segmentation (for example, in an area with a nearby university, college students are more likely to buy cheaper chocolates so it would make more sense for the shop to stock the cheap ones). 
+\vspace{6pt}
+
+Unlike supervised learning, an unsupervised learning algorithm does not tell a system exactly what output  it wants. Instead what it does is feed the data and ask the system to find something peculiar or meaningful. In the above example, the algorithm just finds what are the different market segments without being told they belong to college students or working people, etc.
+\vspace{6pt}
+
+Unsupervised learning overcomes one of the major criticisms against supervised learning, which is that it requires a lot of labelled data. This opens a possibility to AI being able to learn much more like a human from much lesser data in the future.
+\subsubsection{Transfer learning}
+Say we have built an algorithm for self-driving cars and start deploying it. There might be regions with different types of vehicles like golf carts. Even though our system has been trained with a lot of data, it will contain very few images of golf carts. Instead of building another algorithm for golf cart detection from the ground up, we can use the technique of transfer learning. This technique lets us learn from task A and use the knowledge to help with task B. It particularly works very well if the dataset from task A is large.
+\subsubsection{Reinforcement learning}
+Let's say we want to write an algorithm for automating a helicopter. It is difficult to do this by supervised learning because, while in the case of card we had only a few types of objects to deal with, here we have a lot more. It is very difficult to specify what is the best way to fly an helicopter when it is in a certain position. This is where reinforcement learning comes in.
+\vspace{6pt}
+
+It is quite similar to how one would train a pet. A simulation is created to let the helicopter fly around. Whenever the AI flies the helicopter well, we give it a positive feedback and when it crashes, we give it a negative feedback. Over time, the AI learns how to fly the helicopter as it keeps on getting dynamic feedback. More formally, reinforcement learning uses a `reward signal' to tell the AI whether it is doing well or poorly $-$ it automatically learns to maximize its positive rewards.
+\vspace{6pt}
+
+In addition to this, reinforcement learning has also helped build algorithms for playing strategic games like Othello or chess, and also for playing video games. One of the weaknesses of reinforcement learning is that it is difficult to control the amount of data the system feeds to its own learning algorithm.
+\subsubsection{GANs (generative adversarial networks)}
+This AI technique was only recently designed in 2014. GANs are very good at synthesizing images from scratch. This aspect has caused GANs to gain a lot of traction in everything involved with computer graphics like video games and other media.
+\vspace{6pt}
+
+The general idea of GANs is of 2 networks (generative and discriminative) working hand in hand. The generative network generates stuff while the discriminative network evaluates it. The job of the generative network is to increase the error rate of the discriminative network (i.e. to try and fool the discriminative network as much as possible by producing novel images based on a true data distribution that the discriminative network thinks are not actually synthesized).
+\subsubsection{Knowledge graph}
+One of the more underrated AI techniques are knowledge graphs. A web search about a famous personality often leads in a huge string of links and a panel to the right showing some of their general details. These details are derived from a knowledge graph, which is nothing but a database that lists people and key information about them. Many companies build such databases of celebrities, movies, hotels, etc and can help extract a lot of important data relatively quickly.
+
+\hrulefill
+\begin{center}
+\textbf{END OF WEEK 3}
+\end{center}
+This is the end of the course documentation from Week 3. Keep on reading further for documentation from further weeks, or spend some time gaining further insight into the previously discussed topics.
+
+\hrulefill
+\pagebreak
+\section{AI and Society}
+\textit{(This section is currently in the works. Expect it to be up typically within a week's time.)}
 
 \hrulefill
 \end{document}
