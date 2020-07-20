@@ -19,3 +19,12 @@
 \contentsline {subsection}{\numberline {3.3}Impact of data on job functions}{11}{subsection.3.3}%
 \contentsline {subsection}{\numberline {3.4}Choosing an AI project}{11}{subsection.3.4}%
 \contentsline {subsection}{\numberline {3.5}Working with an AI team}{12}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Technical tools for AI teams}{13}{subsection.3.6}%
+\contentsline {section}{\numberline {4}Building AI in a company}{14}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Smart speakers: a case study}{14}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Self-driving cars: a case study}{14}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Major roles in an AI team}{15}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}The AI transformation playbook}{16}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}First steps and pitfalls}{17}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Major AI application areas}{17}{subsection.4.6}%
+\contentsline {subsection}{\numberline {4.7}Major AI techniques}{17}{subsection.4.7}%

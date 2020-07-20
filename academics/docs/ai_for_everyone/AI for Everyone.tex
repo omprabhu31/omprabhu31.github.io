@@ -438,7 +438,7 @@ After brainstorming and narrowing down to a certain list of projects, it is time
 \begin{center}
 \begin{tabular}{|p{21.5em}|p{21.5em}|}
 \hline
-\textsc{Technical Diligence} & \textsc{Business Diligence} \\
+\textsc{Technical Diligence} & \textsc{Business Diligence}\\
 \hline
 can an AI system meet the desired performance & will automation lower costs enough?\\
 \hline
@@ -461,6 +461,147 @@ Another factor we need to consider is whether we want to build or buy (or maybe 
 	\item avoid building things that are an industry standard (eg: storage servers, computer hardware, etc)
 \end{itemize}
 \subsection{Working with an AI team}
+After a project is finalised, one must know how to work with an AI team in order to make sure that the project runs smoothly. Normally a business should have already an AI team but even if not, it is fairly easy to either hire AI engineers or learn a thing or two about AI yourself and get enough knowledge to get started. After this, we need to consider the following points while working with an AI team:
+\begin{itemize}
+	\item specify the acceptance criteria (eg: goal is to detect defects in coffee mugs with 95\% accuracy) and provide the dataset to the AI team to measure the accuracy
+	\begin{itemize}
+		\item training set $-$ dataset containing both input and output using which the AI learns the mapping
+		\item test set $-$ dataset with new input data which the AI team gives the algorithm to see what it outputs 
+	\end{itemize}
+	\item do not expect 100\% accuracy $-$ AI has its limitations and so does the amount of data being fed into the training set
+	\item keep taking feedback from the AI team as to whether the training data needs to be improved, etc
+\end{itemize}
+It is often a good idea to be in constant touch with the AI team to try and find a reasonable level of accuracy that passes technical as well as business diligence (since it might not be worth it if the AI has low accuracy).
+\pagebreak
+\subsection{Technical tools for AI teams}
+Let us finally discuss some of the most commonly used tools by AI teams to train and test learning algorithms. It is important to have a little knowledge about this since it gives us a better insight when communicating with the AI team.
+\begin{itemize}
+	\item machine learning framework: open source frameworks like PyTorch, TensorFlow, etc make writing software for ML systems much more efficient
+	\item research publications: AI technology breakthroughs published freely on the internet (a major source is Arxiv) and on GitHub repositories
+	\item CPUs and GPUs: CPU does majority of the computational work, while GPU hardware is very powerful for building large neural networks
+	\item cloud deployments: refers to renting computer servers such as from AWS, Azure, etc to use external servers to do the computation (as opposed to on-premises deployment, which means buying your own servers)
+	\item edge deployment: putting a processor right where data is collected to process data and make quick decisions
+	\begin{itemize}
+		\item for a self-driving car, there is not enough time to record data, send data to a cloud server and receive a response from the server
+		\item computation must happen quickly inside the car
+	\end{itemize}
+\end{itemize}
+\hrulefill
+\begin{center}
+\textbf{END OF WEEK 2}
+\end{center}
+This is the end of the course documentation from Week 2. Keep on reading further for documentation from further weeks, or spend some time gaining further insight into the previously discussed topics.
+
+\hrulefill
+\pagebreak
+\section{Building AI in a company}
+Up till now, we have discussed what AI is and how to build an AI project. Let us now discuss some complex AI projects in depth and find out how AI projects fit in the context of a company.
+\subsection{Smart speakers: a case study}
+Let us go through a brief case study of how AI software is written to respond to voice commands like `Ok Google, tell me a joke'. There is a sequence of steps (known as an AI pipeline) needed to process the command:
+\begin{center}
+\includegraphics[width=\textwidth]{smart_speaker_steps1.png}
+\end{center}
+Quite often, AI teams are split into various specialized groups and each of them focus on specific tasks in the AI pipeline. The AI pipeline is reasonably flexible in that it might change on occurrence of a slightly more complicated command like `Ok Google, set a timer for 3 minutes'.
+\vspace{6pt}
+
+In such a case, majority of the earlier process remains the same except the final step. The execution step will be separated into 2 further steps:
+\begin{itemize}
+	\item extract duration $-$ look at the text and pull out the phrase corresponding to the time duration
+	\item command execution $-$ specialized software component that can start a timer with the set duration
+\end{itemize}
+Smart speakers have a lot more functions apart from the above two and given the function we want to perform, we can figure out what the AI pipeline will look like. A major challenge for teams building a smart speaker lies in the intent recognition stage - a user can ask for a particular command in many ways (eg: tell me a joke, do you know any good jokes?, say something funny, make me laugh, etc).
+\vspace{6pt}
+
+To further solidify our understanding of the AI pipeline, let us look at a second case study on self-driving cars.
+\subsection{Self-driving cars: a case study}
+Let us try to construct the AI pipeline of how the AI in a self-driving car might make decisions on how to drive.
+\begin{center}\includegraphics[scale=0.8]{self_driving_car_steps.png}\end{center}
+Let us look into some details regarding car detection, pedestrian detection and motion planning:
+\begin{itemize}
+	\item car detection $-$ supervised learning algorithm to input images from all sides of the car, radar info and output positions of nearby cars
+	\item pedestrian detection $-$ very similar to car detection techniques
+	\item motion planning $-$ outputs the path the car should take as well as safe speed to avoid collisions with other cars (as well as overtaking parked cars)
+\end{itemize}
+This is a fairly simplified pipeline of how a self-driving car might work. Most self-driving cars would have an auto navigator that relies on GPS, and also use other stuff like gyroscopes. 
+\vspace{6pt}
+
+Another component in self-driving cars is that of trajectory prediction. Instead of just knowing the current position of cars, it is more useful to be able to predict how they are likely to move in the next few seconds (by focusing on turn indicators, brake lights, etc) to be able to avoid them even as they are moving. To drive safely we need to consider a lot of other factors, which might lead to a fairly complicated AI pipeline as below:
+\begin{center}
+\includegraphics[width=\textwidth]{self_driving_pipeline.png}
+\end{center}
+\subsection{Major roles in an AI team}
+In the previous example of a self-driving car, we saw a pretty complicated AI pipeline. To pull off a project like this, there are usually large AI teams divided into small groups to work on specialized tasks. Let's take a look into the major roles in such a team:
+\begin{itemize}
+	\item software engineer: write specialized software for command execution
+	\item machine learning engineer: write software responsible for A $\rightarrow$ B mappings, collect data and train neural networks by interating over the algorithm
+	\item machine learning researcher: perform research on how to extend state-of-the-art in ML, publish papers and maintain documentation
+	\item machine learning scientist: go through academic \& research literature to find ways to implement state-of-the-art technology to the current application
+	\item data scientist: examine data and gain insights; further discuss and present the insights to the team
+	\item data engineer: organize data and saving it in an easily accessible, secure and cost-effective way
+	\item AI product manager: help decide what is feasible and valuable, and what to finally build; manage deadlines and coordinating with the team
+\end{itemize}
+Even though having a large team generally helps due to the possibility of specialized jobs, it is possible to get started with a relatively small team of about 3-5 people. Even a basic knowledge can help to start analysing small amounts of data and training basic ML models.
+\vspace{6pt}
+
+Up till now, we have seen what an AI team comprises, but AI teams often need to work with other departments in the company to bring out maximum efficiency. This is where the AI transformation playbook comes in.
+\subsection{The AI transformation playbook}
+Just having a large AI team at its disposal does not make a company a good AI company. Many of the top AI companies follow most of the points in the AI transformation playbook in some way of the other (this is a term coined by Andrew Ng, a pioneer in ML technology, but is essentially a list of points that, if followed, is likely to make a company good at AI):
+\begin{enumerate}
+	\item Execute pilot projects to gain momentum
+	\begin{itemize}
+		\item initial project should be successful rather than valuable (helps gain the confidence of other departments in the company and investors)
+		\item project should preferably show quick traction (within 6-12 months) since it helps gain the required momentum and experience for future projects
+		\item can outsource data initially to work upon it and gain experience before building an in-house team
+	\end{itemize}
+	\item Build an in-house AI team
+	\begin{itemize}
+		\item centralized AI team instead of each business unit having their own AI component
+		\item build company-wide platforms (software tools, data infrastructure, etc)
+	\end{itemize}
+	\item Provide broad AI training
+	\begin{itemize}
+		\item executives and seniors should know the basics of AI and how to make resource allocation decisions
+		\item AI division leaders should know how to conduct diligence on projects before selecting them and monitor the progress of different teams working on the project
+		\item AI engineers/trainees should be able to collect the right type of data, build algorithms based off of it and then assemble various modules of the project to ship it 
+	\end{itemize}
+	\item Develop an AI strategy
+	\begin{itemize}
+		\item leverage AI to create an advantage specific to the industry sector
+		\item this point is not at number one because before planning out a strategy, it is important to have basic knowledge regarding AI (for example, one may put forth a strategy to collect a lot of data, but is that data really useful?)
+		\item the virtuous cycle of AI:
+		\begin{itemize}
+			\item better product $\rightarrow$ more users $\rightarrow$ more user data (which can be used to update the model) $\rightarrow$ better product (and so on)
+			\item difficult for newer companies to enter the market since already existing companies are likelier to have a better product and larger user base
+			\item small teams can take advantage of this by pushing into lesser explored industries and capitalizing later on their specialization
+		\end{itemize}
+		\item strategic data acquisition (eg: launching free services solely for data collection purposes)
+		\item unified data warehouses let engineers connect the dots (eg: in case of customer complaints, it is better to have the manufacturing data in the same place to find out exactly what caused the fault)
+	\end{itemize}
+	\item Develop internal and external communications
+	\begin{itemize}
+		\item how AI will benefit the company must be communicated to investors so relations are maintained
+		\item communicate with the government to introduce AI solutions in areas like health care, and even other areas where user privacy regulations are strict
+		\item user education as to how to deal with introduction of new technology
+		\item may also help in recruitment procedures for the company
+	\end{itemize}
+\end{enumerate}
+If you wish to go through a more detailed version of the AI transformation playbook, you may do so here: \texttt{\href{https://landing.ai/ai-transformation-playbook/}{https://landing.ai/ai-transformation-playbook/}}.
+\subsection{First steps and pitfalls}
+Even after following all the points in the AI transformation playbook, there are companies which are subject to common pitfalls while taking their first steps towards an AI project.  Let us look at some of them:
+\begin{itemize}
+	\item expecting AI to solve everything (instead, one should give due time to technical and business diligence to figure out if the project is actually possible and valuable using AI)
+	\item hiring employees of only one type i.e. only ML engineers or only software engineers, etc (there should be a cross-functional team that pairs business talent with engineering talent)
+	\item expecting AI projects to work right away (more often the first attempt is a disaster, but continuous iteration of training data over the algorithm can refine it a lot)
+	\item expecting traditional business approaches to work (instead, one should build a separate AI team and work with them for a more dynamic progress)
+	\item feeling the need to have a large team and a huge amount of data (often small teams working with small datasets can gain better insights before investing further in data collection)
+\end{itemize}
+Much of what we have discussed so far might sound great but can feel daunting when it comes to putting things to practice. In order to take the first step into the world of AI, it is better to get a certain group (maybe a group of friends) to learn about AI instead of going in solo. It is also important to brainstorm on different projects, even if they seem to small - it is better to start small and succeed rather than to go big and fail.
+\vspace{6pt}
+
+Now that we have looked through the basics of AI technology and how to build and choose AI projects, let us now go through slightly more advanced concepts like reinforcement learning, computer vision, natural language processing, etc.
+\subsection{Major AI application areas}
+\textit{(This section is currently in the works. Expect it to be up within a week's time.)}
+\subsection{Major AI techniques}
 \textit{(This section is currently in the works. Expect it to be up within a week's time.)}
 
 \hrulefill
