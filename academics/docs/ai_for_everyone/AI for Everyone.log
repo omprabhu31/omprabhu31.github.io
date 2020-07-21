@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.7.11)  20 JUL 2020 21:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.7.11)  21 JUL 2020 09:28
 entering extended mode
 **"./AI for Everyone.tex"
 ("AI for Everyone.tex"
@@ -665,7 +665,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \openout4 = `"AI for Everyone.toc"'.
 
  [2] [3]
-<data_vs_performance.png, id=230, 567.92175pt x 246.32025pt>
+<data_vs_performance.png, id=260, 567.92175pt x 246.32025pt>
 File: data_vs_performance.png Graphic file (type png)
 <use data_vs_performance.png>
 Package pdftex.def Info: data_vs_performance.png  used on input line 116.
@@ -676,53 +676,53 @@ Underfull \hbox (badness 10000) in paragraph at lines 246--246
  []
 
 [6]
-<neural_network.png, id=249, 876.876pt x 407.121pt>
+<neural_network.png, id=279, 876.876pt x 407.121pt>
 File: neural_network.png Graphic file (type png)
 <use neural_network.png>
 Package pdftex.def Info: neural_network.png  used on input line 269.
 (pdftex.def)             Requested size: 483.69684pt x 224.57573pt.
-<ai_terminology.png, id=250, 479.99326pt x 292.6935pt>
+<ai_terminology.png, id=280, 479.99326pt x 292.6935pt>
 File: ai_terminology.png Graphic file (type png)
 <use ai_terminology.png>
 Package pdftex.def Info: ai_terminology.png  used on input line 276.
 (pdftex.def)             Requested size: 383.99512pt x 234.1551pt.
  [7 <./neural_network.png> <./ai_terminology.png>]
-<customer_support_automation.png, id=258, 511.9125pt x 169.23225pt>
+<customer_support_automation.png, id=288, 511.9125pt x 169.23225pt>
 File: customer_support_automation.png Graphic file (type png)
 <use customer_support_automation.png>
 Package pdftex.def Info: customer_support_automation.png  used on input line 30
 1.
 (pdftex.def)             Requested size: 483.69684pt x 159.90466pt.
  [8 <./customer_support_automation.png>]
-<self_driving_car.png, id=268, 496.254pt x 142.131pt>
+<self_driving_car.png, id=298, 496.254pt x 142.131pt>
 File: self_driving_car.png Graphic file (type png)
 <use self_driving_car.png>
 Package pdftex.def Info: self_driving_car.png  used on input line 314.
 (pdftex.def)             Requested size: 483.69684pt x 138.53485pt.
-<deep_learning1.png, id=269, 401.0985pt x 146.34676pt>
+<deep_learning1.png, id=299, 401.0985pt x 146.34676pt>
 File: deep_learning1.png Graphic file (type png)
 <use deep_learning1.png>
 Package pdftex.def Info: deep_learning1.png  used on input line 328.
 (pdftex.def)             Requested size: 401.0975pt x 146.34639pt.
-<deep_learning2.png, id=270, 447.47176pt x 218.61674pt>
+<deep_learning2.png, id=300, 447.47176pt x 218.61674pt>
 File: deep_learning2.png Graphic file (type png)
 <use deep_learning2.png>
 Package pdftex.def Info: deep_learning2.png  used on input line 333.
 (pdftex.def)             Requested size: 447.47066pt x 218.6162pt.
  [9 <./self_driving_car.png> <./deep_learning1.png>]
-<face_recognition.png, id=277, 458.31226pt x 213.1965pt>
+<face_recognition.png, id=307, 458.31226pt x 213.1965pt>
 File: face_recognition.png Graphic file (type png)
 <use face_recognition.png>
 Package pdftex.def Info: face_recognition.png  used on input line 341.
 (pdftex.def)             Requested size: 458.31113pt x 213.19597pt.
  [10 <./deep_learning2.png> <./face_recognition.png>]
-<ecommerce_steps.png, id=284, 660.066pt x 132.495pt>
+<ecommerce_steps.png, id=314, 660.066pt x 132.495pt>
 File: ecommerce_steps.png Graphic file (type png)
 <use ecommerce_steps.png>
 Package pdftex.def Info: ecommerce_steps.png  used on input line 375.
 (pdftex.def)             Requested size: 483.69684pt x 97.09253pt.
  [11 <./ecommerce_steps.png>]
-<manufacturing_steps.png, id=299, 461.92575pt x 128.8815pt>
+<manufacturing_steps.png, id=329, 461.92575pt x 128.8815pt>
 File: manufacturing_steps.png Graphic file (type png)
 <use manufacturing_steps.png>
 Package pdftex.def Info: manufacturing_steps.png  used on input line 392.
@@ -738,39 +738,39 @@ Underfull \hbox (badness 10000) in paragraph at lines 409--409
  []
 
 [12 <./manufacturing_steps.png>] [13] [14]
-<smart_speaker_steps1.png, id=317, 761.244pt x 145.7445pt>
+<smart_speaker_steps1.png, id=347, 761.244pt x 145.7445pt>
 File: smart_speaker_steps1.png Graphic file (type png)
 <use smart_speaker_steps1.png>
 Package pdftex.def Info: smart_speaker_steps1.png  used on input line 502.
 (pdftex.def)             Requested size: 483.69684pt x 92.609pt.
-<self_driving_car_steps.png, id=318, 523.35526pt x 241.50224pt>
+<self_driving_car_steps.png, id=348, 523.35526pt x 241.50224pt>
 File: self_driving_car_steps.png Graphic file (type png)
 <use self_driving_car_steps.png>
 Package pdftex.def Info: self_driving_car_steps.png  used on input line 518.
 (pdftex.def)             Requested size: 418.68475pt x 193.20204pt.
  [15 <./smart_speaker_steps1.png> <./self_driving_car_steps.png>]
-<self_driving_pipeline.png, id=325, 1079.232pt x 481.19775pt>
+<self_driving_pipeline.png, id=355, 1079.232pt x 481.19775pt>
 File: self_driving_pipeline.png Graphic file (type png)
 <use self_driving_pipeline.png>
 Package pdftex.def Info: self_driving_pipeline.png  used on input line 530.
 (pdftex.def)             Requested size: 483.69684pt x 215.66322pt.
  [16 <./self_driving_pipeline.png>] [17] [18]
 [19] [20]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 681.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 693.
  [21]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 681.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 693.
  ("AI for Everyone.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 681.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 681.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 693.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 693.
 Package rerunfilecheck Info: File `"AI for Everyone".out' has not changed.
-(rerunfilecheck)             Checksum: EB38C269F26D0AFDFEA58CE320353773;2982.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 681.
+(rerunfilecheck)             Checksum: 219ADE3B34E1F59A6896ACDCCC8EA2BB;3422.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 693.
  ) 
 Here is how much of TeX's memory you used:
- 10745 strings out of 480790
- 176376 string characters out of 2893515
+ 10757 strings out of 480790
+ 176556 string characters out of 2893515
  590845 words of memory out of 3000000
- 26430 multiletter control sequences out of 15000+200000
+ 26436 multiletter control sequences out of 15000+200000
  542661 words of font info for 63 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  45i,8n,47p,734b,516s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -785,9 +785,9 @@ msfonts/cm/cmr12.pfb><C:/Users/Om Prabhu/AppData/Local/Programs/MiKTeX 2.9/font
 s/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Om Prabhu/AppData/Local/Program
 s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Om Prabhu/AppD
 ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on "AI for Everyone.pdf" (21 pages, 1562767 bytes).
+Output written on "AI for Everyone.pdf" (21 pages, 1566810 bytes).
 PDF statistics:
- 410 PDF objects out of 1000 (max. 8388607)
- 85 named destinations out of 1000 (max. 500000)
- 394 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 441 PDF objects out of 1000 (max. 8388607)
+ 91 named destinations out of 1000 (max. 500000)
+ 442 words of extra memory for PDF output out of 10000 (max. 10000000)
 
