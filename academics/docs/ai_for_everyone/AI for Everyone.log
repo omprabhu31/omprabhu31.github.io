@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.7.11)  21 JUL 2020 09:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.7.11)  21 JUL 2020 19:23
 entering extended mode
 **"./AI for Everyone.tex"
 ("AI for Everyone.tex"
@@ -756,21 +756,38 @@ Package pdftex.def Info: self_driving_pipeline.png  used on input line 530.
 (pdftex.def)             Requested size: 483.69684pt x 215.66322pt.
  [16 <./self_driving_pipeline.png>] [17] [18]
 [19] [20]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 693.
- [21]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 693.
+<word_plot.png, id=384, 473.97075pt x 287.8755pt>
+File: word_plot.png Graphic file (type png)
+<use word_plot.png>
+Package pdftex.def Info: word_plot.png  used on input line 707.
+(pdftex.def)             Requested size: 189.58493pt x 115.14815pt.
+ [21 <./word_plot.png>]
+<adversarial_attacks.png, id=390, 514.3215pt x 136.71075pt>
+File: adversarial_attacks.png Graphic file (type png)
+<use adversarial_attacks.png>
+Package pdftex.def Info: adversarial_attacks.png  used on input line 726.
+(pdftex.def)             Requested size: 308.59528pt x 82.02707pt.
+ [22 <./adversarial_attacks.png>]
+<automation_risk.png, id=396, 634.16925pt x 417.9615pt>
+File: automation_risk.png Graphic file (type png)
+<use automation_risk.png>
+Package pdftex.def Info: automation_risk.png  used on input line 749.
+(pdftex.def)             Requested size: 380.50449pt x 250.77882pt.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 768.
+ [23 <./automation_risk.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 768.
  ("AI for Everyone.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 693.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 693.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 768.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 768.
 Package rerunfilecheck Info: File `"AI for Everyone".out' has not changed.
-(rerunfilecheck)             Checksum: 219ADE3B34E1F59A6896ACDCCC8EA2BB;3422.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 693.
+(rerunfilecheck)             Checksum: 685E379269FE73A471A68E3283B486F5;3410.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 768.
  ) 
 Here is how much of TeX's memory you used:
- 10757 strings out of 480790
- 176556 string characters out of 2893515
+ 10777 strings out of 480790
+ 176957 string characters out of 2893515
  590845 words of memory out of 3000000
- 26436 multiletter control sequences out of 15000+200000
+ 26451 multiletter control sequences out of 15000+200000
  542661 words of font info for 63 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  45i,8n,47p,734b,516s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -785,9 +802,9 @@ msfonts/cm/cmr12.pfb><C:/Users/Om Prabhu/AppData/Local/Programs/MiKTeX 2.9/font
 s/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Om Prabhu/AppData/Local/Program
 s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Om Prabhu/AppD
 ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on "AI for Everyone.pdf" (21 pages, 1566810 bytes).
+Output written on "AI for Everyone.pdf" (23 pages, 1990609 bytes).
 PDF statistics:
- 441 PDF objects out of 1000 (max. 8388607)
- 91 named destinations out of 1000 (max. 500000)
- 442 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 456 PDF objects out of 1000 (max. 8388607)
+ 93 named destinations out of 1000 (max. 500000)
+ 457 words of extra memory for PDF output out of 10000 (max. 10000000)
 
