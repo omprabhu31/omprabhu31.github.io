@@ -6,3 +6,9 @@
 \contentsline {subsection}{\numberline {2.2}Supervised learning with neural networks}{4}{subsection.2.2}%
 \contentsline {subsection}{\numberline {2.3}Why is deep learning taking off now?}{5}{subsection.2.3}%
 \contentsline {section}{\numberline {3}Logistic Regression as a Neural Network}{6}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Derivatives (optional)}{6}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Binary classification}{7}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Logistic regression}{7}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Cost function in logistic regression}{8}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Gradient descent}{8}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Computation graph}{9}{subsection.3.6}%
