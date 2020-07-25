@@ -12,3 +12,18 @@
 \BOOKMARK [2][-]{subsection.3.4}{Cost function in logistic regression}{section.3}% 12
 \BOOKMARK [2][-]{subsection.3.5}{Gradient descent}{section.3}% 13
 \BOOKMARK [2][-]{subsection.3.6}{Computation graph}{section.3}% 14
+\BOOKMARK [3][-]{subsubsection.3.6.1}{Derivatives with a computation graph}{subsection.3.6}% 15
+\BOOKMARK [3][-]{subsubsection.3.6.2}{The chain rule for derivatives}{subsection.3.6}% 16
+\BOOKMARK [2][-]{subsection.3.7}{Computation graphs for logistic regression}{section.3}% 17
+\BOOKMARK [3][-]{subsubsection.3.7.1}{Gradient descent for a single training example}{subsection.3.7}% 18
+\BOOKMARK [3][-]{subsubsection.3.7.2}{Derivation of \040epstopdfLz \(optional\)}{subsection.3.7}% 19
+\BOOKMARK [3][-]{subsubsection.3.7.3}{Gradient descent on m examples}{subsection.3.7}% 20
+\BOOKMARK [2][-]{subsection.3.8}{Explaining the cost function \(optional\)}{section.3}% 21
+\BOOKMARK [1][-]{section.4}{Python and Vectorization}{}% 22
+\BOOKMARK [2][-]{subsection.4.1}{Vectorization}{section.4}% 23
+\BOOKMARK [2][-]{subsection.4.2}{Vectorizing logistic regression}{section.4}% 24
+\BOOKMARK [3][-]{subsubsection.4.2.1}{Vectorizing the forward propagation steps}{subsection.4.2}% 25
+\BOOKMARK [3][-]{subsubsection.4.2.2}{Vectorizing the gradient output of logistic regression}{subsection.4.2}% 26
+\BOOKMARK [2][-]{subsection.4.3}{Broadcasting in python}{section.4}% 27
+\BOOKMARK [2][-]{subsection.4.4}{Python and numpy vectors}{section.4}% 28
+\BOOKMARK [1][-]{section.5}{Shallow Neural Networks}{}% 29

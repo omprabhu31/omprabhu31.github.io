@@ -17,6 +17,8 @@
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
+\usepackage{fancyvrb}
+\fvset{tabsize=4}
 \theoremstyle{definition}
 \newtheorem{innercustomgeneric}{\customgenericname}
 \providecommand{\customgenericname}{}
@@ -140,7 +142,7 @@ Fast computation is very important in deep learning, since the idea of training 
 
 \hrulefill
 \begin{center}\textbf{END OF WEEK 1}\end{center}
-This is the end of the course documentation from Week 1. Keep on reading further for documentation from further weeks, or spend some time gaining further insight into the previously discussed topics.
+This is the end of the course documentation for Week 1. Keep on reading further for documentation from further weeks, or spend some time gaining further insight into the previously discussed topics.
 
 \hrulefill
 \pagebreak
@@ -148,7 +150,7 @@ This is the end of the course documentation from Week 1. Keep on reading further
 Now that we have an idea of what neural networks are and what they can do, let us dive into the basics of neural network programming. Many of these ideas can be discussed using the concept of logistic regression.
 \vspace{6pt}
 
-\textbf{NOTE:} Throughout this section and some other parts of the document, there will be extensive use of the following notation:
+\textbf{NOTE:} Throughout the document, there will be extensive use of the following notation:
 \begin{enumerate}
 	\item a single input feature vector has dimension $n_x$
 	\item a single training example is represented by $(x,y)$ $\rightarrow$ $x\in\mathbb{R}^{n_x},$ $y\in\{0,1\}$
@@ -186,7 +188,7 @@ Consider this simple function $f(a)=3a$. Let $a=2$, then $f(a)=6$. Let's now cha
 Now if we construct a triangle as in the diagram, we see that `nudging' $a$ to the right by $0.001$ causes $f(a)$ to increase by $0.003$. For each 1 unit of change in $a$, there is a corresponding change of 3 units in $f(a)$. 
 \vspace{6pt}
 
-We say that the slope, or derivative, of the function $f(a)$ is 3. More specifically, it is the derivative of the function at $a=2$. More formally, we define the derivative of a function at a specific point as the rate of change of the function value at that point. Mathematically, we can write this as
+We say that the slope, or derivative, of the function $f(a)$ is 3. More specifically, it is the derivative of the function with respect to $a$ at $a=2$. More formally, we define the derivative of a function at a specific point as the rate of change of the function value at that point. Mathematically, we can write this as
 $$\frac{\text{d}f(a)}{\text{d}a}=3=f^{\prime}(a)$$
 
 \begin{wrapfigure}[10]{R}{0.31\textwidth}
@@ -210,7 +212,7 @@ As it happens, the derivative of the function $f(a)=a^2$ at any given point on t
 This description of derivatives might make it look like they are an approximation, but this is not the case. In practice, the amount by which $a$ is changed is infinitesimally small, which gives rise to another concept in calculus known as limits (will not be discussed here). 
 \pagebreak
 
-If you wish to know more about derivatives and/or limits, feel free to go through the resources listed below: 
+If you wish to know more about derivatives and/or limits, feel free to go through the resources listed below. A expertise in differential calculus is not desired, but a working knowledge always helps: 
 \begin{itemize}
 	\item \texttt{\href{https://www.khanacademy.org/math/calculus-1/cs1-limits-and-continuity}{Limits and Continuity (by Khan Academy)}}
 	\item \texttt{\href{https://www.khanacademy.org/math/calculus-1/cs1-derivatives-definition-and-basic-rules}{Derivatives: Definition and Basic Rules (by Khan Academy)}}
@@ -339,6 +341,358 @@ $$w\equiv w-\alpha\left(\frac{\partial J(w,b)}{\partial w}\right)\text{; } b\equ
 When we actually get down to coding such and algorithm, we will use the following (mathematically inconsistent) notation:
 $$\text{d}w\equiv \frac{\partial J(w,b)}{\partial w} \text{; } \text{d}b\equiv \frac{\partial J(w,b)}{\partial b}\longrightarrow w\equiv w-\alpha\text{d}w; b\equiv b-\alpha\text{d}b$$ 
 \subsection{Computation graph}
+The computations of a neural network are organized in terms of a forward pass, in which we compute the output of the neural network, and a backward pass, in which we compute the derivatives. The computation graph explains why it is organized this way. To illustrate it, let's take a very simple example.
+\vspace{6pt}
+
+Let's say we want to compute a function $J(a,b,c)=3(a+bc)$. There are 3 steps involved in computing this function. First, we compute the value of $bc$ and maybe store that in a variable $u$. Then we compute $v=a+u$ and finally, we compute $J=3\times v$. We might construct a computation graph that might look like the one below.
+\begin{wrapfigure}[6]{L}{0.4\textwidth} \includegraphics[width=0.4\textwidth]{computation_graph.png}
+\end{wrapfigure}
+\vspace{-6pt}
+
+The computation graph comes in handy when there is some distinguished output variable $J$ that we want to optimize. And in case of logistic regression, $J$ is the cost function.
+\vspace{6pt}
+
+What we saw just now was the use of a forward pass to compute the value of $J$. Now let us see what a backward pass looks like and how it can be used to compute derivatives.
+\subsubsection{Derivatives with a computation graph}
+Say we want to compute the derivative of $J$ wrt $v$. Since $J=3v$, the value of the derivative is 3 (at all points, not just at $v=11$). We've essentially performed one step of the backward pass (or back propagation).
+\vspace{12pt}
+
+Let's see what happens with $\dfrac{\text{d}J}{\text{d}a}$. Say we change the value of $a$ from 5 to 5.001. Subsequently, $v$ is changed from 11 to 11.001, and $J$ from 33 to 33.003. Again, we see that every unit of change in $a$ causes 3 units of change in $J$. Similarly, we can compute that $\dfrac{\text{d}J}{\text{d}u}=3$.
+\subsubsection{The chain rule for derivatives}
+Finally let us consider the derivative of $J$ wrt $b$. Say we change the value of $b$ from 3 to 3.001. Note that the value of $u$ is not only affected by $b$ but also by $c$. Hence, the value of $u$ will change to 6.002, that of $v$ to 11.002 and that of $J$ to 33.006. So, the value of $\dfrac{\text{d}J}{\text{d}b}$ is 6, right? Well, yes and no.
+\vspace{12pt}
+
+Let's think of it this way. What if $b=3$ and $c=3$? We get $u=9, v=14$ and $J=42$. Changing $b$ from 3 to 3.001 would change $u$ from 9 to 9.003, $v$ from 14 to 14.003 and finally, $J$ from 42 to 42.009. Now it seems like $\dfrac{\text{d}J}{\text{d}b}=9$. How did this happen? It seems like the value of $c$ affects the derivative term $\dfrac{\text{d}J}{\text{d}b}$ and indeed, it is so.
+\vspace{12pt}
+
+We can look at it as changing $b$ changes $u$ first. This change in $u$ causes a change in $v$. Finally, the change in $v$ causes a change in $J$. This is where the chain rule for derivatives comes in. According to the chain rule, $$\frac{\text{d}J}{\text{d}b}=\frac{\partial J}{\partial v}\times\frac{\partial v}{\partial u}\times\frac{\partial u}{\partial b}$$
+We can verify this by quickly computing the values of the individual derivatives and multiplying them. It is important to clarify here itself that even though the chain rule makes it look like derivatives compute like ordinary fractions, this is NOT the case.
+\vspace{6pt}
+
+With this understanding of the chain rule, now the term `backward propagation' really starts to make sense. To find the derivative of $J$ wrt $b$, we `propagate backwards' from $J$ to $v$, then from $v$ to $u$ and finally, from $u$ to $b$. This concept might seem trivial now, but it helps quite a lot in the context of logistic regression.
+\vspace{6pt}
+
+\textbf{NOTE:} Whenever we use computation graphs, there will usually be an output variable that we want to optimize. Hence, a lot of the computation will be about calculating the derivative of the output variable (\texttt{J}) with respect to some other variable (let's call it \texttt{var}). When we implement it in code, we will have to assign the derivative a variable name. While we could name it something like \texttt{dFinalOutput/dVar} or \texttt{dJ/dvar}, these are not good variable names. For our convenience, we will name the variable as simply \texttt{dvar}. For example, if we want to compute d$J$/d$a$, we will name the derivative variable \texttt{da}. This convention will be used in further sections where we will actually code algorithms in Python.
+\subsection{Computation graphs for logistic regression}
+As a brief recap for the previous sections, we had setup logistic regression as follows:
+$$z=w^Tx+b; \hat{y}=a=\sigma(z)$$
+$$\Lagr(a,y)=-[y\log a+(1-y)\log(1-a)]$$
+$$J(w,b)=\dfrac{1}{m}\sum_{i=1}^{m}\Lagr(a^{(i)},y^{(i)})=-\dfrac{1}{m}\sum_{i=1}^{m}\left[y^{(i)}\log a^{(i)}+(1-y^{(i)})\log(1-a^{(i)})\right]$$
+\subsubsection{Gradient descent for a single training example}
+For this example, let's say that we have only 2 feature values $x_1,x_2$. To compute $z$, we will need $w_1,w_1,b$ in addition to $x_1,x_2$. We can set up the forward propagation steps of our computation graph as follows:
+$$w_1,w_2,b \longrightarrow z=w_1^Tx_1+w_2^Tx_2+b\longrightarrow \hat{y}=a=\sigma(z)\longrightarrow\Lagr(a,y)$$
+We want to modify the parameters $w_1,w_2,b$ in order to reduce the loss $\Lagr(a,y)$. This will require us to go through backward propagation to compute the derivatives of $\Lagr$ wrt $w_1,w_2,b$. To do this, we follow these steps:
+\begin{itemize}
+	\item $\dfrac{\partial\Lagr(a,y)}{\partial a}=-\dfrac{y}{a}+\dfrac{1-y}{1-a}$ (while writing code, the variable name for $\dfrac{\partial\Lagr(a,y)}{\partial a}$ will be simply \texttt{da})
+	\item $\dfrac{\partial\Lagr(a,y)}{\partial z}=\dfrac{\partial\Lagr(a,y)}{\partial a}\times\dfrac{\partial a}{\partial z}=a-y$ (again the variable name for $\dfrac{\partial\Lagr(a,y)}{\partial z}$ will be \texttt{dz})
+	\item $\dfrac{\partial\Lagr(a,y)}{\partial w_1}=x_1(a-y); \dfrac{\partial\Lagr(a,y)}{\partial w_2}=x_2(a-y);\dfrac{\partial\Lagr(a,y)}{\partial b}=a-y$ (variable names \texttt{dw1, dw2, db})
+\end{itemize}
+\pagebreak
+\subsubsection{Derivation of $\dfrac{\partial\Lagr}{\partial z}$ (optional)}
+Let us explore the derivation of the expression for $\dfrac{\partial \Lagr}{\partial z}$ in a much greater detail:
+\begin{proof}
+\textbf{Step 1: $\dfrac{\partial \Lagr}{\partial a}$}
+$$\Lagr = -[y\log a+(1-y)\log(1-a)]$$
+$$\therefore\dfrac{\partial\Lagr}{\partial a}=-\left[y\frac{\text{d}\log a}{\text{d}a}\right]-\left[(1-y)\frac{\text{d}\log(1-a)}{\text{d}a}\right]$$
+$$\therefore\dfrac{\partial\Lagr}{\partial a}=-\left[y\times\frac{1}{a}\right]-\left[(1-y)\times\frac{1}{1-a}\times (-1)\right]$$
+\begin{equation}\boxed{\therefore\dfrac{\partial\Lagr(a,y)}{\partial a}=-\dfrac{y}{a}+\dfrac{1-y}{1-a}}\end{equation}
+\textbf{Step 2: $\dfrac{\partial a}{\partial z}$}
+$$a=\sigma(z)\implies\dfrac{\partial a}{\partial z}=\dfrac{\partial \sigma(z)}{\partial z}$$
+$$\therefore\dfrac{\partial a}{\partial z}=\dfrac{\partial}{\partial z}\left(\frac{1}{1+e^{-z}}\right)$$
+$$\therefore\dfrac{\partial a}{\partial z}=-\frac{1}{(1+e^{-z})^2}(-e^{-z})=\frac{e^{-z}}{(1+e^{-z})^2}$$
+$$\therefore\dfrac{\partial a}{\partial z}=\frac{1}{1+e^{-z}}\left(1-\frac{1}{1+e^{-z}}\right)=\sigma(z)(1-\sigma(z))$$
+\begin{equation}
+\boxed{\therefore\dfrac{\partial a}{\partial z}=a(1-a)}
+\end{equation}
+\textbf{Step 3: $\dfrac{\partial \Lagr}{\partial z}$} (from (1) \& (2), using the chain rule for derivatives)
+$$\frac{\partial \Lagr}{\partial z}=\frac{\partial \Lagr}{\partial a}\times\frac{\partial a}{\partial z}$$
+$$\therefore\frac{\partial\Lagr}{\partial z}=\left[-\dfrac{y}{a}+\dfrac{1-y}{1-a}\right]\times a(1-a)$$
+$$\therefore\frac{\partial\Lagr}{\partial z}=\frac{a-y}{a(1-a)}\times a(1-a)$$
+$$\boxed{\therefore\frac{\partial\Lagr}{\partial z}=a-y}$$
+\end{proof}
+\subsubsection{Gradient descent on $m$ examples}
+Now let us look at how to use the computation graph to carry out gradient descent for an entire training set. A single training example will now be represented by $(x^{(i)},y^{(i)})$ with parameters $w_1^{(i)},w_2^{(i)},b^{(i)}$. The cost function is the simple average of all the losses over the training set, and the same follows for the cost function as well, i.e
+$$\frac{\partial J(w,b)}{\partial w_1}=\frac{1}{m}\sum_{i=1}^m\frac{\partial\Lagr(a^{(i)},y^{(i)})}{\partial w_1^{(i)}};\frac{\partial J(w,b)}{\partial w_2}=\frac{1}{m}\sum_{i=1}^m\frac{\partial\Lagr(a^{(i)},y^{(i)})}{\partial w_2^{(i)}};\frac{\partial J(w,b)}{\partial b}=\frac{1}{m}\sum_{i=1}^m\frac{\partial\Lagr(a^{(i)},y^{(i)})}{\partial b^{(i)}}$$
+What we need to do is compute the derivatives on all the individual training examples and average them over the training set to be able to carry out gradient descent. Let's take all of this and wrap it into a concrete algorithm until when we should implement the gradient descent (variable names are to be comprehended as defined earlier):
+\begin{itemize}
+	\item initialise \texttt{J=0, dw1=0, dw2=0, db=0}
+	\item using a \texttt{for} loop, compute the derivatives corresponding to each training example and add them up $-$ a very rough sample program would look like this (obviously, it is far from complete)
+\begin{Verbatim}[tabsize=2]
+> J,db = 0,0
+	for k in range(n_x):
+			dw[k] = 0
+	for i in range(m):
+			z[i] = w[i]*x[i] + b
+			a[i] = sigma(z[i])
+			J += -(y[i]*math.log(a[i]) + (1-y[i])*math.log(1-a[i]))
+			dz[i] = a[i] - y[i]
+			for k in range(n_x):
+					dw[k] += x[k,i]dz[i]
+			db += dz[i]
+	J/=m
+	for k in range(n_x):
+			dw[k]/=m
+	db/=m
+\end{Verbatim}
+\end{itemize}
+When implementing deep learning algorithms, it is found that having explicit \texttt{for} loops greatly slows down the learning speed of the algorithm. As we move to bigger and bigger datasets, it becomes even more cumbersome. Hence, to avoid using explicit \texttt{for} loops, there is a set of techniques called vectorization. 
+\subsection{Explaining the cost function (optional)}
+In Section 3.4, we defined the cost function for logistic regression. Let us try to reason out why we use that particular form of function.To recap, we defined
+$$\hat{y}=\sigma(w^Tx+b)\text{ and } \hat{y}=P(y=1\mid x)$$
+In other words,
+$$\left. \begin{array}{l}
+    \text{if }y=1: P(y\mid x)=\hat{y} \\
+    \text{if }y=0: P(y\mid x)=1-\hat{y} \\
+\end{array}{} \right\}
+\longrightarrow P(y\mid x)=\hat{y}^y(1-\hat{y})^{(1-y)}
+$$
+We want to maximize the probability that our approximation $\hat{y}=y$. Instead of optimizing the above probability function, what we can rather do is maximise $\log P(y\mid x)$, which is much easier to differentiate. Note that we can do this since the $\log$ function is a monotonically increasing function. On computing $\log P(y\mid x)$, the result is exactly the negative of what we have in the loss function. Maximising $\log P(y\mid x)$ results in maximising the probability function and minimizing the loss function.
+\vspace{6pt}
+
+How about the cost function? Assuming that we've drawn the training examples independently, then the probability of all the examples is simply the product of the individual probabilities, i.e.
+$$P_{train} = \prod_{i=1}^m P(y^{(i)}\mid x^{(i)})$$
+Maximising this function is equivalent to maximising the individual probabilities, for which again we resort to maximising $\log P(y^{(i)}\mid x^{(i)})$ rather than $P(y^{(i)}\mid x^{(i)})$.
+$$\log P_{train}=\sum_{i=1}^{m}\log P(y^{(i)}\mid x^{(i)})=-\sum_{i=1}^{m}\Lagr(\hat{y}^{(i)},y^{(i)})$$
+This now starts to look like the form of the cost function. Now, since we want to minimize the cost, we take the negative of $\log P_{train}$. And finally, to make sure that our quantities are better scaled, we divide by $m$ (we can work without this, but the value of the function may sometimes get too high for large datasets). This brings us to our final form of the cost function
+$$J(w,b)=\dfrac{1}{m}\sum_{i=1}^{m}\Lagr(a^{(i)},y^{(i)})=-\dfrac{1}{m}\sum_{i=1}^{m}\left[y^{(i)}\log a^{(i)}+(1-y^{(i)})\log(1-a^{(i)})\right]$$
+
+\hrulefill
+\begin{center}\textbf{END OF WEEK 2 - MODULE 1}\end{center}
+This is the end of the course documentation for Module 1 from Week 2. Keep on reading further for the documentation for Module 2, or spend some time gaining further insight into the previously discussed topics.
+
+\hrulefill
+\pagebreak
+\section{Python and Vectorization}
+Vectorization is a technique used to get rid of excessive \texttt{for} loops in programs. This is especially important in deep learning because the presence of \texttt{for} loops in deep learning algorithms significantly increases the time that it takes the code to run. With small datasets, this might be okay but with larger ones, it can take days on end and this really slows down the training process.
+\subsection{Vectorization}
+In logistic regression, we needed to compute $z=w^Tx+b$, where $w,x\in\mathbb{R}^{n_x}$. A non-vectorized implementation of this computation would involve something like this:
+\begin{Verbatim}
+> z=0
+  for i in range[1,n_x]:
+ 	z += w_i*x_i
+  z += b
+\end{Verbatim}
+In contrast, a vectorized implementation of the same using the \texttt{numpy} library for Python would involve a much simpler and faster piece of code:
+\begin{Verbatim}
+> z = np.dot(w,x) + b
+\end{Verbatim}
+We could actually try a speed test with both the codes by getting them to multiply one million terms from 2 random arrays:
+\begin{center}
+\begin{tabular}{|l|l|}
+\hline
+\texttt{import time} & \texttt{import time}\\
+\texttt{import numpy as np} & \texttt{import numpy as np}\\
+ & \\
+\texttt{a = np.random.rand(1000000)} & \texttt{c=0}\\
+\texttt{b = np.random.rand(1000000)} & \\
+\texttt{initial = time.time()} & \texttt{a = np.random.rand(1000000)}\\
+
+\texttt{c = np.dot(a,b)} & \texttt{b = np.random.rand(1000000)}\\
+\texttt{final = time.time()} & \texttt{initial = time.time()}\\
+ & \texttt{for i in range(1000000):}\\
+\texttt{print("Vectorized version:" + str(1000*} & \texttt{		c += a[i]*b[i]}\\
+\texttt{		(final-initial)) + "ms")} & \texttt{final = time.time()}\\
+ & \\
+ & \texttt{print("For loop:" + str(1000*}\\
+ & \texttt{		(final-initial) + "ms")}\\
+\hline
+\end{tabular}
+\end{center}
+Not only is the vectorized version shorter, it runs about 400 times faster than the code using a \texttt{for} loop. The speed difference would be same regardless if the programs are run on a CPU or GPU, since they have similar parallelization instructions (known as SIMD instructions). Using built-in functions instead of explicit loops, it enables the processors to take much more advantage of parallelism to perform computations faster.
+\vspace{6pt}
+
+The rule of thumb to keep in mind when programming neural networks is to avoid using explicit \texttt{for} loops whenever possible.
+\subsection{Vectorizing logistic regression}
+Previously we tried to code the algorithm for logistic regression using 2 for-loops. The resulting loops looked like this:
+\begin{Verbatim}[tabsize=2]
+> J,db = 0,0
+	for k in range(n_x):
+			dw[k] = 0
+	for i in range(m):
+			z[i] = w[i]*x[i] + b
+			a[i] = sigma(z[i])
+			J += -(y[i]*math.log(a[i]) + (1-y[i])*math.log(1-a[i]))
+			dz[i] = a[i] - y[i]
+			for k in range(n_x):
+					dw[k] += x[k,i]dz[i]
+			db += dz[i]
+	J/=m
+	for k in range(n_x):
+			dw[k]/=m
+	db/=m
+\end{Verbatim}
+It turns out that we can easily get rid of the nested for loop in the code. This can be done by getting rid of individual vectors \texttt{dw1}, \texttt{dw2} and so on into a single \texttt{numpy} vector \texttt{dw}. The code may look something like this: 
+\begin{Verbatim}[tabsize=2]
+> J,db = 0,0
+	dw = np.zeros((n_x,1))
+	for i in range(m):
+			z[i] = w[i]*x[i] + b
+			a[i] = sigma(z[i])
+			J += -(y[i]*math.log(a[i]) + (1-y[i])*math.log(1-a[i]))
+			dz[i] = a[i] - y[i]
+			dw += x[i]dz[i]
+			db += dz[i]
+	J/=m
+	dw/=m
+	db/=m
+\end{Verbatim}
+We've gone from having 2 \texttt{for} loops to just one. Though, we still loop over the individual training examples.
+\subsubsection{Vectorizing the forward propagation steps}
+The forward propagation steps require to first find $z^{(i)}=w^Tx^{(i)}+b$ and then $a^{(i)}=\sigma(z^{(i)})$. It turns out we can do this without an explicit \texttt{for} loop. Let us first see how to compute $z^{(i)}$. Remember we defined a matrix $X\in\mathbb{R}^{n_x\times m}$ as
+$$X=\begin{pmatrix}
+	\vdots & \vdots & & \vdots\\
+	x^{(1)} & x^{(2)} & \cdots & x^{(m)}\\
+	\vdots & \vdots & & \vdots\\
+\end{pmatrix}$$
+Let us now define 2 other matrices $Z,B\in\mathbb{R}^{1\times m}$ as
+$$Z=\begin{pmatrix}
+	z^{(1)} & z^{(2)} & \cdots & z^{(m)}\\
+\end{pmatrix};
+B=\begin{pmatrix}
+	b & b & \cdots & b\\
+\end{pmatrix}$$
+Using these 2 matrices, we can express the system of equations $z^{(i)}=w^Tx^{(i)}+b$ in a single matrix equation, which translate into a single line of code:
+$$\left. \begin{array}{cc}
+    z^{(1)}=w^Tx^{(1)}+b \\
+    z^{(2)}=w^Tx^{(2)}+b \\
+    \vdots \\
+    z^{(m)}=w^Tx^{(m)}+b
+\end{array}{} \right\}
+\longrightarrow Z = w^TX+B \longrightarrow \texttt{z = np.dot(w.T,x)+b}
+$$
+There is one subtlety in the above piece of code. We don't explicitly need to define \texttt{b} as a $1\times m$ vector. Even if \texttt{b} is defined as a real number, given that the term \texttt{np.dot(w.T,x)} is of dimension $1\times m$, Python automatically expands \texttt{b} out into a vector of the same dimension. This operation is also known as `broadcasting' in Python.
+\vspace{6pt}
+
+Finally, we would like to compute the variables $a^{(i)}$. We can define a matrix $A\in\mathbb{R}^{1\times m}$ similar to how we defined $Z$. We can then implement a vector-valued sigmoid function to output $A$ (this will be discussed in a later section):
+$$A=\begin{pmatrix}
+	a^{(1)} & a^{(2)} & \cdots & a^{(m)}\\
+\end{pmatrix}=\sigma(Z)$$
+\subsubsection{Vectorizing the gradient output of logistic regression}
+We have effectively rid our program of the first 2 statements in the \texttt{for} loop. Now let's see how to vectorize the gradient calculations. Let us first see how to do this for $\text{d}z^{(i)}=a^{(i)}-y^{(i)}$. Similar to the process in the  forward propagation steps, we define a new matrix $\text{d}Z\in\mathbb{R}^{1\times m}$ as
+$$\text{d}Z=\begin{pmatrix}
+	\text{d}z^{(1)} & \text{d}z^{(2)} & \cdots & \text{d}z^{(m)}\\
+\end{pmatrix}=A-Y$$
+We got rid of the \texttt{for} loop which calculated \texttt{dw[k]} by initializing \texttt{dw} as a single \texttt{numpy} zero vector. But we still have the \texttt{for} loop over the $m$ examples in the training set. Let's now attempt to vectorize all these operations and get rid of this \texttt{for} loop as well.
+\vspace{6pt}
+
+\underline{Step 1:} for \texttt{db}, we initialize it as \texttt{db=0} and then add \texttt{dz[i]} to it in each iteration of the \texttt{for} loop
+$$\left. \begin{array}{cc}
+    \texttt{db += dz[1]} \\
+    \texttt{db += dz[2]} \\
+    \vdots \\
+    \texttt{db += dz[m]}
+\end{array}{} \texttt{followed by db /= m} \right\}
+\longrightarrow \texttt{db = np.sum(dZ)/m}$$
+\underline{Step 2:} for \texttt{dw}, we again initialize it as 0 and then add \texttt{x[i]dz[i]} in each iteration of the \texttt{for} loop
+$$\left. \begin{array}{cc}
+    \texttt{dw += x[1]dz[1]} \\
+    \texttt{dw += x[2]dz[2]} \\
+    \vdots \\
+    \texttt{dw += x[m]dz[m]}
+\end{array}{} \texttt{followed by dz /= m} \right\}
+\longrightarrow \texttt{dw = np.dot(x,dZ.T)/m}$$
+Now that we have vectorized the code for all parameters, it's time to put it all together into a single program. This is our original, highly inefficient non-vectorized implementation:
+\begin{Verbatim}[tabsize=2]
+> J,db = 0,0
+	for k in range(n_x):
+			dw[k] = 0
+	for i in range(m):
+			z[i] = w[i]*x[i] + b
+			a[i] = sigma(z[i])
+			J += -(y[i]*math.log(a[i]) + (1-y[i])*math.log(1-a[i]))
+			dz[i] = a[i] - y[i]
+			for k in range(n_x):
+					dw[k] += x[k,i]dz[i]
+			db += dz[i]
+	J/=m
+	for k in range(n_x):
+			dw[k]/=m
+	db/=m
+\end{Verbatim}
+A vectorized version of the same would look like this:
+\begin{Verbatim}[tabsize=2]
+> Z = np.dot(w.t,x) + b
+	A = sigma(Z)
+	dZ = A - Y
+	dw = np.dot(x,dZ.T)/m
+	db = np.sum(dZ)/m
+	
+	w = w - alpha*dw
+	b = b - alpha*db
+\end{Verbatim}
+We have successfully implemented one iteration of gradient descent without using any \texttt{for} loops. However, note that for multiple gradient descents, we will have to loop over the number of iterations.
+\subsection{Broadcasting in python}
+\begin{wrapfigure}[6]{L}{0.4\textwidth}
+\centering \includegraphics[width=0.38\textwidth]{broadcasting_example.png}
+\end{wrapfigure}
+\vspace{6pt}
+
+We have briefly used broadcasting in the previous sections to make our code run faster. Let us explore it in a little more detail using the following example. The adjoining matrix contains the number of calories from carbohydrates, proteins and fats per 100g for 4 different foods. Let's say we want to calculate the \% of calories from carbohydrates, proteins and fats for all the 4 foods.  
+\vspace{-6pt}
+
+We might start out by summing the calories in individual columns. Then, we would calculate each of the \% respectively by dividing each term by its corresponding total. Using the above vectorization techniques, we can perform the above task in 2 lines of code.
+\begin{Verbatim}[tabsize=2]
+> import numpy as np
+	
+	A = np.array([56.0, 0.0, 4.4, 68.0],
+							 [1.2, 104.0. 52.0, 8.0],
+							 [1.8, 135.0, 99.0, 0.9])
+	
+	cal = A.sum(axis=0) # axis = 0 --> sum vertically; axis=1 --> sum horizontally
+	percentage = 100*A/cal
+	
+	print(percentage)
+\end{Verbatim}
+The line \texttt{percentage = 100*A/cal} is an example of broadcasting in python. What we have essentially done is divide a $3\times 4$ matrix by a $1\times 4$ matrix. This type of broadcasting works with both column vectors as well as row vectors. Let's go through another example. If we try to perform the following addition in Python,
+$$\begin{pmatrix}
+	1 \\
+	2 \\
+	3 \\
+	4 \\
+\end{pmatrix} +100\longrightarrow
+\begin{pmatrix}
+	1 \\
+	2 \\
+	3 \\
+	4 \\
+\end{pmatrix}+
+\begin{pmatrix}
+	100 \\
+	100 \\
+	100 \\
+	100 \\
+\end{pmatrix}=
+\begin{pmatrix}
+	101 \\
+	102 \\
+	103 \\
+	104 \\
+\end{pmatrix}$$
+We saw this type of broadcasting in our earlier code for logistic regression with the line \texttt{Z = np.dot(w.t,x) + b}.
+\subsection{Python and \texttt{numpy} vectors}
+The \texttt{numpy} library in Python allows for broadcasting. As we have already seen, this can make our code a whole lot shorter. However, this may also lead to certain hard-to-find bugs in the code if one is not really familiar with how broadcasting works. Some of the most common bugs occur with rank 1 arrays.
+\begin{Verbatim}[tabsize=2]
+> import numpy as np
+	
+	a = np.random.randn(5)
+	
+	print(a.shape)
+	print(a) # prints out the array
+	print(a.T) # still prints out the same array
+	print(np.dot(a,a.T)) # prints a single number instead of a matrix
+\end{Verbatim}
+The first line prints out \texttt{(5,)}, indicating that the array is of rank 1. This type of data structure does not behaves consistently as either a row vector or as a column vector. Its transpose is the same itself. This can lead to some unexpected results with multiplication, etc. 
+\vspace{6pt}
+
+To avoid this, it is better to initialise \texttt{a = np.random.randn(5,1)}. Another alternative is to force the dimension using \texttt{assert(a.shape == (5,1))}. If, for some reason, you end up using a rank 1 array, it can be reshaped as \texttt{a.reshape(5,1)}.
+
+\hrulefill
+\begin{center}\textbf{END OF WEEK 2 - MODULE 2}\end{center}
+This is the end of the course documentation for Week 2. Keep on reading further for the documentation from further weeks, or spend some time gaining further insight into the previously discussed topics.
+
+\hrulefill
+\pagebreak
+\section{Shallow Neural Networks}
 \textit{(This section is currently in the works. Expect it to be up typically within a week's time.)}
 
 \hrulefill

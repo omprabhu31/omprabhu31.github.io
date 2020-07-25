@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.7.11)  23 JUL 2020 14:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.7.11)  25 JUL 2020 12:19
 entering extended mode
 **"./Neural Networks and Deep Learning.tex"
 ("Neural Networks and Deep Learning.tex"
@@ -474,7 +474,17 @@ g.sty"
 \WF@everypar=\toks37
 Package: wrapfig 2003/01/31  v 3.6
 )
-\c@innercustomgeneric=\count282
+("C:\Users\Om Prabhu\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fancyvrb\fancy
+vrb.sty"
+Package: fancyvrb 2020/05/03 v3.6 verbatim text (tvz,hv)
+\FV@CodeLineNo=\count282
+\FV@InFile=\read2
+\FV@TabBox=\box53
+\c@FancyVerbLine=\count283
+\FV@StepNumber=\count284
+\FV@OutFile=\write3
+)
+\c@innercustomgeneric=\count285
 
 ("C:\Users\Om Prabhu\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\geome
 try.sty"
@@ -484,9 +494,9 @@ Package: geometry 2020/01/02 v5.9 Page Geometry
 .sty"
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count283
-\Gm@cntv=\count284
-\c@Gm@tempcnt=\count285
+\Gm@cnth=\count286
+\Gm@cntv=\count287
+\c@Gm@tempcnt=\count288
 \Gm@bindingoffset=\dimen175
 \Gm@wd@mp=\dimen176
 \Gm@odd@mp=\dimen177
@@ -530,28 +540,28 @@ Package: ifpdf 2019/10/25 v3.4 ifpdf legacy package. Use iftex instead.
 ex.sty"
 Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
 ))
-\GPT@outputbox=\box53
+\GPT@outputbox=\box54
  ("Neural Networks and Deep Learning.aux")
 \openout1 = `"Neural Networks and Deep Learning.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-\AtBeginShipoutBox=\box54
-Package hyperref Info: Link coloring OFF on input line 64.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+\AtBeginShipoutBox=\box55
+Package hyperref Info: Link coloring OFF on input line 66.
 
 ("C:\Users\Om Prabhu\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\namer
 ef.sty"
@@ -565,15 +575,15 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ng\gettitlestring.sty"
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count286
+\c@section@level=\count289
 )
-LaTeX Info: Redefining \ref on input line 64.
-LaTeX Info: Redefining \pageref on input line 64.
-LaTeX Info: Redefining \nameref on input line 64.
+LaTeX Info: Redefining \ref on input line 66.
+LaTeX Info: Redefining \pageref on input line 66.
+LaTeX Info: Redefining \nameref on input line 66.
  ("Neural Networks and Deep Learning.out")
 ("Neural Networks and Deep Learning.out")
-\@outlinefile=\write3
-\openout3 = `"Neural Networks and Deep Learning.out"'.
+\@outlinefile=\write4
+\openout4 = `"Neural Networks and Deep Learning.out"'.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
@@ -583,16 +593,16 @@ Package caption Info: End \AtBeginDocument code.
 ("C:\Users\Om Prabhu\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\su
 pp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count287
+\scratchcounter=\count290
 \scratchdimen=\dimen183
-\scratchbox=\box55
-\nofMPsegments=\count288
-\nofMParguments=\count289
+\scratchbox=\box56
+\nofMPsegments=\count291
+\nofMParguments=\count292
 \everyMPshowfont=\toks39
-\MPscratchCnt=\count290
+\MPscratchCnt=\count293
 \MPscratchDim=\dimen184
-\MPnumerator=\count291
-\makeMPintoPDFobject=\count292
+\MPnumerator=\count294
+\makeMPintoPDFobject=\count295
 \everyMPtoPDFconversion=\toks40
 )
 ("C:\Users\Om Prabhu\AppData\Local\Programs\MiKTeX 2.9\tex/latex/epstopdf-pkg\e
@@ -635,107 +645,165 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 66.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 68.
 
 
 ("C:\Users\Om Prabhu\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsa.
 fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 66.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 68.
 
 
 ("C:\Users\Om Prabhu\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.
 fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) ("Neural Networks and Deep Learning.toc")
-\tf@toc=\write4
-\openout4 = `"Neural Networks and Deep Learning.toc"'.
+\tf@toc=\write5
+\openout5 = `"Neural Networks and Deep Learning.toc"'.
 
  [1
 
 {C:/Users/Om Prabhu/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2]
-<deep_learning1.png, id=90, 401.0985pt x 146.34676pt>
+<deep_learning1.png, id=167, 401.0985pt x 146.34676pt>
 File: deep_learning1.png Graphic file (type png)
 <use deep_learning1.png>
-Package pdftex.def Info: deep_learning1.png  used on input line 94.
+Package pdftex.def Info: deep_learning1.png  used on input line 96.
 (pdftex.def)             Requested size: 401.0975pt x 146.34639pt.
-<deep_learning2.png, id=92, 447.47176pt x 218.61674pt>
+<deep_learning2.png, id=169, 447.47176pt x 218.61674pt>
 File: deep_learning2.png Graphic file (type png)
 <use deep_learning2.png>
-Package pdftex.def Info: deep_learning2.png  used on input line 99.
+Package pdftex.def Info: deep_learning2.png  used on input line 101.
 (pdftex.def)             Requested size: 447.47066pt x 218.6162pt.
  [3 <./deep_learning1.png> <./deep_learning2.png>]
-<types_of_nn.png, id=100, 452.28975pt x 349.305pt>
+<types_of_nn.png, id=176, 452.28975pt x 349.305pt>
 File: types_of_nn.png Graphic file (type png)
 <use types_of_nn.png>
-Package pdftex.def Info: types_of_nn.png  used on input line 118.
+Package pdftex.def Info: types_of_nn.png  used on input line 120.
 (pdftex.def)             Requested size: 452.28865pt x 349.30414pt.
  [4 <./types_of_nn.png>]
-<data_vs_performance.png, id=107, 567.92175pt x 246.32025pt>
+<data_vs_performance.png, id=183, 567.92175pt x 246.32025pt>
 File: data_vs_performance.png Graphic file (type png)
 <use data_vs_performance.png>
-Package pdftex.def Info: data_vs_performance.png  used on input line 126.
+Package pdftex.def Info: data_vs_performance.png  used on input line 128.
 (pdftex.def)             Requested size: 369.14476pt x 160.10626pt.
-<sigmoid_relu.png, id=108, 728.7225pt x 293.095pt>
+<sigmoid_relu.png, id=184, 728.7225pt x 293.095pt>
 File: sigmoid_relu.png Graphic file (type png)
 <use sigmoid_relu.png>
-Package pdftex.def Info: sigmoid_relu.png  used on input line 135.
+Package pdftex.def Info: sigmoid_relu.png  used on input line 137.
 (pdftex.def)             Requested size: 364.36035pt x 146.54713pt.
  [5 <./data_vs_performance.png> <./sigmoid_relu.png>]
-<y_equals_3x.png, id=115, 419.76825pt x 436.63126pt>
+<y_equals_3x.png, id=191, 419.76825pt x 436.63126pt>
 File: y_equals_3x.png Graphic file (type png)
 <use y_equals_3x.png>
-Package pdftex.def Info: y_equals_3x.png  used on input line 179.
+Package pdftex.def Info: y_equals_3x.png  used on input line 181.
 (pdftex.def)             Requested size: 135.43451pt x 140.87079pt.
-<x_square.png, id=116, 542.025pt x 425.1885pt>
+<x_square.png, id=192, 542.025pt x 425.1885pt>
 File: x_square.png Graphic file (type png)
 <use x_square.png>
-Package pdftex.def Info: x_square.png  used on input line 193.
+Package pdftex.def Info: x_square.png  used on input line 195.
 (pdftex.def)             Requested size: 149.94482pt x 117.62463pt.
  [6 <./y_equals_3x.png> <./x_square.png>]
-<rgb_matrices.png, id=146, 319.94531pt x 261.97874pt>
+<rgb_matrices.png, id=221, 319.94531pt x 261.97874pt>
 File: rgb_matrices.png Graphic file (type png)
 <use rgb_matrices.png>
-Package pdftex.def Info: rgb_matrices.png  used on input line 231.
+Package pdftex.def Info: rgb_matrices.png  used on input line 233.
 (pdftex.def)             Requested size: 232.17241pt x 190.1116pt.
-<sigmoid_logistic_regression.png, id=147, 486.81876pt x 324.21124pt>
+<sigmoid_logistic_regression.png, id=222, 486.81876pt x 324.21124pt>
 File: sigmoid_logistic_regression.png Graphic file (type png)
 <use sigmoid_logistic_regression.png>
 Package pdftex.def Info: sigmoid_logistic_regression.png  used on input line 26
-7.
+9.
 (pdftex.def)             Requested size: 183.80716pt x 122.41002pt.
  [7 <./rgb_matrices.png>]
-<gradient_descent.png, id=154, 412.54124pt x 235.47975pt>
+<gradient_descent.png, id=229, 412.54124pt x 235.47975pt>
 File: gradient_descent.png Graphic file (type png)
 <use gradient_descent.png>
-Package pdftex.def Info: gradient_descent.png  used on input line 310.
+Package pdftex.def Info: gradient_descent.png  used on input line 312.
 (pdftex.def)             Requested size: 183.80716pt x 104.9193pt.
  [8 <./sigmoid_logistic_regression.png>]
-<1d_convex_plot.png, id=162, 364.9635pt x 210.18526pt>
+<1d_convex_plot.png, id=237, 364.9635pt x 210.18526pt>
 File: 1d_convex_plot.png Graphic file (type png)
 <use 1d_convex_plot.png>
-Package pdftex.def Info: 1d_convex_plot.png  used on input line 325.
+Package pdftex.def Info: 1d_convex_plot.png  used on input line 327.
 (pdftex.def)             Requested size: 183.80716pt x 105.85567pt.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 345.
- [9 <./gradient_descent.png> <./1d_convex_plot.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 345.
- ("Neural Networks and Deep Learning.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 345.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 345.
+<computation_graph.png, id=238, 513.71925pt x 124.66576pt>
+File: computation_graph.png Graphic file (type png)
+<use computation_graph.png>
+Package pdftex.def Info: computation_graph.png  used on input line 348.
+(pdftex.def)             Requested size: 193.47577pt x 46.95117pt.
+ [9 <./gradient_descent.png> <./1d_convex_plot.png> <./computation_graph.png>] 
+[10]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 391.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<def>-command' on input line 391.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\@tempa' on input line 391.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<def>-command' on input line 391.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\@tempb' on input line 391.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\partial' on input line 391.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\partial' on input line 391.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 391.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 413.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 413.
+
+[11] [12] [13] [14]
+<broadcasting_example.png, id=273, 315.579pt x 95.75775pt>
+File: broadcasting_example.png Graphic file (type png)
+<use broadcasting_example.png>
+Package pdftex.def Info: broadcasting_example.png  used on input line 626.
+(pdftex.def)             Requested size: 183.80716pt x 55.7733pt.
+ [15 <./broadcasting_example.png>]
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 672.
+ [16]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 699.
+ [17]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 699.
+
+("Neural Networks and Deep Learning.aux")
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 699.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 699.
 Package rerunfilecheck Info: File `"Neural Networks and Deep Learning".out' has
  not changed.
-(rerunfilecheck)             Checksum: DFAE5B7DD73AA1850CB784920DF67446;993.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 345.
+(rerunfilecheck)             Checksum: EB3C404B362703CB457D1DAC9799A4DD;2283.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 699.
  ) 
 Here is how much of TeX's memory you used:
- 10609 strings out of 480790
- 174698 string characters out of 2893515
+ 11042 strings out of 480790
+ 181593 string characters out of 2893515
  590863 words of memory out of 3000000
- 26346 multiletter control sequences out of 15000+200000
- 542360 words of font info for 62 fonts, out of 3000000 for 9000
+ 26744 multiletter control sequences out of 15000+200000
+ 542865 words of font info for 65 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 45i,9n,47p,675b,334s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 45i,9n,47p,825b,586s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Om Prabhu\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi
 600\tcrm1000.pk><C:/Users/Om Prabhu/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
 e1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Om Prabhu/AppData/Local/Programs/MiK
@@ -755,12 +823,13 @@ msfonts/cm/cmr7.pfb><C:/Users/Om Prabhu/AppData/Local/Programs/MiKTeX 2.9/fonts
 a/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users
 /Om Prabhu/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmt
 t10.pfb><C:/Users/Om Prabhu/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
-c/amsfonts/symbols/msam10.pfb><C:/Users/Om Prabhu/AppData/Local/Programs/MiKTeX
- 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on "Neural Networks and Deep Learning.pdf" (9 pages, 818780 byte
-s).
+c/amsfonts/cm/cmtt12.pfb><C:/Users/Om Prabhu/AppData/Local/Programs/MiKTeX 2.9/
+fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/Om Prabhu/AppData/Loca
+l/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on "Neural Networks and Deep Learning.pdf" (17 pages, 968569 byt
+es).
 PDF statistics:
- 238 PDF objects out of 1000 (max. 8388607)
- 38 named destinations out of 1000 (max. 500000)
- 168 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 362 PDF objects out of 1000 (max. 8388607)
+ 65 named destinations out of 1000 (max. 500000)
+ 298 words of extra memory for PDF output out of 10000 (max. 10000000)
 
