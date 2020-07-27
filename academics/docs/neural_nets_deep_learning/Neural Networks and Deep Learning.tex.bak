@@ -142,7 +142,7 @@ Fast computation is very important in deep learning, since the idea of training 
 
 \hrulefill
 \begin{center}\textbf{END OF WEEK 1}\end{center}
-This is the end of the course documentation from Week 1. Keep on reading further for documentation from further weeks, or spend some time gaining further insight into the previously discussed topics.
+This is the end of the course documentation for Week 1. Keep on reading further for documentation from further weeks, or spend some time gaining further insight into the previously discussed topics.
 
 \hrulefill
 \pagebreak
@@ -159,18 +159,18 @@ Now that we have an idea of what neural networks are and what they can do, let u
 	\item to put all training examples $x$ into a more compact notation, we define a matrix $X\in\mathbb{R}^{n_x\times m}$ as follows:
 \begin{center}
 $X$ = 
-$\begin{pmatrix}
+$\begin{bmatrix}
 	\vdots & \vdots & & \vdots\\
 	x^{(1)} & x^{(2)} & \cdots & x^{(m)}\\
 	\vdots & \vdots & & \vdots\\
-\end{pmatrix}$
+\end{bmatrix}$
 \end{center}
 	\item to put all output labels $y$ into a more compact notation, we define a matrix $Y\in\mathbb{R}^{1\times m}$ as follows:
 \begin{center}
 $Y$ = 
-$\begin{pmatrix}
+$\begin{bmatrix}
 	y^{(1)} & y^{(2)} & \cdots & y^{(m)}\\
-\end{pmatrix}$
+\end{bmatrix}$
 \end{center}
 	\item terms of the form $x^{(i)}$, $y^{(i)}$, etc are associated with the $i^{th}$ training example
 \end{enumerate}
@@ -236,7 +236,7 @@ Humans perceive images by their subtle features. A computer looks at an image as
 We just take all the red pixel values and list them one by one, followed by the green pixel values and then the blue pixel values, as shown below:
 \begin{center}
 $x$ =
-$\begin{pmatrix}
+$\begin{bmatrix}
 	253\\
 	144\\
 	\vdots\\
@@ -246,7 +246,7 @@ $\begin{pmatrix}
 	165\\
 	187\\
 	\vdots\\
-\end{pmatrix}$
+\end{bmatrix}$
 \end{center}
 Suppose we have a 64$\times$64 image. The resulting feature vector will have 64$\times$64$\times$3 (12288) dimensions.
 \vspace{-6pt}
@@ -453,6 +453,8 @@ How about the cost function? Assuming that we've drawn the training examples ind
 $$P_{train} = \prod_{i=1}^m P(y^{(i)}\mid x^{(i)})$$
 Maximising this function is equivalent to maximising the individual probabilities, for which again we resort to maximising $\log P(y^{(i)}\mid x^{(i)})$ rather than $P(y^{(i)}\mid x^{(i)})$.
 $$\log P_{train}=\sum_{i=1}^{m}\log P(y^{(i)}\mid x^{(i)})=-\sum_{i=1}^{m}\Lagr(\hat{y}^{(i)},y^{(i)})$$
+This now starts to look like the form of the cost function. Now, since we want to minimize the cost, we take the negative of $\log P_{train}$. And finally, to make sure that our quantities are better scaled, we divide by $m$ (we can work without this, but the value of the function may sometimes get too high for large datasets). This brings us to our final form of the cost function
+$$J(w,b)=\dfrac{1}{m}\sum_{i=1}^{m}\Lagr(a^{(i)},y^{(i)})=-\dfrac{1}{m}\sum_{i=1}^{m}\left[y^{(i)}\log a^{(i)}+(1-y^{(i)})\log(1-a^{(i)})\right]$$
 
 \hrulefill
 \begin{center}\textbf{END OF WEEK 2 - MODULE 1}\end{center}
@@ -537,18 +539,18 @@ It turns out that we can easily get rid of the nested for loop in the code. This
 We've gone from having 2 \texttt{for} loops to just one. Though, we still loop over the individual training examples.
 \subsubsection{Vectorizing the forward propagation steps}
 The forward propagation steps require to first find $z^{(i)}=w^Tx^{(i)}+b$ and then $a^{(i)}=\sigma(z^{(i)})$. It turns out we can do this without an explicit \texttt{for} loop. Let us first see how to compute $z^{(i)}$. Remember we defined a matrix $X\in\mathbb{R}^{n_x\times m}$ as
-$$X=\begin{pmatrix}
+$$X=\begin{bmatrix}
 	\vdots & \vdots & & \vdots\\
 	x^{(1)} & x^{(2)} & \cdots & x^{(m)}\\
 	\vdots & \vdots & & \vdots\\
-\end{pmatrix}$$
+\end{bmatrix}$$
 Let us now define 2 other matrices $Z,B\in\mathbb{R}^{1\times m}$ as
-$$Z=\begin{pmatrix}
+$$Z=\begin{bmatrix}
 	z^{(1)} & z^{(2)} & \cdots & z^{(m)}\\
-\end{pmatrix};
-B=\begin{pmatrix}
+\end{bmatrix};
+B=\begin{bmatrix}
 	b & b & \cdots & b\\
-\end{pmatrix}$$
+\end{bmatrix}$$
 Using these 2 matrices, we can express the system of equations $z^{(i)}=w^Tx^{(i)}+b$ in a single matrix equation, which translate into a single line of code:
 $$\left. \begin{array}{cc}
     z^{(1)}=w^Tx^{(1)}+b \\
@@ -562,14 +564,14 @@ There is one subtlety in the above piece of code. We don't explicitly need to de
 \vspace{6pt}
 
 Finally, we would like to compute the variables $a^{(i)}$. We can define a matrix $A\in\mathbb{R}^{1\times m}$ similar to how we defined $Z$. We can then implement a vector-valued sigmoid function to output $A$ (this will be discussed in a later section):
-$$A=\begin{pmatrix}
+$$A=\begin{bmatrix}
 	a^{(1)} & a^{(2)} & \cdots & a^{(m)}\\
-\end{pmatrix}=\sigma(Z)$$
+\end{bmatrix}=\sigma(Z)$$
 \subsubsection{Vectorizing the gradient output of logistic regression}
 We have effectively rid our program of the first 2 statements in the \texttt{for} loop. Now let's see how to vectorize the gradient calculations. Let us first see how to do this for $\text{d}z^{(i)}=a^{(i)}-y^{(i)}$. Similar to the process in the  forward propagation steps, we define a new matrix $\text{d}Z\in\mathbb{R}^{1\times m}$ as
-$$\text{d}Z=\begin{pmatrix}
+$$\text{d}Z=\begin{bmatrix}
 	\text{d}z^{(1)} & \text{d}z^{(2)} & \cdots & \text{d}z^{(m)}\\
-\end{pmatrix}=A-Y$$
+\end{bmatrix}=A-Y$$
 We got rid of the \texttt{for} loop which calculated \texttt{dw[k]} by initializing \texttt{dw} as a single \texttt{numpy} zero vector. But we still have the \texttt{for} loop over the $m$ examples in the training set. Let's now attempt to vectorize all these operations and get rid of this \texttt{for} loop as well.
 \vspace{6pt}
 
@@ -642,31 +644,31 @@ We might start out by summing the calories in individual columns. Then, we would
 	print(percentage)
 \end{Verbatim}
 The line \texttt{percentage = 100*A/cal} is an example of broadcasting in python. What we have essentially done is divide a $3\times 4$ matrix by a $1\times 4$ matrix. This type of broadcasting works with both column vectors as well as row vectors. Let's go through another example. If we try to perform the following addition in Python,
-$$\begin{pmatrix}
+$$\begin{bmatrix}
 	1 \\
 	2 \\
 	3 \\
 	4 \\
-\end{pmatrix} +100\longrightarrow
-\begin{pmatrix}
+\end{bmatrix} +100\longrightarrow
+\begin{bmatrix}
 	1 \\
 	2 \\
 	3 \\
 	4 \\
-\end{pmatrix}+
-\begin{pmatrix}
+\end{bmatrix}+
+\begin{bmatrix}
 	100 \\
 	100 \\
 	100 \\
 	100 \\
-\end{pmatrix}=
-\begin{pmatrix}
+\end{bmatrix}=
+\begin{bmatrix}
 	101 \\
 	102 \\
 	103 \\
 	104 \\
-\end{pmatrix}$$
-We saw this type of broadcasting in our earlier code for logistic regression with the line \texttt{Z = np.dot(w.t,x) + b}.
+\end{bmatrix}$$
+We saw this type of broadcasting in our earlier code for logistic regression with the line \texttt{Z = np.dot(w.t,x)+b}.
 \subsection{Python and \texttt{numpy} vectors}
 The \texttt{numpy} library in Python allows for broadcasting. As we have already seen, this can make our code a whole lot shorter. However, this may also lead to certain hard-to-find bugs in the code if one is not really familiar with how broadcasting works. Some of the most common bugs occur with rank 1 arrays.
 \begin{Verbatim}[tabsize=2]
@@ -685,5 +687,198 @@ The first line prints out \texttt{(5,)}, indicating that the array is of rank 1.
 To avoid this, it is better to initialise \texttt{a = np.random.randn(5,1)}. Another alternative is to force the dimension using \texttt{assert(a.shape == (5,1))}. If, for some reason, you end up using a rank 1 array, it can be reshaped as \texttt{a.reshape(5,1)}.
 
 \hrulefill
+\begin{center}\textbf{END OF WEEK 2 - MODULE 2}\end{center}
+This is the end of the course documentation for Week 2. Keep on reading further for the documentation from further weeks, or spend some time gaining further insight into the previously discussed topics.
 
+\hrulefill
+\pagebreak
+\section{Shallow Neural Networks}
+In the previous section, we saw how to implement a single iteration of logistic regression, i.e. a neural network with a single node. The node computed 2 variables $z$ and $a$.
+\begin{center}
+\includegraphics{week2.png}
+\end{center}
+Most often, neural networks will have multiple nodes distributed between multiple `hidden' layers. Let us see an example of a neural network with one hidden node:
+\begin{center}
+\includegraphics[scale=0.5]{week3.png}
+\end{center}
+Each of the individual neurons corresponds to a computation of $z$ and $a$:
+\begin{itemize}
+	\item the first stack of nodes will receive an input as $W^{[1]},b^{[1]},x$$$z^{[1]}=W^{[1]}x+b^{[1]}\longrightarrow a^{[1]}=\sigma(z^{[1]})$$
+	\item the second layer (a single node) will receive input $W^{[2]},b^{[2]},a^{[1]}$ from the first layer and follow a similar computation
+$$z^{[2]}=W^{[2]}a^{[1]}+b^{[2]}\longrightarrow a^{[2]}=\sigma(z^{[2]})\longrightarrow \Lagr(a^{[2]},y)$$
+\end{itemize}
+\textbf{NOTE:} The above notation will be used throughout the next sections. This notation $W^{[i]},b^{[i]},a^{[i]}$ corresponds to different layers in the neural network and is not to be confused with $W^{(i)},b^{(i)},a^{(i)}$, which corresponds to individual training examples.
+\subsection{Neural network representation}
+Now that we have seen the basic representation of a neural network, let us explore a neural network with a single hidden layer in a little more detail. 
+\begin{wrapfigure}[11]{L}{0.4\textwidth}
+\centering \includegraphics[width=0.38\textwidth]{single_hidden_layer.png}
+\end{wrapfigure}
+\vspace{6pt}
+
+The input features $x_1,x_2,x_3$ stacked vertically form the input layer of the neural network. Similarly, the final layer (in this case, just a single node) forms the output layer and is responsible for generating the predicted value $\hat{y}$. 
+\vspace{6pt}
+
+In the middle, we have the hidden layer of the neural network. The training dataset contains values from both the input layer as well as the output layer. However, the true values for the middle nodes are not observed in the training set, and hence the term `hidden'.
+\vspace{6pt}
+
+Let us now introduce a little more notation with reference to the diagram alongside:
+\begin{itemize}
+	\item initially we used the vector $X$ to denote the input features $\rightarrow$ an alternative notation for the input features is $a^{[0]}=X$
+\end{itemize}
+The term $a$ stands for activations and refers to the values that different layers in the neural network pass on to subsequent layers.
+\begin{itemize}
+	\item the next layer will, in turn, generate a set of activations $a^{[1]}=\{a_1^{[1]},a_2^{[1]},a_3^{[1]},a_4^{[1]}\}$
+	\item the final layer will generate a value $a^{[2]}$, a real number, which corresponds to $\hat{y}$
+\end{itemize}
+
+\subsection{Computing the output of a neural network}
+In logistic regression, we had a single node which computed $z=w^Tx+b$ and $a=\sigma(z)$. A neural network just does this a lot more times.
+\vspace{6pt}
+Consider the first node in the hidden layer of the network in Section 5.1. It computes $z_1^{[1]}={w_1^{[1]}}^Tx+b_1^{[1]}$ and $a_1^{[1]}=\sigma(z_1^{[1]})$. Similarly, the second layer computes $z_2^{[1]}={w_2^{[1]}}^Tx+b_2^{[1]}$ and $a_2^{[1]}=\sigma(z_2^{[1]})$, and so on. Naturally, using a \texttt{for} loop in such a case is inefficient, and even more so when the number of nodes increases. Let's see how we can vectorize the set of 4 equations corresponding to the middle layer. 
+\vspace{6pt}
+
+Let's start with computing $z$ as a vector. We define the vector $Z^{[1]}$ and matrices $W^{[1]},B^{[1]}$ as
+$$Z^{[1]}=
+\begin{bmatrix}
+	\cdots & w_1^{[1]T} & \cdots\\
+	\cdots & w_2^{[1]T} & \cdots\\
+	\cdots & w_3^{[1]T} & \cdots\\
+	\cdots & w_4^{[1]T} & \cdots\\
+\end{bmatrix}
+\begin{bmatrix}
+	x_1\\
+	x_2\\
+	x_3\\
+\end{bmatrix} 
+ +
+\begin{bmatrix}
+	b_1^{[1]}\\
+	b_2^{[1]}\\
+	b_3^{[1]}\\
+	b_4^{[1]}\\
+\end{bmatrix}= W^{[1]}x+B^{[1]}=
+\begin{bmatrix}
+	w_1^{[1]T}x+b_1^{[1]}\\
+	w_2^{[1]T}x+b_2^{[1]}\\
+	w_3^{[1]T}x+b_3^{[1]}\\
+	w_4^{[1]T}x+b_4^{[1]}\\
+\end{bmatrix}=
+\begin{bmatrix}
+	z_1^{[1]}\\
+	z_2^{[1]}\\
+	z_3^{[1]}\\
+	z_4^{[1]}\\
+\end{bmatrix}
+$$
+Finally we define another vector $A^{[1]}=\sigma(Z^{[1]})$ which simply stacks up all the values $a_1^{[1]},a_2^{[1]},a_3^{[1]},a_4^{[1]}$. The computation in the final node is very similar, except for a change in the layer index.
+\subsection{Vectorization across multiple examples}
+The previous section dealt with computing the output of a neural network for a single example. Let's how try to compute the output over an entire training set.
+$$x\longrightarrow a^{[2]}=\hat{y} \left\{
+\begin{array}{l}
+    x^{(1)}\longrightarrow a^{[2](1)}=\hat{y}^{(1)} \\
+    x^{(2)}\longrightarrow a^{[2](2)}=\hat{y}^{(2)} \\
+    \vdots \\
+    x^{(m)}\longrightarrow a^{[2](m)}=\hat{y}^{(m)}\\
+\end{array}{}\right.$$
+We now have to refine the matrices $Z^{[1]}$ and $A^{[1]}$ so that we vertically span over the number of nodes in the hidden layer and horizontally span across the number of training examples:
+$$X=A^{[0]}
+\begin{bmatrix}
+	\vdots & \vdots & & \vdots\\
+	x^{(1)} & x^{(2)} & \cdots & x^{(m)}\\
+	\vdots & \vdots & & \vdots\\
+\end{bmatrix};
+Z^{[1]}=
+\begin{bmatrix}
+	\vdots & \vdots & & \vdots\\
+	z^{[1](1)} & z^{[1](2)} & \cdots & z^{[1](m)}\\
+	\vdots & \vdots & & \vdots\\
+\end{bmatrix};
+A^{[1]}=
+\begin{bmatrix}
+	\vdots & \vdots & & \vdots\\
+	a^{[1](1)} & a^{[1](2)} & \cdots & a^{[1](m)}\\
+	\vdots & \vdots & & \vdots\\
+\end{bmatrix}
+$$
+The implementation of this into code is very similar to what we did with logistic regression $-$ only the matrices are of a bigger order. The final vector equations we now have are:
+$$Z^{[1]}={W^{[1]}}^TX+b^{[1]}\longrightarrow A^{[1]}=\sigma(Z^{[1]})$$
+$$Z^{[2]}={W^{[2]}}^TA^{[1]}+b^{[2]}\longrightarrow A^{[2]}=\sigma(Z^{[2]})$$
+\subsection{Activation functions}
+An activation function is the function that passes on parameters from one layer of a neural network to the next. For example, in our example, the function $A^{[1]}=\sigma(Z^{[1]})$ is the activation function. Up till now, we have been using the sigmoid function as the activation function. There are many other choices and sometimes, these can work much better.
+\vspace{6pt}
+
+Generally we choose non-linear sigmoid functions. We do this because otherwise, $\hat{y}$ would just be a linear computation of the input features. While working with many hidden layers, if the activation function is just a linear combination of the input, it makes the purpose of having multiple layers redundant since the output is so predictable and can just be hardcoded.
+\vspace{6pt}
+
+In fact, in our current example, if we use the linear activation function $g(z)=z$ for the hidden layer, then the model is no more expressive that standard logistic regression without any hidden layer.
+\vspace{6pt}
+
+We can replace the function $\sigma(Z^{[1]})$ with a different general function $g(Z^{[1]})$ which is non-linear. One example of a function that almost always performs better than the sigmoid is the $\tanh$ function. The formula for the $\tanh$ function is
+$$\tanh(z)=\frac{e^z-e^{-z}}{e^z+e^{-z}}$$
+It turns out that applying $\tanh$ as the activation function for the middle layer almost always leads to better results than using the sigmoid. This is because, since the values lie between $-1$ and 1, the mean of the data lies closer to 0 than to 0.5. This actually makes the learning for the next layer easier. One exception to when sigmoid would be a more preferable choice is during binary classification, where we want the output predictions to be between 0 and 1.
+\vspace{6pt}
+
+One disadvantage of both the sigmoid and tanh function is that for very large and small $z$, the slope of the function ends up very close to 0, which can slow down gradient descent. This brings us to another popular activation function called the ReLU (rectified linear unit).
+\begin{wrapfigure}[10]{L}{0.3\textwidth}
+\centering \includegraphics[width=0.28\textwidth]{relu.png}
+\end{wrapfigure}
+\vspace{6pt}
+
+The ReLU function is defined as $R(z)=\max(0,z)$. Technically, the derivative of this function at $z=0$ is not defined, but the odds of running into the exact case $z=0$ are extremely small. To handle for that case, we can artificially define it to be either 0 or 1 without affecting the accuracy much. The ReLU is increasingly becoming the default choice of activation function. 
+\vspace{-6pt}
+
+One disadvantage of the ReLU is that the derivative is zero for all $z<0$. This can be rectified by changing the slope to a very subtle angle $-$ this type of ReLU is called the `leaky' ReLU. However, despite it working better than the ReLU, it is not used as much.
+\vspace{18pt}
+
+\textbf{NOTE:} Linear activation functions are usually not preferred in hidden layers, but one of the rare applications of linear activation functions is in compression algorithms. Linear activation functions are also somewhat commonly used in the output layer since the final range of $y$ and $\hat{y}$ are the same.
+\subsection{Gradient descent for neural networks}
+We have seen how to vectorize the forward propagation steps for out neural network. Let's now get into back propagation using gradient descent, for which we need to first define the gradients of various activation functions. For an activation function $a=g(z)$, with a little bit of calculus, we can prove the following results:
+$$g(z)=\sigma(z)=\frac{1}{1+e^{-z}}\longrightarrow g^{\prime}(z)=a(1-a)$$
+$$g(z)=\tanh(z)=\frac{e^z-e^{-z}}{e^z+e^{-z}}\longrightarrow g^{\prime}(z)=(1+a)(1-a)$$
+$$g(z)=\max(0,z)\longrightarrow g^{\prime}(z)= \left\{
+\begin{array}{cc}
+	0 & \text{ if } z<0\\
+	1 & \text{ if } z>0\\ 
+\end{array} \right.$$
+$$g(z)=\max(0.01z,z)\longrightarrow g^{\prime}(z)= \left\{
+\begin{array}{lc}
+	0.01 & \text{ if } z<0\\
+	1 & \text{ if } z>0\\ 
+\end{array} \right.$$
+Note that for the ReLU and leaky ReLU functions we can set the derivative at $z=0$ to be either 0 or 1, without affecting the accuracy of the algorithm much. Now that we have defined the derivatives of the various activation functions, let's get into implementing gradient descent.
+\vspace{6pt}
+
+We have the input parameters $X,W^{[1]},b^{[1]},W^{[2]}$ and $b^{[2]}$. Let us define $n^{[1]},n^{[2]}$ as the number of nodes in the hidden layer and the output layer respectively. $X$ is of dimension $(n_x,n^{[1]})$, or $(n^{[0]},n^{[1]})$ for a more consistent notation. The dimensions of 
+$W^{[1]},b^{[1]},W^{[2]},b^{[2]}$ are $(n^{[1]},n^{[0]}),(n^{[1]},1),(n^{[2]},n^{[1]}),(n^{[2]},1)$ respectively. Let us assume, for now, that we are performing binary classification. Then, the loss and cost functions will have a very similar form to that we used in case of logistic regression earlier:
+$$J(W^{[1]},b^{[1]},W^{[2]},b^{[2]})=\frac{1}{m}\sum_{i=1}^m\Lagr(\hat{y},y)=\frac{1}{m}\sum_{i=1}^m\Lagr(a^{[2]},y)$$
+To then carry out gradient descent, we need to compute the gradients $\dfrac{\text{d}J}{\text{d}W^{[1]}},\dfrac{\text{d}J}{\text{d}b^{[1]}},\dfrac{\text{d}J}{\text{d}W^{[2]}},\dfrac{\text{d}J}{\text{d}b^{[2]}}$. After this is done, we would need to update the parameters on each iteration using $$W^{[1]}=W^{[1]}-\alpha\left(\dfrac{\text{d}J}{\text{d}W^{[1]}}\right);b^{[1]}=b^{[1]}-\alpha\left(\dfrac{\text{d}J}{\text{d}b^{[1]}}\right);W^{[2]}=W^{[2]}-\alpha\left(\dfrac{\text{d}J}{\text{d}W^{[2]}}\right);b^{[2]}=b^{[2]}-\alpha\left(\dfrac{\text{d}J}{\text{d}b^{[2]}}\right)$$
+Let us finally express the gradient descent algorithm as a bunch of equations (keep in mind that any notation of the form $\text{d}Z^{[1]}$ actually means $\left.\dfrac{\text{d}J}{\text{d}Z^{[1]}}\right)$. We use the sigmoid as the activation function for the output layer, and a function $g^{[1]}(Z^{[1]})$ for the hidden layer.
+\begin{center}
+\begin{tabular}{c|c}
+	\textbf{Forward Propagation} & \textbf{Back Propagation}\\\\	
+	$Z^{[1]}={W^{[1]}}^TX+b^{[1]}$ & $\text{d}Z^{[2]}=A^{[2]}-Y$\\\\
+	$A^{[1]}=\sigma(Z^{[1]})$ & $\text{d}W^{[2]}=\dfrac{1}{m}\texttt{np.dot(}\text{d}Z^{[2]},{A^{[1]}}\texttt{.T)}$\\\\
+	$Z^{[2]}={W^{[2]}}^TA^{[1]}+b^{[2]}$ & $\text{d}b^{[2]}=\dfrac{1}{m}\texttt{np.sum(}\text{d}Z^{[2]}\texttt{,axis=1,keepdims=True)}$\\\\
+	$A^{[2]}=\sigma(Z^{[2]})$ & $\text{d}Z^{[1]}=\texttt{np.dot(}W^{[2]}\texttt{.T,}\text{d}Z^{[2]}\texttt{)}\times{g^{[1]}}^{\prime}(Z^{[1]})$\\\\
+	 & $\text{d}W^{[1]}=\dfrac{1}{m}\texttt{np.dot(}\text{d}Z^{[1]},X\texttt{.T)}$\\\\
+	  & $\text{d}b^{[1]}=\dfrac{1}{m}\texttt{np.sum(}\text{d}Z^{[1]}\texttt{,axis=1,keepdims=True)}$\\\\
+\end{tabular}
+\end{center}
+\subsection{Initialization of variables}
+In our implementation of logistic regression, we initialised the variables all to 0. In the case of neural networks, this won't work. Consider a neural network with 2 input features and 2 hidden units.
+\begin{wrapfigure}[6]{L}{0.35\textwidth}
+\centering \includegraphics[width=0.33\textwidth]{initialization.png}
+\end{wrapfigure}
+\vspace{6pt}
+
+Let's say we initialize $W^{[1]},W^{[2]},b^{[1]}$ all to null matrices. It turns out that initialising $b^{[1]}$ to 0 is okay, but it is a problem in case of $W^{[1]}$ and $W^{[2]}$. This is because then, $z_1^{[1]}=z_2^{[1]}\implies a_1^{[1]}=a_2^{[1]}$, since both of the nodes are computing the same activation function. Due to this, during back propagation, we get the result that $\text{d}z_1^{[1]}=\text{d}z_2^{[1]}$. So essentially, the 2 nodes are now identical (or symmetric).
+\vspace{6pt}
+
+By mathematical induction over the number of iterations, it can be proven that both the nodes compute exactly the same function during each iteration. Hence, there is really no point to having more than one hidden unit. We want them to be computing different functions.
+\vspace{6pt}
+
+A solution to this is to initialize the parameters to random values i.e. $w^{[1]}=\texttt{np.random.randn((2,2))*0.01}$ and so on. We multiply by a small factor to ensure that $w$, hence $z$, and hence $a$ are small enough to not end up on the flat parts of the activation function curve.
+
+\hrulefill
 \end{document}
+

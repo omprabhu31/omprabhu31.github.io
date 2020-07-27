@@ -27,3 +27,10 @@
 \BOOKMARK [2][-]{subsection.4.3}{Broadcasting in python}{section.4}% 27
 \BOOKMARK [2][-]{subsection.4.4}{Python and numpy vectors}{section.4}% 28
 \BOOKMARK [1][-]{section.5}{Shallow Neural Networks}{}% 29
+\BOOKMARK [2][-]{subsection.5.1}{Neural network representation}{section.5}% 30
+\BOOKMARK [2][-]{subsection.5.2}{Computing the output of a neural network}{section.5}% 31
+\BOOKMARK [2][-]{subsection.5.3}{Vectorization across multiple examples}{section.5}% 32
+\BOOKMARK [2][-]{subsection.5.4}{Activation functions}{section.5}% 33
+\BOOKMARK [2][-]{subsection.5.5}{Gradient descent for neural networks}{section.5}% 34
+\BOOKMARK [2][-]{subsection.5.6}{Initialization of variables}{section.5}% 35
+\BOOKMARK [1][-]{section.6}{Deep Neural Networks}{}% 36
