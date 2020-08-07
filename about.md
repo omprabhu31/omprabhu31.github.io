@@ -6,7 +6,7 @@ feature-img: "assets/img/sample_feature_img_2.png"
 hide: true
 ---
 
-Seems like you wanna know more about me (wink wink)! For starters, my name is Om Prabhu. I'm currently an undergrad at the <a href="https://www.ese.iitb.ac.in/">Department of Energy Science and Engineering, IIT Bombay</a>.
+Seems like you wanna know more about me (wink wink)! For starters, my name is Om Prabhu. I'm currently a dual degree student at the <a href="https://www.me.iitb.ac.in/">Department of Mechanical Engineering, IIT Bombay</a>.
 
 I love playing video games (any genre, but I prefer story rich stuff the most). I honestly believe that video games are the best form of entertainment (more about that sometime later), and personally they help refresh my mind and concentrate on other things for longer durations. Some of my favourite titles are <a href="https://square-enix-games.com/en_US/games/life-is-strange"><i>Life is Strange</i></a>, <a href="http://www.giantsparrow.com/games/finch/"><i>What Remains of Edith Finch</i></a>, <a href="https://www.playdead.com/games/limbo/"><i>Limbo</i></a> and <a href="http://www.thefirsttree.com/"><i>The First Tree</i></a>. On a side note, I'm also currently taking a set of courses in Game Design and Development.
 
