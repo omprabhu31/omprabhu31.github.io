@@ -12,7 +12,7 @@ The general structure of the website is inspired by [Aryaman Maithani](https://a
 
 ---
 
-Visitor Count: 
+<h3>Visitor Count</h3>
 
 <!-- hitwebcounter Code START -->
 <center><a href="https://www.hitwebcounter.com" target="_blank">
