@@ -12,11 +12,13 @@ The general structure of the website is inspired by [Aryaman Maithani](https://a
 
 ---
 
-Visitor Count: <!-- hitwebcounter Code START -->
-<a href="https://www.hitwebcounter.com" target="_blank">
-<img src="https://hitwebcounter.com/counter/counter.php?page=7556214&width=100&style=0010&nbdigits=5&type=ip&initCount=0" title="Web Counter" Alt="counter free"   border="0" >
-</a>                                    
+Visitor Count: 
 
-This counter was started on August 9, 2020. It only displays unique visitors, no matter the number of times you visit the website.
+<!-- hitwebcounter Code START -->
+<center><a href="https://www.hitwebcounter.com" target="_blank">
+<img src="https://hitwebcounter.com/counter/counter.php?page=7556214&width=500&style=0010&nbdigits=5&type=ip&initCount=0" title="Web Counter" Alt="counter free"   border="0" >
+</a></center>                                 
+
+This counter was started on August 9, 2020. It only displays unique visitors, no matter the number of times you visit the website or number of pages you visit on the website.
 
 ---
