@@ -15,7 +15,9 @@ The general structure of the website is inspired by [Aryaman Maithani](https://a
 <h3>Visitor Count</h3>
 
 <!-- hitwebcounter Code START -->
-<center>You are visitor number - <a href="http://www.reliablecounter.com" target="_blank"><img src="https://www.reliablecounter.com/count.php?page=omprabhu31.github.io2085004&digit=style/plain/31/&reloads=0" width="40" border="0"></a></center>
+<center>You are visitor number - <!-- Badge Code - Do Not Change The Code -->
+<a class="hitCounter" href="https://visitorshitcounter.com/" target="_blank" title="Hit counter" data-name="1f7f994fa596684813ccd8129751426c|5|ip|1|rgb(33, 33, 33);|#ffffff|large|s-hit">Hit Counter</a><script>document.write("<script type='text/javascript' src='https://visitorshitcounter.com/js/hitCounter.js?v="+Date.now()+"'><\/script>");</script>
+<!-- Badge Code End Here -->
 <br/>                                
 
 (The count was started on August 9, 2020. It only displays unique visitors, no matter the number of times you visit the website or number of pages you visit on the website.)
