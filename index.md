@@ -14,8 +14,8 @@ The general structure of the website is inspired by [Aryaman Maithani](https://a
 
 Visitor Count: <!-- hitwebcounter Code START -->
 <a href="https://www.hitwebcounter.com" target="_blank">
-<img src="https://hitwebcounter.com/counter/counter.php?page=7556201&style=0007&nbdigits=3&type=ip&initCount=0" title="Web Counter" Alt="counter free"   border="0" >
-</a> 
+<img src="https://hitwebcounter.com/counter/counter.php?page=7556214&style=0010&nbdigits=5&type=ip&initCount=0" title="Web Counter" Alt="counter free"   border="0" >
+</a>                                    
 
 This counter was started on August 9, 2020. It only displays unique visitors, no matter the number of times you visit the website.
 
