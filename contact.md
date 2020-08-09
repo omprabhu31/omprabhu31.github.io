@@ -14,4 +14,6 @@ hide: true
 	<li><a href="https://www.linkedin.com/in/omprabhu31/">LinkedIn</a></li>
 </ul>
 
-If you wish to contact me but remain anonymous, you can do so [here](https://forms.gle/U7fuk4wQ771iAaLf6).
+If you wish to contact me but remain anonymous, you can do so below. If, for some reason, the embed doesn't work for you, you can find the link to the form in the page footer as well.
+
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfG-jusOqOxokcExQO-CVaXXqkAf2rzybisQkBEiyBdj4-nTQ/viewform?embedded=true" width="640" height="746" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
