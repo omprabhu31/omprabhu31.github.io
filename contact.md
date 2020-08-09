@@ -16,4 +16,4 @@ hide: true
 
 If you wish to contact me but remain anonymous, you can do so below. If, for some reason, the embed doesn't work for you, you can find the link to the form in the page footer as well.
 
-<center><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfG-jusOqOxokcExQO-CVaXXqkAf2rzybisQkBEiyBdj4-nTQ/viewform?embedded=true" width="908" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe></center
+<center><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfG-jusOqOxokcExQO-CVaXXqkAf2rzybisQkBEiyBdj4-nTQ/viewform?embedded=true" width="640" height="840" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe></center>
