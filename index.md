@@ -15,7 +15,7 @@ The general structure of the website is inspired by [Aryaman Maithani](https://a
 <h3>Visitor Count</h3>
 
 <!-- hitwebcounter Code START -->
-<center>You are visitor number <a href="http://www.reliablecounter.com" target="_blank"><img src="https://www.reliablecounter.com/count.php?page=omprabhu31.github.io2085004&digit=style/plain/31/&reloads=1" alt="reliablecounter.com" title="reliablecounter.com" border="0"></a><br /><a href="http://https://www.reliablecounter.com/blog" target="_blank" style="font-family: Geneva, Arial; font-size: 9px; color: #330010; text-decoration: none;">reliablecounter.com</a></center>                                 
+<center>You are visitor number <a href="http://www.reliablecounter.com" target="_blank"><img src="https://www.reliablecounter.com/count.php?page=omprabhu31.github.io2085004&digit=style/plain/31/&reloads=1" border="0"></a></center>                                 
 
 This counter was started on August 9, 2020. It only displays unique visitors, no matter the number of times you visit the website or number of pages you visit on the website.
 
