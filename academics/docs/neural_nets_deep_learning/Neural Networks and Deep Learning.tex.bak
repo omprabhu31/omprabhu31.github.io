@@ -90,7 +90,7 @@ Just as how electricity once transformed countless industries, AI today is on it
 \hrulefill
 \pagebreak
 \section{Overview of Deep Learning}
-The terminology in AI is still not very well defined. For example, some people say that neural networks are a subset of deep learning while others use the two words almost interchangeably. Through most of this documentation, we will refer to deep learning as being a science of building and training neural networks. With that said, let's look at what a neural network is.
+The terminology in AI is still not very well defined. For example, some people say that neural networks are a subset of deep learning while others use the two words almost interchangeably. Through most of these notes, we will refer to deep learning as being a science of building and training neural networks. With that said, let's look at what a neural network is.
 \subsection{Neural networks}
 Let us use an example of demand prediction to try and understand what neural networks really are. Suppose a t-shirt company wants to know how many units they can expect to sell based on their selling price. The required dataset might be a in the form of a demand curve, where the higher the price the lesser the demand. This form of curve can be used to train what is perhaps the simplest possible neural network.
 \begin{center}\includegraphics{deep_learning1.png}\end{center}
@@ -142,7 +142,7 @@ Fast computation is very important in deep learning, since the idea of training 
 
 \hrulefill
 \begin{center}\textbf{END OF WEEK 1}\end{center}
-This is the end of the course documentation for Week 1. Keep on reading further for documentation from further weeks, or spend some time gaining further insight into the previously discussed topics.
+This is the end of the course notes for Week 1. Keep on reading further for notes from further weeks, or spend some time gaining further insight into the previously discussed topics.
 
 \hrulefill
 \pagebreak
@@ -458,7 +458,7 @@ $$J(w,b)=\dfrac{1}{m}\sum_{i=1}^{m}\Lagr(a^{(i)},y^{(i)})=-\dfrac{1}{m}\sum_{i=1
 
 \hrulefill
 \begin{center}\textbf{END OF WEEK 2 - MODULE 1}\end{center}
-This is the end of the course documentation for Module 1 from Week 2. Keep on reading further for the documentation for Module 2, or spend some time gaining further insight into the previously discussed topics.
+This is the end of the course notes for Module 1 from Week 2. Keep on reading further for the notes for Module 2, or spend some time gaining further insight into the previously discussed topics.
 
 \hrulefill
 \pagebreak
@@ -688,7 +688,7 @@ To avoid this, it is better to initialise \texttt{a = np.random.randn(5,1)}. Ano
 
 \hrulefill
 \begin{center}\textbf{END OF WEEK 2 - MODULE 2}\end{center}
-This is the end of the course documentation for Week 2. Keep on reading further for the documentation from further weeks, or spend some time gaining further insight into the previously discussed topics.
+This is the end of the course notes for Week 2. Keep on reading further for the notes from further weeks, or spend some time gaining further insight into the previously discussed topics.
 
 \hrulefill
 \pagebreak
@@ -878,6 +878,15 @@ By mathematical induction over the number of iterations, it can be proven that b
 \vspace{6pt}
 
 A solution to this is to initialize the parameters to random values i.e. $w^{[1]}=\texttt{np.random.randn((2,2))*0.01}$ and so on. We multiply by a small factor to ensure that $w$, hence $z$, and hence $a$ are small enough to not end up on the flat parts of the activation function curve.
+
+\hrulefill
+\begin{center}\textbf{END OF WEEK 3}\end{center}
+This is the end of the course notes for Week 3. Keep on reading further for the notes from further weeks, or spend some time gaining further insight into the previously discussed topics.
+
+\hrulefill
+\pagebreak
+\section{Deep Neural Networks}
+\textit{(This section is currently in the works. Expect it to be up within a week's time.)}
 
 \hrulefill
 \end{document}
