@@ -13,8 +13,8 @@ I love playing video games (any genre, but I prefer story rich stuff the most). 
 Here's a sneak peak from my Steam art gallery:
 
 <img src="/assets/img/lis_finalchoice.jpg" alt="Life is Strange" width="454">
-<img src="/assets/img/mantroid_planet.jpg" alt="The Awesome Adventures of Captain Spirit" width="454">
-<img src="/assets/img/clifflevel.jpg" alt="The First Tree" width="454">
+<img src="/assets/img/deer.jpg" alt="Red Dead Redemption 2" width="454">
+<img src="/assets/img/journey.jpg" alt="Journey" width="454">
 <img src="/assets/img/house.jpg" alt="What Remains of Edith Finch" width="454">
 
 Apart from playing games, I listen to music (like seriously, a lot of it). Here is my [Favourites](https://open.spotify.com/playlist/71jTfHYeJXhq0u1iFzOzkI?si=SnhE73jDTbCbBvR3R2hOOg) playlist on Spotify. I've also made a little [collaborative playlist](https://open.spotify.com/playlist/4CtKpwGpbBcniahdVdW7dw?si=BWD67UA6RAurdlvGWxC8Ww) where you guys can add some cool songs. 
