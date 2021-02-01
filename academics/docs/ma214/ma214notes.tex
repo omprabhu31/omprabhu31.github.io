@@ -1,0 +1,158 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}	
+
+%common math and LaTeX packages
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd}
+\usepackage{multirow,booktabs}
+\usepackage[table]{xcolor}
+\usepackage{fullpage}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{mathrsfs}
+\usepackage{wrapfig}
+\usepackage{setspace}
+\usepackage{calc}
+\usepackage{multicol}
+\usepackage{cancel}
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[margin=3cm]{geometry}
+\usepackage{amsmath}
+\newlength{\tabcont}
+\setlength{\parindent}{0.0in}
+\setlength{\parskip}{0.0in}
+\usepackage{empheq}
+
+%shaded environment for important equations/notes
+\usepackage{mdframed}
+\colorlet{shaded}{blue!15}
+\colorlet{shadedtext}{black}
+\newenvironment{shaded}
+   {
+     \raggedright
+     \color{shadedtext}%
+   }{}
+\surroundwithmdframed[
+   hidealllines=true,
+   backgroundcolor=shaded
+]{shaded}
+
+%page geometry definitions
+\usepackage[most]{tcolorbox}
+\usepackage{xcolor}
+\parindent 0in
+\parskip 6pt
+\geometry{margin=1in, headsep=0.25in}
+
+%custom theorem definitions
+\theoremstyle{definition}
+\newtheorem{innercustomgeneric}{\customgenericname}
+\providecommand{\customgenericname}{}
+\newcommand{\newcustomtheorem}[2]{%
+  \newenvironment{#1}[1]
+  {%
+   \renewcommand\customgenericname{#2}%
+   \renewcommand\theinnercustomgeneric{##1}%
+   \innercustomgeneric
+  }
+  {\endinnercustomgeneric}
+}
+\newcustomtheorem{thm}{Theorem}
+\newcustomtheorem{lem}{Lemma}
+\newcustomtheorem{defn}{Definition}
+\newcustomtheorem{prop}{Proposition}
+\newcustomtheorem{exer}{Exercise}
+\newcustomtheorem{note}{Note}
+\renewcommand{\qedsymbol}{$\blacksquare$}
+
+\let\a\alpha
+\let\b\beta
+\let\g\gamma
+\let\e\varepsilon
+\let\t\theta
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\PP}{\mathcal{P}}
+\newcommand{\C}{\mathcal{C}}
+\newcommand{\Lagr}{\mathcal{L}}
+
+\begin{document}
+
+%document header
+\begin{center}
+{\LARGE \bf MA 214 - Introduction to Numerical Analysis}\\
+{Instructor: \textit{Prof. Saikat Mazumdar}}\\
+Last updated \today \\~\\
+{\large \bf Om Prabhu}\\
+Undergraduate, Mechanical Engineering\\
+Indian Institute of Technology Bombay\\~\\
+\textsc{Disclaimer}
+\end{center}
+\vspace{-6pt}
+
+This document is a compilation of the notes I made while taking the course MA 214 (Introduction to Numerical Analysis) in my 4$^{\text{th}}$ semester at IIT Bombay. It is not meant to serve as a replacement for any formal textbook or lecture on the subject, since the theory is not discussed at all.
+
+There will probably be many instances where I use certain common symbols without explicitly mentioning what they mean. It is to be assumed that they carry their usual meanings.
+
+If you have any suggestions and/or spot any errors, you know where to contact me.
+
+\hrulefill
+\tableofcontents
+\hrulefill
+\pagebreak
+\section{Interpolation Theory}
+Suppose $(n+1)$ real points $(x_0,y_0), (x_1,y_1),\dots,(x_n,y_n)$ are known. Further the set of points $x_i$ is spread out over the interval $[a,b]$. Then the problem of approximating a function over the interval $[a,b]$ passing through these points is called interpolation.
+
+We define the norm on $\mathcal{C}[a.b]$ as:
+$||f||=\max_{x\in[a,b]}|f(x)|$. To define the `closeness' of 2 functions formally, we consider the quantity
+$||f-g||=\max_{x\in [a,b]}\left|f(x)-g(x)\right|$. The Weierstrass approximation theorem states that:
+
+Take a function $f\in\C[a,b]$. Given any real number $\e>0$, there exists a polynomial $p$ such that 
+$$||f-p||<\e\implies |f(x)-p(x)|<\e\text{\hspace{12pt}}\forall x\in[a,b]$$
+\subsection{Lagrange interpolation formula} 
+Given $n+1$ distinct real points $x_0,x_1,\dots,x_n$ and $n+1$ real numbers $y_0,y_1,\dots,y_n$, there exists a unique polynomial $p_n\in\mathbb{P}_n$ such that $p(x_i)=y_i$ for $ i=0,1,\dots,n$. Construct $n^{th}$ degree polynomials $L_0^n(x),L_1^n(x),\dots,L_n^n(x)$ such that
+$$L_k^n(x_i)=\left\lbrace\begin{array}{lr}
+1 & \text{if } i=k\\
+0 & \text{if } i\neq k
+\end{array}\right.\implies \boxed{p_n(x)=\sum_{k=0}^ny_kL_k^n(x)}$$
+The lagrange polynomials $L_k^n$ can be found as 
+$$\boxed{L_k^n(x)=\prod_{j=0,j\neq k}^n\frac{(x-x_j)}{(x_k-x_j)}}$$
+
+\subsection{Newton's divided differences}
+Let $x_0,x_1,\dots,x_n$ be $n+1$ real distinct points in $[a,b].$ Let $f:[a,b]\to\R$ be a function whose values are known at these points. We want to find a polynomial $p_n(x)\in\mathbb{P}_n$ such that $p_n(x_i)=f(x_i)$ for $i=0,1,\dots,n$.
+
+We define the divided differences (independant of order of points) as follows: $$f[x_0]:=f(x_0)$$$$
+f[x_0,x_1,\dots,x_{m+1}]:=\frac{f[x_1,\dots,x_{m+1}]-f[x_0,\dots,x_m]}{x_{m+1}-x_0}$$
+Then the polynomial $p_n(x)$ can be written as:
+$$p_n(x) := f[x_0]  + f[x_0, x_1](x - x_0)+\cdots+f[x_0,x_1,\dots,x_n]\prod_{k=0}^{n-1}(x-x_k)$$
+
+\subsection{Matrix representation}
+The problem can also be expressed as a system of linear equations and solved for the coefficients using matrix equations. A matrix similar to the Vandermonde matrix is generated.
+
+$$\begin{bmatrix}
+1 & x_0 & x_0^2 & \cdots & x_0^n\\
+1 & x_1 & x_1^2 & \cdots & x_1^n\\
+\vdots & & \ddots & & \vdots\\
+1 & x_n & x_n^2 & \cdots & x_n^n\\
+\end{bmatrix}
+\begin{bmatrix}
+a_0\\
+a_1\\
+\vdots\\
+a_n
+\end{bmatrix}=
+\begin{bmatrix}
+y_0\\
+y_1\\
+\vdots\\
+y_n
+\end{bmatrix}
+$$
+\subsection{Error estimation}
+Take $f\in\C^{n+1}[a,b]$. Let $x_0,x_1,\dots,x_n$ be $n+1$ distinct points in $[a,b]$. Let $p\in\mathbb{P}_n$ such that $p(x_i)=f(x_i)$ for $i=1,2,\dots,n$. Then for all $x\in[a,b]$, there exists $\xi=\xi(x)\in (a,b)$ such that
+$$f(x)-p(x)=\frac{1}{(n+1)!}f^{(n+1)}(\xi)\prod_{k=0}^n (x-x_k)$$
+Taking maximum over $x\in[a,b]$, we can see that our choice of interpolation points influences the error significantly.
+$$\max_{x\in[a,b]}|f(x)-p(x)|\leqslant\frac{1}{(n+1)!}||f^{(n+1)}||\max_{x\in[a,b]}\prod_{k=0}^n|(x-x_k)|$$
+\end{document}
