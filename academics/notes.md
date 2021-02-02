@@ -11,15 +11,13 @@ Warning: This page is not yet organised very well. I will work on it as and when
 
 You can find some notes over here that I've been maintaining for some academic courses (or academic-related courses), taken both at IIT Bombay as well as on other platforms like Coursera, Udemy, etc. In case you're looking for notes from the various Gamedev courses I've pursued, you can check them out [here](/gamedev/courses/).
 
+> <h3>[MA 214 - Numerical Analysis](/academics/docs/ma214/)</h3>
+> Instructor: Prof. Saikat Mazumdar
+
 > <h3>ME 202 - Strength of Materials</h3>
 > Instructor: Prof. Salil Kulkarni
 >
 > Notes: [.pdf](/academics/docs/me202/me202notes.pdf) / [.tex](https://github.com/omprabhu31/omprabhu31.github.io/blob/master/academics/docs/me202/me202notes.tex)
-
-> <h3>MA 214 - Numerical Analysis</h3>
-> Instructor: Prof. Saikat Mazumdar
->
-> Notes: [.pdf](/academics/docs/ma214/ma214notes.pdf) / [.tex](https://github.com/omprabhu31/omprabhu31.github.io/blob/master/academics/docs/ma214/ma214notes.tex)
 
 > <h3>AI For Everyone</h3>
 > Offered by [deeplearning.ai](https://www.deeplearning.ai/) on [Coursera](https://www.coursera.org/)  -  Instructor: [Andrew Ng](https://www.coursera.org/instructor/andrewng)
