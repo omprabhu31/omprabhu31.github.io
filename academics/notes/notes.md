@@ -15,6 +15,7 @@ Mostly, I write notes in `LaTeX`. To view the `.tex` code, just simply change th
 <ul>
 <li><a href="https://omprabhu31.github.io/academics/notes/ma214/">MA 214</a> - Introduction to Numerical Analysis</li>
 <li><a href="https://omprabhu31.github.io/academics/notes/me202/">ME 202</a> - Strength of Materials</li>
+<li><a href="https://omprabhu31.github.io/academics/notes/me226/">ME 226</a> - Mechanical Measurements</li>
 </ul>
 
 <h3>Other courses</h3>

@@ -1,0 +1,255 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage[margin=0.8in]{geometry}
+\usepackage[utf8]{inputenc}
+
+%page setup
+\usepackage{setspace}
+\setlength{\parindent}{0in}
+\usepackage{float}
+\usepackage{fancyhdr}
+%\pagestyle{fancy}
+%\fancyhf{}
+%\lhead{\footnotesize ME 218 - Experiment 1}
+%\rhead{\footnotesize Om Prabhu, 19D170018}
+\cfoot{\footnotesize \thepage}
+
+%common math and TeX packages
+\usepackage{amsmath, amsthm, amsfonts, amssymb, amscd}
+\usepackage{siunitx, subcaption}
+\usepackage{hyperref, authblk}
+\usepackage{graphicx}
+\usepackage{wrapfig, float}
+\usepackage{verbatim, enumitem, kantlipsum}
+\usepackage{cancel}
+\usepackage[retainorgcmds]{IEEEtrantools}
+
+%tables and code
+\usepackage[table]{xcolor}
+\usepackage{csvsimple}
+
+\let\a\alpha
+\let\b\beta
+\let\g\gamma
+\let\e\epsilon
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\PP}{\mathcal{P}}
+\newcommand{\Lagr}{\mathcal{L}}
+
+\begin{document}
+\begin{center}
+	{\Large \sc ME 226 (Mechanical Measurements) - Homework 1}
+\end{center}
+\textit{Name: Om Prabhu\\
+Roll Number: 19D170018}
+\vspace{2mm}
+
+Honor Pledge: I have abided by the course honor code. I have neither received solutions from my peers nor shared my solutions with them. All the solutions in this document are my own work.
+\vspace{-1.5mm}
+
+\hrulefill
+\vspace{2mm}
+
+\begin{enumerate}[label=(\arabic*),leftmargin=*]
+	\item We have the data given as follows:
+\begin{center}
+\begin{tabular}{|l|l|l|}
+	\hline
+	Input (MPa) & Increasing Output (MPa) & Decreasing Output (MPa)\\
+	\hline
+	0 & 0.25 & 0.2\\
+	\hline
+	10 & 10.56 & 10.6\\
+	\hline
+	20 & 21.65 & 21.75\\
+	\hline
+	30 & 32.21 & 32.65\\
+	\hline
+	40 & 43.65 & 43.98\\
+	\hline
+	50 & 52.3 & 52.73\\
+	\hline
+\end{tabular}
+\end{center}
+\begin{enumerate}[label=\roman*)]
+	\itemsep1em
+	\item According to least squares method, we have the following equations:
+	$$\begin{array}{l}
+		\displaystyle m=\frac{1}{D}\left(N\sum_k x_ky_k-\sum_k x_k\sum_k y_k\right)\\
+		\displaystyle c=\frac{1}{D}\left(\sum_k x_k^2\sum_k y_k-\sum_k x_k\sum_k x_ky_k\right)
+	\end{array} \text{ and } D=N\sum_k x_k^2-\left(\sum_k x_k\right)^2$$
+The individual quantities can be calculated as shown below:
+\begin{align*}
+	\sum_k x_k&=2(0+10+20+30+40+50)=300\\ 
+	\sum_k x_k^2&=2(0+100+400+900+1600+2500)=11000\\
+	\sum_k x_ky_k&=105.6+106+433+435+966.3+979.5+1746+1759.2+2615+2636.5\\
+	&=11786.1\\
+	\sum_k y_k&=0.25+0.2+10.56+10.6+21.65+21.75+32.21+32.65+43.65+\dots\\
+	&\hspace{10mm}\dots 43.98+52.3+52.73=322.63
+\end{align*}
+Thus we can find the value of $D,\text{ }m$ and $c$ as follows:
+$$D=12(11000)-(300)^2=42000$$
+$$\boxed{\therefore m=\frac{12(11786.1)-(300)(322.63)}{42000}=1.063}$$
+$$\boxed{\therefore c=\frac{(11000)(322.63)-(300)(11786.1)}{42000}=0.312}$$
+Thus the equation of best linear fit for the given data is $y=1.063x+0.312$
+	\item First, we find the standard deviation of $y$:
+\begin{align*}
+	\sigma_y^2&=\frac{1}{N-2}\sum_k (mx_k+c-y_k)^2\\
+	&=\frac{1}{10}\left[\begin{array}{l}
+		0.062^2+0.112^2+0.382^2+0.342^2+(-0.078)^2+(-0.178)^2+\dots\\
+		\hspace{0mm}(-0.008)^2+(-0.448)^2+(-0.818)^2+(-1.148)^2+1.162^2+0.732^2
+	\end{array}\right]=0.4624\\
+\end{align*}
+Thus we get $\boxed{\sigma_y=0.68}$.
+
+Based on this, we can calculate the remaining standard deviations as follows:
+$$\therefore \sigma_x^2=\frac{\sigma_y^2}{m^2}=0.4092\implies\boxed{\sigma_x=0.64}$$
+$$\therefore \sigma_m^2=\frac{N\sigma_y^2}{D}=1.321\times 10^{-4}\implies\boxed{\sigma_m=0.011}$$
+$$\therefore \sigma_c^2=\frac{\sigma_y^2\sum_k x_k^2}{D}=0.1211\implies\boxed{\sigma_c=0.35}$$
+	\item We have the output value $y=25.35$ and want to find the true input value. Using the best linear fit equation obtained earlier:
+	\begin{align*}
+		y&=1.063x+0.312\\
+		\therefore x&=\frac{y-0.312}{1.063}\\
+		\therefore x&=\frac{25.35-0.312}{1.063}=23.55
+	\end{align*}
+The uncertainty of the input value within $\pm 3\sigma$ limits is $3\times 0.64=1.92$. Thus the final value of the input is $\boxed{x=23.55\pm 1.92\text{ MPa}}$.
+\newpage
+\end{enumerate}
+	\item We have 15 sample values of $L$ and $D$ each and we know that surface area $A=\pi DL+\pi\dfrac{D^2}{2}$. We first calculate the value of surface area at each of the sample points:
+\begin{align*}
+	A_1&=\pi(20.4)(100.1)+\pi\frac{(20.4)^2}{2}=7068.96\\
+	A_2&=\pi(19.5)(99.9)+\pi\frac{(19.5)^2}{2}=6717.275\\
+	A_3&=\pi(20.1)(99.8)+\pi\frac{(20.1)^2}{2}=6936.589\\
+	A_4&=\pi(19.9)(100.2)+\pi\frac{(19.9)^2}{2}=6886.324\\
+	A_5&=\pi(20.1)(100.3)+\pi\frac{(20.1)^2}{2}=6968.162\\
+	A_6&=\pi(20.3)(99.8)+\pi\frac{(20.3)^2}{2}=7011.988\\
+	A_7&=\pi(20.2)(100)+\pi\frac{(20.2)^2}{2}=6986.965\\
+	A_8&=\pi(19.6)(100.4)+\pi\frac{(19.6)^2}{2}=6785.589\\
+	A_9&=\pi(19.7)(99.7)+\pi\frac{(19.7)^2}{2}=6779.981\\
+	A_{10}&=\pi(19.8)(99.9)+\pi\frac{(19.8)^2}{2}=6829.948\\
+	A_{11}&=\pi(20)(101)+\pi\frac{(20)^2}{2}=6974.336\\
+	A_{12}&=\pi(19.2)(99)+\pi\frac{(19.2)^2}{2}=6550.598\\
+	A_{13}&=\pi(19.4)(99.5)+\pi\frac{(19.4)^2}{2}=6655.401\\
+	A_{14}&=\pi(20)(100.6)+\pi\frac{(20)^2}{2}=6949.203\\
+	A_{15}&=\pi(20.4)(100.5)+\pi\frac{(20.4)^2}{2}=7094.596\\
+\end{align*}
+From the calculated data, the mean value $\bar{A}$ is:
+$$\bar{A}=\frac{\displaystyle\sum_{i=1}^N A_i}{N}=\frac{103195.915}{15}=6879.728$$
+From this data we can now calculate the sample variance as follows:
+$$\sigma_A^2=\sum_{i=1}^N \frac{(A_i-\bar{A})^2}{N-1}=24441.0175\implies \sigma_A=156.336$$
+Thus the final value of the area within $\pm 3\sigma$ error limits is $\boxed{A=6879.728\pm 469.008\text{ mm}^2}$. 
+\newpage
+	\item Before we employ the least squares method to solve this problem, we need to prove the expressions for it first. We know that the input-output relation for the data is $q_0=aq_i+b$. For convenience, we can rewrite this as $y=ax_b$, where $y$ represents the output and $x$ represents the input. We can then define the error $E$ as:
+	$$E=\sum_{i=1}^N(y_i-(ax_i+b))^2$$
+For minimum error, we must have $\dfrac{\partial E}{\partial a}=0$ and $\dfrac{\partial E}{\partial b}=0$.
+\begin{align*}
+	\frac{\partial E}{\partial a}=0&\implies \sum_{i=1}^N 2(-x_i)(y_i-(ax_i+b))=0\\
+	\frac{\partial E}{\partial b}=0&\implies \sum_{i=1}^N 2(y_i-(ax_i+b))=0
+\end{align*} 
+We can further simplify the above equations to get the following system of equations:
+\begin{align*}
+	a\left(\sum_{i-1}^N x_i^2\right)+b\left(\sum_{i-1}^N x_i\right)&=\left(\sum_{i-1}^N x_iy_i\right)\\
+	a\left(\sum_{i-1}^N x_i\right)+bN&=\left(\sum_{i-1}^N y_i\right)
+\end{align*}
+This system of linear equations can further be expressed in a matrix form as follows:
+$$\begin{bmatrix}
+	\displaystyle\sum_{i=1}^N x_i^2 & \displaystyle\sum_{i=1}^N x_i\\
+	\displaystyle\sum_{i=1}^N x_i & N\\
+\end{bmatrix}\begin{bmatrix}
+	a\\
+	b\\
+\end{bmatrix}=\begin{bmatrix}
+	\displaystyle\sum_{i=1}^N x_iy_i\\
+	\displaystyle\sum_{i=1}^N y_i\\
+\end{bmatrix}$$
+$$\therefore \begin{bmatrix}
+	a\\
+	b\\
+\end{bmatrix}=\begin{bmatrix}
+	\displaystyle\sum_{i=1}^N x_i^2 & \displaystyle\sum_{i=1}^N x_i\\
+	\displaystyle\sum_{i=1}^N x_i & N\\
+\end{bmatrix}^{-1}\begin{bmatrix}
+	\displaystyle\sum_{i=1}^N x_iy_i\\
+	\displaystyle\sum_{i=1}^N y_i\\
+\end{bmatrix}\implies 
+	\begin{bmatrix}
+	a\\
+	b\\
+\end{bmatrix}=\frac{1}{D}\begin{bmatrix}
+	N & \displaystyle -\sum_{i=1}^N x_i\\
+	\displaystyle -\sum_{i=1}^N x_i & \displaystyle\sum_{i=1}^N x_i^2\\
+\end{bmatrix}\begin{bmatrix}
+	\displaystyle\sum_{i=1}^N x_iy_i\\
+	\displaystyle\sum_{i=1}^N y_i\\
+\end{bmatrix}$$
+where the determinant $\displaystyle D=N\sum_{i=1}^N x_i^2-\left(\sum_{i=1}^N x_i\right)^2$. Thus, the final expressions for $a$ and $b$ are:
+\begin{align*}
+	a&=\frac{1}{D}\left(N\sum_{i=1}^N x_iy_i-\sum_{i=1}^N x_i\sum_{i=1}^N y_i\right)\\
+	b&=\frac{1}{D}\left(\sum_{i=1}^N x_i^2\sum_{i=1}^N y_i-\sum_{i=1}^N x_i\sum_{i=1}^N x_iy_i\right)
+\end{align*}
+From the given data, we have $\displaystyle\sum_{i=1}^N x_i=27$, $\displaystyle\sum_{i=1}^N x_i^2=179$, $\displaystyle\sum_{i=1}^N x_iy_i=180.6$ and $\displaystyle\sum_{i=1}^N y_i=27.35$. 
+
+Thus we can easily calculate the values of $a,b,D$ as follows:
+$$D=N\sum_{i=1}^N x_i^2-\left(\sum_{i=1}^N x_i\right)^2=7(179)-(27)^2=524$$
+\begin{align*}
+	\therefore a&=\frac{1}{D}\left(N\sum_{i=1}^N x_iy_i-\sum_{i=1}^N x_i\sum_{i=1}^N y_i\right)=\frac{1}{524}[7(180.6)-(27)(27.35)]=1.003\\
+	\therefore b&=\frac{1}{D}\left(\sum_{i=1}^N x_i^2\sum_{i=1}^N y_i-\sum_{i=1}^N x_i\sum_{i=1}^N x_iy_i\right)=\frac{1}{524}[(179)(27.35)-(180.6)(27)]=0.037
+\end{align*}
+Thus, $\boxed{a=1.003}$ and $\boxed{b=0.037}$. The linear best fit expression for the following set of data is $q_o=1.003q_i+0.037$. To calculate the accuracy of these results, we first need to find $\sigma_y$.
+\begin{align*}
+	\sigma_y^2&=\frac{1}{N-2}\sum_{i=1}^N (ax_i+b-y_i)^2\\
+	&=\frac{1}{5}[(-0.063)^2+(-0.06)^2+(-0.007)^2+(0.146)^2+(-0.051)^2+(0.158)^2+(-0.133)^2]\\
+	&=0.0148
+\end{align*}
+Thus we get $\boxed{\sigma_y=0.122}$ and accuracy of measurement based on $\pm 3\sigma$ limits is $\pm 0.366$. Now to find the accuracy of the calculated values of $a$ and $b$:
+$$\sigma_a^2=\frac{N\sigma_y^2}{D}=1.977\times 10^{-4}\implies\boxed{\sigma_a=0.014}$$
+$$\sigma_b^2=\frac{\sigma_y^2\sum_i x_i^2}{D}=5.056\times 10^{-3}\implies\boxed{\sigma_b=0.071}$$
+\newpage
+	\item We have the relation $\kappa=q \dfrac{\ln(r_0)-\ln(r_1)}{2\pi l(T_1-T_0)}$. The root sum square error can be found as follows:
+	$$E_{RSS}=\sqrt{\left(\frac{\partial\kappa}{\partial q}\Delta q\right)^2+\left(\frac{\partial\kappa}{\partial r_0}\Delta r_0\right)^2+\left(\frac{\partial\kappa}{\partial r_1}\Delta r_1\right)^2+\left(\frac{\partial\kappa}{\partial l}\Delta l\right)^2+\left(\frac{\partial\kappa}{\partial T_1}\Delta T_1\right)^2+\left(\frac{\partial\kappa}{\partial T_0}\Delta T_0\right)^2}$$
+	$$\therefore E_{RSS}^2=\left(\frac{\partial\kappa}{\partial q}\right)^2\sigma_q^2+\left(\frac{\partial\kappa}{\partial r_0}\right)^2\sigma_{r_0}^2+\left(\frac{\partial\kappa}{\partial r_1}\right)^2\sigma_{r_1}^2+\left(\frac{\partial\kappa}{\partial l}\right)^2\sigma_{l}^2+\left(\frac{\partial\kappa}{\partial T_1}\right)^2\sigma_{T_1}^2+\left(\frac{\partial\kappa}{\partial T_0}\right)^2\sigma_{T_0}^2$$
+Let us first calculate the individual terms:
+\begin{align*}
+	\frac{\partial\kappa}{\partial q}\sigma_{q}&=\left(\dfrac{\ln(r_0)-\ln(r_1)}{2\pi l(T_1-T_0)}\right)\sigma_{q}=\frac{\ln 2}{2\pi(0.5)(30)}\times \frac{1}{3}=2.45\times 10^{-3} \text{ W/m/K}\\
+	\frac{\partial\kappa}{\partial r_0}\sigma_{r_0}&=\left(\frac{1}{r_0}\right)\frac{q}{2\pi l(T_1-T_0)}\sigma_{r_0}=\frac{70}{2\pi(0.02)(0.5)(30)}\times \frac{0.0005}{3}=6.19\times 10^{-3}\text{ W/m/K}\\
+	\frac{\partial\kappa}{\partial r_1}\sigma_{r_1}&=-\left(\frac{1}{r_1}\right)\frac{q}{2\pi l(T_1-T_0)}\sigma_{r_1}=-\frac{70}{2\pi(0.01)(0.5)(30)}\times \frac{0.0005}{3}=-12.38\times 10^{-3}\text{ W/m/K}\\
+	\frac{\partial\kappa}{\partial l}\sigma_{l}&=-q\left(\dfrac{\ln(r_0)-\ln(r_1)}{2\pi l^2(T_1-T_0)}\right)\sigma_{l}=-\frac{70\ln 2}{2\pi (0.5)^2(30)}\times \frac{0.01}{3}=-3.43\times 10^{-3}\text{ W/m/K}\\
+	\frac{\partial\kappa}{\partial T_1}\sigma_{T_1}&=-q\left(\dfrac{\ln(r_0)-\ln(r_1)}{2\pi l(T_1-T_0)^2}\right)\sigma_{T_1}=-\frac{70\ln 2}{2\pi(0.5)(30)^2}\times \frac{1}{3}=-5.72\times 10^{-3}\text{ W/m/K}\\
+	\frac{\partial\kappa}{\partial T_0}\sigma_{T_0}&=q\left(\dfrac{\ln(r_0)-\ln(r_1)}{2\pi l(T_1-T_0)^2}\right)\sigma_{T_0}=\frac{70\ln 2}{2\pi(0.5)(30)^2}\times \frac{1}{3}=5.72\times 10^{-3}\text{ W/m/K}
+\end{align*}
+Thus we have, $E_{RSS}=\sqrt{(2.45)^2+(6.19)^2+(-12.38)^2+(-3.43)^2+(-5.72)^2+(5.72)^2}\times 10^{-3}$ i.e. $\boxed{E_{RSS}=1.657\times 10^{-2}\text{ W/m/K}}$.
+
+The maximum possible error in measurement of thermal conductivity is simply the absolute sum error.
+$$E_{max}=\left|\frac{\partial\kappa}{\partial q}\sigma_{q}\right|+\left|\frac{\partial\kappa}{\partial r_0}\sigma_{r_0}\right|+\left|\frac{\partial\kappa}{\partial r_1}\sigma_{r_1}\right|+\left|\frac{\partial\kappa}{\partial l}\sigma_{l}\right|+\left|\frac{\partial\kappa}{\partial T_1}\sigma_{T_1}\right|+\left|\frac{\partial\kappa}{\partial T_0}\sigma_{T_0}\right|$$
+Thus the maximum possible error is $\boxed{E_{max}=3.58\times 10^{-3}\text{ W/m/K}}$.
+\newpage
+ 	\item We have the relation $F=\dfrac{\e Ebt^2}{3r(\sin\theta-\frac{2}{\pi})}$. We are also given that the root sum square limit of the load is 2.5 kN. We also know that 
+ 	$$E_{RSS}^2=\left(\frac{\partial F}{\partial \e}\right)^2\sigma_{\e}^2+\left(\frac{\partial F}{\partial E}\right)^2\sigma_{E}^2+\left(\frac{\partial F}{\partial b}\right)^2\sigma_{b}^2+\left(\frac{\partial F}{\partial t}\right)^2\sigma_{t}^2+\left(\frac{\partial F}{\partial r}\right)^2\sigma_{r}^2+\left(\frac{\partial F}{\partial \theta}\right)^2\sigma_{\theta}^2$$ 
+All of the variances are unknown to us. We ignore the error in $E$ (given in the question). However, we can calculate the values of the derivatives:
+\begin{align*}
+	\frac{\partial F}{\partial\e}&=\dfrac{ Ebt^2}{3r(\sin\theta-\frac{2}{\pi})}=\frac{(210\times 10^9)(25\times 10^{-3})(36\times 10^{-6})}{3(75\times 10^{-3})(\frac{1}{\sqrt{2}}-\frac{2}{\pi})}=1.19\times 10^7\\
+	\frac{\partial F}{\partial b}&=\dfrac{\e Et^2}{3r(\sin\theta-\frac{2}{\pi})}=\frac{(210\times 10^9)(3400\times 10^{-6})(36\times 10^{-6})}{3(75\times 10^{-3})(\frac{1}{\sqrt{2}}-\frac{2}{\pi})}=1.62\times 10^6\\
+	\frac{\partial F}{\partial t}&=\dfrac{2\e Ebt}{3r(\sin\theta-\frac{2}{\pi})}=\frac{2(3400\times 10^{-6})(210\times 10^9)(25\times 10^{-3})(6\times 10^{-3})}{3(75\times 10^{-3})(\frac{1}{\sqrt{2}}-\frac{2}{\pi})}=1.35\times 10^7\\
+	\frac{\partial F}{\partial r}&=-\dfrac{\e Ebt^2}{3r^2(\sin\theta-\frac{2}{\pi})}=-\frac{(3400\times 10^{-6})(210\times 10^9)(25\times 10^{-3})(36\times 10^{-6})}{3(75\times 10^{-3})^2(\frac{1}{\sqrt{2}}-\frac{2}{\pi})}=-5.41\times 10^5\\
+	\frac{\partial F}{\partial\theta}&=-\dfrac{\e Ebt^2\cos\theta}{3r(\sin\theta-\frac{2}{\pi})^2}=-\frac{(3400\times 10^{-6})(210\times 10^9)(25\times 10^{-3})(36\times 10^{-6})(\frac{1}{\sqrt{2}})}{3(75\times 10^{-3})(\frac{1}{\sqrt{2}}-\frac{2}{\pi})^2}=4.07\times 10^5
+\end{align*}
+By method of equal effects, each of the quantities on RHS will be $\dfrac{2500^2}{5}=1.25\times 10^6$ N$^2$. Thus we have:
+\begin{align*}
+	\left(\frac{\partial F}{\partial \e}\right)^2\sigma_{\e}^2&=1.25\times 10^6\implies \boxed{\sigma_{\e}=9.39\times 10^{-5}}\\
+	\left(\frac{\partial F}{\partial b}\right)^2\sigma_{b}^2&=1.25\times 10^6\implies \boxed{\sigma_{b}=6.90\times 10^{-4}}\\
+	\left(\frac{\partial F}{\partial t}\right)^2\sigma_{t}^2&=1.25\times 10^6\implies \boxed{\sigma_{t}=8.28\times 10^{-5}}\\
+	\left(\frac{\partial F}{\partial r}\right)^2\sigma_{r}^2&=1.25\times 10^6\implies \boxed{\sigma_{r}=2.07\times 10^{-3}}\\
+	\left(\frac{\partial F}{\partial \theta}\right)^2\sigma_{\theta}^2&=1.25\times 10^6\implies \boxed{\sigma_{\theta}=2.75\times 10^{-3}}
+\end{align*}
+If uncertainty is based on absolute limits, then each of the quantities on RHS is $\dfrac{2500}{5}=500$ N.
+\begin{align*}
+	\left|\frac{\partial F}{\partial \e}\right|\sigma_{\e}&=500\implies \boxed{\sigma_{\e}=4.20\times 10^{-5}}\\
+	\left|\frac{\partial F}{\partial b}\right|\sigma_{b}&=500\implies \boxed{\sigma_{b}=3.09\times 10^{-4}}\\
+	\left|\frac{\partial F}{\partial t}\right|\sigma_{t}&=500\implies \boxed{\sigma_{t}=3.70\times 10^{-5}}\\
+	\left|\frac{\partial F}{\partial r}\right|\sigma_{r}&=500\implies \boxed{\sigma_{r}=9.24\times 10^{-4}}\\
+	\left|\frac{\partial F}{\partial \theta}\right|\sigma_{\theta}&=500\implies \boxed{\sigma_{\theta}=1.23\times 10^{-3}}
+\end{align*}
+\end{enumerate}
+\end{document}
+
