@@ -17,7 +17,7 @@ Mostly, I write notes in `LaTeX`. To view the `.tex` code, just simply change th
 <li><a href="https://omprabhu31.github.io/academics/notes/me202/">ME 202</a> - Strength of Materials</li>
 </ul>
 
-<h3>Other courses/h3>
+<h3>Other courses</h3>
 
 > <h5>Neural Networks and Deep Learning</h5>
 > Offered by [deeplearning.ai](https://www.deeplearning.ai/) on [Coursera](https://www.coursera.org/)  -  Instructor: [Andrew Ng](https://www.coursera.org/instructor/andrewng)
