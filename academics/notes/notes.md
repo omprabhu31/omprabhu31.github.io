@@ -19,14 +19,14 @@ Mostly, I write notes in `LaTeX`. To view the `.tex` code, just simply change th
 
 <h3>Other courses</h3>
 
-> <h5>Neural Networks and Deep Learning</h5>
+> <h4>Neural Networks and Deep Learning</h4>
 > Offered by [deeplearning.ai](https://www.deeplearning.ai/) on [Coursera](https://www.coursera.org/)  -  Instructor: [Andrew Ng](https://www.coursera.org/instructor/andrewng)
 >
 > This course deals with the foundations of deep learning and how to actually build and implement efficient vectorized neural networks using Python.
 >
 > Notes: [.pdf](/academics/notes/neural_nets_deep_learning/Neural Networks and Deep Learning.pdf) / [.tex](https://github.com/omprabhu31/omprabhu31.github.io/blob/master/academics/notes/neural_nets_deep_learning/Neural%20Networks%20and%20Deep%20Learning.tex)
 
-> <h5>AI For Everyone</h5>
+> <h4>AI For Everyone</h4>
 > Offered by [deeplearning.ai](https://www.deeplearning.ai/) on [Coursera](https://www.coursera.org/)  -  Instructor: [Andrew Ng](https://www.coursera.org/instructor/andrewng)
 >
 > This is a non-technical course in the field of AI to help understand AI technologies as well as choose and implement AI projects to benefit the society.
