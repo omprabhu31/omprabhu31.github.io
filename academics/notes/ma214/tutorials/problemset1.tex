@@ -1,0 +1,132 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage[top = 2.5cm, bottom = 2.5cm, left = 2.5cm, right = 2.5cm]{geometry}
+\usepackage[utf8]{inputenc}
+
+%page setup
+\usepackage{setspace}
+\linespread{1.1}
+\setlength{\parindent}{0in}
+\usepackage{float}
+\usepackage{fancyhdr}
+%\pagestyle{fancy}
+\fancyhf{}
+\lhead{\footnotesize MA 214 - Problem Set 1 Solutions}
+%\rhead{\footnotesize Om Prabhu}
+%\cfoot{\footnotesize \thepage}
+
+%common math and TeX packages
+\usepackage{amsmath, amsthm, amsfonts, amssymb, amscd, gensymb}
+\usepackage{bigints}
+\usepackage{siunitx, subcaption}
+\usepackage{hyperref, authblk}
+\usepackage{graphicx}
+\usepackage{wrapfig, float}
+\usepackage{verbatim, enumitem, kantlipsum}
+\usepackage{cancel}
+\usepackage[retainorgcmds]{IEEEtrantools}
+
+%tables and code
+\usepackage[table]{xcolor}
+\usepackage{csvsimple}
+
+\let\a\alpha
+\let\b\beta
+\let\g\gamma
+\let\e\varepsilon
+\let\t\theta
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\PP}{\mathcal{P}}
+\newcommand{\C}{\mathcal{C}}
+\newcommand{\Lagr}{\mathcal{L}}
+
+\begin{document}
+\begin{center}
+	{\LARGE MA 214 - Problem Set 1 Solutions}
+	\vspace{2mm}
+	
+	{\large Om Prabhu}
+\end{center}
+\begin{enumerate}[label=(\arabic*), leftmargin=*]
+	\item We have the points $(0,0),(0.5,y),(1,3),(2,2)$. We also know that the coefficient of $x^3$ in the interpolation polynomial $p_3(x)$ is 6. Using divided differences, the coefficient of $x^3$ is equal to $f[x_0,x_1,x_2,x_3]$. We solve for $y$ as follows:
+\begin{align*}
+	f[x_0]&:=f(x_0)=0\\
+	\therefore f[x_0,x_1]&:=\dfrac{f(x_1)-f(x_0)}{x_1-x_0}=2y\\
+	f[x_1,x_2]&:=\dfrac{f(x_2)-f(x_1)}{x_2-x_1}=6-2y\\
+	f[x_2,x_3]&:=\dfrac{f(x_3)-f(x_2)}{x_3-x_2}=-1\\
+	\therefore f[x_0,x_1,x_2]&:=\dfrac{f[x_1,x_2]-f[x_0,x_1]}{x_2-x_0}=6-4y\\
+	f[x_1,x_2,x_3]&:=\dfrac{f[x_2,x_3]-f[x_1,x_2]}{x_3-x_1}=\dfrac{4y-14}{3}\\
+	\therefore f[x_0,x_1,x_2,x_3]&:=\dfrac{f[x_1,x_2,x_3]-f[x_0,x_1,x_2]}{x_3-x_0}=\dfrac{16y-32}{6}
+\end{align*}
+Equating this expression to the coefficient of $x^3$, we get the value for $y=4.25$.\hfill$\blacksquare$	
+
+	\item Since we have only 2 points $x_0=-1,x_1=1$, our interpolation polynomial $p_1(x)$ will be a straight line. Since there is no information about the function values at these points, $p_1$ will be in terms of $y_0=f(x_0)$ and $y_1=f(x_1)$:
+\begin{align*}
+	p_1(x)&=f(x_0)+\frac{f(x_1)-f(x_0)}{x_1-x_0}(x-x_0)\\
+	p_1(x)&=y_0+\frac{y_1-y_0}{2}(x+1)\\
+	\therefore p_1(x)&=\frac{y_1+y_0}{2}+\left(\frac{y_1-y_0}{2}\right)x
+\end{align*}
+In order to get the required inequality, we use the error equation as follows:
+\begin{align*}
+	\max_{x\in[a,b]} |f(x)-p(x)| & \leqslant \frac{1}{(n+1)!} ||f^{(n+1)}|| \max_{x\in[a,b]} \prod_{k=0}^n (x-x_k)\\
+	\therefore \max_{x\in[-1,1]} |f(x)-p_1(x)| & \leqslant \frac{1}{2} ||f^{\prime\prime}|| \max_{x\in[-1,-1]} \prod_{k=0}^1 (x-x_k)\\
+	\therefore \max_{x\in[-1,1]} |f(x)-p_1(x)| & \leqslant \frac{1}{2} \max_{x\in[-1,1]}|f^{\prime\prime}(x)| \max_{x\in[-1,-1]} (x^2-1)
+\end{align*}
+We observe that $\displaystyle \max_{x\in[-1,-1]} (x^2-1)$ takes the value of 1 (namely at $x=0$), which gives us the desired inequality.\hfill$\blacksquare$
+\newpage
+
+	\item We have the function $f(x)=\sqrt{x-x^2}$ and the points $x_0=0,x_1=a,x_2=1$. We can solve for $p_2(x)$ using the Lagrange interpolation formula as follows:
+\begin{align*}
+	L_0^2(x)&=\frac{(x-1)(x-a)}{(0-a)(0-1)}=\frac{x^2-(a+1)x+a}{a}\\
+	L_1^2(x)&=\frac{(x-1)(x-0)}{(a-0)(a-1)}=\frac{x^2-x}{a^2-a}\\
+	L_2^2(x)&=\frac{(x-0)(x-a)}{(1-a)(1-0)}=\frac{x^2-ax}{1-a}\\
+	\therefore p_2(x)&=0\left(\frac{x^2-(a+1)x+a}{a}\right)+\sqrt{a-a^2}\left(\frac{x^2-x}{a^2-a}\right)+0\left(\frac{x^2-ax}{1-a}\right)\\
+	&=-\left(\frac{x^2-x}{\sqrt{a-a^2}}\right)
+\end{align*}
+Thus the required value of $a$ is \hfill$\blacksquare$ 
+
+	\item We can prove the result by simply substituting values of $i$ and taking 3 cases as follows:
+	\begin{enumerate}[label=\roman*)]
+		\item for $i=0$:
+		$$p_{n+1}(x_0)=\frac{(x_0-x_0)r_n(x_0)-(x_0-x_{n+1})q_n(x_0)}{x_{n+1}-x_0}=\frac{0+(x_0-x_{n+1})0}{x_{n+1}-x_0}=0$$
+		\item for $i=1,2,\dots,n$:
+		$$p_{n+1}(x_i)=\frac{(x_i-x_0)r_n(x_i)-(x_i-x_{n+1})q_n(x_i)}{x_{n+1}-x_0}=\frac{(x_i-x_0)0+(x_i-x_{n+1})0}{x_{n+1}-x_0}=0$$
+		\item for $i=n+1$: 
+		$$p_{n+1}(x_{n+1})=\frac{(x_{n+1}-x_0)r_n(x_{n+1})-(x_{n+1}-x_{n+1})q_n(x_{n+1})}{x_{n+1}-x_0}=\frac{(x_{n+1}-x_0)0+0}{x_{n+1}-x_0}=0$$
+	\end{enumerate}
+By uniqueness theorem, $p_{n+1}(x)$ is the only polynomial of degree $n+1$ interpolating on the given points.\hfill$\blacksquare$
+
+	\item We are given the interpolation points $x_0=0,x_1=0.4,x_2=0.7$ and the divided differences as $f[x_2]=6,f[x_1,x_2]=10,f[x_0,x_1,x_2]=\frac{50}{7}$. The rest of the values can found as follows:
+\begin{align*}
+	f[x_0,x_1]&=f[x_1,x_2]-f[x_0,x_1,x_2](x_2-x_0)\\
+	&=10-\left(\frac{50}{7}\right)0.7=5\\
+	f[x_1]&=f[x_2]-f[x_1,x_2](x_2-x_1)\\
+	&=6-10(0.7-0.4)=3\\
+	f[x_0]&=f[x_1]-f[x_0,x_1](x_1-x_0)\\
+	&=3-5(0.4)=1
+\end{align*}
+.\hfill$\blacksquare$
+\newpage
+
+	\item Using the given data, we can calculate the divided differences as follows (intermediate calculations have been skipped):
+\begin{align*}
+	f[x_0] &= f(x_0) = 1\\
+	\therefore f[x_0,x_1] &= \dfrac{f(x_1)-f(x_0)}{x_1-x_0} = 3\\
+	\therefore f[x_0,x_1,x_2] & = \frac{f[x_1,x_2]-f[x_0,x_1]}{x_2-x_0}=2\\
+	\therefore f[x_0,x_1,x_2,x_3] &= \frac{f[x_1,x_2,x_3]-f[x_0,x_1,x_2]}{x_3-x_0}=-1\\
+	\therefore f[x_0,x_1,x_2,x_3,x_4] &= 0\\
+	\therefore f[x_0,x_1,x_2,x_3,x_4,x_5] &=0
+\end{align*}
+Hence $p(x)=1+3(x+2)+2(x+2)(x+1)-x(x+2)(x+1)$.\hfill$\blacksquare$
+
+	\item We have $f\in\mathcal{C}^n[a,b]$ and $n+1$ distinct points $x_0,x_1,\dots,x_n$ in $[a,b]$. Using the divided differences method, the interpolation polynomial can be written as $$p(x):= f[x_0]  + f[x_0, x_1](x - x_0)+\cdots+f[x_0,x_1,\dots,x_n]\prod_{k=0}^{n-1}(x-x_k)$$
+	Since $f(x_i)=p(x_i)$ for $i=0,1,\dots,n$, thus the function $f(x)-p(x)$ has $n+1$ distinct roots. Thus by Rolle's theorem, $f^{(n)}(x)-p^{(n)}(x)$ has exactly one root in $[a,b]$. Let this root occur at $x=\delta$. Thus,
+	$$f^{(n)}(\delta)-p^{(n)}(\delta)=0$$
+Now, note that the $n^{th}$ order derivative of $p$ is identically $n!f[x_0,x_1,\dots,x_n]$.\hfill$\blacksquare$
+
+	\item The solution is similar to that of question 7 above.\hfill$\blacksquare$
+\end{enumerate}
+\end{document}
+

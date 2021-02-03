@@ -11,15 +11,12 @@ Warning: The notes section is not yet organised very well. I will work on it as 
 
 You can find some notes over here that I've been maintaining for some academic courses (or academic-related courses), taken both at IIT Bombay as well as on other platforms like Coursera, Udemy, etc. In case you're looking for notes from the various Gamedev courses I've pursued, you can check them out [here](/gamedev/courses/).
 
+Mostly, I write notes in $$\LaTeX$$. To view the `.tex` code, just simply change the `.pdf` to `.tex` in the URL. Alternatively, if you feel more comfortable with GitHub, you may head [here](https://github.com/omprabhu31/omprabhu31.github.io/) and navigate to the appropriate folder.
+
 <h3>Courses taken at IIT Bombay</h3>
 <ul>
-<li> <a href="https://omprabhu31.github.io/academics/notes/ma214/">MA 214</a> - Introduction to Numerical Analysis</li>
+<li><a href="https://omprabhu31.github.io/academics/notes/ma214/">MA 214</a> - Introduction to Numerical Analysis</li>
 </ul>
-
-> <h3>MA 214 - Introduction to Numerical Analysis</h3>
-> Instructor: Prof. Saikat Mazumdar
->
-> Notes: [.pdf](/academics/notes/ma214/ma214notes.pdf) / [.tex](https://github.com/omprabhu31/omprabhu31.github.io/blob/master/academics/notes/ma214/ma214notes.tex)
 
 > <h3>ME 202 - Strength of Materials</h3>
 > Instructor: Prof. Salil Kulkarni
