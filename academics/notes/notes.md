@@ -7,9 +7,14 @@ feature-img: "assets/img/sample_feature_img_2.png"
 hide: true
 ---
 
-Warning: This page is not yet organised very well. I will work on it as and when I get time to do so.
+Warning: The notes section is not yet organised very well. I will work on it as and when I get time to do so.
 
 You can find some notes over here that I've been maintaining for some academic courses (or academic-related courses), taken both at IIT Bombay as well as on other platforms like Coursera, Udemy, etc. In case you're looking for notes from the various Gamedev courses I've pursued, you can check them out [here](/gamedev/courses/).
+
+<h3>Courses taken at IIT Bombay
+<ul>
+<li> [MA 214](https://omprabhu31.github.io/academics/notes/ma214/) - Introduction to Numerical Analysis
+</ul>
 
 > <h3>MA 214 - Introduction to Numerical Analysis</h3>
 > Instructor: Prof. Saikat Mazumdar
