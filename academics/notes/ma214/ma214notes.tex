@@ -142,11 +142,11 @@ $$||f-p||<\e\implies |f(x)-p(x)|<\e\text{\hspace{12pt}}\forall x\in[a,b]$$
 \end{enumerate}
 
 \subsection{Lagrange interpolation formula} 
-Given $n+1$ distinct real points $x_0,x_1,\dots,x_n$ and $n+1$ real numbers $y_0,y_1,\dots,y_n$, there exists a unique polynomial $p_n\in\mathbb{P}_n$ such that $p(x_i)=y_i$ for $ i=0,1,\dots,n$. Construct $n^{th}$ degree polynomials $L_0^n(x),L_1^n(x),\dots,L_n^n(x)$ such that
-$$L_k^n(x_i)=\left\lbrace\begin{array}{lr}
+Given $n+1$ distinct real points $x_0,x_1,\dots,x_n$ and a function $f$ whose values are known at these points, there exists a unique polynomial $p_n\in\mathbb{P}_n$ such that $p_n(x_i)=f(x_i)$ for $ i=0,1,\dots,n$. Construct $n^{th}$ degree polynomials $L_0^n(x),L_1^n(x),\dots,L_n^n(x)$ such that
+$$L_k^n(x_i)=\delta_{ki}=\left\lbrace\begin{array}{lr}
 1 & \text{if } i=k\\
 0 & \text{if } i\neq k
-\end{array}\right.\implies \boxed{p_n(x):=\sum_{k=0}^ny_kL_k^n(x)}$$
+\end{array}\right.\implies \boxed{p_n(x):=\sum_{k=0}^nf(x_k)L_k^n(x)}$$
 The lagrange polynomials $L_k^n$ can be found using the following algorithm
 $$\boxed{L_k^n(x):=\prod_{j=0,j\neq k}^n\frac{(x-x_j)}{(x_k-x_j)}}$$
 \textsc{Note:} As will be seen later, the method of divided differences can also be used for polynomial interpolation. A little bit of manipulation on the Lagrange interpolation formula gives us an alternative way to calculate the divided difference $f[x_0,x_1,\dots,x_n]$, given by $$f[x_0,x_1,\dots,x_n]:=\sum_{k=0}^nf(x_k)\prod_{j=0,j\neq k}^{n}\frac{1}{x-x_j}$$
