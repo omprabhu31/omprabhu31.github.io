@@ -13,7 +13,7 @@ You can find some notes over here that I've been maintaining for some academic c
 
 <h3>Courses taken at IIT Bombay</h3>
 <ul>
-<li> [MA 214](https://omprabhu31.github.io/academics/notes/ma214/) - Introduction to Numerical Analysis
+<li> [MA 214](https://omprabhu31.github.io/academics/notes/ma214/) - Introduction to Numerical Analysis</li>
 </ul>
 
 > <h3>MA 214 - Introduction to Numerical Analysis</h3>
