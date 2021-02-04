@@ -208,24 +208,23 @@ $$\sigma_b^2=\frac{\sigma_y^2\sum_i x_i^2}{D}=5.056\times 10^{-3}\implies\boxed{
 \newpage
 	\item We have the relation $\kappa=q \dfrac{\ln(r_0)-\ln(r_1)}{2\pi l(T_1-T_0)}$. The root sum square error can be found as follows:
 	$$E_{RSS}=\sqrt{\left(\frac{\partial\kappa}{\partial q}\Delta q\right)^2+\left(\frac{\partial\kappa}{\partial r_0}\Delta r_0\right)^2+\left(\frac{\partial\kappa}{\partial r_1}\Delta r_1\right)^2+\left(\frac{\partial\kappa}{\partial l}\Delta l\right)^2+\left(\frac{\partial\kappa}{\partial T_1}\Delta T_1\right)^2+\left(\frac{\partial\kappa}{\partial T_0}\Delta T_0\right)^2}$$
-	$$\therefore E_{RSS}^2=\left(\frac{\partial\kappa}{\partial q}\right)^2\sigma_q^2+\left(\frac{\partial\kappa}{\partial r_0}\right)^2\sigma_{r_0}^2+\left(\frac{\partial\kappa}{\partial r_1}\right)^2\sigma_{r_1}^2+\left(\frac{\partial\kappa}{\partial l}\right)^2\sigma_{l}^2+\left(\frac{\partial\kappa}{\partial T_1}\right)^2\sigma_{T_1}^2+\left(\frac{\partial\kappa}{\partial T_0}\right)^2\sigma_{T_0}^2$$
 Let us first calculate the individual terms:
 \begin{align*}
-	\frac{\partial\kappa}{\partial q}\sigma_{q}&=\left(\dfrac{\ln(r_0)-\ln(r_1)}{2\pi l(T_1-T_0)}\right)\sigma_{q}=\frac{\ln 2}{2\pi(0.5)(30)}\times \frac{1}{3}=2.45\times 10^{-3} \text{ W/m/K}\\
-	\frac{\partial\kappa}{\partial r_0}\sigma_{r_0}&=\left(\frac{1}{r_0}\right)\frac{q}{2\pi l(T_1-T_0)}\sigma_{r_0}=\frac{70}{2\pi(0.02)(0.5)(30)}\times \frac{0.0005}{3}=6.19\times 10^{-3}\text{ W/m/K}\\
-	\frac{\partial\kappa}{\partial r_1}\sigma_{r_1}&=-\left(\frac{1}{r_1}\right)\frac{q}{2\pi l(T_1-T_0)}\sigma_{r_1}=-\frac{70}{2\pi(0.01)(0.5)(30)}\times \frac{0.0005}{3}=-12.38\times 10^{-3}\text{ W/m/K}\\
-	\frac{\partial\kappa}{\partial l}\sigma_{l}&=-q\left(\dfrac{\ln(r_0)-\ln(r_1)}{2\pi l^2(T_1-T_0)}\right)\sigma_{l}=-\frac{70\ln 2}{2\pi (0.5)^2(30)}\times \frac{0.01}{3}=-3.43\times 10^{-3}\text{ W/m/K}\\
-	\frac{\partial\kappa}{\partial T_1}\sigma_{T_1}&=-q\left(\dfrac{\ln(r_0)-\ln(r_1)}{2\pi l(T_1-T_0)^2}\right)\sigma_{T_1}=-\frac{70\ln 2}{2\pi(0.5)(30)^2}\times \frac{1}{3}=-5.72\times 10^{-3}\text{ W/m/K}\\
-	\frac{\partial\kappa}{\partial T_0}\sigma_{T_0}&=q\left(\dfrac{\ln(r_0)-\ln(r_1)}{2\pi l(T_1-T_0)^2}\right)\sigma_{T_0}=\frac{70\ln 2}{2\pi(0.5)(30)^2}\times \frac{1}{3}=5.72\times 10^{-3}\text{ W/m/K}
+	\frac{\partial\kappa}{\partial q}\Delta{q}&=\left(\dfrac{\ln(r_0)-\ln(r_1)}{2\pi l(T_1-T_0)}\right)\Delta{q}=\frac{\ln 2}{2\pi(0.5)(30)}\times 1=7.35\times 10^{-3} \text{ W/m/K}\\
+	\frac{\partial\kappa}{\partial r_0}\Delta{r_0}&=\left(\frac{1}{r_0}\right)\frac{q}{2\pi l(T_1-T_0)}\Delta{r_0}=\frac{70}{2\pi(0.02)(0.5)(30)}\times 0.0005=18.57\times 10^{-3}\text{ W/m/K}\\
+	\frac{\partial\kappa}{\partial r_1}\Delta{r_1}&=-\left(\frac{1}{r_1}\right)\frac{q}{2\pi l(T_1-T_0)}\Delta{r_1}=-\frac{70}{2\pi(0.01)(0.5)(30)}\times 0.0005=-37.13\times 10^{-3}\text{ W/m/K}\\
+	\frac{\partial\kappa}{\partial l}\Delta{l}&=-q\left(\dfrac{\ln(r_0)-\ln(r_1)}{2\pi l^2(T_1-T_0)}\right)\Delta{l}=-\frac{70\ln 2}{2\pi (0.5)^2(30)}\times 0.01=-10.29\times 10^{-3}\text{ W/m/K}\\
+	\frac{\partial\kappa}{\partial T_1}\Delta{T_1}&=-q\left(\dfrac{\ln(r_0)-\ln(r_1)}{2\pi l(T_1-T_0)^2}\right)\Delta{T_1}=-\frac{70\ln 2}{2\pi(0.5)(30)^2}\times 1=-17.15\times 10^{-3}\text{ W/m/K}\\
+	\frac{\partial\kappa}{\partial T_0}\Delta{T_0}&=q\left(\dfrac{\ln(r_0)-\ln(r_1)}{2\pi l(T_1-T_0)^2}\right)\Delta{T_0}=\frac{70\ln 2}{2\pi(0.5)(30)^2}\times 1=17.15\times 10^{-3}\text{ W/m/K}
 \end{align*}
-Thus we have, $E_{RSS}=\sqrt{(2.45)^2+(6.19)^2+(-12.38)^2+(-3.43)^2+(-5.72)^2+(5.72)^2}\times 10^{-3}$ i.e. $\boxed{E_{RSS}=1.657\times 10^{-2}\text{ W/m/K}}$.
+Thus we have, $E_{RSS}=\sqrt{(7.35)^2+(18.57)^2+(-37.13)^2+(-10.29)^2+(-17.15)^2+(17.15)^2}\times 10^{-3}$ i.e. $\boxed{E_{RSS}=4.965\times 10^{-2}\text{ W/m/K}}$.
 
 The maximum possible error in measurement of thermal conductivity is simply the absolute sum error.
-$$E_{max}=\left|\frac{\partial\kappa}{\partial q}\sigma_{q}\right|+\left|\frac{\partial\kappa}{\partial r_0}\sigma_{r_0}\right|+\left|\frac{\partial\kappa}{\partial r_1}\sigma_{r_1}\right|+\left|\frac{\partial\kappa}{\partial l}\sigma_{l}\right|+\left|\frac{\partial\kappa}{\partial T_1}\sigma_{T_1}\right|+\left|\frac{\partial\kappa}{\partial T_0}\sigma_{T_0}\right|$$
-Thus the maximum possible error is $\boxed{E_{max}=3.58\times 10^{-3}\text{ W/m/K}}$.
+$$E_{max}=\left|\frac{\partial\kappa}{\partial q}\Delta{q}\right|+\left|\frac{\partial\kappa}{\partial r_0}\Delta{r_0}\right|+\left|\frac{\partial\kappa}{\partial r_1}\Delta{r_1}\right|+\left|\frac{\partial\kappa}{\partial l}\Delta{l}\right|+\left|\frac{\partial\kappa}{\partial T_1}\Delta{T_1}\right|+\left|\frac{\partial\kappa}{\partial T_0}\Delta{T_0}\right|$$
+Thus the maximum possible error is $\boxed{E_{max}=1.076\times 10^{-1}\text{ W/m/K}}$.
 \newpage
  	\item We have the relation $F=\dfrac{\e Ebt^2}{3r(\sin\theta-\frac{2}{\pi})}$. We are also given that the root sum square limit of the load is 2.5 kN. We also know that 
- 	$$E_{RSS}^2=\left(\frac{\partial F}{\partial \e}\right)^2\sigma_{\e}^2+\left(\frac{\partial F}{\partial E}\right)^2\sigma_{E}^2+\left(\frac{\partial F}{\partial b}\right)^2\sigma_{b}^2+\left(\frac{\partial F}{\partial t}\right)^2\sigma_{t}^2+\left(\frac{\partial F}{\partial r}\right)^2\sigma_{r}^2+\left(\frac{\partial F}{\partial \theta}\right)^2\sigma_{\theta}^2$$ 
+ 	$$E_{RSS}^2=\left(\frac{\partial\kappa}{\partial q}\Delta q\right)^2+\left(\frac{\partial\kappa}{\partial r_0}\Delta r_0\right)^2+\left(\frac{\partial\kappa}{\partial r_1}\Delta r_1\right)^2+\left(\frac{\partial\kappa}{\partial l}\Delta l\right)^2+\left(\frac{\partial\kappa}{\partial T_1}\Delta T_1\right)^2+\left(\frac{\partial\kappa}{\partial T_0}\Delta T_0\right)^2$$
 All of the variances are unknown to us. We ignore the error in $E$ (given in the question). However, we can calculate the values of the derivatives:
 \begin{align*}
 	\frac{\partial F}{\partial\e}&=\dfrac{ Ebt^2}{3r(\sin\theta-\frac{2}{\pi})}=\frac{(210\times 10^9)(25\times 10^{-3})(36\times 10^{-6})}{3(75\times 10^{-3})(\frac{1}{\sqrt{2}}-\frac{2}{\pi})}=1.19\times 10^7\\
@@ -236,19 +235,19 @@ All of the variances are unknown to us. We ignore the error in $E$ (given in the
 \end{align*}
 By method of equal effects, each of the quantities on RHS will be $\dfrac{2500^2}{5}=1.25\times 10^6$ N$^2$. Thus we have:
 \begin{align*}
-	\left(\frac{\partial F}{\partial \e}\right)^2\sigma_{\e}^2&=1.25\times 10^6\implies \boxed{\sigma_{\e}=9.39\times 10^{-5}}\\
-	\left(\frac{\partial F}{\partial b}\right)^2\sigma_{b}^2&=1.25\times 10^6\implies \boxed{\sigma_{b}=6.90\times 10^{-4}}\\
-	\left(\frac{\partial F}{\partial t}\right)^2\sigma_{t}^2&=1.25\times 10^6\implies \boxed{\sigma_{t}=8.28\times 10^{-5}}\\
-	\left(\frac{\partial F}{\partial r}\right)^2\sigma_{r}^2&=1.25\times 10^6\implies \boxed{\sigma_{r}=2.07\times 10^{-3}}\\
-	\left(\frac{\partial F}{\partial \theta}\right)^2\sigma_{\theta}^2&=1.25\times 10^6\implies \boxed{\sigma_{\theta}=2.75\times 10^{-3}}
+	\left(\frac{\partial F}{\partial \e}\right)^2\Delta{\e}^2&=1.25\times 10^6\implies \Delta{\e}=9.39\times 10^{-5}\implies \boxed{\sigma_{\e}=3.13\times 10^{-5}}\\
+	\left(\frac{\partial F}{\partial b}\right)^2\Delta{b}^2&=1.25\times 10^6\implies \Delta{b}=6.90\times 10^{-4}\implies \boxed{\sigma_{b}=2.30\times 10^{-4}}\\
+	\left(\frac{\partial F}{\partial t}\right)^2\Delta{t}^2&=1.25\times 10^6\implies \Delta{t}=8.28\times 10^{-5}\implies \boxed{\sigma_{t}=2.76\times 10^{-5}}\\
+	\left(\frac{\partial F}{\partial r}\right)^2\Delta{r}^2&=1.25\times 10^6\implies \Delta{r}=2.07\times 10^{-3}\implies \boxed{\sigma_{r}=6.90\times 10^{-4}}\\
+	\left(\frac{\partial F}{\partial \theta}\right)^2\Delta{\theta}^2&=1.25\times 10^6\implies \Delta{\theta}=2.75\times 10^{-3}\implies \boxed{\sigma_{\theta}=9.17\times 10^{-4}}
 \end{align*}
 If uncertainty is based on absolute limits, then each of the quantities on RHS is $\dfrac{2500}{5}=500$ N.
 \begin{align*}
-	\left|\frac{\partial F}{\partial \e}\right|\sigma_{\e}&=500\implies \boxed{\sigma_{\e}=4.20\times 10^{-5}}\\
-	\left|\frac{\partial F}{\partial b}\right|\sigma_{b}&=500\implies \boxed{\sigma_{b}=3.09\times 10^{-4}}\\
-	\left|\frac{\partial F}{\partial t}\right|\sigma_{t}&=500\implies \boxed{\sigma_{t}=3.70\times 10^{-5}}\\
-	\left|\frac{\partial F}{\partial r}\right|\sigma_{r}&=500\implies \boxed{\sigma_{r}=9.24\times 10^{-4}}\\
-	\left|\frac{\partial F}{\partial \theta}\right|\sigma_{\theta}&=500\implies \boxed{\sigma_{\theta}=1.23\times 10^{-3}}
+	\left|\frac{\partial F}{\partial \e}\right|\Delta{\e}&=500\implies \Delta{\e}=4.20\times 10^{-5}\implies \boxed{\sigma_{\e}=1.40\times 10^{-5}}\\
+	\left|\frac{\partial F}{\partial b}\right|\Delta{b}&=500\implies \Delta{b}=3.09\times 10^{-4}\implies \boxed{\sigma_{b}=1.03\times 10^{-4}}\\
+	\left|\frac{\partial F}{\partial t}\right|\Delta{t}&=500\implies \Delta{t}=3.70\times 10^{-5}\implies \boxed{\sigma_{t}=1.23\times 10^{-5}}\\
+	\left|\frac{\partial F}{\partial r}\right|\Delta{r}&=500\implies \Delta{r}=9.24\times 10^{-4}\implies \boxed{\sigma_{r}=3.08\times 10^{-4}}\\
+	\left|\frac{\partial F}{\partial \theta}\right|\Delta{\theta}&=500\implies \Delta{\theta}=1.23\times 10^{-3}\implies \boxed{\sigma_{\theta}=4.21\times 10^{-4}}
 \end{align*}
 \end{enumerate}
 \end{document}
