@@ -1,0 +1,167 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage[top = 2.5cm, bottom = 2.5cm, left = 2.5cm, right = 2.5cm]{geometry}
+\usepackage[utf8]{inputenc}
+
+%page setup
+\usepackage{setspace}
+\linespread{1.1}
+\setlength{\parindent}{0in}
+\usepackage{float}
+\usepackage{fancyhdr}
+%\pagestyle{fancy}
+\fancyhf{}
+\lhead{\footnotesize MA 214 - Problem Set 2 Solutions}
+%\rhead{\footnotesize Om Prabhu}
+%\cfoot{\footnotesize \thepage}
+
+%common math and TeX packages
+\usepackage{amsmath, amsthm, amsfonts, amssymb, amscd, gensymb}
+\usepackage{bigints}
+\usepackage{siunitx, subcaption}
+\usepackage{hyperref, authblk}
+\usepackage{graphicx}
+\usepackage{wrapfig, float}
+\usepackage{verbatim, enumitem, kantlipsum}
+\usepackage{cancel}
+\usepackage[retainorgcmds]{IEEEtrantools}
+
+%tables and code
+\usepackage[table]{xcolor}
+\usepackage{csvsimple}
+
+\let\a\alpha
+\let\b\beta
+\let\g\gamma
+\let\e\varepsilon
+\let\t\theta
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\PP}{\mathcal{P}}
+\newcommand{\C}{\mathcal{C}}
+\newcommand{\Lagr}{\mathcal{L}}
+
+\begin{document}
+\begin{center}
+	{\LARGE MA 214 - Problem Set 2 Solutions}
+	\vspace{2mm}
+	
+	{\large Om Prabhu}
+\end{center}
+\begin{enumerate}[label=(\arabic*), leftmargin=*]
+	\item Assume that $xp(x-1)=(x+1)p(x)$ is true. Take a function $f(x)=(x+1)p(x)$. Then for some real $\a$, we have $f(x-1)=f(x)\implies \dots=f(-1)=f(0)=f(1)=\dots=\a$ i.e. $f(x)-\a$ has infinitely many roots.
+	
+	Define $g(x)=f(x)-\a$. Thus $g$ has infinitely many zeroes. This is a contradiction to our assumption, because no polynomial of finite degree can have infinitely many roots. Therefore, $g$ must identically be zero.
+	We get $p(x)=\dfrac{\a}{x+1}$, which can be a polynomial only if $\a=0$. Thus $p$ is identically zero.\hfill$\blacksquare$
+	\item We can directly compute all these values as follows:
+	\begin{align*}
+		d_1&=\max_{x\in[-\pi,\pi]}|\cos x-\sin x|=\sqrt{2}\\
+		d_2&=\max_{x\in[-\pi,\pi]}|\cos^2 x-\sin^2 x|=\max_{x\in[-\pi,\pi]}|1-2\sin^2 x|=1\\
+		d_3&=\max_{x\in[-\pi,\pi]}|\cos^3 x-\sin^3 x|\\
+		&=\max_{x\in[-\pi,\pi]}|\cos x-\sin x|\max_{x\in[-\pi,\pi]}|1-\sin x\cos x|\\
+		&=\max_{x\in[-\pi,\pi]}|\sqrt{2}\cos\left(x+\frac{\pi}{2}\right)|\max_{x\in[-\pi,\pi]}|1-\frac{\sin 2x}{2}|=1
+	\end{align*}
+	Thus $d_1>d_2=d_3$.\hfill$\blacksquare$
+	\item \textbf{I} $\rightarrow\left\lbrace\begin{array}{l}
+		\text{for }a_kx^k\rightarrow k\text{ multiplications},\text{}\therefore\text{ for }k=0,1,\dots,n\implies\text{total }\dfrac{n(n+1)}{2}\text{}	\\
+		n\text{ additions}
+	\end{array}
+	\right.$
+	
+	\textbf{II} $\rightarrow\left\lbrace\begin{array}{l}
+		\text{for }a_kx^k\rightarrow\text{2 multiplications for }k=2,\dots,n\text{ and 1 for }a_1x\implies\text{total }2n-1\text{}	\\
+		n\text{ additions}
+	\end{array}
+	\right.$
+	
+	\textbf{III} $\rightarrow$ 1 addition and multiplication in each bracket, $\therefore$ $n$ additions and multiplications\hfill$\blacksquare$
+	\item We have 3 intervals and want to interpolate on them using quadratic splines. Define the piecewise quadratic as:
+	$$\varphi=\left\lbrace \begin{array}{l}
+		\varphi_1=a_0^{(1)}+a_1^{(1)}x+a_2^{(1)}x^2\text{ on }[-1,0]\\
+		\varphi_2=a_0^{(2)}+a_1^{(2)}x+a_2^{(2)}x^2\text{ on }[0,1]\\
+		\varphi_3=a_0^{(3)}+a_1^{(3)}x+a_2^{(3)}x^2\text{ on }[1,2]\\
+	\end{array}\right.$$
+	Using boundary conditions on $\varphi$, we get
+	$a_0^{(1)}-a_1^{(1)}+a_2^{(1)}=1$ and $a_0^{(3)}+2a_1^{(3)}+4a_2^{(3)}=8$.
+	
+	Using the continuity of $\varphi$ at interior points $x=0$ and $x=1$, we get
+	\vspace{-2.5mm}
+	$$\varphi_1(0)=\varphi_2(0)=0\implies a_0^{(1)}= a_0^{(2)}=0$$
+	\vspace{-8.5mm}
+	$$\varphi_2(1)=\varphi_3(1)\implies a_0^{(2)}+a_1^{(2)}+a_2^{(2)}=a_0^{(3)}+a_1^{(3)}+a_2^{(3)}=1$$
+	Finally, we use the condition of continuity of the first derivative at interior points:
+	\vspace{-2.5mm}
+	$$\varphi_1^{\prime}(0)=\varphi_2^{\prime}(0)\implies a_1^{(1)}= a_1^{(2)}$$
+	\vspace{-8.5mm}
+	$$\varphi_2^{\prime}(1)=\varphi_3^{\prime}(1)\implies a_1^{(2)}+2a_2^{(2)}=a_1^{(3)}+2a_2^{(3)}$$
+	\newpage
+	The last condition is given to us as $a_2^{(3)}=0$. We can write this in form of the following matrix equation:
+	$$\begin{bmatrix}
+		1 & -1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+		0 & 0 & 0 & 0 & 0 & 0 & 1 & 2 & 4 \\
+		1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+		0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 \\
+		0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 \\
+		0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 \\
+		0 & 1 & 0 & 0 & -1 & 0 & 0 & 0 & 0 \\
+		0 & 0 & 0 & 0 & 1 & 2 & 0 & -1 & -2 \\
+		0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 \\
+	\end{bmatrix}\begin{bmatrix}
+		a_0^{(1)}\\ a_1^{(1)}\\ a_2^{(1)}\\ a_0^{(2)}\\ a_1^{(2)}\\ a_2^{(2)}\\ a_0^{(3)}\\ a_1^{(3)}\\ a_2^{(3)}
+	\end{bmatrix}=\begin{bmatrix}
+		1\\
+		8\\
+		0\\
+		0\\
+		1\\
+		1\\
+		0\\
+		0\\
+		0\\
+	\end{bmatrix}
+	$$\hfill$\blacksquare$
+	\item \begin{enumerate}
+		\item True
+		\item Use the binomial formula
+		\item Keeping in mind that $B_{n-1,-1}(x)=0$, 
+		\vspace{-2.5mm}		
+		$$\displaystyle\sum_{k=0}^n \frac{k}{n}B_{n,k}(x)=\sum_{k=0}^n \frac{(n-1)!}{(n-k)!(k-1)!}x^k(1-x^k)=x\sum_{k=0}^n B_{n-1,k-1}(x)=x$$
+		\item We expand tha given expression as follows: 
+		\vspace{-2.5mm}		
+		\begin{align*}
+			\sum_{k-0}^n\left(\frac{k}{n}-x\right)^2B_{n,k}(x)&= \sum_{k-0}^n\frac{k^2}{n^2}B_{n,k}(x)-2x\sum_{k-0}^n\frac{k}{n}B_{n,k}(x)+x^2\sum_{k-0}^nB_{n,k}(x)\\
+			&=\sum_{k-0}^n\frac{k^2}{n^2}{n\choose k}x^k(1-x)^{n-k}-x^2\\
+			&=\sum_{k-0}^n\frac{k}{n}{n-1\choose k-1}x^k(1-x)^{n-k}-x^2\\
+			&=\sum_{k-0}^n\frac{1}{n}\left[(k-1){n-1\choose k-1}+{n-1\choose k-1}\right]x^k(1-x)^{n-k}-x^2\\
+			&=\sum_{k-0}^n\frac{1}{n}\left[(n-1){n-2\choose k-2}+{n-1\choose k-1}\right]x^k(1-x)^{n-k}-x^2\\
+			&=\frac{(n-1)x^2+x}{n}-x^2=\frac{x(1-x)}{n}
+		\end{align*}
+		\item We have $\displaystyle B_n(f)-f=\sum_{k=0}^nf\left(\dfrac{k}{n}\right)B_{n,k}(x)-f(x)$. We can write $\displaystyle f(x)=\sum_{k=0}^nB_{n,k}(x)f(x)$.
+		\vspace{-2.5mm}
+		\begin{align*}
+			\therefore B_n(f)-f&=\sum_{k=0}^n\left(f\left(\dfrac{k}{n}\right)-f(x)\right)B_{n,k}(x)\\
+			\therefore |B_n(f)-f|&\leqslant \sum_{k=0}^n\left|f\left(\dfrac{k}{n}\right)-f(x)\right|B_{n,k}(x)
+		\end{align*}
+		\newpage
+We now make use of the information that for any given $\e>0$, there exists a $\delta>0$ such that $|f(x)-f(y)|<\dfrac{\e}{2}$ whenever $|x-y|<\delta$.
+\begin{align*}
+	\sum_{k=0}^n\left|f\left(\dfrac{k}{n}\right)-f(x)\right|B_{n,k}(x)&=\sum_{\left|\frac{k}{n}-x\right|<\delta}\left|f\left(\dfrac{k}{n}\right)-f(x)\right|B_{n,k}(x)\\
+	&\text{ }\text{ }\text{ }\text{ }\text{ }\text{ }+\sum_{\left|\frac{k}{n}-x\right|\geqslant\delta}\left|f\left(\dfrac{k}{n}\right)-f(x)\right|B_{n,k}(x)
+\end{align*}
+ $$\displaystyle S_1=\sum_{\left|\frac{k}{n}-x\right|<\delta}\left|f\left(\dfrac{k}{n}\right)-f(x)\right|B_{n,k}(x)\leqslant\frac{\e}{2}\sum_{\left|\frac{k}{n}-x\right|<\delta}B_{n,k}(x)\leqslant\frac{\e}{2}$$  The sum $S_2$ is a bit more tricky. We use the identity $|a(x)-b(x)|\leqslant ||a(x)||+||b(x)||$.
+\begin{align*}
+	S_2&=\sum_{\left|\frac{k}{n}-x\right|\geqslant\delta}\left|f\left(\dfrac{k}{n}\right)-f(x)\right|B_{n,k}(x)\\
+	&\leqslant 2||f||\sum_{\left|\frac{k}{n}-x\right|\geqslant\delta}B_{n,k}(x)\\
+	&\leqslant 2||f||\sum_{\left|\frac{k}{n}-x\right|\geqslant\delta}\frac{\left|\frac{k}{n}-x\right|^2}{\left|\frac{k}{n}-x\right|^2}B_{n,k}(x)\\
+	&\leqslant \frac{2||f||}{\delta^2}\sum_{\left|\frac{k}{n}-x\right|\geqslant\delta}\left|\frac{k}{n}-x\right|^2 B_{n,k}(x)\\
+	&\leqslant\left(\frac{2||f||}{\delta^2}\right)\left(\frac{x(1-x)}{n}\right)
+\end{align*}
+Note that $x(1-x)\leqslant\dfrac{1}{4}$ for $x\in[0,1]$. Thus we have $S_2\leqslant\dfrac{||f||}{2\delta^2n}$. The only part of the solution now remaining is to pick $n$ such that $n>\dfrac{||f||}{\delta^2\e}$.\hfill$\blacksquare$
+	\end{enumerate}
+	\item We are given a polynomial $p(x)=a_0+a_1x+\dots+a_{n-1}x^{n-1}+x^n$ where $a_i\in\Z$. We are also given 4 integers $\a\neq\b\neq\g\neq\delta$ such that $p(\a)=p(\b)=p(\g)=p(\delta)=7$. Thus we can rewrite $p$ as
+	$$p(x)=7+(x-\a)(x-\b)(x-\g)(x-\delta)q(x)$$
+	Substituting $p(s)=10$ gives us $(s-\a)(s-\b)(s-\g)(s-\delta)q(s)=3$. Now note that since $q(x)$ has integer coefficients, $q(s)$ must take an integer value. Given distinct $\a,\b,\g,\delta$, we must have distinct $(s-\a),(s-\b),(s-\g),(s-\delta)$. Since 3 is a prime number, this is not possible (why? - take modulus of both sides).\hfill$\blacksquare$
+\end{enumerate}
+\end{document}
+
