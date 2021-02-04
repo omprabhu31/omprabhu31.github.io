@@ -17,7 +17,7 @@
 \usepackage{multicol}
 \usepackage{cancel}
 \usepackage[retainorgcmds]{IEEEtrantools}
-\usepackage[margin=3cm]{geometry}
+\usepackage[margin=1in]{geometry}
 \usepackage{amsmath}
 \newlength{\tabcont}
 \setlength{\parindent}{0.0in}
@@ -93,7 +93,7 @@ Indian Institute of Technology Bombay\\~\\
 \end{center}
 \vspace{-6pt}
 
-This document is a compilation of the notes I made while taking the course ME 202 (Strength of Materials) in my 4$^{\text{th}}$ semester at IIT Bombay. It is not meant to serve as a replacement for any formal textbook or lecture on the subject, since the theory is not discussed at all.
+This document is a compilation of the notes I made while taking the course ME 202 (Strength of Materials) in my 4$^{\text{th}}$ semester at IIT Bombay. Even though I try to discuss as much theory as possible, this is not a substitute to any formal teaching material on the subject.
 
 There will probably be many instances where I use certain common symbols without explicitly mentioning what they mean. It is to be assumed that they carry their usual meanings.
 
@@ -121,7 +121,7 @@ If you have any suggestions and/or spot any errors, you know where to contact me
 \end{itemize}
 \vspace{-7mm}
 \begin{enumerate}[label=\textbf{\roman*)}]
-	\item \textbf{Internal resisting torque} (method of sections)
+	\item \textbf{Internal Resisting Torque} (method of sections)
 \end{enumerate}
 \vspace{-8mm}
 
@@ -142,6 +142,82 @@ $\sum M_{AB}=0\implies -250+T_{AB}=0$
 $\sum M_{BC}=0\implies -250+75+T_{BC}=0$
 
 $\sum M_{CD}=0\implies -250+75+325+T_{CD}=0$
+\vspace{-10mm}
+\begin{wrapfigure}[6]{R}{0.2\textwidth}
+\centering \includegraphics[width=0.2\textwidth]{torque_diag.JPG}
+\end{wrapfigure}
 
-Direction of torque is determined using right hand thumb rule, i.e. thumb along +ve z-direction and direction of curling of fingers corresponds to +ve torque.
+\vspace{10mm}
+
+The results can be shown using a torque diagram.
+
+Direction of torque is decided using right hand thumb rule, i.e. thumb along +ve z-direction and direction of curling of fingers corresponds to +ve torque. 
+
+To define the origin, consider the element you come across first when you travel along that direction (A, in this case).
+
+If external torque varies with $z$, take a section at an arbitrary $z$ and find internal resisting torque as a function of $z$, i.e. $T(z)$.
+\vspace{-2.5mm}
+
+\begin{enumerate}[label=\textbf{\roman*)}]
+	\setcounter{enumi}{1}
+	\item \textbf{Some Observations}
+\end{enumerate}
+\vspace{-8mm}
+
+\begin{wrapfigure}[8]{L}{0.27\textwidth}
+\includegraphics[width=0.27\textwidth]{torsion_obs.JPG}
+\end{wrapfigure}
+
+\hspace{0.5\textwidth}
+\vspace{-7mm}
+
+\begin{itemize}
+\itemsep0em
+	\item[$-$] each circular cut remains a circle
+	\item[$-$] longitudinal lines deform helically \& intersect the circles at equal angles
+	\item[$-$] cross-sections of shaft ends remain flat
+	\item[$-$] radial lines on the flat ends remain straight
+\end{itemize}
+\vspace{-3mm}
+
+Non-circular shafts often undergo a phenomenon called warping (a topic for a later time).
+\begin{enumerate}[label=\textbf{\roman*)}]
+	\setcounter{enumi}{2}
+	\item \textbf{Shear Strain} $\g$
+\end{enumerate}
+\vspace{-6mm}
+
+\begin{center}
+\includegraphics[width=0.35\textwidth]{strain_1.JPG}\hspace{0.1\textwidth}\includegraphics[width=0.3\textwidth]{strain_2.JPG}
+\end{center}
+\newpage
+Notice how the element is initially rectangular and later gets distorted. This gives rise to a shear strain and as a result, shear stress. As a kinematic assumption, the cross-sections remain planar and rotate rigidly under the load.
+$$\g=\tan\psi_{z\theta}=\frac{r\phi(z+\Delta z)-r\phi(z)}{\Delta z}\implies \boxed{\g=r\frac{\text{d}\phi}{\text{d}z}}$$
+$$\therefore \g_{max}=R\frac{\text{d}\phi}{\text{d}z}\implies \g=\left(\frac{r}{R}\right)\g_{max}$$
+\vspace{-6mm}
+\begin{enumerate}[label=\textbf{\roman*)}]
+	\setcounter{enumi}{3}
+	\item \textbf{Shear Stress  $\tau$ and the Torsion Formula}
+\end{enumerate}
+\vspace{-10mm}
+
+\begin{center}
+\includegraphics[width=0.35\textwidth]{torsion_formula1.JPG}\hspace{0.1\textwidth}\includegraphics[width=0.25\textwidth]{torsion_formula2.JPG}
+\end{center}
+\vspace{-3mm}
+$$T(z+\Delta z)+t(z)\Delta z-T(z)=0\implies \frac{\text{d}T}{\text{d}z}+t(z)=0$$
+The moment due to the shear stresses must equal the external torque $T(z)$. Thus $\displaystyle T(z)=\int_{A(z)}\tau r\text{d}A$. Also since $\tau$ \& $\g$ satisfy the constitutive relation $\boxed{\tau=G\g}$, thus $\displaystyle \g=\left(\frac{r}{R}\right)\g_{max}\implies \tau=\left(\frac{r}{R}\right)\tau_{max}$.
+$$\therefore T=\int_A\tau r\text{d}A=\int_A \tau_{max}\frac{r^2}{R}\text{d}A=\frac{\tau_{max}}{R}\int_Ar^2\text{d}A\implies \boxed{\tau_{max}=\frac{TR}{J}\implies \tau=\frac{Tr}{J}}$$
+The polar moment of inertia $\displaystyle J=\int_Ar^2\text{d}A=\left\lbrace\begin{array}{ll}
+\dfrac{\pi R^4}{2}&\text{for solid cross-sections}\\
+\dfrac{\pi (r_0^4-r_i^4)}{2}&\text{for annular cross-sections}\\
+\end{array}\right.$
+
+Due to the complementary properties of the shear stress, an associated shear stress is also developed in the plane parallel to the $z$-axis.
+\vspace{-2mm}
+\begin{enumerate}[label=\textbf{\roman*)}]
+	\setcounter{enumi}{4}
+	\item \textbf{Angle of Twist}
+\end{enumerate}
+
 \end{document}
