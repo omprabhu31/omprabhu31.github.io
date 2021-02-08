@@ -1,0 +1,183 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage[margin=0.8in]{geometry}
+\usepackage[utf8]{inputenc}
+
+%page setup
+\usepackage{setspace}
+\setlength{\parindent}{0in}
+\usepackage{float}
+\usepackage{fancyhdr}
+%\pagestyle{fancy}
+%\fancyhf{}
+%\lhead{\footnotesize ME 218 - Experiment 1}
+%\rhead{\footnotesize Om Prabhu, 19D170018}
+\cfoot{\footnotesize \thepage}
+
+%common math and TeX packages
+\usepackage{amsmath, amsthm, amsfonts, amssymb, amscd}
+\usepackage{siunitx, subcaption}
+\usepackage{hyperref, authblk}
+\usepackage{graphicx}
+\usepackage{wrapfig, float}
+\usepackage{verbatim, enumitem, kantlipsum}
+\usepackage{cancel}
+\usepackage[retainorgcmds]{IEEEtrantools}
+
+%tables and code
+\usepackage[table]{xcolor}
+\usepackage{csvsimple}
+
+\let\a\alpha
+\let\b\beta
+\let\g\gamma
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\PP}{\mathcal{P}}
+\newcommand{\Lagr}{\mathcal{L}}
+
+\begin{document}
+\begin{center}
+	{\Large \sc Experiment 1: Uniaxial Tensile Test}
+\end{center}
+\textit{Name: Om Prabhu\\
+Roll Number: 19D170018}
+\vspace{-1.5mm}
+
+\hrulefill
+\vspace{2mm}
+
+\textsc{Objectives:} To determine the following in an uniaxially loaded mild steel and aluminium specimen
+\vspace{-2mm}
+
+\begin{enumerate}[label=(\alph*)]
+	\itemsep-0.2em
+	\item construction of the true stress vs. true strain curve until fracture
+	\item the modulus of elasticity
+	\item the ultimate tensile strength (UTS)
+	\item the percentage reduction in length and cross section area
+\end{enumerate}
+\textsc{Experimental Method:}
+\vspace{-2mm}
+
+\begin{enumerate}[label=(\alph*)]
+	\item { Apparatus and Measurements} $-$ The list of required tools and equipment along with their respective measurements is as follows:
+\vspace{-2mm}
+
+	\begin{itemize}
+		\item Test specimens of aluminium and mild steel 
+		\item Universal Testing Machine (UTM) - used to grip the specimen and apply a uniform tensile load along the axis of the specimen 
+		\item Vernier Calipers - used to accurately measure the dimensions of the specimen
+		\item Ruler - used for measuring lengths of the test section of the specimen
+		\item Extensometer - used for measuring lateral contraction in the test section of the specimen
+	\end{itemize}
+	
+	\item {Theory} $-$ For a linear, isotropic material, we can derive its stress-strain relationship using tension, compression or torsion test. A material may exhibit different properties depending on the type of load applied.
+	
+	In this test, the applied load is tensile in nature. When a material undergoes tension, the atoms or molecules tend to move farther apart in the direction of the applied force. This is generally accompanied with a lateral contraction in the cross section. Theoretically, as the cross-section of the material shrinks, the load-bearing capacity also decreases.
+	
+	Initially, the stress-strain behaviour is linear in the elastic region. However, after the yield point, plastic deformation occurs along with elastic deformation. If the material is unloaded after this point, it will exhibit a permanent elongation. The material can only bear stress up to its ultimate tensile strength (UTS). Shortly after the UTS, the cross-section shrinks too much and the material can no longer bear additional stress. This is the fracture region and the point at which the material breaks is called the fracture point.
+
+	\item {Procedure} $-$ 
+	\begin{enumerate}[label=\roman*)]
+		\item a piece of the desired metal is cut into a cylindrical test specimen. The ends of the specimen are broader for easier gripping on the UTM, resulting in a `dumbell-shaped' specimen
+		\item the dimensions of the specimen, in particular the test length and smallest cross section diameter, are measured using the vernier calipers and ruler
+		\item the extensometer is used to make gauge marks on the test section of the specimen. For this experiment, we take gauge length $L=20$ mm and make gauge marks at the center and at 10 mm on either side of the center
+		\item the ends of the specimen are pulled apart in the UTM which indicates the load required at each stage (the strain rate is maintained uniform). The loading situation is identical to pulling a relatively slender member along its axis.
+		\item elongation and lateral contraction in the specimens are measured using a dial gauge in the UTM, which are later converted to stress and strain using equations from mechanics
+	\end{enumerate}
+\end{enumerate}
+\newpage
+\textsc{Results:}
+%\vspace{-2mm}
+
+\begin{enumerate}[label=(\alph*)]
+	\item For aluminium test specimen:
+\vspace{-3mm}
+	
+\begin{itemize}
+	\itemsep0em
+	\item[$-$] initial diameter of specimen $d_i(Al)=7\text{ mm}$
+	\item[$-$] initial gauge length of specimen $L_i(Al)=100\text{ mm}$
+	\item[$-$] final diameter of specimen $d_f(Al)=3.34\text{ mm}$
+	\item[$-$] final gauge length of specimen $L_f(Al)=109.4\text{ mm}$
+\end{itemize}
+	\item For mild steel test specimen:
+\vspace{-3mm}
+
+\begin{itemize}
+	\itemsep0em
+	\item[$-$] initial diameter of specimen $d_i(ms)=7\text{ mm}$
+	\item[$-$] initial gauge length of specimen $L_i(ms)=100\text{ mm}$
+	\item[$-$] final diameter of specimen $d_f(ms)=4.82\text{ mm}$
+	\item[$-$] final gauge length of specimen $L_f(ms)=105.6\text{ mm}$
+\end{itemize}
+\end{enumerate}
+
+\textsc{Graphs \& Calculations:}
+\vspace{2.5mm}
+
+The graphs obtained from the extensometer readings for both the specimens are as follows:
+\vspace{2.5mm}
+
+\includegraphics[width=0.475\textwidth]{al_linear.png}
+\hspace{0.05\textwidth}
+\includegraphics[width=0.475\textwidth]{ms_linear.png}
+\vspace{1.5mm}
+
+We can calculate the Young's modulus of both materials by equating it to the slopes of the respective graphs as follows:
+\vspace{-7.5mm}
+
+\begin{align*}
+	\text{Young's modulus of aluminium } E_{Al}&=58.67\text{ GPa}\\
+	\text{Young's modulus of mild steel } E_{ms}&=196.37\text{ GPa}
+\end{align*}
+
+The stress vs. strain curves obtained from the UTM readings for both the specimens are as follows:
+\vspace{2.5mm}
+
+\includegraphics[width=0.475\textwidth]{al_stress_strain.png}
+\hspace{0.05\textwidth}
+\includegraphics[width=0.475\textwidth]{ms_stress_strain.png}
+%\vspace{1.5mm}
+
+We can use these graphs to calculate the yield stress and ultimate tensile strength for both the materials as follows:
+\vspace{-7.5mm}
+
+\begin{align*}
+	\text{Yield stress of aluminium } \sigma_{yield}(Al)&\approx 175\text{ MPa}\\
+	\text{Yield stress of mild steel } \sigma_{yield}(ms)&\approx 480\text{ MPa}
+\end{align*}
+\vspace{-14mm}
+
+\begin{align*}
+	\text{Ultimate tensile strength of aluminium } \sigma_{uts}(Al)&=201.05\text{ MPa}\\
+	\text{Ultimate tensile strength of mild steel } \sigma_{uts}(ms)&=570.43\text{ MPa}
+\end{align*}
+Finally, we can use the initial and final values of lengths and diameters to calculate the percentage change in length and area for both the materials:
+\begin{enumerate}[label=(\alph*)]
+	\item For aluminium test specimen:
+\begin{align*}
+	\text{\% change in length } \Delta L_{Al}&=\frac{L_f(Al)-L_i(Al)}{L_i(Al)}\times 100\\
+	\therefore\Delta L_{Al}&=\frac{109.4-100}{100}\times 100 = 9.4\%\\
+	\text{\% change in area } \Delta A_{Al}&=\frac{d_f(Al)^2-d_i(Al)^2}{d_i(Al)^2}\times 100\\
+	\therefore\Delta A_{Al}&=\frac{3.34^2-7^2}{7^2}\times 100 = -77.2\%
+\end{align*}
+	\item For mild steel test specimen:
+\begin{align*}
+	\text{\% change in length } \Delta L_{ms}&=\frac{L_f(ms)-L_i(ms)}{L_i(ms)}\times 100\\
+	\therefore\Delta L_{ms}&=\frac{105.6-100}{100}\times 100 = 5.6\%\\
+	\text{\% change in area } \Delta A_{ms}&=\frac{d_f(ms)^2-d_i(ms)^2}{d_i(ms)^2}\times 100\\
+	\therefore\Delta A_{ms}&=\frac{4.82^2-7^2}{7^2}\times 100 = -52.5\%
+\end{align*}
+\end{enumerate}
+
+\textsc{Conclusion:}
+\begin{enumerate}[label=\roman*)]
+		\item As expected, the calculated value of Young's modulus of mild steel is greater than aluminium
+		\item The calculated values of Young's modulus of aluminium and mild steel (58.67 GPa and 196.37 GPa respectively) are fairly close to their theoretical values (71 GPa for aluminium and 210 GPa for mild steel)
+		\item As expected due to geometric compatibility, a larger percentage change in length also corresponds to a larger percentage change in area ($\Delta L_{Al}>\Delta L_{ms}\rightarrow|\Delta A_{Al}|>|\Delta A_{ms}|$)
+	\end{enumerate}
+
+\end{document}
+

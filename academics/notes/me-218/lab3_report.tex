@@ -1,0 +1,158 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage[margin=0.8in]{geometry}
+\usepackage[utf8]{inputenc}
+
+%page setup
+\usepackage{setspace}
+\setlength{\parindent}{0in}
+\usepackage{float}
+\usepackage{fancyhdr}
+%\pagestyle{fancy}
+%\fancyhf{}
+%\lhead{\footnotesize ME 218 - Experiment 1}
+%\rhead{\footnotesize Om Prabhu, 19D170018}
+\cfoot{\footnotesize \thepage}
+
+%common math and TeX packages
+\usepackage{amsmath, amsthm, amsfonts, amssymb, amscd}
+\usepackage{siunitx, subcaption}
+\usepackage{hyperref, authblk}
+\usepackage{graphicx}
+\usepackage{wrapfig, float}
+\usepackage{verbatim, enumitem, kantlipsum}
+\usepackage{cancel}
+\usepackage[retainorgcmds]{IEEEtrantools}
+
+%tables and code
+\usepackage[table]{xcolor}
+\usepackage{csvsimple}
+
+\let\a\alpha
+\let\b\beta
+\let\g\gamma
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\PP}{\mathcal{P}}
+\newcommand{\Lagr}{\mathcal{L}}
+
+\begin{document}
+\begin{center}
+	{\Large \sc Experiment 3: Torsion of a Circular Shaft}
+\end{center}
+\textit{Name: Om Prabhu\\
+Roll Number: 19D170018}
+\vspace{-1.5mm}
+
+\hrulefill
+\vspace{2mm}
+
+\textsc{Objectives:} To find out the following properties of a circular shaft made of aluminium:
+\vspace{-2mm}
+
+\begin{enumerate}[label=(\alph*)]
+	\itemsep-0.2em
+	\item find out the torque vs. angle of twist relationship
+	\item find out the yield torque $T_Y$ and limiting torque $T_L$
+	\item calculate the shear modulus of aluminium and compare it with theoretical predictions
+\end{enumerate}
+\textsc{Experimental Method:}
+\vspace{-2mm}
+
+\begin{enumerate}[label=(\alph*)]
+	\item { Apparatus and Measurements} $-$ The list of required tools and equipment along with their respective measurements is as follows:
+\vspace{-2mm}
+
+	\begin{itemize}
+		\item Circular shaft made of aluminium
+		\item Torsion testing setup	- used to grip the shaft and measure the torque \& angle of twist
+		\item Vernier Calipers - used to accurately measure the dimensions of the specimen
+		\item Marker - used to make a line on the shaft in order to observer the twist
+	\end{itemize}
+	
+	\item {Theory} $-$ For a linear, isotropic material, we can derive its stress-strain relationship using tension, compression or torsion test. A material may exhibit different properties depending on the type of load applied. In this experiment, the applied load is torsional.
+	
+	The typical torque-twist relationship for metals is described as follows. Initially, the material response is elastic and we get a linear relationship. At the onset of yield, the relationship is no longer linear. Plastic deformation starts at the outermost fiber first and moves inward as torque is increased further. At the limiting torque value $T_L$, the entire cross-section is in plastic deformation. Beyond this point, the shaft cannot resist further torque applied.
+	
+	In this experiment, we will approximate the strain hardening region to be nearly a horizontal line (i.e. perfectly plastic). The torque($T$)-twist($\theta$) relation for a perfectly plastic material is as follows:
+	$$T=\dfrac{4}{3}T_Y\left[1-0.25\left(\dfrac{\theta_Y}{\theta}\right)^3\right]$$
+
+	where $T_Y$ and $\theta_Y$ are the torque and angle of twist at the onset of yield respectively. The yield torque $T_Y$ is given by
+	$$T_Y=\dfrac{J\tau_Y}{R}\text{ and } J=\dfrac{\pi R^4}{2}$$
+	where $J$ is the polar moment of inertia, $R$ is the radius of the circular shaft and $\tau_Y$ is the yield stress in shear. Thus the limiting torque $T_L$ is given by $T_L=\dfrac{4}{3}T_Y $.
+
+	\item {Procedure} $-$ 
+	\begin{enumerate}[label=\roman*)]
+		\item the aluminium circular shaft is fitted with large circular discs which grip the cross-section of the shaft while it is being twisted
+		\item the gauge length is decided by the length of the shaft between the two discs
+		\item a straight line is made along the length of the shaft in order to observe the effect of twisting
+		\item the optical encoder is rested on the discs to measure the angle of twist
+		\item one end of the shaft is fixed and the other is loaded at a constant rate of twist and the torque vs twist data is collected at periodic intervals
+		\item the limiting and yield torque are obtained from the observations made during the experiment and a general torque vs twist curve can be plotted to analyse the material response
+	\end{enumerate}
+\end{enumerate}
+\newpage
+\textsc{Observations:}
+\vspace{-2mm}
+
+\begin{enumerate}[label=(\alph*)]
+	\itemsep0em
+	\item gauge length $L=100$ mm
+	\item diameter of the shaft $d=$10 mm
+	\item maximum observed angle of twist $\theta_{max}=$ 4123$^{\text{o}}$
+\end{enumerate}
+
+\textsc{Graphs \& Calculations:}
+\vspace{2.5mm}
+
+The torque vs. angle of twist curve obtained from the experimental data is as shown below:
+\begin{center}
+\includegraphics[width=0.75\textwidth]{image.jpg}
+\end{center}
+As seen earlier, the yield torque is the point on the curve where the initial linear region ends. Similarly, the limiting torque is the maximum value of torque in the region of plastic deformation. From the graph,
+\begin{align*}
+T_Y&\approx 32\text{ Nm}\\
+T_{L,exp}&=38.83\text{ Nm}
+\end{align*}
+Using the theoretical formula for $T_L$, we get
+$T_{L,th}=\dfrac{4}{3}T_Y=42.67\text{ Nm}$. 
+\vspace{2.5mm}
+
+To calculate the shear modulus $G$, we consider the linear elastic region of the graph up to $T_Y$. At $T=20.01\text{Nm}$, we have $\theta=6.26^{\text{o}}=0.109\text{ rad}$. Thus,
+$$\theta=\frac{TL}{JG}\implies G=\frac{TL}{\theta J}=\frac{32TL}{\pi \theta d^4}$$
+$$\therefore G_{exp}=\frac{32\times 20.01\times 0.1}{\pi\times 0.109\times (0.01)^4}=18.69\text{ GPa}$$
+Based on the theoretical values of the limiting torque and shear modulus of aluminium, we can calculate the error in measurement as follows:
+\begin{align*}
+\text{\% error in limiting torque }\Delta T_L&=\frac{T_{L,exp}-T_{L,th}}{T_{L,th}}\times 100\\
+&=\frac{38.83-42.67}{42.67}\times 100=-8.99\%
+\end{align*}
+\begin{align*}
+\text{\% error in shear modulus }\Delta G&=\frac{G_{exp}-G_{th}}{G_{th}}\times 100\\
+&=\frac{18.69-25}{25}\times 100=-25.24\%
+\end{align*}
+\textsc{Sources of Error:}
+\begin{enumerate}[label=\roman*)]
+	\itemsep0em
+	\item Tightening of screws might not be proper, resulting in errors in measurement of angle of twist
+	\item The diameter and size of the shaft has to be compatible with the machine to obtain proper readings, otherwise there may be errors in measurement
+\end{enumerate}
+\textsc{Results:} 
+\vspace{2mm}
+
+The properties of aluminium extracted from the experiment are as follows:
+	\begin{enumerate}[label=\roman*)]
+		\itemsep0em
+		\item yield torque $T_Y\approx 32$ Nm
+		\item limiting torque $T_{L,exp}=38.83$ Nm
+		\item shear modulus $G_{exp}=18.69$ GPa
+	\end{enumerate}
+Apart from these results, some other observations are mentioned below:
+\begin{itemize}
+		\itemsep0em
+		\item[$-$] The line marked along the length of the shaft becomes helical, whereas the circumferential and radial lines simply rotate and retain their original shape
+		\item[$-$] Fracture was observed at the location close to the screws. This is because the stress concentration at that point is higher due to presence of voids.
+		\item[$-$] Failure occurs along a plane perpendicular to the shaft axis. This is because this place encounters the maximum shear stress (better seen using the Mohr's circle for pure shear).
+\end{itemize}
+\textsc{References:} An Introduction to the Mechanics of Solids - Crandall, Dahl, Lardner
+\end{document}
+

@@ -1,0 +1,161 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage[margin=0.8in]{geometry}
+\usepackage[utf8]{inputenc}
+
+%page setup
+\usepackage{setspace}
+\setlength{\parindent}{0in}
+\usepackage{float}
+\usepackage{fancyhdr}
+%\pagestyle{fancy}
+%\fancyhf{}
+%\lhead{\footnotesize ME 218 - Experiment 1}
+%\rhead{\footnotesize Om Prabhu, 19D170018}
+\cfoot{\footnotesize \thepage}
+
+%common math and TeX packages
+\usepackage{amsmath, amsthm, amsfonts, amssymb, amscd}
+\usepackage{siunitx, subcaption}
+\usepackage{hyperref, authblk}
+\usepackage{graphicx}
+\usepackage{wrapfig, float}
+\usepackage{verbatim, enumitem, kantlipsum}
+\usepackage{cancel}
+\usepackage[retainorgcmds]{IEEEtrantools}
+
+%tables and code
+\usepackage[table]{xcolor}
+\usepackage{csvsimple}
+
+\let\a\alpha
+\let\b\beta
+\let\g\gamma
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\PP}{\mathcal{P}}
+\newcommand{\Lagr}{\mathcal{L}}
+
+\begin{document}
+\begin{center}
+	{\Large \sc Experiment 2: Uniaxial Compression Test}
+\end{center}
+\textit{Name: Om Prabhu\\
+Roll Number: 19D170018}
+\vspace{-1.5mm}
+
+\hrulefill
+\vspace{2mm}
+
+\textsc{Objectives:} To carry out compression test and determine the following in a uniaxially loaded mild steel and aluminium specimen:
+\vspace{-2mm}
+
+\begin{enumerate}[label=(\alph*)]
+	\itemsep-0.2em
+	\item machine compliance
+	\item compressive flow strength at $~$30\% strain of aluminium sample
+	\item Young's modulus in compression and the complete true stress vs. true strain curve
+\end{enumerate}
+
+\textsc{Experimental Method:}
+\vspace{-2mm}
+
+\begin{enumerate}[label=(\alph*)]
+	\item { Apparatus and Measurements} $-$ The list of required tools and equipment along with their respective measurements is as follows:
+\vspace{-2mm}
+
+	\begin{itemize}
+		\item Test specimens of aluminium and steel 
+		\item Universal Testing Machine (UTM) with compression plates - used to apply a uniform compressive load along the axis of the specimen 
+		\item Vernier Calipers - used to accurately measure the diameters of the specimens
+		\item Ruler - used for measuring lengths of the specimens
+	\end{itemize}
+\item {Theory} $-$ For a linear, isotropic material, we can derive its stress-strain relationship using tension, compression or torsion test. A material may exhibit different properties depending on the type of load applied.
+	
+	In this test, the applied load is compressive in nature. When a material undergoes uniaxial compression, the atoms or molecules tend to come close together in the direction of the applied force. The deformation may be permanent depending on the material and generally, the material expands in the lateral direction (where no force is applied). Failure in compression is also often different from that in tension, as it involves buckling, shear bending and diametric cracking.
+	
+	Stiffness is defined as the amount of resistance to deformation or deflection in response to the applied force. Compliance is defined as the reciprocal of stiffness. In this experiment, we use the steel specimen of known Young's modulus to extract the UTM compliance. Here, the inherent assumption of considering the steel specimen as a linear elastic spring is valid because we load it within the elastic limits. We then carry out a similar test on the aluminium sample and based on the compliance data obtained, we can construct the true stress vs. true strain curve.
+
+	\item {Procedure} $-$ 
+	\begin{enumerate}[label=\roman*)]
+		\item a piece of the desired metal is cut into a test specimen of a right circular cylinder shape
+		\item dimensions of the specimens are measured at 3 different locations along its height and length to determine the  average cross-section area ($A_0$) and length ($L_0$)
+		\item the specimen is placed centrally between the two compressions plates, such that the centre of the moving
+head is vertically above the centre of specimen
+		\item load is applied on the specimen by moving the head at a constant velocity
+		\item the first compression test is performed on the steel specimen within its elastic limits and data regarding force and machine extension is recorded
+		\item a similar test is carried out on the aluminium sample at 30\% strain
+		\item force and displacement readings are measured using the UTM, which are later converted into stress and strain using the compliance data
+	\end{enumerate}
+\end{enumerate}
+\newpage
+\textsc{Observations:}
+%\vspace{-2mm}
+
+\begin{enumerate}[label=(\alph*)]
+	\item For steel specimen:
+\vspace{-3mm}
+	
+	\begin{itemize}
+		\itemsep0em
+		\item[$-$] initial diameter of the specimen $d_{i,s}=20\text{ mm}$
+		\item[$-$] final diameter of the specimen $d_{f,s}=20\text{ mm}$
+		\item[$-$] initial length of the specimen $L_{i,s}=20\text{ mm}$
+		\item[$-$] final length of the specimen $L_{f,s}=20\text{ mm}$
+	\end{itemize}
+	\item For aluminium specimen:
+\vspace{-3mm}
+
+	\begin{itemize}
+		\itemsep0em
+		\item[$-$] initial average diameter of the specimen $d_{i,Al}=12.4\text{ mm}$
+		\item[$-$] final average diameter of the specimen $d_{f,Al}=14.2\text{ mm}$
+		\item[$-$] initial average length of the specimen $L_{i,Al}=19.03\text{ mm}$
+		\item[$-$] initial average length of the specimen $L_{f,Al}=14.02\text{ mm}$
+	\end{itemize}
+\end{enumerate}
+
+\textsc{Graphs \& Calculations:}
+\vspace{2.5mm}
+
+The machine compliance curve obtained using the UTM data for steel is as follows:
+
+\begin{center}
+\includegraphics[width=0.55\textwidth]{mcc.png}
+\end{center}
+
+Based on this compliance data, we can use polynomial fitting to find the coefficients of the above curve. This can subsequently be used to construct the true stress vs true strain curve for aluminium, which is as follows:
+
+\begin{center}
+\includegraphics[width=0.55\textwidth]{tss.png}
+\end{center}
+
+The compliance of steel can be found as follows:
+$$C_{steel}=\frac{1}{\text{stiffness}}=\frac{L_{steel}}{E_{steel}A_{steel}}=1.6\times 10^{-10}\text{ m/N}$$
+We can also calculate the percentage change in length and area of aluminium using the initial and final values of the length and diameter:
+\begin{align*}
+	\text{\% change in length } \Delta L_{Al}&=\frac{L_{f,Al}-L_{i,Al}}{L_{i,Al}}\times 100\\
+	\therefore\Delta L_{Al}&=\frac{14.02-19.03}{19.03}\times 100 = -26.3\%\\
+	\text{\% change in area } \Delta A_{Al}&=\frac{d_{f,Al}^2-d_{i,Al}^2}{d_{i,Al}^2}\times 100\\
+	\therefore\Delta A_{Al}&=\frac{14.2^2-12.4^2}{12.4^2}\times 100 = 31.1\%
+\end{align*}
+Using the true stress vs true strain curve for aluminium, we can equate the slope of the linear region of the curve (red part) to the Young's modulus of aluminium.
+$$\therefore\text{Young's modulus of Aluminium}=E_{exp,Al}\approx 69.7\text{ GPa}$$
+Using the theoretical value of Young's modulus for aluminium $E_{th,Al}=69$ GPa (referred from Crandall), we can calculate the error as follows:
+$$\therefore \text{\% error in Young's modulus}=\frac{E_{exp,Al}-E_{th,Al}}{E_{th,Al}}\times 100=\frac{69.7-69}{69}\times 100 = 0.014\%$$
+\textsc{Results:}
+\begin{enumerate}[label=\roman*)]
+		\itemsep0em
+		\item calculated value of Young's modulus of aluninium = 69.7 GPa
+		\item yield strength of Al $\approx$ 175 MPa
+		\item compressive flow strength of aluminium at 30\% strain $\approx$ 380 MPa
+\end{enumerate}
+
+\textsc{Conclusion:}
+\begin{enumerate}[label=\roman*)]
+		\item As expected, Young's modulus of steel is greater than that of aluminium
+		\item The aluminium specimen shows the phenomenon of buckling under large compressive loads
+		\item There is no change in the length and diameter of the steel specimen as the true stress vs true strain curve remains within the elastic limits
+\end{enumerate}
+\end{document}
+
