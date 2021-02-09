@@ -1,0 +1,197 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage[margin=0.8in]{geometry}
+\usepackage[utf8]{inputenc}
+
+%page setup
+\usepackage{setspace}
+\setlength{\parindent}{0in}
+\usepackage{float}
+\usepackage{fancyhdr}
+%\pagestyle{fancy}
+%\fancyhf{}
+%\lhead{\footnotesize ME 218 - Experiment 1}
+%\rhead{\footnotesize Om Prabhu, 19D170018}
+\cfoot{\footnotesize \thepage}
+
+%common math and TeX packages
+\usepackage{amsmath, amsthm, amsfonts, amssymb, amscd}
+\usepackage{siunitx, subcaption}
+\usepackage{hyperref, authblk}
+\usepackage{graphicx}
+\usepackage{wrapfig, float}
+\usepackage{verbatim, enumitem, kantlipsum}
+\usepackage{cancel}
+\usepackage[retainorgcmds]{IEEEtrantools}
+
+%tables and code
+\usepackage[table]{xcolor}
+\usepackage{csvsimple}
+\usepackage{multirow}
+\usepackage{hyperref}
+
+\let\a\alpha
+\let\b\beta
+\let\g\gamma
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\PP}{\mathcal{P}}
+\newcommand{\Lagr}{\mathcal{L}}
+
+\begin{document}
+\begin{center}
+	{\Large \sc Experiment 6: Rockwell Hardness Measurement of Metals}
+\end{center}
+\textit{Name: Om Prabhu\\
+Roll Number: 19D170018}
+\vspace{-1.5mm}
+
+\hrulefill
+\vspace{2mm}
+
+\textsc{Objectives:} To determine the Rockwell hardness numbers of metals
+\vspace{2mm}
+
+\textsc{Experimental Method:}
+\vspace{-2mm}
+
+\begin{enumerate}[label=(\alph*)]
+	\item { Apparatus and Measurements} $-$ The list of required tools and equipment along with their respective measurements is as follows:
+\vspace{-2mm}
+
+	\begin{itemize}
+		\item[$-$] Specimens of various metals (aluminium, brass, copper, high speed steel in this experiment)
+		\item[$-$] Indenters
+		\item[$-$] Rockwell hardness testing machine
+	\end{itemize}
+	
+	\item {Theory} $-$ There are many definitions for hardness depending on the material. For metals, the most appropriate one would be `resistance to permanent deformation'. Hardness can be calculated in many ways and using many tests.
+	
+The Rockwell hardness test measures hardness by pressing an indenter into the material surface under a specific load and then measuring the depth of penetration. Other tests like Brinell and Vickers calculate it from the force per unit area. Because materials vary so much in their properties, there are various Rockwell scales on which hardness is measured. 
+
+We have four materials, namely 6061 aluminium alloy, brass IS 319, electrograde copper and high speed steel (HSS). The B scale is used for the first 3 metals, while the hardness of HSS is measured on the C scale. The indenter is a carbide tungsten ball (for HRB) or a spherical diamond tipped cone (for HRC), depending on the material to be tested. 
+
+The hardness value of a specimen can provide us with a lot of information regarding it. Uniform hardness numbers are a sufficient guarantee that the specimen is of uniform quality. Along with other properties of a metal like strength, elasticity and ductility, it can be very helpful for choosing materials for various engineering applications.
+	\item {Procedure} $-$ 
+	\begin{enumerate}[label=\roman*)]
+		\item ensure that the surface of indentation of the specimen is parallel to the platform and then place it on the machine platform
+		\item move the platform upward using the anvil so that the distance between the indenter and the specimen is less than 8 mm
+		\item select the appropriate hardness scale (HRB/HRC) depending on the metal to be tested
+		\item on pressing the start button, the indenter moves down towards the specimen to make the indentation and the machine returns the hardness value
+		\item note down the value and take 3 readings for each material with different points of indentation to increase the accuracy of measurement
+	\end{enumerate}
+\end{enumerate}
+
+\textsc{Observation Table:}
+\vspace{2mm}
+
+The individual hardness readings are listed in the table below. For each material, we have taken 3 readings to ensure a greater level of accuracy.
+
+%\begin{enumerate}[label=(\roman*)]
+%	\itemsep0em
+%	\item aluminium 6061 alloy $\rightarrow\left.\begin{array}{ll}
+%		1^{\text{st}}\text{ reading }&45.87\text{ HRB}\\
+%		2^{\text{nd}}\text{ reading }&51.07\text{ HRB}\\
+%		3^{\text{rd}}\text{ reading }&50.95\text{ HRB}\\
+%	\end{array}\right.$
+%	\item brass IS 319 $\rightarrow\left.\begin{array}{ll}
+%		1^{\text{st}}\text{ reading }&67.67\text{ HRB}\\
+%		2^{\text{nd}}\text{ reading }&63.85\text{ HRB}\\
+%		3^{\text{rd}}\text{ reading }&65.51\text{ HRB}\\
+%	\end{array}\right.$
+%\end{enumerate}
+%\newpage
+%\begin{enumerate}[label=(\roman*)]
+%	\setcounter{enumi}{2}
+%	\item electrograde copper $\rightarrow\left.\begin{array}{ll}
+%		1^{\text{st}}\text{ reading }&29.53\text{ HRB}\\
+%		2^{\text{nd}}\text{ reading }&26.42\text{ HRB}\\
+%		3^{\text{rd}}\text{ reading }&28.97\text{ HRB}\\
+%	\end{array}\right.$
+%	\item high speed steel $\rightarrow\left.\begin{array}{ll}
+%		1^{\text{st}}\text{ reading }&66.99\text{ HRC}\\
+%		2^{\text{nd}}\text{ reading }&67.98\text{ HRC}\\
+%		3^{\text{rd}}\text{ reading }&67.67\text{ HRC}\\
+%	\end{array}\right.$
+%\end{enumerate}
+
+\begin{center}
+\def\arraystretch{1.5}
+\begin{tabular}{|m{10em}|m{10em}|m{7.5em}|ll}
+\cline{1-3}
+\multicolumn{1}{|c|}{\textbf{material}}                                           & \multicolumn{1}{c|}{\textbf{reading number}} & \multicolumn{1}{c|}{\textbf{value}} &  &  \\ \cline{1-3}
+\multirow{3}{*}{aluminium 6061 alloy}                                             & 1                                            & 45.87 HRB                           &  &  \\ \cline{2-3}
+                                                                                  & 2                                            & 51.07 HRB                           &  &  \\ \cline{2-3}
+                                                                                  & 3                                            & 50.95 HRB                           &  &  \\ \cline{1-3}
+\end{tabular}
+
+                                                                                  \newpage
+                                                                                 \begin{tabular}{|m{10em}|m{10em}|m{7.5em}|ll}
+\cline{1-3}
+\multicolumn{1}{|c|}{\textbf{material}}                                           & \multicolumn{1}{c|}{\textbf{reading number}} & \multicolumn{1}{c|}{\textbf{value}} &  &  \\ \cline{1-3}
+\multirow{3}{*}{brass IS 319}                                                     & 1                                            & 67.67 HRB                           &  &  \\ \cline{2-3}
+                                                                                  & 2                                            & 63.85 HRB                           &  &  \\ \cline{2-3}
+                                                                                  & 3                                            & 65.51 HRB                           &  &  \\ \cline{1-3}
+\multirow{3}{*}{electrograde copper}                                              & 1                                            & 29.53 HRB                           &  &  \\ \cline{2-3}
+                                                                                  & 2                                            & 26.42 HRB                           &  &  \\ \cline{2-3}
+                                                                                  & 3                                            & 28.97 HRB                           &  &  \\ \cline{1-3}
+\multirow{3}{*}{\begin{tabular}[c]{@{}l@{}}high speed steel\\ (HSS)\end{tabular}} & 1                                            & 66.99 HRC                           &  &  \\ \cline{2-3}
+                                                                                  & 2                                            & 67.98 HRC                           &  &  \\ \cline{2-3}
+                                                                                  & 3                                            & 67.67 HRC                           &  &  \\ \cline{1-3}
+\end{tabular}
+\end{center}
+\textsc{Calculations:}
+\vspace{2mm}
+
+Using the readings above, we can calculate the mean experimental hardness values for each of the metals as shown below:
+\begin{align*}
+	\text{mean hardness of aluminium}&=\frac{45.87+51.07+50.95}{3}=49.29\text{ HRB}\\
+	\text{mean hardness of brass}&=\frac{67.67+63.85+65.51}{3}=65.67\text{ HRB}\\
+	\text{mean hardness of copper}&=\frac{29.53+26.42+28.97}{3}=28.31\text{ HRB}\\
+	\text{mean hardness of HSS}&=\frac{66.99+67.98+67.67}{3}=67.55\text{ HRC}
+\end{align*}
+The theoretical hardness values of all the materials are as follows:
+\begin{align*}
+	\text{theoretical hardness of aluminium}&=60\text{ HRB}\\
+	\text{theoretical hardness of brass}&=67\text{ HRB}\\
+	\text{theoretical hardness of copper}&=51\text{ HRB}\\
+	\text{theoretical hardness of HSS}&=65\text{ HRC}
+\end{align*}
+Thus the percentage error in experimental values of hardness can be calculated as follows:
+\begin{align*}
+	\text{\% error in hardness of aluminium}&=\left|\frac{49.29-60}{60}\right|\times 100=17.85\%\\
+	\text{\% error in hardness of brass}&=\left|\frac{65.67-67}{67}\right|\times 100=1.98\%\\
+	\text{\% error in hardness of copper}&=\left|\frac{28.31-51}{51}\right|\times 100=44.49\%\\
+	\text{\% error in hardness of HSS}&=\left|\frac{67.55-65}{65}\right|\times 100=3.92\%
+\end{align*}
+
+\textsc{Sources of Error:}
+\begin{enumerate}[label=\roman*)]
+	\itemsep0em
+	\item The surface of indentation of the specimens may not be completely flat due to defects
+	\item Diamond is very hard but also brittle and hence, it can break on application of large forces which can result in incorrect readings
+	\item There may be machine deflection due to dirt, grease, etc which can lead to a bias in the readings
+	\item Rough, gouged or worn anvil surfaces can also lead to incorrect readings
+\end{enumerate}
+\newpage
+\textsc{Results:} 
+\vspace{2mm}
+
+The experimentally determined hardness properties of the four given materials are as follows:
+	\begin{enumerate}[label=\roman*)]
+		\itemsep0em
+		\item hardness of aluminium 6061 alloy $-$ 49.29 HRB
+		\item hardness of brass IS319 alloy $-$ 65.67 HRB
+		\item hardness of electrograde copper $-$ 28.31 HRB
+		\item hardness of high speed steel $-$ 67.55 HRC
+	\end{enumerate}
+\textsc{References:} 
+	\begin{itemize}
+	\itemsep0em
+		\item[$-$] theoretical hardness value for aluminium $-$ \href{http://amet-me.mnsu.edu/UserFilesShared/DATA_ACQUISITION/mts/MaterialData/MaterialData_9391_Al-6061.pdf}{\texttt{http://amet-me.mnsu.edu/UserFilesShared/DAT A\_ACQUISITION/mts/MaterialData/MaterialData\_9391\_Al-6061.pdf}}
+		\item[$-$] theoretical hardness value for brass $-$ \href{https://archive.org/details/gov.in.is.319.2007/page/n9/mode/2up}{\texttt{https://archive.org/details/gov.in.is.319.2007/p age/n9/mode/2up}}
+		\item[$-$] theoretical hardness of copper $-$ \href{http://www.matweb.com/search/DataSheet.aspx?MatGUID=ca486cc7cefa44d98ee67d2f5eb7d21f&ckck=1}{\texttt{http://www.matweb.com/search/DataSheet.aspx?MatGUID $=$ca486cc7cefa44d98ee67d2f5eb7d21f\&ckck$=$1}}
+		\item[$-$] theoretical hardness value for HSS $-$ \href{https://material-properties.org/what-is-hardness-of-high-speed-steel-definition/}{\texttt{https://material-properties.org/what-is-hardness -of-high-speed-steel-definition/}}
+	\end{itemize}
+\end{document}
+
