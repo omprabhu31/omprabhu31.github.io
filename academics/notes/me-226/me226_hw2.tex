@@ -1,0 +1,164 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage[margin=0.8in]{geometry}
+\usepackage[utf8]{inputenc}
+
+%page setup
+\usepackage{setspace}
+\setlength{\parindent}{0in}
+\usepackage{float}
+\usepackage{fancyhdr}
+%\pagestyle{fancy}
+%\fancyhf{}
+%\lhead{\footnotesize ME 218 - Experiment 1}
+%\rhead{\footnotesize Om Prabhu, 19D170018}
+\cfoot{\footnotesize \thepage}
+
+%common math and TeX packages
+\usepackage{amsmath, amsthm, amsfonts, amssymb, amscd}
+\usepackage{siunitx, subcaption}
+\usepackage{hyperref, authblk}
+\usepackage{graphicx}
+\usepackage{wrapfig, float}
+\usepackage{verbatim, enumitem, kantlipsum}
+\usepackage{cancel}
+\usepackage[retainorgcmds]{IEEEtrantools}
+
+%tables and code
+\usepackage[table]{xcolor}
+\usepackage{csvsimple}
+
+\let\a\alpha
+\let\b\beta
+\let\g\gamma
+\let\e\epsilon
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\PP}{\mathcal{P}}
+\newcommand{\Lagr}{\mathcal{L}}
+
+\begin{document}
+\begin{center}
+	{\Large \sc ME 226 (Mechanical Measurements) - Homework 2}
+\end{center}
+\textit{Name: Om Prabhu\\
+Roll Number: 19D170018}
+\vspace{2mm}
+
+Honor Pledge: I have abided by the course honor code. I have neither received solutions from my peers nor shared my solutions with them. All the solutions in this document are my own work.
+\vspace{-1.5mm}
+
+\hrulefill
+\vspace{2mm}
+
+\begin{enumerate}[label=(\arabic*),leftmargin=*]
+	\item Given time constant $\tau=15$s
+	
+	\hspace{2.85em}velocity of balloon $v_y=6$m/s
+	
+	\hspace{2.85em}temperature variation with altitude $\Delta T_y=0.15^{\text{o}}$C/30$\text{m}=0.005^{\text{o}}$C/m
+	
+We also know that the recorded temperature at $y=3000$m is $0^{\text{o}}$C.
+\begin{enumerate}
+	\item In this case, the ramp input is equal to the decrease in temperature every second. We know that the balloon travels 6m every second. We also know that the temperature decrease is $0.005^{\text{o}}$C for every metre. Thus the ramp input is:
+	$$q_{iramp}=\Delta T_yv_y=-0.005\times 6\implies \boxed{q_{iramp}-0.03^{\text{o}}\text{C/s}}$$
+	\item The steady state error is given by the ramp input multiplied by the time constant, as follows:
+	$$\text{steady state error}=q_{iramp}\tau=-0.03\times 15\implies \boxed{e_{ss}-0.45^{\text{o}}\text{C}}$$
+	\item Since the time constant of the system is 15s, thus there is a 15s delay between the recorded temperature and actual temperature. To find the correct temperature at a particular altitude, we must add the steady state error to the recorded value.
+	$$\boxed{\therefore\text{correct temperature at 3000m}=-0.45^{\text{o}}\text{C}}$$
+	\item Since the velocity $v_y=6$m/s, the time taken to reach at altitude of 3000m is $t=3000/6=500$s. Thus, the true altitude at which $0^{\text{o}}$C occurs is:
+	$$y(20-\tau)=v_y(500-\tau)=6(500-15)\implies \boxed{y=2910\text{m}}$$
+	An alternative approach would be to note that the rate of temperature decrease is $0.15^{\text{o}}\text{C}$ for every 30 metres increase in height. Thus for a $0.45^{\text{o}}\text{C}$ increase in temperature, the corresponding decrease in height should be $\dfrac{0.45\times 30}{0.15}=90$m. Thus the true altitude again comes out to be 2910m.
+\end{enumerate}
+\newpage
+	\item Given coefficient of linear expansion of mercury $\a_{mercury}=180\times 10^{-6}/^{\text{o}}$C
+	
+	\hspace{2.85em}density of mercury $\rho_{mercury}=13600$kg/m$^3$
+	
+	\hspace{2.85em}specific heat $C_p=0.15$kJ/kg$^{\text{o}}$C
+	
+	\hspace{2.85em}heat transfer coefficient $h_{air}=5.36$J/s/m$^2$/$^{\text{o}}$C
+	
+	\hspace{2.85em}capillary diameter  $d=0.25\text{mm}$
+	\begin{enumerate}
+		\item We want a sensitivity of $K=4$mm/$^{\text{o}}$C. We have the formula for the sensitivity $K=\dfrac{\b V}{A_c}$. Since $\b$ is the coefficient for volume expansion, we have $\beta=3\a=540\times 10^{-6}/^{\text{o}}$C.
+\begin{align*}
+	K=\dfrac{\b V}{A_c}&\implies V=\frac{KA_c}{\b}\\
+	\therefore V&=\frac{(4\times 10^{-3})\left(\pi\times\frac{(0.25\times 10^{-3})^2}{4}\right)}{540\times 10^{-6}}\\
+	\therefore V&=3.63\times 10^{-7}
+\end{align*}
+Thus the volume of mercury inside the bulb $\boxed{V=3.63\times 10^{-7}\text{m}^3}$
+		\item To find the time constant, we have the formula $\tau=\dfrac{\rho C_pV}{hA_s}$. To calculate the surface area of the bulb $A_s$, we must first find its radius.
+		$$r_s=\sqrt[3]{\frac{3V}{4\pi}}=4.42\times 10^{-3}\implies A_s=4\pi r^2=2.46\times 10^{-4}$$
+		Now that we have the value of $A_s$, we can calculate $\tau$ as follows:
+		$$\tau=\frac{13600\times 150\times (3.63\times 10^{-7})}{5.36\times (2.46\times 10^{-4})}=561.61$$
+		Thus the time constant of the thermometer $\boxed{\tau=561.61\text{s}}$
+	\end{enumerate}
+	\newpage
+	\item Given density of metal $\rho=7900$kg/m$^3$
+	
+	\hspace{2.85em}specific heat capacity $C_p=450$J/kgK
+	
+	\hspace{2.85em}diameter of ball $d_b=1.6$mm
+	
+	\hspace{2.85em}heat transfer coefficient $h=100$W/m$^2$K
+	
+	We can use this information to find the time constant $\tau$ for the thermocouple:
+	\begin{align*}
+	\tau&=\frac{\rho C_pV}{hA_s}=\frac{\rho C_p}{h}\times\frac{\frac{4}{3}\pi r^3}{4\pi r^2}=\frac{\rho C_pd_b}{6h}\\
+	&=\frac{7900\times 450\times 1.6\times 10^{-3}}{100\times 6}=9.48\text{s}
+	\end{align*}
+	The initial fluid temperature is $30^{\text{o}}\text{C}$, which is then raised suddenly by $70^{\text{o}}\text{C}$. Thus the final fluid temperature is $100^{\text{o}}\text{C}$. We want the temperature to reach 90\% of its final temperature i.e. $90^{\text{o}}\text{C}$. We can establish the relation between the fluid temperature and time as follows:
+	$$T=T_0+r(1-e^{-t/\tau})$$
+To find the constants $T_0$ and $r$, we use the boundary conditions as follows:
+\begin{align*}
+	T=30\text{ at }t=0&\implies T_0=30\\
+	T=100\text{ at }t=\infty&\implies r=70
+\end{align*}
+Thus our final equation is $T=30+70(1-e^{-t/\tau})$. We can then find the time required to reach $90^{\text{o}}\text{C}$ as follows:
+\begin{align*}
+	90=30+70(1-e^{-t/\tau})&\implies 70(1-e^{-t/\tau})=60\\
+	\therefore 1-e^{-t/\tau}=\frac{6}{7}&\implies e^{-t/\tau}=\frac{1}{7}\\
+	\therefore e^{t/\tau}=7&\implies t=\tau\ln 7\\
+	\therefore t=9.48\times\ln 7&\implies \boxed{t=18.45\text{ms}}
+\end{align*}
+	\newpage
+	\item We have three cases for the first order pressure sensor, which will give us three different time constants as follows:
+\begin{enumerate}[label=\Roman*)]
+	\item For 95\% accuracy, we have $(1-e^{-t/\tau})\geqslant 0.95\implies e^{-t/\tau}\leqslant 0.05\implies e^{t/\tau}\geqslant 20$. Substituting the value of $t=0.05$s, we get $\tau_1\leqslant 16.69\text{ms}$.
+	\item We have a ramp input with $q_{iramp}=0.7\text{MPa/s}$. We also have steady state error $=q_{iramp}\tau\leqslant 14\text{kPa}$. Hence, we get $\tau_2\leqslant 20\text{ms}$.
+	\item We have a sinusoidal input with frequency 25Hz. Thus the angular frequency is $\omega=2\pi f=2\times\pi\times 25=157.08\text{rad/s}$. We can work out the amplitude accuracy in the frequency domain (using Laplace transform) as follows:
+	\begin{align*}
+	\text{amplitude accuracy}&=\left|\frac{Q_0(s)}{KQ_i(s)}\right|=\left|\frac{1}{1+\tau s}\right|\geqslant 0.9\\
+	\therefore \frac{1}{\sqrt{1+\omega^2\tau^2}}&\geqslant 0.9\implies 1+\omega^2\tau^2\leqslant 1.23\\
+	\therefore \omega\tau&\leqslant 0.48\implies \tau_3\leqslant 3.08\text{ms}
+	\end{align*}
+\end{enumerate}
+To satisfy all of these conditions, the largest allowable time constant is $\boxed{\tau=3.08\text{ms}}$
+	\newpage
+	\item The general equation for a first order system is $q_0=Ce^{-t/\tau}+Kq_i$. We have 3 unknowns - $C$, $K$ and $\tau$. We could solve this using a system of 3 equations. However, from the given values, we can note that the system is pretty close to saturation around $t=50$s. Thus, we can make the approximation that the output from the system at $t=\infty$ is very close to the output at $t=50$.
+	
+	Assuming that $q_0=205$ as $t\to\infty$, we can find out $C$ and $K$ as follows:
+	\begin{align*}
+		q_0(0)=20&\implies C+Kq_i=20\\
+		q_0(\infty)=205&\implies Kq_i=205
+	\end{align*}
+Thus our input-output relationship for this system is $q_0=205-185e^{-t/\tau}$. Now to check whether this system is first order or not, we need to find out $\tau$ for each of the data points. If all the values of $\tau$ are fairly close to each other, then we can conclude that the system is indeed of first order.
+
+From the input-output relationship, we get $\displaystyle \tau=\frac{t}{\ln\left(\frac{185}{205-q_0}\right)}$.
+\begin{align*}
+	t=5,\text{ }q_0=85&\implies\tau=\frac{5}{\ln\left(\frac{185}{205-85}\right)}=11.55\text{s}\\
+	t=10,\text{ }q_0=130&\implies\tau=\frac{10}{\ln\left(\frac{185}{205-130}\right)}=11.07\text{s}\\
+	t=15,\text{ }q_0=160&\implies\tau=\frac{15}{\ln\left(\frac{185}{205-160}\right)}=10.61\text{s}\\
+	t=20,\text{ }q_0=185&\implies\tau=\frac{20}{\ln\left(\frac{185}{205-185}\right)}=8.99\text{s}\\
+	t=25,\text{ }q_0=190&\implies\tau=\frac{25}{\ln\left(\frac{185}{205-190}\right)}=9.95\text{s}\\
+	t=30,\text{ }q_0=195&\implies\tau=\frac{30}{\ln\left(\frac{185}{205-195}\right)}=10.28\text{s}\\
+	t=35,\text{ }q_0=197&\implies\tau=\frac{35}{\ln\left(\frac{185}{205-197}\right)}=11.14\text{s}\\
+	t=40,\text{ }q_0=200&\implies\tau=\frac{40}{\ln\left(\frac{185}{205-200}\right)}=11.07\text{s}\\
+	t=45,\text{ }q_0=202&\implies\tau=\frac{45}{\ln\left(\frac{185}{205-202}\right)}=10.91\text{s}
+\end{align*}
+Since all the values of $\tau$ are fairly close together, we can conclude that the system is of first order. The time constant can be found by taking the average of all the obtained values as follows:
+$$\tau=\frac{11.55+11.07+10.61+8.99+9.95+10.28+11.14+11.07+10.91}{9}\implies\boxed{\tau=10.62\text{s}}$$
+\end{enumerate}
+\end{document}
+
