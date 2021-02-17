@@ -2,7 +2,7 @@
 layout: home
 title: Home
 subtitle: My personal website
-feature-img: "assets/img/sample_feature_img_3.png"
+feature-img: "assets/img/sample_feature_img.png"
 hide: true
 ---
 
