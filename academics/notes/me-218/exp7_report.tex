@@ -1,0 +1,174 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage[margin=0.8in]{geometry}
+\usepackage[utf8]{inputenc}
+
+%page setup
+\usepackage{setspace}
+\setlength{\parindent}{0in}
+\usepackage{float}
+\usepackage{fancyhdr}
+%\pagestyle{fancy}
+%\fancyhf{}
+%\lhead{\footnotesize ME 218 - Experiment 1}
+%\rhead{\footnotesize Om Prabhu, 19D170018}
+\cfoot{\footnotesize \thepage}
+
+%common math and TeX packages
+\usepackage{amsmath, amsthm, amsfonts, amssymb, amscd}
+\usepackage{siunitx, subcaption}
+\usepackage{hyperref, authblk}
+\usepackage{graphicx}
+\usepackage{wrapfig, float}
+\usepackage{verbatim, enumitem, kantlipsum}
+\usepackage{cancel}
+\usepackage[retainorgcmds]{IEEEtrantools}
+
+%tables and code
+\usepackage[table]{xcolor}
+\usepackage{csvsimple}
+\usepackage{multirow}
+\usepackage{hyperref}
+
+\let\a\alpha
+\let\b\beta
+\let\g\gamma
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\PP}{\mathcal{P}}
+\newcommand{\Lagr}{\mathcal{L}}
+
+\begin{document}
+\begin{center}
+	{\Large \sc Experiment 7: Charpy Impact Test}
+\end{center}
+\textit{Name: Om Prabhu\\
+Roll Number: 19D170018}
+\vspace{-1.5mm}
+
+\hrulefill
+\vspace{2mm}
+
+\underline{\textsc{Objectives:}}
+\vspace{-1mm}
+
+\begin{enumerate}[label=(\alph*)]
+	\itemsep0em
+	\item To study the impact resistance of metals using impact testing machine of the Charpy type
+	\item To determine the variation of impact strength of a material with change in temperature
+\end{enumerate}
+\vspace{2mm}
+
+\underline{\textsc{Experimental Method:}} 
+\vspace{-2mm}
+
+\begin{enumerate}[label=(\alph*)]
+	\item { Apparatus and Measurements} $-$ The list of required tools and equipment along with their respective measurements is as follows:
+\vspace{-2mm}
+
+	\begin{itemize}
+		\item[$-$] Impact testing machine 
+		\item[$-$] Standard charpy specimens (also called as `notch' specimens)
+		\item[$-$] Furnace and thermocouple (to heat the specimen and increase its temperature)
+		\item[$-$] Liquid nitrogen (to lower the temperature of the specimen)
+		\item[$-$] Tongs (to hold and place the specimen at the centre of the anvil)
+		\item[$-$] Vernier calipers (to measure the dimensions of the specimen)
+	\end{itemize}
+	
+	\item {Theory} $-$ Some materials like cast iron, glass and hard plastics offer considerable resistance to a continuous load, but shatter easily when a sudden load (impact) is applied. Impact testing is used to determine the energy absorbed by a specimen when brought to fracture by a hammer blow. It gives us the brittleness of the material. 
+
+Impact strength is defined as the resistance of a material to sudden loading. Highly brittle materials have low impact strength. Temperature can also influence the impact strength of materials. Impact test can also be used to determine the transition temperature for ductile-to-brittle behaviour.
+
+A typical ductile-to-brittle transition curve is shown below for a range of temperatures. As the temperature is increased in the transition range, it is observed that the appearance of the fracture surface changes from crystalline (no distortion) to fibrous or silky (major distortion at the sides). This shows that there is strong correlation between the energy absorbed and the portion of fracture surface undergoing distortion.
+\begin{center}
+\includegraphics[width=0.35\textwidth]{dtb.JPG}
+\end{center}
+The impact load can be applied in many different ways. In the Charpy test, the specimen has a notch cut across the middle of one of its faces. It is placed as a simply supported beam and the impact is applied to the face directly behind the notch using the blow from a swinging pendulum hammer. The impact testing machine calculates the energy absorbed, which can be converted to impact strength using the following equation:
+$$\text{impact strength}=\frac{\text{energy absorbed}}{\text{area under the notch}}$$
+	\item {Procedure} $-$ 
+	\begin{enumerate}[label=\roman*)]
+		\item Note down the dimensions of the specimen using vernier calipers and find out the working area of the specimen where the notch is located.
+		\item With no specimen on the anvil, raise the pendulum to an initial dial reading $R1$ and release it. Note the reading $R2$ on the dial. The difference of $R1$ and $R2$ corresponds to the energy loss due to friction.
+		\item Using the tongs, carefully place the specimen at the centre of the anvil.
+		\item Raise the pendulum to the same height as $R1$ and release it. The pendulum will swing to the other side and rupture the specimen.
+		\item Note the reading on the dial and tabulate it.
+		\item Repeat the procedure for different specimens and change in temperature to examine the variation of impact strength with temperature.
+	\end{enumerate}
+\end{enumerate}
+
+\underline{\textsc{Observations:}}
+\vspace{-2mm}
+
+\begin{enumerate}[label=(\alph*)]
+\itemsep-0.1em
+	\item dimensions of the specimen $-$ $55\text{ mm}\times 10 \text{ mm}\times 10 \text{ mm}$
+	\item notch width $-$ 2 mm
+	\item area under the notch $-$ 80 $\text{mm}^2$
+	\item maximum possible energy value $-$ 406 J (obtained from machine)
+	\item energy loss due to friction $-$ 2.0975 J (obtained from machine)
+\end{enumerate}
+
+\begin{center}
+\def\arraystretch{1.5}
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+\textbf{Sr. No.} & \multicolumn{1}{c|}{\textbf{Material}} & \multicolumn{1}{c|}{\textbf{EMF (mV)}} & \multicolumn{1}{c|}{\textbf{Temperature ($^{\text{o}}$C)}} & \textbf{Impact Energy (J)} \\ \hline
+1                & aluminium                              & 80                                     & 24 (room temp)                                & 53.04                      \\ \hline
+2                & \multirow{6}{*}{mild steel}            &                                        & 24 (room temp)                                & 204.09                     \\ \cline{1-1} \cline{3-5} 
+3                &                                        &                                        & 24 (room temp)                                & 184.83                     \\ \cline{1-1} \cline{3-5} 
+4                &                                        & 3                                      & 72                                            & 124.02                     \\ \cline{1-1} \cline{3-5} 
+5                &                                        & 3.8                                    & 91.8                                          & 136.78                     \\ \cline{1-1} \cline{3-5} 
+6                &                                        & -3                                     & -72                                           & 5.5727                     \\ \cline{1-1} \cline{3-5} 
+7                &                                        & -3.75                                  & -90                                           & 3.3675                     \\ \hline
+\end{tabular}
+\end{center}
+\underline{\textsc{Calculations and Graphs:}}
+\vspace{2mm}
+
+Using area of notch = $80\times 10^{-6}\text{ m}^2$ and $\text{impact strength}=\dfrac{\text{energy absorbed}}{\text{area under the notch}}$, we get
+\begin{center}
+\def\arraystretch{1.5}
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+\textbf{Sr. No.} & \multicolumn{1}{c|}{\textbf{Material}} & \multicolumn{1}{c|}{\textbf{Temperature ($^{\text{o}}$C)}} & \textbf{Impact Energy (J)} & \textbf{Impact Strength (J/m$^2$)} \\ \hline
+1                & aluminium                              & 24 (room temp)                                & 53.04                      & 663000                         \\ \hline
+2                & \multirow{6}{*}{mild steel}            & 24 (room temp)                                & 204.09                     & 2551125                        \\ \cline{1-1} \cline{3-5} 
+3                &                                        & 24 (room temp)                                & 184.83                     & 2310375                        \\ \cline{1-1} \cline{3-5} 
+4                &                                        & 72                                            & 124.02                     & 1550250                        \\ \cline{1-1} \cline{3-5} 
+5                &                                        & 91.8                                          & 136.78                     & 1709750                        \\ \cline{1-1} \cline{3-5} 
+6                &                                        & -72                                           & 5.5727                     & 69658.75                       \\ \cline{1-1} \cline{3-5} 
+7                &                                        & -90                                           & 3.3675                     & 42093.75                       \\ \hline
+\end{tabular}
+\end{center}
+\newpage
+Using the above calculated values of impact strength for mild steel, we can plot a graph of impact strength vs temperature using spline interpolation as shown below:
+
+\begin{center}
+\includegraphics[width=0.6\textwidth]{graph.png}
+\end{center}
+
+\underline{\textsc{Sources of Error:}}
+\begin{itemize}
+	\itemsep0em
+	\item[$-$] There is a time delay between taking out the specimen from the heater/liquid nitrogen and measuring its temperature. Hence, some heat transfer might have occurred to the atmosphere before the thermocouple is connected, leading to inaccurate temperature measurements.
+	\item[$-$] There might be a discrepancy in the readings if the placement of the specimen on the anvil is incorrect (i.e. direction of impact is not perpendicular to the face opposite to the notch).
+	\item[$-$] There may be errors in calibration of the instrument. To reduce this, the readings for energy loss due to friction and maximum possible value can be taken multiple times.
+\end{itemize}
+
+\underline{\textsc{Results:}}
+	\begin{enumerate}[label=\roman*)]
+		\itemsep0em
+		\item Rupture energy of aluminium at room temperature = 53.04 J
+		\item Average rupture energy of mild steel at room temperature = 194.46 J
+		\item Energy loss due to friction = 2.0975 J
+	\end{enumerate}
+\underline{\textsc{Conclusions:}}
+\begin{enumerate}[label=\roman*)]
+		\itemsep0em
+		\item For mild steel, impact strength is maximum at room temperature.
+		\item At lower temperatures, the material is more brittle and the fracture surface has a shiny, crystalline appearance. There is negligible distortion at the sides.
+		\item At higher temperatures, the material is comparatively less brittle and the fracture surface has a fibrous/silky appearance. There is significant distortion at the sides.
+		\item Ductility of materials initially increases with increasing temperature. On increasing temperature beyond room temperature, it decreases for some time and then again increases.
+	\end{enumerate}
+\end{document}
+
