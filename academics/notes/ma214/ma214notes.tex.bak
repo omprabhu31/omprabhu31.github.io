@@ -337,7 +337,7 @@ Recall the error equation from \hyperref[subsec:error_eq]{Section 1.5}. We use i
 \end{align*}
 \begin{itemize}
 	\item[$-$] Trapezium rule: $\displaystyle |\I_f-\I_{p_1}|\leqslant\frac{1}{12}\mid\mid f^{\prime\prime}\mid\mid(b-a)^3$
-	\item[$-$] Simpson's rule: $\displaystyle |\I_f-\I_{p_2}|\leqslant\frac{1}{192}\mid\mid f^{\prime\prime\prime}\mid\mid(b-a)^4$
+	\item[$-$] Simpson's rule: $\displaystyle |\I_f-\I_{p_2}|\leqslant\frac{1}{196}\mid\mid f^{\prime\prime\prime}\mid\mid(b-a)^4$
 \end{itemize}
 As we increase $n$, some of the weights take negative values. As a result, the error does not converge to zero with $n$. 
 \subsection{Gaussian quadrature}

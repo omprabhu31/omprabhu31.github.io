@@ -1,0 +1,327 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}	
+
+%common math and LaTeX packages
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd}
+\usepackage{multirow,booktabs}
+\usepackage[table]{xcolor}
+\usepackage{multirow}
+\usepackage{fullpage}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{mathrsfs}
+\usepackage{wrapfig}
+\usepackage{setspace}
+\usepackage{calc}
+\usepackage{multicol}
+\usepackage{cancel}
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\newlength{\tabcont}
+\setlength{\parindent}{0.0in}
+\setlength{\parskip}{0.0in}
+\usepackage{empheq}
+
+%shaded environment for important equations/notes
+\usepackage{mdframed}
+\colorlet{shaded}{blue!15}
+\colorlet{shadedtext}{black}
+\newenvironment{shaded}
+   {
+     \raggedright
+     \color{shadedtext}%
+   }{}
+\surroundwithmdframed[
+   hidealllines=true,
+   backgroundcolor=shaded
+]{shaded}
+
+%page geometry definitions
+\usepackage[most]{tcolorbox}
+\usepackage{xcolor}
+\parindent 0in
+\parskip 6pt
+\geometry{margin=1in, headsep=0.25in}
+
+%custom theorem definitions
+\theoremstyle{definition}
+\newtheorem{innercustomgeneric}{\customgenericname}
+\providecommand{\customgenericname}{}
+\newcommand{\newcustomtheorem}[2]{%
+  \newenvironment{#1}[1]
+  {%
+   \renewcommand\customgenericname{#2}%
+   \renewcommand\theinnercustomgeneric{##1}%
+   \innercustomgeneric
+  }
+  {\endinnercustomgeneric}
+}
+\newcustomtheorem{thm}{Theorem}
+\newcustomtheorem{lem}{Lemma}
+\newcustomtheorem{defn}{Definition}
+\newcustomtheorem{prop}{Proposition}
+\newcustomtheorem{exer}{Exercise}
+\newcustomtheorem{note}{Note}
+\renewcommand{\qedsymbol}{$\blacksquare$}
+
+\let\a\alpha
+\let\b\beta
+\let\g\gamma
+\let\e\varepsilon
+\let\t\theta
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\PP}{\mathcal{P}}
+\newcommand{\C}{\mathcal{C}}
+\newcommand{\Lagr}{\mathcal{L}}
+
+\begin{document}
+
+%document header
+\begin{center}
+{\LARGE \bf ME 226 - Mechanical Measurements}\\
+{Instructor: \textit{Prof. Dipanshu Bansal}}\\
+Last updated \today \\~\\
+{\large \bf Om Prabhu}\\
+Undergraduate, Department of Mechanical Engineering\\
+Indian Institute of Technology Bombay\\~\\
+\textsc{Note To Reader}
+\end{center}
+\vspace{-6pt}
+
+This document is a compilation of the notes I made while taking the course ME 226 (Mechanical Measurements) in my 4$^{\text{th}}$ semester at IIT Bombay. It is not a substitute for any formal lecture or textbook on the subject, since I pretty much overlook all the theory parts.
+
+If you have any suggestions and/or spot any errors, you know where to contact me.
+\vspace{-3mm}
+
+\hrulefill
+\section{Introduction \& Basic Concepts}
+\textbf{\large Some definitions:}
+\vspace{-3.5mm}
+\begin{itemize}
+	\itemsep-0.2em
+	\item[$-$] sensitivity: slope of the output vs input curve for an instrument
+	\item[$-$] span: difference between maximum and minimum possible measurements for an instrument
+	\item[$-$] range: difference between maximum and minimum deflection for an instrument
+	\item[$-$] resolution: smallest measurable change in input
+	\item[$-$] threshold: smallest measurable input
+	\item[$-$] hysteresis: inability of instrument to give repeatable results during loading and unloading (hysteresis loss = area under the input-output curve)
+\end{itemize}
+\vspace{-3.5mm}
+Error in an instrument is a combination of 2 factors - bias (correctable by calibration) and imprecision (permanent component caused due to human error).
+\vspace{-3.5mm}
+\begin{wrapfigure}[7]{L}{0.4\textwidth}
+\includegraphics[width=0.35\textwidth]{error.jpeg}
+\end{wrapfigure}
+
+\hspace{0.37\textwidth}
+
+I $-$ no bias, no imprecision
+
+II $-$ bias, no imprecision
+
+III $-$ no bias, imprecision
+
+IV $-$ bias, imprecision
+
+Additionally, results should be fairly repeatable (i.e. repeating the measurements should yield similar values).
+
+\textbf{\large Basic Statistics:}
+$$\text{probability density function}=\frac{\text{(number of readings in an interval)}}{\text{(total number of readings)}\times\text{(width of interval)}}$$
+Plot pdf as a function of interval length $-$ area under the curve is 1. On dividing the data into very small intervals, the pdf is a continuous function $f(x)$ such that $\displaystyle P(a<x<b)=\int_a^b f(x)\text{d}x$. 
+
+In practice, many measurement sets are very close to the Gaussian distribution $\displaystyle f(x)=\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^2}{2\sigma^2}}$. For an ideal condition $-\infty<x<\infty$, but instruments cannot have infinite range.
+
+\begin{center}
+\begin{tabular}{l|cc}
+& for a population & for a sample\\
+\hline
+mean value & $\displaystyle \mu=\frac{\displaystyle\sum_{i=1}^Nx_i}{N}$ & $\displaystyle \bar{X}=\frac{\displaystyle\sum_{i=1}^nx_i}{n}$\\
+variance & $\displaystyle\sigma^2=\frac{\displaystyle\sum_{i=1}^N(x_i-\mu)^2}{N}$ & $\displaystyle s^2=\frac{\displaystyle\sum_{i=1}^n(x_i-\bar{X})^2}{n-1}$\\
+\end{tabular}
+\end{center}
+A population refers to a continuous data distribution whereas a sample refers to the fixed number of discrete data points. 68\%, 95\%, 99.7\% readings lie in the $\pm\sigma,\pm 2\sigma,\pm 3\sigma$ range respectively.
+\vspace{2mm}
+
+\textbf{\large Method of Least Squares:}
+
+Assume a linear fit $y=mx+c$. We define the error $\displaystyle E=\sum_{k=1}^N\left((mx_k+c)-y_k\right)^2$. In order to minimize the error,
+$$\frac{\partial E}{\partial m}=0\implies \sum 2(mx_k+c-y_k)x_k=0$$
+$$\frac{\partial E}{\partial c}=0\implies \sum 2(mx_k+c-y_k)=0$$
+Solving this as a system of linear equations, we get
+\begin{align*}
+m&=\frac{1}{D}\left(N\sum x_ky_k-\sum x_k\sum y_k\right)\\
+c&=\frac{1}{D}\left(N\sum x_k^2\sum y_k-\sum x_k\sum x_ky_k\right)\\
+D&=N\sum x_k^2-\left(\sum x_k\right)^2
+\end{align*}
+The variances in $y,x,m,c$ are calculated using the following formulae:
+\vspace{-3.5mm}
+\begin{center}
+\begin{tabular}{cc}
+	$\displaystyle s_y^2=\frac{1}{N-2}\sum \left(mx_k+c-y_k\right)^2$ & $\displaystyle s_x^2=\frac{s_y^2}{m^2}$\\~\\ 
+	\vspace{-3.5mm}
+	$\displaystyle s_m^2=\frac{Ns_y^2}{N\sum x_k^2-\left(\sum x_k\right)^2}$ & $\displaystyle s_c^2=\frac{s_y^2\sum x_k^2}{N\sum x_k^2-\left(\sum x_k\right)^2}$\\
+\end{tabular}
+\end{center}
+\textbf{\large The Error Function:}
+
+We have the Gaussian distribution given by $\displaystyle f(x)=\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^2}{2\sigma^2}}$. Define $\eta=\dfrac{x-\mu}{\sigma\sqrt{2}}$. The error function is defined as $\displaystyle\text{er}f(\eta)=\frac{2}{\sqrt{\pi}}\int_0^{\eta}e^{-t^2}\text{d}t$. It follows that $\text{er}f(-\eta)=-\text{er}f(\eta)$.
+$$P(X<x)=F(x)=\frac{1}{2}(1+\text{er}f(\eta))$$
+$$P(x_1<X<x_2)=F(x_2)-F(x_1)=\frac{1}{2}(\text{er}f(\eta_2)-\text{er}f(\eta_1))$$
+\newpage
+A table for error function values is as follows:
+\vspace{-8mm}
+\begin{center}
+\includegraphics{erf.jpg}
+\end{center}
+\vspace{-3.5mm}
+
+\textbf{\large Combination of Component Errors:}
+
+Measured quantities are often influenced by a combination of other measured quantities (for example, stored potential energy = $\rho gh$). Let quantity $P=f(u_1,u_2,\dots,u_n)$ with individual errors $\Delta u_1,\Delta u_2,\dots,\Delta u_n$. 
+$$\text{absolute error}=\Delta P=\left|\frac{\partial f}{\partial u_1}\Delta u_1\right|+\left|\frac{\partial f}{\partial u_2}\Delta u_2\right|+\dots+\left|\frac{\partial f}{\partial u_n}\Delta u_n\right|$$
+$$\text{root sum square error}=E_{RSS}=\sqrt{\left(\frac{\partial f}{\partial u_1}\Delta u_1\right)^2+\left(\frac{\partial f}{\partial u_2}\Delta u_2\right)^2+\dots+\left(\frac{\partial f}{\partial u_n}\Delta u_n\right)^2}$$
+For $N$ measurements of each of the quantities,
+$$\sigma_P^2=\left(\frac{\partial f}{\partial u_1}\right)\sigma_1^2+\left(\frac{\partial f}{\partial u_2}\right)\sigma_2^2+\dots+\left(\frac{\partial f}{\partial u_n}\right)\sigma_n^2$$
+
+\textbf{\large Error Analysis of Voltmeters and Ammeters:}
+
+For a voltmeter, we first calculate the equivalent resistance $R_{eq}$ across the points where the voltmeter is to be connected. Then,
+$$\text{measured voltage }E_m=\frac{R_{m}}{R_m+R_{eq}}E_0\text{ }\text{  and  }\text{ }\text{error }\epsilon=1-\frac{E_m}{E_0}=\frac{R_{eq}}{R_m+R_{eq}}$$
+For an ammeter, we again calculate $R_{eq}$ (this time the meter will be in series with the rest of the circuit). Then,
+$$\text{measured current }I_m=\frac{R_{eq}}{R_m+R_{eq}}I_u\text{ }\text{ and }\text{ }\text{error }\epsilon=1-\frac{I_m}{I_u}=\frac{R_m}{R_m+R_{eq}}$$
+\section{Dynamic Characteristics}
+General mathematical model (input $q_i\rightarrow$ output $q_0$) of a system can be represented by:
+$$a_{n}\frac{\text{d}^{n}q_{0}}{\text{d}t^{n}}+a_{n-1}\frac{\text{d}^{n-1}q_{0}}{\text{d}t^{n-1}}+\dots+a_{1}\frac{\text{d}q_{0}}{\text{d}t}+a_0q_0=b_{m}\frac{\text{d}^{m}q_{i}}{\text{d}t^{m}}+b_{m-1}\frac{\text{d}^{m-1}q_{i}}{\text{d}t^{m-1}}+\dots+b_{1}\frac{\text{d}q_{i}}{\text{d}t}+b_0q_i$$
+Normally we don't specify the input derivatives, so we replace the RHS by just $q_i$. Sometimes we may also need to employ techniques like the Laplace transform to solve certain problems.
+\vspace{-2mm}
+
+\begin{center}
+\includegraphics[width=0.8\textwidth]{laplace.jpg}
+\end{center}
+\textbf{\large Zero Order Systems:}
+
+The general equation can be written as $a_0q_0=b_0q_i\implies q_0=\dfrac{b_0}{a_0}q_i=Kq_i$.
+\vspace{-2mm}
+
+\begin{itemize}
+	\itemsep-0em
+	\item[$-$] $K$ is the static sensitivity of the system
+	\item[$-$] output is instantaneous with respect to input (i.e. $\phi=0$)
+\end{itemize}
+\vspace{-4mm}
+
+An example of a zero order system is a potentiometer. The emf $e_0=\dfrac{x}{L}E_b$ is a function of only variable, i.e. distance of the sliding contact.
+\newpage
+\subsection{First Order Systems}
+The general equation characterizing a first order system is:
+\begin{align*}
+	a_1\frac{\text{d}q_0}{\text{d}t}+a_0q_0&=b_0q_i\\
+	\therefore \frac{a_1}{a_0}\frac{\text{d}q_0}{\text{d}t}+q_0&=\frac{b_0}{a_0}q_i\\
+	\therefore (\tau D+1)q_0=Kq_i\implies & \frac{q_0}{q_i}(D)=\frac{K}{1+\tau D}
+\end{align*}
+$\tau$ is the time constant whereas $K$ is the static sensitivity of the system.
+
+With certain assumptions, we can model a thermometer as a 1$^{\text{st}}$ order system. Its relies on thermal expansion of the liquid column in response to changes in the surrounding temperature.
+$$\left.\begin{array}{r}
+\b=\text{coefficient of volume expansion}\\
+V=\text{volume of bulb}\\
+A_c=\text{cross-sectional area of capillary}\\
+\rho=\text{density of thermometer fluid}\\
+C_p=\text{specific heat capacity of thermometer fluid}\\
+h=\text{heat transfer coefficient}\\
+A_s=\text{surface area of bulb}
+\end{array}\right\rbrace K=\frac{\b V}{A_c}\text{ }\text{ and }\text{ }\tau=\frac{\rho C_pV}{hA_s}
+$$
+The differential equation obtained is:
+$$\frac{\text{d}T}{\text{d}t}+\frac{hA_s}{\rho C_pV}T=\frac{hA_sT_f}{\rho C_pV}\implies \frac{\text{d}y}{\text{d}t}+p(t)y=g(t)$$
+$$y(t)=\frac{\int e^{\int p(t)\text{d}t}g(t)\text{d}t+C}{e^{\int p(t)\text{d}t}}\implies T=T_f+(T_0-T_f)e^{-t/\tau}$$
+
+\textbf{\large Step Response:}
+
+For a step response, the input $q_i$ is constant. Hence, the governing equation is:
+$$(\tau D+1)q_0=Kq_i\implies q_0=Kq_i +Ce^{-t/\tau})$$
+For zero initial conditions, we have $q_0=Kq_i(1-e^{-t/\tau})$. Thus, the response time depends only on the value of $\tau$. The error for a step response can be written as
+$$e_m=Kq_i-q_0=Kq_ie^{-t/\tau}$$
+\vspace{-3mm}
+
+\begin{center}
+\includegraphics[width=0.49\textwidth]{firstorder_stepresponse.jpg}
+\includegraphics[width=0.49\textwidth]{firstorder_steperror.jpg}
+\end{center}
+\newpage
+\textbf{\large Ramp Response:}
+
+The governing equation is $(\tau D+1)q_0=Kq_{iramp}t$. Applying the Laplace transform, we get
+$$q_0=\frac{Kq_{iramp}t}{(1+\tau D)}\implies Q_0(s)=\frac{Kq_{iramp}}{s^2(1+\tau s)}\implies \frac{Q_0(s)}{Kq_{iramp}}=\frac{1}{s^2}-\frac{\tau}{s}+\frac{1}{s+\frac{1}{\tau}}$$
+Inverting the Laplace transform, we finally get $$q_0(t)=Kq_{iramp}(t-\tau)+Kq_{iramp}\tau e^{-t/\tau}\text{ }\text{ and }\text{ }e_m=Kq_{iramp}\tau(1-e^{-t/\tau})$$
+The steady state error (i.e. component of error that stays constant with time) is given by $e_{ss}=Kq_{iramp}\tau$ (often we assume $K=1$). The transient error eventually converges to 0, thus there is always an error of $e_{ss}$ even for very large values of time.
+
+\textbf{\large Impulse Response:}
+
+We initially assume a step input of magnitude $A/T$ applied for time $T$. The impulse response can then be found in the limit $T\to 0$.
+\begin{align*}
+q_0=\frac{A}{T}(1-e^{-t/\tau})&\text{ for }0\leqslant t\leqslant T\\
+q_0=\frac{A(1-e^{-T/\tau})e^{-t/\tau}}{Te^{-T/\tau}}&\text{ for }t>T
+\end{align*}
+In the limit $T\to 0$, we get the impulse response as
+$$q_0=\frac{A}{T}e^{-t/\tau}$$
+\textbf{Frequency Response:}
+$$\frac{q_0}{Kq_i}=\frac{1}{1+\tau D}=\frac{1}{1+j\tau\omega}\implies \frac{q_0}{Kq_i}=\frac{1}{\sqrt{1+\tau^2\omega^2}};\text{ }\phi=\arctan(-\tau\omega)$$
+$$\therefore\text{ for input }q_i=a\sin(\omega t)\rightarrow \text{output }q_0=\frac{a}{\sqrt{1+\tau^2\omega^2}}\sin(\omega t+\phi)$$
+As observed, the frequency response has a magnitude as well as a phase difference associated with it. An ideal frequency response would have $\dfrac{q_0}{Kq_i}=1$ and $\phi=0$.
+\subsection{Second Order Systems}
+The general equation characterizing a second order system is:
+\begin{align*}
+	a_2\frac{\text{d}^2q_0}{\text{d}t^2}+a_1\frac{\text{d}q_0}{\text{d}t}+a_0q_0&=b_0q_i\\
+	\therefore \frac{a_2}{a_0}\frac{\text{d}^2q_0}{\text{d}t^2}+\frac{a_1}{a_0}\frac{\text{d}q_0}{\text{d}t}+q_0&=\frac{b_0}{a_0}q_i
+\end{align*}
+A very common example of a second order system is that of a mass, spring and damper. The force applied by the spring depends on the displacement $x$ while the force applied by the damper depends on the velocity $v$.
+\newpage
+$$m\frac{\text{d}^2x}{\text{d}t^2}=F-Kx-B\frac{\text{d}x}{\text{d}t}\implies (mD^2+BD+K)x=F\implies \left(\frac{m}{k}D^2+\frac{B}{K}D+1\right)x=\frac{F}{K}$$
+Replacing $\displaystyle \omega_n=\sqrt{\frac{K}{m}}$ and $\displaystyle \zeta=\frac{B}{2\sqrt{mK}}$, we get
+$$\left(\frac{D^2}{\omega_n^2}+\frac{2\zeta D}{\omega_n}+1\right)x=\frac{F}{k}$$
+\textbf{\large Step, Ramp \& Impulse Responses:}
+
+All of the following equations can be derived using the fundamental differential equation $$\ddot{y}+2\zeta\omega_n\dot{y}+\omega_n^2y=f(t)$$
+\begin{center}
+\includegraphics[width=\textwidth]{secondorder_response.jpg}
+\end{center}
+\begin{itemize}
+	\itemsep0em
+	\item[$-$] damped natural frequency $\omega_d=\sqrt{1-\zeta^2}\omega_n$ for $0\leqslant\zeta<1$
+	\item[$-$] phase angle $\psi=\arctan(\dfrac{\zeta}{\sqrt{1-\zeta^2}})$ for $0\leqslant\zeta<1$
+	\item[$-$] time constants for overdamped ($\zeta>1$) systems are
+	$$\tau_1=\frac{1}{\zeta\omega_n-\sqrt{\zeta^2-1}\omega_n}\text{ and }\tau_2=\frac{1}{\zeta\omega_n+\sqrt{\zeta^2-1}\omega_n}$$
+\end{itemize}
+The impulse response can be found by simply differentiating the step response. Similarly, the ramp response can be found by integrating the step response. 
+
+For a ramp response, the steady state error is given by $$e_{m,ss}=\frac{2\zeta q_{iramp}}{\omega_n}$$
+Some important observations from the above equations are as follows:
+\vspace{-3mm}
+\begin{itemize}
+	\itemsep-0.1em
+	\item[$-$] overdamped systems have a sluggish response (i.e. large time delay to reach desired output)
+	\item[$-$] underdamped system have an oscillatory response depending on the damping coefficient
+	\item[$-$] critically damped systems have the most desirable performance
+	\item[$-$] in most systems, $\omega_nt$ is determined by the response, so we often try to design $\omega_n$ to be as large as possible
+	\item[$-$] most commercial systems tend to use $0.6<\zeta<0.7$, since the system gives $\approx 90\%$ accuracy at $\omega_nt=2.5$
+\end{itemize}
+\textbf{\large Frequency Response:}
+
+The general equation for frequency response of a second order system is:
+$$\left(\frac{D^2}{\omega_n^2}+\frac{2\zeta D}{\omega_n}+1\right)q_0=Kq_i\implies \frac{q_0}{Kq_i}=\frac{1}{\dfrac{D^2}{\omega_n^2}+\dfrac{2\zeta D}{\omega_n}+1}\implies \frac{q_0}{Kq_i}=\frac{1}{\dfrac{-\omega^2}{\omega_n^2}+\dfrac{2\zeta\omega}{\omega_n}j+1}$$
+$$\therefore \frac{q_0}{Kq_i}=\frac{1}{\sqrt{\left(1-\dfrac{\omega^2}{\omega_n^2}\right)^2+\left(\dfrac{2\zeta\omega}{\omega_n}\right)^2}};\text{ }\phi=\arctan\left[\frac{-2\zeta}{\dfrac{\omega_n}{\omega}-\dfrac{\omega}{\omega_n}}\right]$$
+When $\omega/\omega_n$ is small, the response for $0.6<\zeta<0.7$ is satisfactory. Also when the system frequency matches the natural frequency of the device, resonance occurs in which $\phi=0$ and the amplitude rises.
+\subsection{Combination of Systems}
+For systems in series, their individual transfer functions are simply multiplied. For example, 2 first order systems in series give a second order system as follows:
+\begin{align*}
+	\text{for }q_i=(\tau_1D+1)q_{01}&\text{ and }q_{01}=(\tau_2D+1)q_0\\
+	 q_i=(\tau_1D+1)(\tau_2D+1)q_0\implies & q_i=(\tau_1\tau_2D^2+\tau_1D+\tau_2D+1)q_o
+\end{align*}
+Comparing this with the standard equation for a second order system, we get $\tau_1\tau_2=\dfrac{1}{\omega_n^2}$ and $\tau_1+\tau_1=\dfrac{2\zeta}{\omega_n}$.
+\end{document}
