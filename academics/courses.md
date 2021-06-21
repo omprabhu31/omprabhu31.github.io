@@ -48,7 +48,6 @@ hide: true
 <li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=ME%20213">ME 213 - Manufacturing Practice Lab</a></li>
 <li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=ME%20218">ME 218 - Solid Mechanics Lab</a></li>
 <li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=ME%20224">ME 224 - Fluid Mechanics Lab</a></li>
-<li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=ME%20675">ME 675 - Theory of Plasticity</a></li>
 <li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=ME%20766">ME 766 - High Performance Scientific Computing</a></li>
 <li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=MA%20214">MA 214 - Introduction to Numerical Analysis</a></li>
 <li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=SC%20202">SC 202 - Signals and Feedback Systems</a></li>
