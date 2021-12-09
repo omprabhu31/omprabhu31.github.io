@@ -53,6 +53,18 @@ hide: true
 <li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=SC%20202">SC 202 - Signals and Feedback Systems</a></li>
 </ul>
 
+<h3>Semester 5 (Autumn 2021)</h3>
+<ul>
+<li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=ME%20311">ME 311 - Microprocessors and Automatic Controls</a></li>
+<li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=ME%20338">ME 338 - Manufacturing Processes II</a></li>
+<li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=ME%20346">ME 346 - Heat Transfer</a></li>
+<li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=ME%20307">ME 307 - Mechanical Measurements Lab</a></li>
+<li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=ME%20374">ME 374 - Manufacturing Processses Lab</a></li>
+<li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=HS%20301">HS 301 - Philosophy</a></li>
+<li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=IE%20643">IE 643 - Deep Learning: Theory and Practice</a></li>
+<li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=SC%20301">SC 301 - Linear and Nonlinear Systems</a></li>
+</ul>
+
 
 
 
