@@ -21,6 +21,14 @@ Mostly, I write notes in `LaTeX`. To view the `.tex` code, just simply change th
 
 <h3>Other courses</h3>
 
+> <h4>Machine Learning</h4>
+> Offered by [Stanford University](https://www.stanford.edu/) on [Coursera](https://www.coursera.org/)  -  Instructor: [Andrew Ng](https://www.coursera.org/instructor/andrewng)
+>
+> This course provides a broad introduction to machine learning, datamining, and statistical pattern recognition. Topics include: (i) Supervised learning (parametric/non-parametric algorithms, support vector machines, kernels, neural networks); (ii) Unsupervised learning (clustering, dimensionality reduction, recommender systems, deep learning); (iii) Best practices in machine learning (bias/variance theory; innovation process in machine learning and AI). The course will also draw from numerous case studies and applications.
+>
+> Notes: [Link to GitHub Repository](https://github.com/omprabhu31/machine-learning-coursera-stanford)
+
+
 > <h4>Neural Networks and Deep Learning</h4>
 > Offered by [deeplearning.ai](https://www.deeplearning.ai/) on [Coursera](https://www.coursera.org/)  -  Instructor: [Andrew Ng](https://www.coursera.org/instructor/andrewng)
 >
