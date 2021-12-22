@@ -15,7 +15,7 @@ The general structure of the website is inspired by [Aryaman Maithani](https://a
 <h3>Visitor Count</h3>
 
 <!-- hitwebcounter Code START -->
-<center>You are visitor number - <!-- Badge Code - Do Not Change The Code -->
+<center><!-- Badge Code - Do Not Change The Code -->
 <script src="https://apps.elfsight.com/p/platform.js" defer></script>
 <div class="elfsight-app-809de696-051f-4ac0-b372-e4d6db9d425e"></div>
 <!-- Badge Code End Here --></center>
