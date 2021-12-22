@@ -16,7 +16,7 @@ The general structure of the website is inspired by [Aryaman Maithani](https://a
 
 <!-- hitwebcounter Code START -->
 <center>You are visitor number - <!-- Badge Code - Do Not Change The Code -->
-<a class="hitCounter" href="https://visitorshitcounter.com/" target="_blank" title="Hit counter" data-name="1f7f994fa596684813ccd8129751426c|5|ip|1|rgb(33, 33, 33);|#ffffff|large|s-hit">Hit Counter</a><script>document.write("<script type='text/javascript' src='https://visitorshitcounter.com/js/hitCounter.js?v="+Date.now()+"'><\/script>");</script>
+<script type="text/javascript" src="//counter.websiteout.net/js/7/5/348/1"></script>
 <!-- Badge Code End Here --></center>
                            
 (The count was started on August 9, 2020. It only displays unique visitors, no matter the number of times you visit the website or number of pages you visit on the website.)
