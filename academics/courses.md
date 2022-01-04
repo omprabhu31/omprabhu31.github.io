@@ -65,10 +65,17 @@ hide: true
 <li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=SC%20301">SC 301 - Linear and Nonlinear Systems</a></li>
 </ul>
 
-
-
-
-
-
-
-
+<h3>Semester 6 (Spring 2022)</h3>
+<ul>
+<li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=ME%20306">ME 306 - Applied Thermodynamics</a></li>
+<li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=ME%20308">ME 308 - Industrial Engineeering and Operations Research</a></li>
+<li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=ME%20310">ME 310 - Microprocessor and Automatic Controls Lab</a></li>
+<li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=ME%20316">ME 316 - Kinematics and Dynamics of Machines</a></li>
+<li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=ME%20370">ME 370 - Kinematics and Dynamics of Machines Lab</a></li>
+<li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=ME%20372">ME 372 - Heat Transfer and Metrology Lab</a></li>
+<li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=ME%20673">ME 673 - Mathematical Methods in Engineering</a></li>
+<li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=EN%20301">EN 301 - Introduction to Renewable Energy Technologies</a></li>
+<li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=HS%20200">HS 200 - Environmental Studies</a></li>
+<li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=ES%20200">ES 200 - Environmental Studies, Science and Engineering</a></li>
+<li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=SC%20218">SC 218 - Analytical and Geometric Dynamics</a></li>
+</ul>
