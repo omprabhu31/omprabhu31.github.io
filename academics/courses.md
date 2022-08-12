@@ -21,7 +21,7 @@ hide: true
 <h3>Semester 2 (Spring 2019)</h3>
 <ul>
 <li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=MA%20106">MA 106 - Linear Algebra</a></li>
-<li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=MA%20108">MA 108 - Differential Equations</a> (cancelled due to the prevalent SARS-CoV-2 pandemic)</li>
+<li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=MA%20108">MA 108 - Differential Equations</a> (cancelled due to the SARS-CoV-2 pandemic)</li>
 <li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=PH%20108">PH 108 - Basics of Electricity and Magnetism</a></li>
 <li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=PH%20117">PH 117 - Physics Lab</a></li>
 <li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=ME%20113">ME 113 - Workshop Practice</a></li>
@@ -78,4 +78,15 @@ hide: true
 <li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=HS%20200">HS 200 - Environmental Studies</a></li>
 <li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=ES%20200">ES 200 - Environmental Studies, Science and Engineering</a></li>
 <li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=SC%20218">SC 218 - Analytical and Geometric Dynamics</a></li>
+</ul>
+
+<h3>Semester 7 (Autumn 2022)</h3>
+<ul>
+<li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=ME%20409">ME 409 - Inteligent Manufacturing Systems Lab</a></li>
+<li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=ME%20423">ME 423 - Machine Design</a></li>
+<li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=ME%20441">ME 441 - Applied Thermodynamics Lab</a></li>
+<li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=ME%20477">ME 477 - Introduction to Optimization</a></li>
+<li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=ME%20651">ME 651 - Fluid Dynamics</a></li>
+<li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=IE%20503">IE 503 - Operations Analysis</a></li>
+<li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=EE%20720">EE 720 - Introduction to Number Theory and Cryptography</a></li>
 </ul>
