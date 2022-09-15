@@ -6,7 +6,9 @@ feature-img: "assets/img/sample_feature_img.png"
 hide: true
 ---
 
-Hey, are you looking for my CV? *Link to be added soon*
+I will be using this page to maintain my CV and any relevant links. You can find a copy of my CV [here](https://omprabhu31.github.io/cv.pdf).
+
+Of course, this is a work in progress and will be updated from time to time. If you have any suggestions regarding it, feel free to contact me and I will make sure to implement as much of your feedback as possible :)
 
 <h3>Links</h3>
 
