@@ -82,7 +82,7 @@ hide: true
 
 <h3>Semester 7 (Autumn 2022)</h3>
 <ul>
-<li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=ME%20409">ME 409 - Inteligent Manufacturing Systems Lab</a></li>
+<li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=ME%20409">ME 409 - Intelligent Manufacturing Systems Lab</a></li>
 <li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=ME%20423">ME 423 - Machine Design</a></li>
 <li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=ME%20441">ME 441 - Applied Thermodynamics Lab</a></li>
 <li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=ME%20477">ME 477 - Introduction to Optimization</a></li>
