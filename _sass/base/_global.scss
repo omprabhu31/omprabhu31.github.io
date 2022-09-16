@@ -14,11 +14,6 @@ html {
   background: $background-color;
 }
 
-p {
-  text-align:justify;
-  text-justify:inter-word;
-}
-
 // Typography
 ::selection {
   background: $selection-color;
@@ -31,6 +26,8 @@ body {
   font-family: $font-family-main;
   font-size: $font-size;
   word-wrap: break-word;
+  text-align:justify;
+  text-justify: inter-character;
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: $font-family-headings;
@@ -94,6 +91,8 @@ dd {
 }
 p, ol, ul, dl, .math-display {
   line-height: 1.5;
+  text-align:justify;
+  text-justify: inter-character;
   margin-bottom: 1em;
 }
 // KaTeX math display
