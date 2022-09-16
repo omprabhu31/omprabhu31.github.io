@@ -14,6 +14,11 @@ html {
   background: $background-color;
 }
 
+p {
+  text-align:justify;
+  text-justify:inter-word;
+}
+
 // Typography
 ::selection {
   background: $selection-color;
@@ -64,7 +69,7 @@ td,
 th {
   padding: 0.5em 1em;
   border: 1px solid $border-color;
-  text-align: justify;
+  text-align: left;
 }
 td {
   vertical-align: top;
