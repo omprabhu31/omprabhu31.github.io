@@ -6,7 +6,7 @@ feature-img: "assets/img/sample_feature_img.png"
 hide: true
 ---
 
-Hello, you've reached my website! I intend to use this space mainly as a repository for my academic work, along with occasional blog posts and some other stuff I haven't yet figured out. Feel free to explore, though I'm afraid there's not an awful lot to see right now. The website is still in the works - opefully that will change soon. Your feedback is always welcome :)
+Hello, you've reached my website! I intend to use this space mainly as a repository for my academic work, along with occasional blog posts and some other stuff I haven't yet figured out. Feel free to explore, though I'm afraid there's not an awful lot to see right now. The website is still in the works - hopefully that will change soon. Your feedback is always welcome!
 
 The general layout of the website is inspired by [Aryaman Maithani's](https://aryamanmaithani.github.io/) website. Credits for edits (hehe) suggested by others can be found in the website [changelog](/changelog/).
 
