@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Notes
-subtitle: This is where I post the notes I make
 permalink: /academics/notes/
 feature-img: "assets/img/sample_feature_img_2.png"
 hide: true

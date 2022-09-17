@@ -6,7 +6,7 @@ feature-img: "assets/img/sample_feature_img_2.png"
 hide: true
 ---
 
-
+<h3>IITB Courses</h3>
 
 <h4>Semester 1 (Autumn 2019)</h4>
 <ul>
@@ -19,7 +19,7 @@ hide: true
 <li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=BB%20101">BB 101 - Biology</a></li>
 </ul>
 
-<h3>Semester 2 (Spring 2019)</h3>
+<h4>Semester 2 (Spring 2019)</h4>
 <ul>
 <li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=MA%20106">MA 106 - Linear Algebra</a></li>
 <li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=MA%20108">MA 108 - Differential Equations</a> (cancelled due to the SARS-CoV-2 pandemic)</li>
@@ -30,7 +30,7 @@ hide: true
 <li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=EN%20110">EN 110 - Energy Engineering Fundamentals</a></li>
 </ul>
 
-<h3>Semester 3 (Autumn 2020)</h3>
+<h4>Semester 3 (Autumn 2020)</h4>
 <ul>
 <li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=ME%20201">ME 201 - Solid Mechanics</a></li>
 <li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=M#%20209">ME 209 - Thermodynamics</a></li>
@@ -41,7 +41,7 @@ hide: true
 <li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=SC%20639">SC 639 - Mathematical Structures for Control</a></li>
 </ul>
 
-<h3>Semester 4 (Spring 2020)</h3>
+<h4>Semester 4 (Spring 2020)</h4>
 <ul>
 <li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=ME%20202">ME 202 - Strength of Materials</a></li>
 <li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=ME%20206">ME 206 - Manufacturing Processes I</a></li>
@@ -54,7 +54,7 @@ hide: true
 <li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=SC%20202">SC 202 - Signals and Feedback Systems</a></li>
 </ul>
 
-<h3>Semester 5 (Autumn 2021)</h3>
+<h4>Semester 5 (Autumn 2021)</h4>
 <ul>
 <li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=ME%20311">ME 311 - Microprocessors and Automatic Controls</a></li>
 <li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=ME%20338">ME 338 - Manufacturing Processes II</a></li>
@@ -66,7 +66,7 @@ hide: true
 <li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=SC%20301">SC 301 - Linear and Nonlinear Systems</a></li>
 </ul>
 
-<h3>Semester 6 (Spring 2022)</h3>
+<h4>Semester 6 (Spring 2022)</h4>
 <ul>
 <li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=ME%20306">ME 306 - Applied Thermodynamics</a></li>
 <li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=ME%20308">ME 308 - Industrial Engineeering and Operations Research</a></li>
@@ -81,7 +81,7 @@ hide: true
 <li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=SC%20218">SC 218 - Analytical and Geometric Dynamics</a></li>
 </ul>
 
-<h3>Semester 7 (Autumn 2022)</h3>
+<h4>Semester 7 (Autumn 2022)</h4>
 <ul>
 <li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=ME%20409">ME 409 - Intelligent Manufacturing Systems Lab</a></li>
 <li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=ME%20423">ME 423 - Machine Design</a></li>
@@ -91,3 +91,7 @@ hide: true
 <li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=IE%20503">IE 503 - Operations Analysis</a></li>
 <li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=EE%20720">EE 720 - Introduction to Number Theory and Cryptography</a></li>
 </ul>
+
+<h3>Other Courses</h3>
+
+*to be added shortly*
