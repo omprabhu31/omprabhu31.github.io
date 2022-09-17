@@ -1,13 +1,14 @@
 ---
 layout: page
 title: Courses
-subtitle: Courses that I've taken/am taking at IIT Bombay
 permalink: /academics/courses/
 feature-img: "assets/img/sample_feature_img_2.png"
 hide: true
 ---
 
-<h3>Semester 1 (Autumn 2019)</h3>
+
+
+<h4>Semester 1 (Autumn 2019)</h4>
 <ul>
 <li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=MA%20105">MA 105 - Calculus</a></li>
 <li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=PH%20107">PH 107 - Quantum Physics and Applications</a></li>
