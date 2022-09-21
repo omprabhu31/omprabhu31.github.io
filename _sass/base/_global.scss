@@ -23,6 +23,8 @@ html {
 }
 body {
   color: $text-color;
+  text-align:justify;
+  text-justify: inter-character;
   font-family: $font-family-main;
   font-size: $font-size;
   word-wrap: break-word;
@@ -55,9 +57,6 @@ blockquote p:last-child,
 footer p:last-child {
   text-align:center;
   margin-bottom: 0;
-}
-footer {
-  text-align: center;
 }
 table {
   table-layout:fixed;
@@ -93,8 +92,6 @@ dd {
 }
 p, ol, ul, dl, .math-display {
   line-height: 1.5;
-  text-align:justify;
-  text-justify: inter-character;
   margin-bottom: 1em;
 }
 // KaTeX math display
