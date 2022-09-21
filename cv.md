@@ -12,7 +12,7 @@ Of course, this is a work in progress and will be updated from time to time. If 
 
 <h3>Links</h3>
 
-In case the links on the PDF are not clickable for some reason (for example, you're on an older version of your browser, or maybe you're just using a printout), here is a list of the links, appearing in the same order as the in CV.
+In case the links on the PDF are not clickable for some reason (for example, you're on an older version of your browser, or maybe you're just using a printout), here is a list of the links, appearing in the same order as in the CV.
 
 1. [Report]() (*link to be added soon*) on Humor Detection using BERT Sentence Embedding
 2. [Report](https://github.com/omprabhu31/ME766-Project/blob/main/Project%20Report.pdf) and [Presentation](https://github.com/omprabhu31/ME766-Project/blob/main/Project%20Presentation.pdf) on LU Decomposition: A Timing Study using OpenMP and CUDA
