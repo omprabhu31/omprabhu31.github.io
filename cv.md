@@ -19,4 +19,8 @@ In case the links on the PDF are not clickable for some reason (for example, you
 3. [Report](https://github.com/omprabhu31/ME308-Project/blob/main/Project%20Report/Group-13.pdf) and [Presentation](https://github.com/omprabhu31/ME308-Project/blob/main/ME308_PPT_Group13.pdf) on Operations Research in Air Traffic Flow Management Systems
 4. [Report](https://github.com/omprabhu31/ME338-Project/blob/main/ME338_Course_Project_Final_Report.pdf) and [Presentation](https://github.com/omprabhu31/ME338-Project/blob/main/ME338_Course_Project_Presentation.pdf) on Manufacturing Process of a Clock
 5. [Code](https://colab.research.google.com/drive/1qyFkr0tTRn6F3Oo_brKC4NQrGXn933UD) for Extended Kalman Filter on Lie Groups
-6. [Badge](https://www.credly.com/badges/d5f54969-3c60-42b9-af46-9ca3916be6b1) for Unity Junior Programmer pathway
+6. Certificates for MOOC Courses
+    * Machine Learning (Stanford University, Coursera) - [Certificate](https://www.coursera.org/account/accomplishments/certificate/YK5F8WJ7K95M)
+    * R Programming (The Johns Hopkins University, Coursera) - [Certificate](https://www.coursera.org/account/accomplishments/certificate/9V7UYYQEXYNE)
+    * Data Science: Visualization (Harvard University, edX) - [Certificate](https://courses.edx.org/certificates/1584beed679d4e47ba76c100bd5d724e)
+7. [Badge](https://www.credly.com/badges/d5f54969-3c60-42b9-af46-9ca3916be6b1) for Unity Junior Programmer pathway
