@@ -14,13 +14,14 @@ Of course, this is a work in progress and will be updated from time to time. If 
 
 In case the links on the PDF are not clickable for some reason (for example, you're on an older version of your browser, or maybe you're just using a printout), here is a list of the links, appearing in the same order as in the CV.
 
-1. [Report]() (*link to be added soon*) on Humor Detection using BERT Sentence Embedding
-2. [Report](https://github.com/omprabhu31/ME766-Project/blob/main/Project%20Report.pdf) and [Presentation](https://github.com/omprabhu31/ME766-Project/blob/main/Project%20Presentation.pdf) on LU Decomposition: A Timing Study using OpenMP and CUDA
-3. [Report](https://github.com/omprabhu31/ME308-Project/blob/main/Project%20Report/Group-13.pdf) and [Presentation](https://github.com/omprabhu31/ME308-Project/blob/main/ME308_PPT_Group13.pdf) on Operations Research in Air Traffic Flow Management Systems
-4. [Report](https://github.com/omprabhu31/ME338-Project/blob/main/ME338_Course_Project_Final_Report.pdf) and [Presentation](https://github.com/omprabhu31/ME338-Project/blob/main/ME338_Course_Project_Presentation.pdf) on Manufacturing Process of a Clock
-5. [Code](https://colab.research.google.com/drive/1qyFkr0tTRn6F3Oo_brKC4NQrGXn933UD) for Extended Kalman Filter on Lie Groups
-6. Certificates for MOOC Courses
+1. [Report](https://github.com/omprabhu31/ME766-Project/blob/main/Project%20Report.pdf) and [Presentation](https://github.com/omprabhu31/ME766-Project/blob/main/Project%20Presentation.pdf) on LU Decomposition: A Timing Study using OpenMP and CUDA
+2. [Report](https://github.com/omprabhu31/ME308-Project/blob/main/Project%20Report/Group-13.pdf) and [Presentation](https://github.com/omprabhu31/ME308-Project/blob/main/ME308_PPT_Group13.pdf) on Operations Research in Air Traffic Flow Management Systems
+3. [Report](https://github.com/omprabhu31/ME338-Project/blob/main/ME338_Course_Project_Final_Report.pdf) and [Presentation](https://github.com/omprabhu31/ME338-Project/blob/main/ME338_Course_Project_Presentation.pdf) on Manufacturing Process of a Clock
+4. [Code](https://colab.research.google.com/drive/1qyFkr0tTRn6F3Oo_brKC4NQrGXn933UD) for Extended Kalman Filter on Lie Groups
+5. Certificates for MOOC Courses
     * Machine Learning (Stanford University, Coursera) - [Certificate](https://www.coursera.org/account/accomplishments/certificate/YK5F8WJ7K95M)
     * R Programming (The Johns Hopkins University, Coursera) - [Certificate](https://www.coursera.org/account/accomplishments/certificate/9V7UYYQEXYNE)
     * Data Science: Visualization (Harvard University, edX) - [Certificate](https://courses.edx.org/certificates/1584beed679d4e47ba76c100bd5d724e)
-7. [Badge](https://www.credly.com/badges/d5f54969-3c60-42b9-af46-9ca3916be6b1) for Unity Junior Programmer pathway
+    * Data Science: Probability (Harvard University, edX) - [Certificate](https://courses.edx.org/certificates/18e417e324714896bdc004eea9694494)
+    * Data Science: Inference & Modeling (Harvard University, edX) - [Certificate](https://courses.edx.org/certificates/7f283bd719a24843b88db5c4657e6386)
+6. [Badge](https://www.credly.com/badges/d5f54969-3c60-42b9-af46-9ca3916be6b1) for Unity Junior Programmer pathway
