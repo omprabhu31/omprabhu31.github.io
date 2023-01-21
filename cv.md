@@ -6,7 +6,7 @@ feature-img: "assets/img/sample_feature_img.png"
 hide: true
 ---
 
-I will be using this page to maintain my CV and any relevant links. You can find a copy of my CV [here](https://omprabhu31.github.io/cv.pdf).
+I will be using this page to maintain my CV and any relevant links. You can find a copy of my CV [here](https://omprabhu31.github.io/cv_full.pdf). If you prefer a shorter version, you can find it [here](https://omprabhu31.github.io/cv_2page.pdf).
 
 Of course, this is a work in progress and will be updated from time to time. If you have any suggestions regarding it, feel free to contact me and I will make sure to implement as much of your feedback as possible :)
 
@@ -14,12 +14,12 @@ Of course, this is a work in progress and will be updated from time to time. If 
 
 In case the links on the PDF are not clickable for some reason (for example, you're on an older version of your browser, or maybe you're just using a printout), here is a list of the links, appearing in the same order as in the CV.
 
-1. [Report](https://github.com/omprabhu31/ME766-Project/blob/main/Project%20Report.pdf) and [Presentation](https://github.com/omprabhu31/ME766-Project/blob/main/Project%20Presentation.pdf) on LU Decomposition: A Timing Study using OpenMP and CUDA
-2. [Report](https://github.com/omprabhu31/me423-project/blob/main/ME%20423%20Course%20Project%20Report.docx.pdf) and [Code](https://github.com/omprabhu31/me423-project/tree/main/sketch_nov7c) for Shoe-stopper: Step Counting using Piezoelectricity
-3. [Report](https://github.com/omprabhu31/ME308-Project/blob/main/Project%20Report/Group-13.pdf) and [Presentation](https://github.com/omprabhu31/ME308-Project/blob/main/ME308_PPT_Group13.pdf) on Operations Research in Air Traffic Flow Management Systems
-4. [Report](https://github.com/omprabhu31/ME338-Project/blob/main/ME338_Course_Project_Final_Report.pdf) and [Presentation](https://github.com/omprabhu31/ME338-Project/blob/main/ME338_Course_Project_Presentation.pdf) on Manufacturing Process of a Clock
-5. [Report](https://github.com/omprabhu31/ME226-project/blob/main/me226_project.pdf) on Measuring Seismic Movement Using Accelerometers
-6. [Presentation](https://docs.google.com/presentation/d/1F-dVJU2rSCg1RYgRYlfTw-YpA1kyaYnklpZFBchI6VM/edit?usp=sharing) on Stabilizing Angular Momentum & Attitude Equations of Rigid Bodies using Torques
+1. [Report](https://github.com/omprabhu31/iitb-projects/blob/main/me766/Project%20Report.pdf) and [Presentation](https://github.com/omprabhu31/iitb-projects/blob/main/me766/Project%20Presentation.pdf) on LU Decomposition: A Timing Study using OpenMP and CUDA
+2. [Report](https://github.com/omprabhu31/iitb-projects/blob/main/me423/ME%20423%20Course%20Project%20Report.docx.pdf) and [Code](https://github.com/omprabhu31/iitb-projects/tree/main/me423/sketch_nov7c) for Shoe-stopper: Step Counting using Piezoelectricity
+3. [Report](https://github.com/omprabhu31/iitb-projects/blob/main/me308/Project%20Report/Group-13.pdf) and [Presentation](https://github.com/omprabhu31/iitb-projects/blob/main/me308/ME308_PPT_Group13.pdf) on Operations Research in Air Traffic Flow Management Systems
+4. [Report](https://github.com/omprabhu31/iitb-projects/blob/main/me338/ME338_Course_Project_Final_Report.pdf) and [Presentation](https://github.com/omprabhu31/iitb-projects/blob/main/me338/ME338_Course_Project_Presentation.pdf) on Manufacturing Process of a Clock
+5. [Report](https://github.com/omprabhu31/iitb-projects/blob/main/me226/me226_project.pdf) on Measuring Seismic Movement Using Accelerometers
+6. [Presentation](https://github.com/omprabhu31/iitb-projects/blob/main/sc618/SC618_Group1_Presentation.pdf) on Stabilizing Angular Momentum & Attitude Equations of Rigid Bodies using Torques
 7. [Code](https://colab.research.google.com/drive/1qyFkr0tTRn6F3Oo_brKC4NQrGXn933UD) for Extended Kalman Filter on Lie Groups
 8. Certificates for MOOC Courses
     * Machine Learning (Stanford University, Coursera) - [Certificate](https://www.coursera.org/account/accomplishments/certificate/YK5F8WJ7K95M)
