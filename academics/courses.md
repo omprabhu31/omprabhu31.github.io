@@ -92,7 +92,7 @@ hide: true
 <li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=EE%20720">EE 720 - Introduction to Number Theory and Cryptography</a></li>
 </ul>
 
-<h4>Semester 8 (Spring 2022)</h4>
+<h4>Semester 8 (Spring 2023)</h4>
 <ul>
 <li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=ME%20604">ME 604 - Robotics</a></li>
 <li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=ME%20714">ME 714 - Computer Integrated Manufacturing</a></li>
