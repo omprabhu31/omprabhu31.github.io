@@ -24,6 +24,7 @@ In case the links on the PDF are not clickable for some reason (for example, you
 8. Certificates for MOOC Courses
     * Machine Learning (Stanford University, Coursera) - [Certificate](https://www.coursera.org/account/accomplishments/certificate/YK5F8WJ7K95M)
     * R Programming (The Johns Hopkins University, Coursera) - [Certificate](https://www.coursera.org/account/accomplishments/certificate/9V7UYYQEXYNE)
+    * Fine Tune BERT for Text Classification with TensorFlow (Coursera) - [Certificate](https://www.coursera.org/account/accomplishments/certificate/Y8WE6TBUQ7KF)
     * Data Science: Visualization (Harvard University, edX) - [Certificate](https://courses.edx.org/certificates/1584beed679d4e47ba76c100bd5d724e)
     * Data Science: Probability (Harvard University, edX) - [Certificate](https://courses.edx.org/certificates/18e417e324714896bdc004eea9694494)
     * Data Science: Inference & Modeling (Harvard University, edX) - [Certificate](https://courses.edx.org/certificates/7f283bd719a24843b88db5c4657e6386)
