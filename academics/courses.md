@@ -92,6 +92,18 @@ hide: true
 <li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=EE%20720">EE 720 - Introduction to Number Theory and Cryptography</a></li>
 </ul>
 
+<h4>Semester 8 (Spring 2022)</h4>
+<ul>
+<li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=ME%20604">ME 604 - Robotics</a></li>
+<li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=ME%20714">ME 714 - Computer Integrated Manufacturing</a></li>
+<li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=ME%20794">ME 794 - Stastical Design of Experiments</a></li>
+<li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=CE%20102">CE 102 - Engineering Mechanics</a></li>
+<li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=SC%20652">SC 652 - Statistical Learning and Sequence Prediction</a></li>
+<li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=IE%20506">IE 506 - Machine Learning: Principles and Techniques</a></li>
+<li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=IE%20716">IE 716 - Integer Programming: Theory and Computations</a></li>
+<li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=GNR%20649">GNR 649 - Planetary Sciences: Earth and Beyond</a></li>
+</ul>
+
 <h3>Other Courses</h3>
 
 *to be added shortly*
