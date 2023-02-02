@@ -6,7 +6,7 @@ feature-img: "assets/img/sample_feature_img.png"
 hide: true
 ---
 
-I will be using this page to maintain my CV and any relevant links. You can find a copy of my CV [here](https://omprabhu31.github.io/cv_full.pdf). If you prefer a shorter version, you can find it [here](https://omprabhu31.github.io/cv_2page.pdf).
+I will be using this page to maintain my CV and any relevant links. You can find a copy of my CV [here](https://omprabhu31.github.io/cv_full.pdf). If you prefer a shorter version, you can find it [here](https://omprabhu31.github.io/cv_2page.pdf). If you're interested in a CV following the Europass format, you can find that [here](https://omprabhu31.github.io/europass_cv.pdf).
 
 Of course, this is a work in progress and will be updated from time to time. If you have any suggestions regarding it, feel free to contact me and I will make sure to implement as much of your feedback as possible :)
 
