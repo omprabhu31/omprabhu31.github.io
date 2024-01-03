@@ -104,6 +104,12 @@ hide: true
 <li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=GNR%20649">GNR 649 - Planetary Sciences: Earth and Beyond</a></li>
 </ul>
 
+<h4>Semester 9 (Autumn 2023)</h4>
+<ul>
+<li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=ME%20781">ME 781 - Statistical Machine Learning and Data Mining</a></li>
+<li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=SC%20631">SC 631 - Games and Information</a></li>
+</ul>
+
 <h3>Other Courses</h3>
 
 *to be added shortly*
