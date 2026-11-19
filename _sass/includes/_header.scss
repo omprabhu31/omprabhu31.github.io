@@ -43,6 +43,13 @@
         margin-right: 0;
       }
     }
+    /* Inline SVG icons (for brands Font Awesome 5 lacks), matched to .fa-fw sizing */
+    .icon-svg {
+      width: 1.25em;
+      height: 1em;
+      vertical-align: -0.125em;
+      fill: currentColor;
+    }
     @media (max-width: 1100px) {
       ul {
         display: inline-block;
