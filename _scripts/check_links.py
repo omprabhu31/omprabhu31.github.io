@@ -124,6 +124,8 @@ def main():
     broken, external = [], {}
 
     for f, url in extract_links(source_files(files)):
+        if url.startswith("//"):  # protocol-relative URL, e.g. //fonts.googleapis.com/...
+            url = "https:" + url
         parsed = urllib.parse.urlparse(url)
         if parsed.scheme in ("http", "https"):
             if url.startswith(SITE + "/") and not url[len(SITE):].startswith(OTHER_REPOS):
