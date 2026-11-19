@@ -1,8 +1,0 @@
-# LaTeX build artefacts (the published PDF is /resume.pdf at the repo root)
-*.aux
-*.log
-*.out
-*.fls
-*.fdb_latexmk
-*.synctex.gz
-main.pdf

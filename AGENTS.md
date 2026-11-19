@@ -25,7 +25,7 @@ Shared instructions for AI coding agents (Claude Code, Codex, and any others) wo
 | `academics/courses.md` | Course list, grouped by semester |
 | `academics/notes/` | Course notes: one folder per course (LaTeX source + compiled PDF + figures), indexed by `notes.md` |
 | `resume.pdf` | Current resume (linked from the nav in `_layouts/default.html` and from `index.md`). Built from `_resume/`, don't edit by hand |
-| `_resume/` | CV LaTeX source (Overleaf export: `main.tex`, `developercv.cls`, images). Not published. `build.sh` builds it into `resume.pdf` |
+| `_resume/` | CV LaTeX source (Overleaf export: `main.tex`, `developercv.cls`, images) plus `build.sh`, which builds it into `resume.pdf`. **Gitignored, local only** |
 | `changelog.md` | Credits for edits suggested by others (`/changelog/`, linked from `index.md`) |
 | `_scripts/` | Repo tooling, not published (Jekyll skips `_`-prefixed folders). `check_links.py` is the link checker |
 
@@ -59,10 +59,11 @@ Shared instructions for AI coding agents (Claude Code, Codex, and any others) wo
 - Link new notes from `academics/notes/notes.md`.
 
 ### Resume (`_resume/`)
-- The CV is written on Overleaf. To update it, the user exports the project as a zip. Replace the files in `_resume/` with the ones from the zip, keeping `build.sh` and `.gitignore`.
+- The CV is written on Overleaf. To update it, the user exports the project as a zip. Replace the files in `_resume/` with the ones from the zip, keeping `build.sh`.
+- `_resume/` is gitignored and exists only on the user's machine. **Never commit the CV source.** Only the built `resume.pdf` goes on GitHub. If `_resume/` is missing (e.g. a fresh clone), ask the user for the Overleaf zip.
 - Run `_resume/build.sh` (needs a TeX distribution with `latexmk`). It compiles `main.tex` and copies the PDF to `/resume.pdf`, the file the site links to.
 - The CV must stay **one page**. `build.sh` exits with a warning if it isn't. Fix it by tightening spacing or margins in `main.tex`, and say what you changed. A new export from Overleaf overwrites such tweaks: `bottom=11mm` in the `geometry` block (the Overleaf version uses 15mm) is what currently keeps it on one page.
-- Commit the `_resume/` source changes and `resume.pdf` together. Build artefacts are gitignored.
+- Commit only `resume.pdf` (a small change, so it goes straight to `master`).
 
 ### Styling
 - Change theme colours, fonts and spacing in `_sass/base/_variables.scss`, not with one-off inline styles.

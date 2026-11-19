@@ -4,3 +4,6 @@
 .sass-cache
 _site
 Gemfile.lock
+
+# CV LaTeX source: kept locally only, just the built resume.pdf is committed
+_resume/
