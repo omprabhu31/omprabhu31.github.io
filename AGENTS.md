@@ -106,7 +106,7 @@ Both are owned by the user's Google account. Responses go there.
 | --- | --- | --- |
 | **Small** | Adding courses, notes, a blog post or an image; fixing typos or broken links; updating `resume.pdf`; copy edits on one page | Commit and push straight to the **current branch** (normally `master`, so it goes live). |
 | **Bigger** | A new page or section that follows existing patterns; changes across many files; reorganising notes; new helper scripts | Create a branch `feature/<short-name>` from up-to-date `master`. Commit and push there as you go, verify everything, then merge into `master` and push. |
-| **Major** | Layout/template/theme/Sass changes; home page or nav changes; `_config.yml` changes; new site sections; removing, renaming or moving pages or permalinks; new JS, plugins or external services | Same as "bigger", but **don't merge**. Push the branch, open a PR into `master` (`gh pr create`), and ask the user to review it. Merge only after the user approves. |
+| **Major** | Layout/template/theme/Sass changes; home page or nav changes; `_config.yml` changes; new site sections; removing, renaming or moving pages or permalinks; new JS, plugins or external services | Same as "bigger", but **don't merge**. Push the branch, open a PR into `master` (`gh pr create`), and ask the user to review it. Merge only after the user approves (see step 7), then clean up (step 8). |
 
 If you're unsure, treat the change as the larger category. If the user has a non-`master` branch checked out, small changes go on that branch. Don't switch away from it.
 
@@ -119,10 +119,17 @@ The user can preview an unmerged branch locally with `git checkout feature/<name
 4. Stage only the files you changed for that feature (`git add <paths>`). Don't use `git add -A` or `git add .` blindly, and don't commit unrelated pre-existing changes you didn't make. Leave those alone and mention them.
 5. Commit messages: short, lowercase, imperative or past-tense summary, matching the repo's existing style (e.g. `added sem 9 courses`, `fixed typo in about page`). Add a body if the change needs explanation. Add any co-author/attribution trailers your tool requires.
 6. Push: `git push` (use `git push -u origin <branch>` the first time you push a new branch).
-7. Merging a verified "bigger" branch: `git checkout master && git pull --rebase && git merge --no-ff feature/<name> && git push`, then delete the branch (`git branch -d feature/<name> && git push origin --delete feature/<name>`).
-8. If a push is rejected because the remote moved ahead, run `git pull --rebase`, resolve conflicts, re-verify, and push again. **Never force-push to `master`**, and never rewrite history that has already been pushed to it.
-9. If the build or link check fails, fix it before committing to `master`. If you can't fix it, don't push to `master`. Report the problem instead.
-10. Never commit secrets, tokens or credentials.
+7. **Merging:**
+   - A verified "bigger" branch: `git checkout master && git pull --rebase && git merge --no-ff feature/<name> && git push`.
+   - A "major" PR the user has approved: `gh pr merge <number> --merge --admin --delete-branch`. `master` has a branch protection rule requiring one approving review, and the user can't approve their own PR on GitHub. Their explicit approval in chat ("merge it") is the review, and `--admin` uses their admin rights to satisfy the rule. Never use `--admin` without that explicit approval.
+8. **After every merge into `master`, clean up, however the merge happened (local merge, `gh pr merge`, or the user merging on GitHub):**
+   - Delete the feature branch locally (`git branch -d feature/<name>`) and on GitHub (`git push origin --delete feature/<name>`, unless `--delete-branch` already did it).
+   - Switch back to `master` and `git pull --rebase` so the local copy matches the live site.
+   - Run `git fetch --prune` so the deleted branch doesn't linger as a stale `origin/feature/<name>` reference.
+   - Only delete branches you created for that feature. Leave other branches (e.g. `test-deployment`) alone unless the user asks.
+9. If a push is rejected because the remote moved ahead, run `git pull --rebase`, resolve conflicts, re-verify, and push again. **Never force-push to `master`**, and never rewrite history that has already been pushed to it.
+10. If the build or link check fails, fix it before committing to `master`. If you can't fix it, don't push to `master`. Report the problem instead.
+11. Never commit secrets, tokens or credentials.
 
 ## Collaborating between agents (Claude ↔ Codex)
 - Both agents may work on this repo, sometimes one after the other. Always assume the other agent may have pushed since you last looked, so `git pull --rebase` before starting and before pushing.
