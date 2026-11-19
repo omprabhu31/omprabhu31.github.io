@@ -33,7 +33,7 @@ hide: true
 <h4>Semester 3 (Autumn 2020)</h4>
 <ul>
 <li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=ME%20201">ME 201 - Solid Mechanics</a></li>
-<li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=M#%20209">ME 209 - Thermodynamics</a></li>
+<li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=ME%20209">ME 209 - Thermodynamics</a></li>
 <li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=ME%20219">ME 219 - Fluid Mechanics</a></li>
 <li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=ME%20221">ME 221 - Structural Materials</a></li>
 <li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=EE%20101">EE 101 - Introduction to Electrical and Electronics Circuits</a></li>
