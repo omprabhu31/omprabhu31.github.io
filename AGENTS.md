@@ -62,7 +62,7 @@ Shared instructions for AI coding agents (Claude Code, Codex, and any others) wo
 - The CV is written on Overleaf. To update it, the user exports the project as a zip. Replace the files in `_resume/` with the ones from the zip, keeping `build.sh`.
 - `_resume/` is gitignored and exists only on the user's machine. **Never commit the CV source.** Only the built `resume.pdf` goes on GitHub. If `_resume/` is missing (e.g. a fresh clone), ask the user for the Overleaf zip.
 - Run `_resume/build.sh` (needs a TeX distribution with `latexmk`). It compiles `main.tex` and copies the PDF to `/resume.pdf`, the file the site links to.
-- The CV must stay **one page**. `build.sh` exits with a warning if it isn't. Fix it by tightening spacing or margins in `main.tex`, and say what you changed. A new export from Overleaf overwrites such tweaks: `bottom=11mm` in the `geometry` block (the Overleaf version uses 15mm) is what currently keeps it on one page.
+- The CV must stay **one page**. `build.sh` exits with a warning if it isn't. Fix it by tightening spacing or margins in `main.tex`, and say what you changed. A new export from Overleaf overwrites such tweaks: These local tweaks currently keep it on one page: `top=12mm` and `bottom=11mm` in the `geometry` block (Overleaf had 15mm for both), `\vspace{-17 pt}` before the lower section headings (Overleaf had `-15 pt`), and the Visual Acuity project wrapped in `\begin{comment}`.
 - Commit only `resume.pdf` (a small change, so it goes straight to `master`).
 
 ### Styling
