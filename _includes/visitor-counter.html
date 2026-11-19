@@ -8,18 +8,22 @@
 <div class="arcade-counter">
   <div class="arcade-counter__caption">PLAYERS JOINED</div>
   <div class="arcade-counter__score" id="arcade-counter-score" role="status">002,511</div>
-  <div class="arcade-counter__blink" aria-hidden="true">&#9654; PRESS START</div>
+  <div class="arcade-counter__blink" id="arcade-counter-footer" aria-hidden="true">&#9654; PRESS START</div>
 </div>
 
 <script>
 (function () {
   // Visitors counted by the previous (Elfsight) counter, 9 Aug 2020 to 19 Nov 2026.
-  // GoatCounter started from zero, so its total is added on top of this.
+  // GoatCounter started from zero, so its count is added on top of this.
   var BASELINE = 2511;
-  // Visitors to the home page ("/"), where this counter lives. The site-wide TOTAL endpoint
-  // stayed at 0 while per-page counts updated, so it isn't used.
+  // Visitors to the home page ("/"), where this counter lives.
+  // GoatCounter caches these responses for up to 4 hours, so new visits show up late.
   var COUNTER_URL = 'https://omprabhu.goatcounter.com/counter//.json';
+  var CACHE_MS = 4 * 60 * 60 * 1000;
+  var STORAGE_KEY = 'arcade-counter-first-visit';
+
   var el = document.getElementById('arcade-counter-score');
+  var footer = document.getElementById('arcade-counter-footer');
   if (!el) return;
 
   // Zero-pad to at least 6 digits, then group with commas: 2511 -> "002,511".
@@ -29,10 +33,41 @@
     return s.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   }
 
-  function show(total) {
+  // Browser storage can be blocked (private windows, strict settings); treat that as "no data".
+  function readFirstVisit() {
+    try { return JSON.parse(window.localStorage.getItem(STORAGE_KEY)); } catch (e) { return null; }
+  }
+  function saveFirstVisit(count) {
+    try { window.localStorage.setItem(STORAGE_KEY, JSON.stringify({ at: Date.now(), count: count })); } catch (e) {}
+  }
+
+  // Because of GoatCounter's cache, the number a visitor sees doesn't include their own visit yet.
+  // Add them on top ourselves:
+  //  - first visit from this browser: +1, with a "that's you" message;
+  //  - later visits while the cached count still predates them (up to 4 hours): +1 quietly,
+  //    so the score doesn't drop back by one.
+  function selfBonus(count) {
+    var first = readFirstVisit();
+    if (!first) { saveFirstVisit(count); return { extra: 1, isNew: true }; }
+    var stillCached = Date.now() - first.at < CACHE_MS && count <= first.count;
+    return { extra: stillCached ? 1 : 0, isNew: false };
+  }
+
+  function celebrate() {
+    if (!footer) return;
+    footer.innerHTML = '&#9650; +1 (THAT’S YOU!)';
+    footer.classList.add('arcade-counter__blink--you');
+    footer.removeAttribute('aria-hidden');
+  }
+
+  function show(total, isNew) {
     el.setAttribute('aria-label', total.toLocaleString('en') + ' visitors');
     var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (reduceMotion || !window.requestAnimationFrame) { el.textContent = format(total); return; }
+    if (reduceMotion || !window.requestAnimationFrame) {
+      el.textContent = format(total);
+      if (isNew) celebrate();
+      return;
+    }
 
     // Tick the score up from zero, like an end-of-level tally.
     var duration = 1400, start = null;
@@ -42,15 +77,20 @@
       var eased = 1 - Math.pow(1 - p, 3);
       el.textContent = format(total * eased);
       if (p < 1) window.requestAnimationFrame(step);
+      else if (isNew) celebrate();
     }
     window.requestAnimationFrame(step);
   }
 
-  // If GoatCounter can't be reached (e.g. blocked by an ad blocker), fall back to the baseline.
   fetch(COUNTER_URL)
     .then(function (r) { return r.ok ? r.json() : { count: '0' }; })
-    .then(function (d) { return BASELINE + (parseInt(String(d.count).replace(/\D/g, ''), 10) || 0); })
-    .catch(function () { return BASELINE; })
-    .then(show);
+    .then(function (d) {
+      var count = parseInt(String(d.count).replace(/\D/g, ''), 10) || 0;
+      var bonus = selfBonus(count);
+      show(BASELINE + count + bonus.extra, bonus.isNew);
+    })
+    // GoatCounter unreachable (often a tracker blocker, so this visit isn't counted either):
+    // show the baseline and don't add the +1.
+    .catch(function () { show(BASELINE, false); });
 })();
 </script>

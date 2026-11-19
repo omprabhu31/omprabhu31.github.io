@@ -25,13 +25,25 @@
     animation: arcade-counter-blink 1.6s steps(1) infinite;
   }
 
+  // First-time visitors: "+1 (THAT'S YOU!)" replaces the blinking PRESS START line.
+  &__blink--you {
+    color: lighten($link-color, 30%);
+    animation: arcade-counter-pop 0.35s ease-out;
+  }
+
   @media (max-width: 500px) {
     &__score { font-size: 1.4em; }
   }
 
   @media (prefers-reduced-motion: reduce) {
-    &__blink { animation: none; }
+    &__blink, &__blink--you { animation: none; }
   }
+}
+
+@keyframes arcade-counter-pop {
+  0% { transform: scale(0.6); opacity: 0; }
+  70% { transform: scale(1.15); opacity: 1; }
+  100% { transform: scale(1); }
 }
 
 @keyframes arcade-counter-blink {
