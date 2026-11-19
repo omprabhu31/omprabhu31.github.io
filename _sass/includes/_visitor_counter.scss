@@ -12,7 +12,7 @@
   }
 
   &__score {
-    font-size: 2.2em;
+    font-size: 1.9em;
     margin: 0.45em 0;
     color: $text-color;
     text-shadow: 0 0 10px $link-color, 0 0 2px $link-color;
@@ -26,7 +26,7 @@
   }
 
   @media (max-width: 500px) {
-    &__score { font-size: 1.6em; }
+    &__score { font-size: 1.4em; }
   }
 
   @media (prefers-reduced-motion: reduce) {
