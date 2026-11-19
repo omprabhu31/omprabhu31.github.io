@@ -25,7 +25,7 @@ Shared instructions for AI coding agents (Claude Code, Codex, and any others) wo
 | `academics/courses.md` | Course list, grouped by semester |
 | `academics/notes/` | Course notes: one folder per course (LaTeX source + compiled PDF + figures), indexed by `notes.md` |
 | `resume.pdf` | Current resume (linked from the nav in `_layouts/default.html` and from `index.md`). Built from `_resume/`, don't edit by hand |
-| `_resume/` | CV LaTeX source (Overleaf export: `main.tex`, `developercv.cls`, images) plus `build.sh`, which builds it into `resume.pdf`. **Gitignored, local only** |
+| `_resume/` | CV LaTeX source (`main.tex`, `developercv.cls`, images) plus `build.sh`, which builds it into `resume.pdf`. **Gitignored, local only** |
 | `changelog.md` | Credits for edits suggested by others (`/changelog/`, linked from `index.md`) |
 | `_scripts/` | Repo tooling, not published (Jekyll skips `_`-prefixed folders). `check_links.py` is the link checker |
 
@@ -59,10 +59,10 @@ Shared instructions for AI coding agents (Claude Code, Codex, and any others) wo
 - Link new notes from `academics/notes/notes.md`.
 
 ### Resume (`_resume/`)
-- The CV is written on Overleaf. To update it, the user exports the project as a zip. Replace the files in `_resume/` with the ones from the zip, keeping `build.sh`.
-- `_resume/` is gitignored and exists only on the user's machine. **Never commit the CV source.** Only the built `resume.pdf` goes on GitHub. If `_resume/` is missing (e.g. a fresh clone), ask the user for the Overleaf zip.
+- `_resume/main.tex` is the master copy of the CV. The user no longer uses Overleaf, so make CV changes directly in `main.tex`. Don't overwrite it from an Overleaf export unless the user asks.
+- `_resume/` is gitignored and exists only on the user's machine. **Never commit the CV source.** Only the built `resume.pdf` goes on GitHub. If `_resume/` is missing (e.g. a fresh clone or another machine), stop and ask the user where the source is. Don't recreate it.
 - Run `_resume/build.sh` (needs a TeX distribution with `latexmk`). It compiles `main.tex` and copies the PDF to `/resume.pdf`, the file the site links to.
-- The CV must stay **one page**. `build.sh` exits with a warning if it isn't. Fix it by tightening spacing or margins in `main.tex`, and say what you changed. A new export from Overleaf overwrites such tweaks: These local tweaks currently keep it on one page: `top=12mm` and `bottom=11mm` in the `geometry` block (Overleaf had 15mm for both), `\vspace{-17 pt}` before the lower section headings (Overleaf had `-15 pt`), and the Visual Acuity project wrapped in `\begin{comment}`.
+- The CV must stay **one page**. `build.sh` exits with a warning if it isn't. Fix it by tightening spacing or wording in `main.tex` (never by cutting content without asking), and say what you changed. Spacing is already tight: `top=12mm`, `bottom=11mm`, and `\vspace{-17 pt}` before the lower section headings. The Visual Acuity project is hidden in `\begin{comment}`.
 - Commit only `resume.pdf` (a small change, so it goes straight to `master`).
 
 ### Styling
