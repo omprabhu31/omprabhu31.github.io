@@ -90,8 +90,11 @@ Do all of these before every commit:
    - **This applies to sub-agents too.** When you hand website work to a sub-agent or another agent, tell it to run the link checker and report the results.
 3. After pushing to `master`, the live site updates within a few minutes. Say so when reporting back.
 
-### Known issues (pre-existing, waiting on the user)
-- The anonymous-message Google Forms are deleted: `forms.gle/d12hiHhnEpvDcL2u7` (footer in `_config.yml`, the notes pages under `academics/notes/*/`), `forms.gle/U7fuk4wQ771iAaLf6` (`blog.md`), and the embedded form in `contact.md`. The link checker will keep flagging these until the user supplies new forms. Don't remove them unless asked. Remove an entry from this list once it's fixed.
+### Google Forms used on the site
+Both are owned by the user's Google account. Responses go there.
+- **Anonymous message** (`…/1FAIpQLSe1cNYSMjQDIuQBHMxn0FZAlslGAcqdmh1BdeW-A7CotFF6yQ/viewform`): footer (`_config.yml`), embedded on `contact.md` (with `?embedded=true`), and the notes pages under `academics/notes/*/`.
+- **Blog suggestions & feedback** (`…/1FAIpQLSc07E4VZhgkYpqSRcE-ur6TddJLVlG1HOHVgyIF0_xQf_1ukw/viewform`): `blog.md`.
+- If you add a new "anonymous message" or "feedback" link, reuse these forms rather than creating new ones.
 
 ## Git workflow (applies to every agent)
 
