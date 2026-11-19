@@ -6,3 +6,9 @@
   color: lighten($text-color, 30%);
   font-size: 0.9em;
 }
+
+/* Copyleft symbol: a mirrored ©. The dedicated character (U+1F12F) is missing from many fonts. */
+.copyleft {
+  display: inline-block;
+  transform: scaleX(-1);
+}
