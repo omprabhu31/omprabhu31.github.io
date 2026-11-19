@@ -16,7 +16,9 @@
   // Visitors counted by the previous (Elfsight) counter, 9 Aug 2020 to 19 Nov 2026.
   // GoatCounter started from zero, so its total is added on top of this.
   var BASELINE = 2511;
-  var COUNTER_URL = 'https://omprabhu.goatcounter.com/counter/TOTAL.json';
+  // Visitors to the home page ("/"), where this counter lives. The site-wide TOTAL endpoint
+  // stayed at 0 while per-page counts updated, so it isn't used.
+  var COUNTER_URL = 'https://omprabhu.goatcounter.com/counter//.json';
   var el = document.getElementById('arcade-counter-score');
   if (!el) return;
 
