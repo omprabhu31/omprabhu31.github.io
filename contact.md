@@ -8,10 +8,8 @@ hide: true
 
 <h3>Contact Details:</h3>
 <ul>
-	<li><a href="mailto:omp3108@gmail.com">omp3108@gmail.com</a></li>
-	<li><a href="mailto:prabhu.om@iitb.ac.in">prabhu.om@iitb.ac.in</a></li>
-	<li><a href="https://www.facebook.com/masterjacks42/">Facebook</a></li>
-	<li><a href="https://www.linkedin.com/in/omprabhu31/">LinkedIn</a></li>
+	<li><a href="mailto:prabhu.om@icloud.com">prabhu.om@icloud.com</a></li>
+	<li><a href="https://www.linkedin.com/in/prabhu-om/">LinkedIn</a></li>
 </ul>
 
 If you wish to contact me but remain anonymous, you can do so below. If, for some reason, the embed doesn't work for you, you can find the link to the form in the page footer as well.
