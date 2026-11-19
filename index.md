@@ -28,12 +28,8 @@ The general layout of the website is inspired by [Aryaman Maithani's](https://ar
 
 <h3>Visitor Count</h3>
 
-<!-- hitwebcounter Code START -->
-<center><!-- Badge Code - Do Not Change The Code -->
-<script src="https://apps.elfsight.com/p/platform.js" defer></script>
-<div class="elfsight-app-809de696-051f-4ac0-b372-e4d6db9d425e"></div>
-<!-- Badge Code End Here --></center>
-                           
-(The count was started on August 9, 2020. It only displays unique visitors, no matter the number of times you visit the website or number of pages you visit on the website.)
+{% include visitor-counter.html %}
+
+(Counting since August 9, 2020. Each visitor is counted once per visit, however many pages they look at.)
 
 ---

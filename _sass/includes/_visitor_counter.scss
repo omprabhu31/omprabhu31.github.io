@@ -1,0 +1,39 @@
+/* --- Arcade-style visitor counter (home page, _includes/visitor-counter.html) --- */
+.arcade-counter {
+  font-family: 'Press Start 2P', monospace;
+  text-align: center;
+  margin: 1.5em 0 1em;
+  line-height: 1.4;
+
+  &__caption {
+    font-size: 0.7em;
+    letter-spacing: 0.2em;
+    color: lighten($link-color, 30%);
+  }
+
+  &__score {
+    font-size: 1.9em;
+    margin: 0.45em 0;
+    color: $text-color;
+    text-shadow: 0 0 10px $link-color, 0 0 2px $link-color;
+    font-variant-numeric: tabular-nums;
+  }
+
+  &__blink {
+    font-size: 0.6em;
+    color: #ffd166;
+    animation: arcade-counter-blink 1.6s steps(1) infinite;
+  }
+
+  @media (max-width: 500px) {
+    &__score { font-size: 1.4em; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    &__blink { animation: none; }
+  }
+}
+
+@keyframes arcade-counter-blink {
+  50% { opacity: 0; }
+}
