@@ -15,7 +15,7 @@ The general layout of the website is inspired by [Aryaman Maithani's](https://ar
 <h3>Academics</h3>
 
 * [Resume](/resume.pdf) - Feel free to hit me up if you have something that might interest me :)
-* [Courses](/academics/courses/) - A list of courses that I've taken/am taking at IIT Bombay
+* [Courses](/academics/courses/) - A list of courses that I took at IIT Bombay
 * [Notes](/academics/notes/) - Notes for some courses that I've (tried my best to) maintain
 
 <h3>Gamedev</h3>
