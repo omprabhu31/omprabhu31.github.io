@@ -19,7 +19,7 @@ hide: true
 <li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=BB%20101">BB 101 - Biology</a></li>
 </ul>
 
-<h4>Semester 2 (Spring 2019)</h4>
+<h4>Semester 2 (Spring 2020)</h4>
 <ul>
 <li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=MA%20106">MA 106 - Linear Algebra</a></li>
 <li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=MA%20108">MA 108 - Differential Equations</a> (cancelled due to the SARS-CoV-2 pandemic)</li>
@@ -41,7 +41,7 @@ hide: true
 <li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=SC%20639">SC 639 - Mathematical Structures for Control</a></li>
 </ul>
 
-<h4>Semester 4 (Spring 2020)</h4>
+<h4>Semester 4 (Spring 2021)</h4>
 <ul>
 <li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=ME%20202">ME 202 - Strength of Materials</a></li>
 <li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=ME%20206">ME 206 - Manufacturing Processes I</a></li>
@@ -60,7 +60,7 @@ hide: true
 <li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=ME%20338">ME 338 - Manufacturing Processes II</a></li>
 <li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=ME%20346">ME 346 - Heat Transfer</a></li>
 <li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=ME%20307">ME 307 - Mechanical Measurements Lab</a></li>
-<li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=ME%20374">ME 374 - Manufacturing Processses Lab</a></li>
+<li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=ME%20374">ME 374 - Manufacturing Processes Lab</a></li>
 <li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=HS%20301">HS 301 - Philosophy</a></li>
 <li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=IE%20643">IE 643 - Deep Learning: Theory and Practice</a></li>
 <li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=SC%20301">SC 301 - Linear and Nonlinear Systems</a></li>
@@ -69,7 +69,7 @@ hide: true
 <h4>Semester 6 (Spring 2022)</h4>
 <ul>
 <li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=ME%20306">ME 306 - Applied Thermodynamics</a></li>
-<li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=ME%20308">ME 308 - Industrial Engineeering and Operations Research</a></li>
+<li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=ME%20308">ME 308 - Industrial Engineering and Operations Research</a></li>
 <li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=ME%20310">ME 310 - Microprocessor and Automatic Controls Lab</a></li>
 <li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=ME%20316">ME 316 - Kinematics and Dynamics of Machines</a></li>
 <li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=ME%20370">ME 370 - Kinematics and Dynamics of Machines Lab</a></li>
@@ -96,7 +96,7 @@ hide: true
 <ul>
 <li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=ME%20604">ME 604 - Robotics</a></li>
 <li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=ME%20714">ME 714 - Computer Integrated Manufacturing</a></li>
-<li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=ME%20794">ME 794 - Stastical Design of Experiments</a></li>
+<li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=ME%20794">ME 794 - Statistical Design of Experiments</a></li>
 <li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=CE%20102">CE 102 - Engineering Mechanics</a></li>
 <li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=SC%20652">SC 652 - Statistical Learning and Sequence Prediction</a></li>
 <li><a href="https://portal.iitb.ac.in/asc/Courses/crsedetail.jsp?ccd=IE%20506">IE 506 - Machine Learning: Principles and Techniques</a></li>
@@ -112,4 +112,8 @@ hide: true
 
 <h3>Other Courses</h3>
 
-*to be added shortly*
+<ul>
+<li>IBM - Machine Learning & Generative AI Professional Certificate (2025-26)</li>
+<li>HarvardX - Data Science Professional Certificate (2022-23)</li>
+<li>Coursera - Machine Learning, Neural Networks and Deep Learning, AI For Everyone (my notes for these are on the <a href="/academics/notes/">notes page</a>)</li>
+</ul>
