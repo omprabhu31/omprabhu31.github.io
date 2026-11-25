@@ -1,6 +1,6 @@
 # SITE CONFIGURATION
 baseurl: ""
-url: "https://omprabhu31.github.io/"
+url: "https://omprabhu31.github.io"
 
 # THEME-SPECIFIC CONFIGURATION
 theme_settings:
@@ -9,7 +9,7 @@ theme_settings:
   subtitle: also this is not animé
   avatar: assets/img/bruh.JPG
   favicon: favicon.ico
-  description: "My Blog"
+  description: "Om Prabhu's personal website, with academic notes, projects and writing"
 
 #  Header and footer text
   header_text: >
@@ -32,7 +32,6 @@ theme_settings:
   youtube: 
 
   # Scripts
-  google_analytics: # Tracking ID, e.g. "UA-000000-01"
   disqus_shortname:
   katex: true # Enable if using math markup
   search: false # Enable the search feature
